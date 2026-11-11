@@ -26,6 +26,8 @@ import { POI, poisNear, TUTORIAL_CRATE_ID } from './pois';
 import { rollLoot, LootDrop, LootKind, makeTreasureMap, findLandSpot } from './loot';
 import { TUTORIAL, setNextQuestId } from './quests';
 import { structureSlots } from './economy';
+import { SeaMonster } from './monster';
+import { Ambient } from './ambient';
 
 export type Mode = 'title' | 'sail' | 'foot' | 'dead';
 
@@ -128,6 +130,8 @@ export class Game implements ShipWorld, AIWorld {
   mobs: Mob[] = [];
   forts: Fort[] = [];
   avatar: Avatar | null = null;
+  monsters: SeaMonster[] = [];
+  ambient = new Ambient();
   mode: Mode = 'title';
   cam = { x: CENTER, y: CENTER, zoom: 0, shake: 0 };
   view = { x: 0, y: 0, w: 480, h: 270, scale: 4 };
@@ -223,6 +227,7 @@ export class Game implements ShipWorld, AIWorld {
     this.projectiles = [];
     this.loot = [];
     this.mobs = [];
+    this.monsters = [];
     this.questShips.clear();
     const s = new Ship(p.design);
     s.isPlayer = true;
@@ -335,6 +340,7 @@ export class Game implements ShipWorld, AIWorld {
       } else s.update(dt, this);
       this.emitWake(s, dt);
     }
+    this.updateMonsters(dt);
     this.shipCollisions(dt);
     this.updateProjectiles(dt);
     for (const s of this.ships) if (s.sinking >= 0 && !s.sinkHandled) this.onSink(s);
@@ -342,6 +348,7 @@ export class Game implements ShipWorld, AIWorld {
     this.updateLoot(dt);
     this.updateMobs(dt);
     this.updateWeatherFx(dt);
+    this.ambient.update(dt, this.cam.x, this.cam.y, this.view.w, this.view.h, !!this.nearIsland || this.mode === 'foot', this.env.windAngle, this.env.windStrength, (x, y) => this.typeAt(x, y), this.particles);
     this.particles.update(dt);
     for (let i = this.texts.length - 1; i >= 0; i--) {
       const t = this.texts[i];
@@ -503,6 +510,8 @@ export class Game implements ShipWorld, AIWorld {
     a.attackCd -= dt;
     a.swing = Math.max(0, a.swing - dt);
     a.hurt = Math.max(0, a.hurt - dt);
+    a.iframes = Math.max(0, a.iframes - dt);
+    if (a.hp < a.maxHp && a.hurt <= 0) a.hp = Math.min(a.maxHp, a.hp + dt * 1.5);
     if (input.mouseDown && a.attackCd <= 0) this.avatarAttack();
     if (a.onLava((x, y) => this.typeAt(x, y))) this.hurtAvatar(30 * dt, true);
     if (a.dig > 0) {
@@ -546,7 +555,7 @@ export class Game implements ShipWorld, AIWorld {
     a.attackCd = 0.45;
     a.swing = 0.25;
     this.sound('sword', a.x, a.y);
-    const dmg = 6 + (w?.combat ?? 0) * 2.2;
+    const dmg = 8 + (w?.combat ?? 0) * 2.5;
     for (const m of this.mobs) {
       if (m.dead) continue;
       const dx = m.x - a.x;
@@ -587,6 +596,10 @@ export class Game implements ShipWorld, AIWorld {
   hurtAvatar(dmg: number, silent = false): void {
     const a = this.avatar;
     if (!a) return;
+    if (!silent) {
+      if (a.iframes > 0) return;
+      a.iframes = 0.5;
+    }
     const p = this.profile;
     const def = (p.armor ? ITEM[p.armor].defense ?? 0 : 0) + (p.hat ? ITEM[p.hat].defense ?? 0 : 0);
     const d = dmg * (1 - Math.min(0.6, def * 0.06));
@@ -1097,7 +1110,7 @@ export class Game implements ShipWorld, AIWorld {
         e.hostile = true;
         e.name = 'Pirate Raft';
         for (const i of e.cells) {
-          const lost = e.hullHp[i] * 0.45;
+          const lost = e.hullHp[i] * 0.6;
           e.hullHp[i] -= lost;
           e.hullTotal -= lost;
         }
@@ -1432,6 +1445,15 @@ export class Game implements ShipWorld, AIWorld {
             break;
           }
           if (!remove) {
+            for (const m of this.monsters) {
+              if (!m.hitTest(p.x, p.y)) continue;
+              this.hurtMonster(m, p.dmg * (p.ammo === 'chain' ? 0.6 : p.ammo === 'grape' ? 0.8 : 1), p.owner);
+              this.particles.splash(p.x, p.y, 6);
+              remove = true;
+              break;
+            }
+          }
+          if (!remove) {
             const t = this.typeAt(p.x, p.y);
             if (!isWater(t) && p.life < p.dur - 0.05 && t !== T_DEEP) {
               const st = p.owner && dist2(p.x, p.y, p.owner.x, p.owner.y) > (p.owner.radius + 8) ** 2;
@@ -1507,9 +1529,70 @@ export class Game implements ShipWorld, AIWorld {
         this.cam.shake = 4;
       }
     }
+    for (const m of this.monsters) {
+      if (m.dead || m.depth > 0.5) continue;
+      const d = Math.hypot(m.x - x, m.y - y);
+      if (d < radius + 10) this.hurtMonster(m, dmg * (1 - Math.min(1, d / (radius + 10)) * 0.6), source);
+    }
     const fx = this.avatar ?? this.player;
     const d = Math.hypot(fx.x - x, fx.y - y);
     if (d < 300) this.cam.shake = Math.max(this.cam.shake, 4 * (1 - d / 300));
+  }
+
+  private hurtMonster(m: SeaMonster, dmg: number, src: Ship | null): void {
+    if (m.dead) return;
+    m.hp -= dmg;
+    m.hurtT = 0.25;
+    if (src?.isPlayer) {
+      m.lastHitByPlayer = true;
+      this.player.lastCombat = this.env.time;
+      this.float(m.x, m.y - 8, `${Math.round(dmg)}`, 0xffe080);
+    }
+    this.sound('hit', m.x, m.y, 0.7, 0.6);
+    if (m.hp > 0) return;
+    m.dead = true;
+    m.deathT = 0;
+    this.sound('roar', m.x, m.y, 0.8, 0.7);
+    this.particles.splash(m.x, m.y, 24);
+    if (!m.lastHitByPlayer) return;
+    const rng = new RNG(m.id * 4241 + 7);
+    const items: LootDrop[] = [];
+    if (rng.chance(0.35 + this.luck())) items.push({ id: 'mermaid_scale', qty: 1 });
+    if (rng.chance(0.3)) items.push({ id: 'kraken_ink', qty: 1 });
+    if (rng.chance(0.06 + m.level * 0.01)) items.push({ id: 'trident_shard', qty: 1 });
+    items.push({ id: rng.pick(['black_pearl', 'pearl', 'sapphire', 'ancient_coin']), qty: rng.int(1, 3) });
+    this.dropLoot(m.x, m.y, Math.round((120 + m.level * 60) * (1 + this.profile.inv.passive('goldFind'))), items, 2);
+    this.profile.fame += 10 + m.level * 3;
+    this.toast(`You slew the ${m.name}! +${10 + m.level * 3} fame`, '#ffd870');
+  }
+
+  private updateMonsters(dt: number): void {
+    const s = this.player;
+    const active = this.playerActive && this.mode === 'sail';
+    for (let i = this.monsters.length - 1; i >= 0; i--) {
+      const m = this.monsters[i];
+      const d = Math.hypot(m.x - s.x, m.y - s.y);
+      const target = active && !m.dead && d < 1100 ? s : null;
+      const wasDiving = m.depth > 0.5;
+      const res = m.update(dt, (x, y) => this.typeAt(x, y), target);
+      if (wasDiving !== m.depth > 0.5) this.particles.splash(m.x, m.y, 12);
+      if (target && !m.roared && d < 700) {
+        m.roared = true;
+        this.sound('roar', m.x, m.y);
+        this.toast(`A ${m.name} rises from the deep!`, '#ff9a7a');
+      }
+      if (target && d < 600) s.lastCombat = this.env.time;
+      if (res && res.biteCell >= 0) {
+        s.damageCell(res.biteCell, res.dmg, 'round', this, null);
+        this.particles.debris(m.x, m.y, 10);
+        this.particles.splash(m.x, m.y, 8);
+        this.sound('hit', m.x, m.y, 1, 0.6);
+        this.hitFlash = 1;
+        this.cam.shake = Math.max(this.cam.shake, 3);
+      }
+      if (!m.dead && m.depth > 0.6 && Math.random() < dt * 8) this.particles.bubble(m.x + (Math.random() - 0.5) * 8, m.y + (Math.random() - 0.5) * 8);
+      if ((m.dead && m.deathT > 5) || d > 3600) this.monsters.splice(i, 1);
+    }
   }
 
   onCrewDeath(ship: Ship, c: CrewMember): void {
@@ -1830,6 +1913,17 @@ export class Game implements ShipWorld, AIWorld {
     const nearStart = Math.hypot(s.x - startIsl.x, s.y - startIsl.y) < 2600;
     let count = 0;
     for (const o of this.ships) if (!o.isPlayer && o.sinking < 0 && dist2(o.x, o.y, s.x, s.y) < 2400 * 2400) count++;
+    if (lvl >= 4 && !nearStart && this.monsters.length === 0 && Math.random() < (this.env.night || this.env.storm > 0.3 ? 0.07 : 0.035)) {
+      for (let k = 0; k < 8; k++) {
+        const ang = Math.random() * Math.PI * 2;
+        const x = s.x + Math.cos(ang) * 900;
+        const y = s.y + Math.sin(ang) * 900;
+        if (this.typeAt(x, y) === T_DEEP && this.openWater(x, y, 120)) {
+          this.monsters.push(new SeaMonster(x, y, clamp(lvl + Math.floor(Math.random() * 2), 1, 10)));
+          break;
+        }
+      }
+    }
     const target = Math.min(7, 2 + Math.floor(lvl * 0.45) + (this.env.night ? 1 : 0));
     if (count >= target) return;
     if (Math.random() < 0.35) return;

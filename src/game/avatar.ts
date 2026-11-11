@@ -15,6 +15,7 @@ export class Avatar {
   digTarget = -1;
   hurt = 0;
   stepT = 0;
+  iframes = 0;
 
   move(dx: number, dy: number, dt: number, typeAt: (x: number, y: number) => number): boolean {
     this.moving = dx !== 0 || dy !== 0;
@@ -33,7 +34,7 @@ export class Avatar {
     if (this.dig > 0) sp = 0;
     const nx = this.x + dx * sp * dt;
     const ny = this.y + dy * sp * dt;
-    const ok = (x: number, y: number) => walkable(typeAt(x - 2, y)) && walkable(typeAt(x + 2, y)) && walkable(typeAt(x, y - 1)) && walkable(typeAt(x, y + 1));
+    const ok = (x: number, y: number) => walkable(typeAt(x, y)) && walkable(typeAt(x - 1, y)) && walkable(typeAt(x + 1, y));
     if (ok(nx, ny)) {
       this.x = nx;
       this.y = ny;
@@ -71,8 +72,8 @@ export interface Mob {
 
 let mobId = 1;
 export function makeMob(kind: MobKind, x: number, y: number, level: number, island: number): Mob {
-  const base = kind === 'crab' ? { hp: 14, dmg: 4, speed: 30 } : kind === 'skeleton' ? { hp: 30, dmg: 8, speed: 34 } : { hp: 45, dmg: 12, speed: 40 };
-  const s = 1 + (level - 1) * 0.25;
+  const base = kind === 'crab' ? { hp: 12, dmg: 3, speed: 28 } : kind === 'skeleton' ? { hp: 26, dmg: 5, speed: 32 } : { hp: 38, dmg: 8, speed: 38 };
+  const s = 1 + (level - 1) * 0.18;
   return {
     id: mobId++,
     kind,
@@ -109,7 +110,7 @@ export function updateMob(m: Mob, av: Avatar | null, dt: number, typeAt: (x: num
       tx = av.x;
       ty = av.y;
       if (d < 9 && m.attackCd <= 0) {
-        m.attackCd = 1.1;
+        m.attackCd = 1.4 + Math.random() * 0.4;
         dmg = m.dmg;
       }
     }

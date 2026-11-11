@@ -354,7 +354,10 @@ export function renderChunk(cx: number, cy: number): ChunkResult {
         const t = waterType(hd, reef, frost);
         types[o] = t;
         let c: number;
-        if (t === T_REEF) c = nz + bay * 0.6 > 0.8 ? wp[8] : wp[7];
+        if (t === T_REEF) {
+          const hv = hashf(wx, wy, 91);
+          c = hv < 0.22 ? wp[5] : hv < 0.5 ? wp[8] : wp[7];
+        }
         else if (t === T_ICE) c = nz + bay * 0.5 > 0.8 ? wp[6] : wp[9];
         else if (t === T_FOAM) c = hd > -1.6 || bay < 0.35 ? wp[6] : wp[5];
         else if (hd > -28 || reef > -0.25) {

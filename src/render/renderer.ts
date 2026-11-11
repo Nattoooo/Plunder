@@ -11,7 +11,9 @@ import type { Ship } from '../game/ship';
 import { poisNear, POI } from '../game/pois';
 import { shipSprite, pruneSprites, PAD } from './shipSprite';
 import { sprites, structureSprite } from './sprites';
-import { drawText, textWidth } from './font';
+import { drawText } from './font';
+import { SEGMENTS } from '../game/monster';
+import { makeSprite } from './sprites';
 
 const tmpIsl: Island[] = [];
 const tmpPOI: POI[] = [];
@@ -38,6 +40,29 @@ export class Renderer {
   private crewSprites = new Map<number, HTMLCanvasElement>();
   private structSprites = new Map<string, HTMLCanvasElement>();
   private frame = 0;
+  private circles = new Map<string, HTMLCanvasElement>();
+  private gullA = makeSprite(['w...w', '.wgw.', '..g..'], { w: '#f4f4f0', g: '#9a9aa0' });
+  private gullB = makeSprite(['.....', 'wwgww', '..g..'], { w: '#f4f4f0', g: '#9a9aa0' });
+  private whale = makeSprite([
+    '....kkkkkkkk......',
+    '..kkbbbbbbbbkk....',
+    '.kbbBBbbbbbbbbkk.k',
+    'kbbbbbbbbbbbbbbbkk',
+    '.kbbbbbbbbbbbbkk.k',
+    '..kkbbbbbbbbkk....',
+    '....kkkkkkkk......'
+  ], { k: '#1e2a36', b: '#3a4a5c', B: '#7a8a9c' });
+  private serpentHead = makeSprite([
+    '...kkkk....',
+    '.kkGGGGkk..',
+    'kGGgggggGk.',
+    'kGgygggggkk',
+    'kgggggggggr',
+    'kGgygggggkk',
+    'kGGgggggGk.',
+    '.kkGGGGkk..',
+    '...kkkk....'
+  ], { k: '#0e2018', G: '#3a8a5a', g: '#2a6a44', y: '#ffe040', r: '#c83a3a' });
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
@@ -161,6 +186,8 @@ export class Renderer {
       ctx.drawImage(spr, sx - (spr.width >> 1), sy - (spr.height >> 1));
     }
     this.drawLandObjects(g, ox, oy, tmpPOI);
+    this.drawAmbientLow(g, ox, oy);
+    for (const m of g.monsters) this.drawMonster(m, ox, oy, t);
     for (const s of g.ships) if (this.onScreen(s, ox, oy)) this.drawShipShadow(s, ox, oy);
     for (const s of g.ships) if (this.onScreen(s, ox, oy)) this.drawShip(g, s, ox, oy, t);
     for (const m of g.mobs) this.drawMob(m.kind, m.x - ox, m.y - oy, m.anim, m.hurt > 0, m.hp / m.maxHp);
@@ -180,11 +207,104 @@ export class Renderer {
       }
     }
     g.particles.draw(ctx, ox, oy, W, H, 1);
+    this.drawGulls(g, ox, oy);
     this.drawLighting(g, ox, oy);
     this.drawOverlays(g, ox, oy, t);
     this.drawWorldUI(g, ox, oy, t);
     if (this.frame % 300 === 0) pruneSprites(new Set(g.ships.map((s) => s.id)));
     if (this.frame % 300 === 0) for (const k of this.comps.keys()) if (!g.ships.some((s) => s.id === k)) this.comps.delete(k);
+  }
+
+  private circle(r: number, body: string, light: string, edge: string): HTMLCanvasElement {
+    const key = `${r}${body}${light}`;
+    let c = this.circles.get(key);
+    if (c) return c;
+    const d = r * 2 + 1;
+    c = document.createElement('canvas');
+    c.width = d;
+    c.height = d;
+    const x = c.getContext('2d')!;
+    for (let j = 0; j < d; j++) for (let i = 0; i < d; i++) {
+      const dx = i - r;
+      const dy = j - r;
+      const dd = Math.sqrt(dx * dx + dy * dy);
+      if (dd > r + 0.3) continue;
+      x.fillStyle = dd > r - 0.9 ? edge : dx + dy < -r * 0.5 ? light : body;
+      x.fillRect(i, j, 1, 1);
+    }
+    this.circles.set(key, c);
+    return c;
+  }
+
+  private drawMonster(m: import('../game/monster').SeaMonster, ox: number, oy: number, t: number): void {
+    const ctx = this.ctx;
+    const hx = m.x - ox;
+    const hy = m.y - oy;
+    if (hx < -120 || hy < -120 || hx > this.w + 120 || hy > this.h + 120) return;
+    const sub = m.depth;
+    const hurt = m.hurtT > 0 && ((this.frame >> 1) & 1);
+    ctx.globalAlpha = m.dead ? Math.max(0, 1 - m.deathT / 5) * (1 - sub * 0.7) : 1 - sub * 0.72;
+    for (let i = SEGMENTS - 1; i >= 1; i--) {
+      const r = Math.round(m.segRadius(i));
+      const sx = Math.round(m.segs[i * 2] - ox);
+      const sy = Math.round(m.segs[i * 2 + 1] - oy);
+      const spr = sub > 0.5 ? this.circle(r, '#0e2a30', '#123438', '#0a1e22') : hurt ? this.circle(r, '#ffffff', '#ffffff', '#c0c0c0') : this.circle(r, i % 2 ? '#2a6a44' : '#2f744a', '#4aa070', '#0e2018');
+      ctx.drawImage(spr, sx - r, sy - r);
+      if (sub < 0.5 && i % 2 === 0 && i < SEGMENTS - 2) {
+        ctx.fillStyle = '#a83a3a';
+        ctx.fillRect(sx, sy - 1, 1, 2);
+      }
+    }
+    const c = Math.cos(m.heading);
+    const sn = Math.sin(m.heading);
+    ctx.setTransform(c, sn, -sn, c, Math.round(hx), Math.round(hy));
+    if (sub < 0.5) ctx.drawImage(this.serpentHead, -4, -4);
+    else ctx.drawImage(this.circle(5, '#0e2a30', '#123438', '#0a1e22'), -5, -5);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = 1;
+    if (!m.dead && sub < 0.5 && m.hp < m.maxHp) {
+      this.bar(Math.round(hx - 15), Math.round(hy - 16), 30, m.hp / m.maxHp, '#c060ff');
+      if (m.target) drawText(ctx, `${m.name} L${m.level}`, hx, hy - 24, 0xd8a0ff, true);
+    }
+    void t;
+  }
+
+  private drawAmbientLow(g: Game, ox: number, oy: number): void {
+    const ctx = this.ctx;
+    const A = g.ambient;
+    for (const w of A.whales) {
+      const f = w.t / w.dur;
+      const a = f < 0.2 ? f / 0.2 : f > 0.75 ? (1 - f) / 0.25 : 1;
+      const c = Math.cos(w.heading);
+      const sn = Math.sin(w.heading);
+      ctx.globalAlpha = a * 0.85;
+      ctx.setTransform(c, sn, -sn, c, Math.round(w.x - ox), Math.round(w.y - oy));
+      ctx.drawImage(this.whale, -9, -3);
+    }
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = 1;
+    const wa = g.env.windAngle;
+    const cx = Math.cos(wa);
+    const cy = Math.sin(wa);
+    ctx.fillStyle = '#ffffff';
+    for (const s of A.streaks) {
+      const f = s.life / s.max;
+      ctx.globalAlpha = Math.sin(f * Math.PI) * 0.22;
+      for (let k = 0; k < s.len; k += 1) ctx.fillRect(Math.round(s.x - ox + cx * k), Math.round(s.y - oy + cy * k), 1, 1);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  private drawGulls(g: Game, ox: number, oy: number): void {
+    const ctx = this.ctx;
+    for (const gl of g.ambient.gulls) {
+      const sx = Math.round(gl.x - ox);
+      const sy = Math.round(gl.y - oy);
+      if (sx < -10 || sy < -20 || sx > this.w + 10 || sy > this.h + 20) continue;
+      ctx.fillStyle = 'rgba(6,20,36,0.3)';
+      ctx.fillRect(sx + 1, sy + 14, 3, 1);
+      ctx.drawImage(Math.floor(gl.flap) % 2 ? this.gullA : this.gullB, sx - 2, sy - 1);
+    }
   }
 
   private onScreen(s: Ship, ox: number, oy: number): boolean {

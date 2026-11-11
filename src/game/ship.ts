@@ -781,15 +781,16 @@ export class Ship {
       }
     }
     const cells = this.cells.length || 1;
-    const pump = 0.012 + s.repair * 0.006;
-    this.flood = clamp(this.flood + ((leak / cells) * 0.085 - pump) * dt, 0, 1);
+    const pump = 0.016 + s.repair * 0.006;
+    this.flood = clamp(this.flood + ((leak / cells) * 0.07 - pump) * dt, 0, 1);
     if (this.flood >= 1) this.startSink(w);
     if (burning && this.integrity() < SINK_AT) this.startSink(w);
     this.repairTimer -= dt;
     if (this.repairTimer <= 0) {
       const iv = 0.25;
       this.repairTimer = iv;
-      if (s.repair > 0) this.repair(s.repair * iv, w);
+      const idle = this.isPlayer && w.env.time - this.lastCombat > 8 ? 0.5 + this.crew.length * 0.08 : 0;
+      if (s.repair + idle > 0) this.repair((s.repair + idle) * iv, w);
       if (s.heal > 0) {
         for (const c of this.crew) if (c.hp < c.maxHp) c.hp = Math.min(c.maxHp, c.hp + s.heal * iv);
       }

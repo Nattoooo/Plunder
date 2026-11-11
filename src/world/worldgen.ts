@@ -358,8 +358,8 @@ export function reefField(x: number, y: number, biome: number): number {
   const th = biome === B_CORAL ? 0.63 : biome === B_SHALLOWS ? 0.75 : biome === B_FROST ? 0.66 : 0.8;
   if (macro < th) return -1;
   const base = (macro - th) * 6;
-  const micro = fbm(x / 26, y / 26, WORLD_SEED + 22, 2);
-  if (micro > 0.63 - Math.min(0.06, base * 0.04)) return 0.6;
+  const micro = fbm(x / 15, y / 15, WORLD_SEED + 22, 2);
+  if (micro > 0.67 - Math.min(0.05, base * 0.03)) return 0.6;
   return base > 0.15 ? 0 : -0.5;
 }
 

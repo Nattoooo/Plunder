@@ -324,7 +324,7 @@ button,
 #banner {
   position: fixed;
   left: 50%;
-  top: 22%;
+  top: 34%;
   transform: translateX(-50%);
   text-align: center;
   pointer-events: none;

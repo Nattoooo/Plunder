@@ -88,6 +88,7 @@ export class Minimap {
         dot(L.dockX1, L.dockY1, PORT_COL[isl.port.faction], 1);
       }
     }
+    for (const m of g.monsters) if (!m.dead && Math.hypot(m.x - f.x, m.y - f.y) < vision * 1.4) dot(m.x, m.y, '#c060ff', 2);
     for (const it of g.profile.inv.items) if (it.data) dot(it.data.x, it.data.y, '#ff2020', 1);
     for (const q of g.profile.quests) if (!q.done) dot(q.x, q.y, '#ffd040', 1);
     if (g.profile.waypoint) dot(g.profile.waypoint.x, g.profile.waypoint.y, '#ff6a5a', 1);

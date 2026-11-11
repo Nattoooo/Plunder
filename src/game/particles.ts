@@ -9,6 +9,7 @@ export const P_GOLD = 7;
 export const P_RAIN = 8;
 export const P_DUST = 9;
 export const P_GHOST = 10;
+export const P_FISH = 11;
 
 const CAP = 2600;
 
@@ -23,7 +24,8 @@ export const PCOLORS = [
   ['#fff8c0', '#ffe060', '#e8b830', '#c89020'],
   ['#a8c0d8', '#a8c0d8', '#90a8c0', '#90a8c0'],
   ['#d8c8a0', '#c0b088', '#a89870', '#908058'],
-  ['#c0ffd8', '#80f0b0', '#50c088', '#309060']
+  ['#c0ffd8', '#80f0b0', '#50c088', '#309060'],
+  ['#d8e4f0', '#b8c8d8', '#98a8bc', '#7888a0']
 ];
 
 export class Particles {
@@ -76,7 +78,7 @@ export class Particles {
       const t = this.type[i];
       this.x[i] += this.vx[i] * dt;
       this.y[i] += this.vy[i] * dt;
-      if (t === P_DEBRIS || t === P_SPLASH || t === P_SPARK || t === P_GOLD) {
+      if (t === P_DEBRIS || t === P_SPLASH || t === P_SPARK || t === P_GOLD || t === P_FISH) {
         this.z[i] += this.vz[i] * dt;
         this.vz[i] -= 140 * dt;
         if (this.z[i] < 0) {
@@ -84,7 +86,7 @@ export class Particles {
           this.vz[i] = 0;
           this.vx[i] *= 0.5;
           this.vy[i] *= 0.5;
-          if (t === P_SPLASH || t === P_SPARK) this.life[i] = Math.min(this.life[i], 0.05);
+          if (t === P_SPLASH || t === P_SPARK || t === P_FISH) this.life[i] = Math.min(this.life[i], 0.05);
         }
       } else if (t === P_SMOKE || t === P_FLAME || t === P_GHOST) {
         this.z[i] += this.vz[i] * dt;

@@ -52,7 +52,7 @@ export class Env implements ShipEnv {
     this.windStrength *= 1 + this.storm * 0.6;
     biomeWeights(x, y, bw);
     this.cold = bw[B_FROST];
-    this.fog = clamp(bw[B_MIST] * 0.55 + this.storm * 0.25 + (this.night ? 0.05 : 0), 0, 0.75);
+    this.fog = clamp(bw[B_MIST] * (this.night ? 0.55 : 0.42) + this.storm * 0.25, 0, 0.7);
     if (this.storm > 0.5) {
       this.flashTimer -= dt;
       if (this.flashTimer <= 0) {
