@@ -105,7 +105,7 @@ export class Particles {
     }
   }
 
-  draw(ctx: CanvasRenderingContext2D, ox: number, oy: number, w: number, h: number, layer: number): void {
+  draw(ctx: CanvasRenderingContext2D, ox: number, oy: number, w: number, h: number, layer: number, k = 1): void {
     let last = '';
     for (let i = 0; i < this.n; i++) {
       const t = this.type[i];
@@ -126,12 +126,12 @@ export class Particles {
       else if (t === P_WAKE) s = s * (0.5 + f * 0.7);
       else if (t === P_FLAME) s = s * (0.4 + f * 0.8);
       if (t === P_RAIN) {
-        ctx.fillRect(sx | 0, sy | 0, 1, 3);
+        ctx.fillRect(Math.round(sx * k) / k, Math.round(sy * k) / k, 1, 3);
         continue;
       }
       const si = s < 1 ? 1 : s | 0;
       if (t === P_WAKE && f < 0.35 && (i & 1)) continue;
-      ctx.fillRect((sx - si / 2) | 0, (sy - si / 2) | 0, si, si);
+      ctx.fillRect(Math.round((sx - si / 2) * k) / k, Math.round((sy - si / 2) * k) / k, si, si);
     }
   }
 

@@ -139,6 +139,7 @@ export interface Settings {
   showFps: boolean;
   particles: number;
   screenShake: boolean;
+  quality: string;
 }
 
 export class Profile {
@@ -161,7 +162,7 @@ export class Profile {
   completedQuests = 0;
   tutorial = 0;
   stats: Stats = { sunk: 0, boarded: 0, distance: 0, treasures: 0, goldEarned: 0, islandsVisited: 0, deaths: 0, playSeconds: 0 };
-  settings: Settings = { master: 0.8, sfx: 0.8, music: 0.45, ambience: 0.7, zoom: 0, showFps: false, particles: 1, screenShake: true };
+  settings: Settings = { master: 0.8, sfx: 0.8, music: 0.45, ambience: 0.7, zoom: 0, showFps: false, particles: 1, screenShake: true, quality: 'auto' };
   markets: Record<number, { t: number; d: Record<string, number> }> = {};
   captainHp = 100;
   weapon: string | null = 'rusty_cutlass';

@@ -34,8 +34,11 @@ export class Renderer {
   w = 480;
   h = 270;
   scale = 4;
+  artScale = 4;
   baseScale = 4;
   dpr = 1;
+  quality = 1;
+  autoQuality = true;
   private comps = new Map<number, Comp>();
   private crewSprites = new Map<number, HTMLCanvasElement>();
   private structSprites = new Map<string, HTMLCanvasElement>();
@@ -72,26 +75,52 @@ export class Renderer {
     this.resize(0);
   }
 
-  resize(zoom: number): void {
+  static autoQualityFor(pixels: number): number {
+    const budget = 3.8e6;
+    for (const q of [1, 0.75, 0.5]) if (pixels * q * q <= budget) return q;
+    return 0.5;
+  }
+
+  resize(zoom: number, quality = this.quality): void {
     this.dpr = window.devicePixelRatio || 1;
+    this.quality = quality;
     const pw = Math.round(window.innerWidth * this.dpr);
     const ph = Math.round(window.innerHeight * this.dpr);
     this.baseScale = Math.max(2, Math.round(ph / 290));
-    const sc = clamp(this.baseScale + zoom, 1, this.baseScale + 3);
-    this.scale = sc;
-    const w = Math.ceil(pw / sc);
-    const h = Math.ceil(ph / sc);
-    if (w !== this.w || h !== this.h || this.canvas.width !== w) {
-      this.w = w;
-      this.h = h;
-      this.canvas.width = w;
-      this.canvas.height = h;
-      this.light.width = Math.ceil(w / 2);
-      this.light.height = Math.ceil(h / 2);
+    this.artScale = clamp(this.baseScale + zoom, 1, this.baseScale + 3);
+    this.scale = this.artScale * quality;
+    const cw = Math.max(1, Math.round(pw * quality));
+    const chh = Math.max(1, Math.round(ph * quality));
+    if (this.canvas.width !== cw || this.canvas.height !== chh) {
+      this.canvas.width = cw;
+      this.canvas.height = chh;
     }
-    this.canvas.style.width = `${(w * sc) / this.dpr}px`;
-    this.canvas.style.height = `${(h * sc) / this.dpr}px`;
+    this.w = cw / this.scale;
+    this.h = chh / this.scale;
+    const lw = Math.ceil(this.w / 2) + 1;
+    const lh = Math.ceil(this.h / 2) + 1;
+    if (this.light.width !== lw || this.light.height !== lh) {
+      this.light.width = lw;
+      this.light.height = lh;
+    }
+    this.canvas.style.width = `${window.innerWidth}px`;
+    this.canvas.style.height = `${window.innerHeight}px`;
+    this.canvas.style.imageRendering = quality >= 1 ? 'pixelated' : 'auto';
     this.ctx.imageSmoothingEnabled = false;
+  }
+
+  snap(v: number): number {
+    return Math.round(v * this.scale) / this.scale;
+  }
+
+  private base(): void {
+    const S = this.scale;
+    this.ctx.setTransform(S, 0, 0, S, 0, 0);
+  }
+
+  private rot(x: number, y: number, c: number, s: number): void {
+    const S = this.scale;
+    this.ctx.setTransform(c * S, s * S, -s * S, c * S, Math.round(x * S), Math.round(y * S));
   }
 
   minZoom(spyglass: boolean): number {
@@ -105,12 +134,12 @@ export class Renderer {
       sx = (Math.random() - 0.5) * g.cam.shake;
       sy = (Math.random() - 0.5) * g.cam.shake;
     }
-    g.view.x = Math.round(g.cam.x - this.w / 2 + sx);
-    g.view.y = Math.round(g.cam.y - this.h / 2 + sy);
+    g.view.x = this.snap(g.cam.x - this.w / 2 + sx);
+    g.view.y = this.snap(g.cam.y - this.h / 2 + sy);
     g.view.w = this.w;
     g.view.h = this.h;
     g.view.scale = this.scale;
-    const k = this.dpr / this.scale;
+    const k = (this.dpr * this.quality) / this.scale;
     g.mouseWX = g.view.x + mx * k;
     g.mouseWY = g.view.y + my * k;
     const m = 200;
@@ -130,56 +159,62 @@ export class Renderer {
     ctx.globalAlpha = 1;
     ctx.imageSmoothingEnabled = false;
     ctx.fillStyle = '#1b4776';
-    ctx.fillRect(0, 0, W, H);
+    ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    const Sc = this.scale;
     const cx0 = Math.floor(ox / CHUNK);
     const cy0 = Math.floor(oy / CHUNK);
     const cx1 = Math.floor((ox + W) / CHUNK);
     const cy1 = Math.floor((oy + H) / CHUNK);
     for (let cx = cx0; cx <= cx1; cx++) {
+      const dx0 = Math.round((cx * CHUNK - ox) * Sc);
+      const dx1 = Math.round(((cx + 1) * CHUNK - ox) * Sc);
       for (let cy = cy0; cy <= cy1; cy++) {
+        const dy0 = Math.round((cy * CHUNK - oy) * Sc);
+        const dy1 = Math.round(((cy + 1) * CHUNK - oy) * Sc);
         if (cx < 0 || cy < 0 || cx >= CHUNKS || cy >= CHUNKS) {
           ctx.fillStyle = '#14161e';
-          ctx.fillRect(cx * CHUNK - ox, cy * CHUNK - oy, CHUNK, CHUNK);
+          ctx.fillRect(dx0, dy0, dx1 - dx0, dy1 - dy0);
           continue;
         }
         const ch = g.chunks.get(cx, cy);
-        if (ch && ch.img) ctx.drawImage(ch.img, cx * CHUNK - ox, cy * CHUNK - oy);
+        if (ch && ch.img) ctx.drawImage(ch.img, dx0, dy0, dx1 - dx0, dy1 - dy0);
       }
     }
+    this.base();
     this.drawGlints(g, ox, oy, t);
     const S = sprites();
     poisNear(g.cam.x, g.cam.y, Math.max(W, H) * 0.8 + 60, tmpPOI);
     for (const p of tmpPOI) {
       if (p.kind === 'claim') continue;
       if (!g.poiAvailable(p)) continue;
-      const sx = Math.round(p.x - ox);
-      const sy = Math.round(p.y - oy);
+      const sx = this.snap(p.x - ox);
+      const sy = this.snap(p.y - oy);
       if (sx < -30 || sy < -30 || sx > W + 30 || sy > H + 30) continue;
       if (p.kind === 'flotsam') {
-        const bob = Math.round(Math.sin(t * 2 + p.id) * 0.8);
+        const bob = this.snap(Math.sin(t * 2 + p.id) * 0.8);
         const spr = p.id % 2 ? S.crate : S.barrel;
         ctx.drawImage(spr, sx - 3, sy - 3 + bob);
         if ((this.frame >> 4) % 3 === 0) ctx.drawImage(S.glint[0], sx - 4, sy + 3);
       } else if (p.kind === 'bottle') {
-        const bob = Math.round(Math.sin(t * 2.4 + p.id) * 1);
+        const bob = this.snap(Math.sin(t * 2.4 + p.id));
         ctx.drawImage(S.bottle, sx - 1, sy - 3 + bob);
       } else if (p.kind === 'wreck') ctx.drawImage(S.wreck, sx - 10, sy - 8);
     }
     for (const q of g.profile.quests) {
       if (q.kind !== 'salvage' || q.done) continue;
-      const sx = Math.round(q.x - ox);
-      const sy = Math.round(q.y - oy);
+      const sx = this.snap(q.x - ox);
+      const sy = this.snap(q.y - oy);
       if (sx > -30 && sy > -30 && sx < W + 30 && sy < H + 30) ctx.drawImage(S.questWreck, sx - 10, sy - 8);
     }
     if (g.profile.lost) {
-      const sx = Math.round(g.profile.lost.x - ox);
-      const sy = Math.round(g.profile.lost.y - oy);
+      const sx = this.snap(g.profile.lost.x - ox);
+      const sy = this.snap(g.profile.lost.y - oy);
       if (sx > -20 && sy > -20 && sx < W + 20 && sy < H + 20) ctx.drawImage(S.lostCargo, sx - 4, sy - 4);
     }
-    g.particles.draw(ctx, ox, oy, W, H, 0);
+    g.particles.draw(ctx, ox, oy, W, H, 0, Sc);
     for (const l of g.loot) {
-      const sx = Math.round(l.x - ox);
-      const sy = Math.round(l.y - oy + Math.sin(l.bob * 2) * 0.8);
+      const sx = this.snap(l.x - ox);
+      const sy = this.snap(l.y - oy + Math.sin(l.bob * 2) * 0.8);
       if (sx < -10 || sy < -10 || sx > W + 10 || sy > H + 10) continue;
       const spr = l.kind === 2 ? S.goldchest : l.kind === 1 ? S.barrel : S.crate;
       if (l.life < 20 && (this.frame >> 3) % 2 === 0) continue;
@@ -197,22 +232,22 @@ export class Renderer {
       const sy = p.y - oy;
       if (sx < -10 || sy < -40 || sx > W + 10 || sy > H + 10) continue;
       ctx.fillStyle = 'rgba(6,20,36,0.45)';
-      ctx.fillRect(Math.round(sx), Math.round(sy), p.size, p.size);
+      ctx.fillRect(this.snap(sx), this.snap(sy), p.size, p.size);
       ctx.fillStyle = p.ammo === 'heated' ? '#ff7a2a' : p.foot ? '#d0d0d8' : p.ammo === 'chain' ? '#6a6a72' : '#202024';
       const s2 = p.lob ? 3 : p.size;
-      ctx.fillRect(Math.round(sx - s2 / 2), Math.round(sy - p.z - s2 / 2), s2, s2);
+      ctx.fillRect(this.snap(sx - s2 / 2), this.snap(sy - p.z - s2 / 2), s2, s2);
       if (p.ammo === 'heated' || p.lob) {
         ctx.fillStyle = p.lob ? '#ffd040' : '#ffd060';
-        ctx.fillRect(Math.round(sx), Math.round(sy - p.z - 1), 1, 1);
+        ctx.fillRect(this.snap(sx), this.snap(sy - p.z - 1), 1, 1);
       }
     }
-    g.particles.draw(ctx, ox, oy, W, H, 1);
+    g.particles.draw(ctx, ox, oy, W, H, 1, Sc);
     this.drawGulls(g, ox, oy);
     this.drawLighting(g, ox, oy);
     this.drawOverlays(g, ox, oy, t);
     this.drawWorldUI(g, ox, oy, t);
     if (this.frame % 300 === 0) pruneSprites(new Set(g.ships.map((s) => s.id)));
-    if (this.frame % 300 === 0) for (const k of this.comps.keys()) if (!g.ships.some((s) => s.id === k)) this.comps.delete(k);
+    if (this.frame % 300 === 0) for (const k of this.comps.keys()) if (!g.ships.some((s) => s.id === Math.abs(k))) this.comps.delete(k);
   }
 
   private circle(r: number, body: string, light: string, edge: string): HTMLCanvasElement {
@@ -246,8 +281,8 @@ export class Renderer {
     ctx.globalAlpha = m.dead ? Math.max(0, 1 - m.deathT / 5) * (1 - sub * 0.7) : 1 - sub * 0.72;
     for (let i = SEGMENTS - 1; i >= 1; i--) {
       const r = Math.round(m.segRadius(i));
-      const sx = Math.round(m.segs[i * 2] - ox);
-      const sy = Math.round(m.segs[i * 2 + 1] - oy);
+      const sx = this.snap(m.segs[i * 2] - ox);
+      const sy = this.snap(m.segs[i * 2 + 1] - oy);
       const spr = sub > 0.5 ? this.circle(r, '#0e2a30', '#123438', '#0a1e22') : hurt ? this.circle(r, '#ffffff', '#ffffff', '#c0c0c0') : this.circle(r, i % 2 ? '#2a6a44' : '#2f744a', '#4aa070', '#0e2018');
       ctx.drawImage(spr, sx - r, sy - r);
       if (sub < 0.5 && i % 2 === 0 && i < SEGMENTS - 2) {
@@ -257,14 +292,14 @@ export class Renderer {
     }
     const c = Math.cos(m.heading);
     const sn = Math.sin(m.heading);
-    ctx.setTransform(c, sn, -sn, c, Math.round(hx), Math.round(hy));
+    this.rot(hx, hy, c, sn);
     if (sub < 0.5) ctx.drawImage(this.serpentHead, -4, -4);
     else ctx.drawImage(this.circle(5, '#0e2a30', '#123438', '#0a1e22'), -5, -5);
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    this.base();
     ctx.globalAlpha = 1;
     if (!m.dead && sub < 0.5 && m.hp < m.maxHp) {
-      this.bar(Math.round(hx - 15), Math.round(hy - 16), 30, m.hp / m.maxHp, '#c060ff');
-      if (m.target) drawText(ctx, `${m.name} L${m.level}`, hx, hy - 24, 0xd8a0ff, true);
+      this.bar(this.snap(hx - 15), this.snap(hy - 16), 30, m.hp / m.maxHp, '#c060ff');
+      if (m.target) drawText(ctx, `${m.name} L${m.level}`, hx, hy - 24, 0xd8a0ff, true, this.scale);
     }
     void t;
   }
@@ -278,10 +313,10 @@ export class Renderer {
       const c = Math.cos(w.heading);
       const sn = Math.sin(w.heading);
       ctx.globalAlpha = a * 0.85;
-      ctx.setTransform(c, sn, -sn, c, Math.round(w.x - ox), Math.round(w.y - oy));
+      this.rot(w.x - ox, w.y - oy, c, sn);
       ctx.drawImage(this.whale, -9, -3);
     }
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    this.base();
     ctx.globalAlpha = 1;
     const wa = g.env.windAngle;
     const cx = Math.cos(wa);
@@ -290,7 +325,7 @@ export class Renderer {
     for (const s of A.streaks) {
       const f = s.life / s.max;
       ctx.globalAlpha = Math.sin(f * Math.PI) * 0.22;
-      for (let k = 0; k < s.len; k += 1) ctx.fillRect(Math.round(s.x - ox + cx * k), Math.round(s.y - oy + cy * k), 1, 1);
+      for (let k = 0; k < s.len; k += 1) ctx.fillRect(this.snap(s.x - ox + cx * k), this.snap(s.y - oy + cy * k), 1, 1);
     }
     ctx.globalAlpha = 1;
   }
@@ -298,8 +333,8 @@ export class Renderer {
   private drawGulls(g: Game, ox: number, oy: number): void {
     const ctx = this.ctx;
     for (const gl of g.ambient.gulls) {
-      const sx = Math.round(gl.x - ox);
-      const sy = Math.round(gl.y - oy);
+      const sx = this.snap(gl.x - ox);
+      const sy = this.snap(gl.y - oy);
       if (sx < -10 || sy < -20 || sx > this.w + 10 || sy > this.h + 20) continue;
       ctx.fillStyle = 'rgba(6,20,36,0.3)';
       ctx.fillRect(sx + 1, sy + 14, 3, 1);
@@ -342,7 +377,7 @@ export class Renderer {
         const fr = Math.min(3, Math.floor((f / 0.4) * 4));
         const spr = S.glint[fr === 3 ? 0 : fr];
         ctx.globalAlpha = tt === T_SHALLOW ? 0.45 : 0.7;
-        ctx.drawImage(spr, Math.round(wx - ox), Math.round(wy - oy));
+        ctx.drawImage(spr, this.snap(wx - ox), this.snap(wy - oy));
       }
     }
     ctx.globalAlpha = 1;
@@ -353,8 +388,8 @@ export class Renderer {
     const S = sprites();
     const t = g.env.time;
     for (const p of pois) {
-      const sx = Math.round(p.x - ox);
-      const sy = Math.round(p.y - oy);
+      const sx = this.snap(p.x - ox);
+      const sy = this.snap(p.y - oy);
       if (sx < -30 || sy < -30 || sx > this.w + 30 || sy > this.h + 30) continue;
       if (p.kind === 'claim') {
         const own = g.profile.ownedIsland(p.island);
@@ -377,13 +412,13 @@ export class Renderer {
     }
     for (const it of g.profile.inv.items) {
       if (it.id !== 'treasure_map' || !it.data) continue;
-      const sx = Math.round(it.data.x - ox);
-      const sy = Math.round(it.data.y - oy);
+      const sx = this.snap(it.data.x - ox);
+      const sy = this.snap(it.data.y - oy);
       if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(S.xmark, sx - 3, sy - 3);
     }
     if (g.profile.waypoint) {
-      const sx = Math.round(g.profile.waypoint.x - ox);
-      const sy = Math.round(g.profile.waypoint.y - oy);
+      const sx = this.snap(g.profile.waypoint.x - ox);
+      const sy = this.snap(g.profile.waypoint.y - oy);
       if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(S.waypoint, sx - 2, sy - 7);
     }
   }
@@ -400,8 +435,8 @@ export class Renderer {
         this.structSprites.set(st, spr);
       }
       const o = offs[i % offs.length];
-      const sx = Math.round(x + o[0] - ox - spr.width / 2);
-      const sy = Math.round(y + o[1] - oy - spr.height / 2);
+      const sx = this.snap(Math.round(x + o[0] - spr.width / 2) - ox);
+      const sy = this.snap(Math.round(y + o[1] - spr.height / 2) - oy);
       ctx.drawImage(spr, sx, sy);
     });
   }
@@ -413,10 +448,10 @@ export class Renderer {
     const c = Math.cos(phi) * k;
     const sn = Math.sin(phi) * k;
     const ctx = this.ctx;
-    ctx.setTransform(c, sn, -sn, c, Math.round(s.x - ox + 2), Math.round(s.y - oy + 2));
+    this.rot(s.x - ox + 2, s.y - oy + 2, c, sn);
     ctx.globalAlpha = s.sinking >= 0 ? Math.max(0, 1 - s.sinking / 4) : 1;
     ctx.drawImage(sp.shadow, -sp.ox, -sp.oy);
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    this.base();
     ctx.globalAlpha = 1;
   }
 
@@ -442,15 +477,15 @@ export class Renderer {
     return c;
   }
 
-  private comp(s: Ship, w: number, h: number): Comp {
-    let c = this.comps.get(s.id);
+  private comp(key: number, w: number, h: number): Comp {
+    let c = this.comps.get(key);
     if (!c || c.canvas.width !== w || c.canvas.height !== h) {
       const canvas = document.createElement('canvas');
       canvas.width = w;
       canvas.height = h;
       c = { canvas, ctx: canvas.getContext('2d')! };
       c.ctx.imageSmoothingEnabled = false;
-      this.comps.set(s.id, c);
+      this.comps.set(key, c);
     }
     return c;
   }
@@ -459,37 +494,16 @@ export class Renderer {
     const sp = shipSprite(s);
     const cw = sp.canvas.width;
     const chh = sp.canvas.height;
-    const comp = this.comp(s, cw, chh);
-    const c = comp.ctx;
+    const hullC = this.comp(s.id, cw, chh);
+    const topC = this.comp(-s.id, cw, chh);
+    const c = hullC.ctx;
+    const u = topC.ctx;
     c.clearRect(0, 0, cw, chh);
+    u.clearRect(0, 0, cw, chh);
     c.drawImage(sp.canvas, 0, 0);
     const px0 = PAD + s.pivotX;
     const py0 = PAD + s.pivotY;
     const d = s.design;
-    const showCrew = this.scale >= 2;
-    if (showCrew) {
-      for (const cm of s.crew) c.drawImage(this.crewSprite(ROLE[cm.role]?.shirt ?? 0xd8d0c0), Math.round(px0 + cm.lx - 1), Math.round(py0 + cm.ly - 1));
-      if (s.isPlayer) {
-        let hx = 0, hy = s.halfLen - 6;
-        for (const i of s.cells) if (d.part[i] === 11) {
-          const [lx, ly] = s.cellLocal(i);
-          hx = lx;
-          hy = ly + 2;
-        }
-        if (!s.cells.some((i) => d.part[i] === 11)) {
-          let maxY = -999;
-          for (const i of s.cells) {
-            const [lx, ly] = s.cellLocal(i);
-            if (ly > maxY && !d.part[i]) {
-              maxY = ly;
-              hx = lx;
-              hy = ly;
-            }
-          }
-        }
-        if (g.mode !== 'foot') c.drawImage(this.crewSprite(0xb82a2a, true), Math.round(px0 + hx - 1), Math.round(py0 + hy - 1));
-      }
-    }
     const relWind = angleDiff(s.heading, g.env.windAngle);
     let trim = clamp(relWind * 0.45, -0.55, 0.55) + s.turnInput * 0.22;
     trim = clamp(trim, -0.65, 0.65);
@@ -515,24 +529,24 @@ export class Renderer {
           c.fillRect(rc + k - 1, my + Math.round((sh * k) / ext), 1, 1);
         }
       }
-      if (comp.sail && s.partHp[i] > 0) this.drawSail(c, comp.sail.style, comp.sail.span, mx, my, s.sail, slope, sailCol, s.partHp[i] / comp.hp, i, s.faction === 'ghost');
+      if (comp.sail && s.partHp[i] > 0) this.drawSail(u, comp.sail.style, comp.sail.span, mx, my, s.sail, slope, sailCol, s.partHp[i] / comp.hp, i, s.faction === 'ghost');
       if (comp.key === 'crows_nest') {
-        c.fillStyle = '#3a2414';
-        c.fillRect(mx - 2, my - 3, 5, 1);
-        c.fillRect(mx - 2, my + 1, 5, 1);
-        c.fillRect(mx - 3, my - 2, 1, 3);
-        c.fillRect(mx + 3, my - 2, 1, 3);
-        c.fillStyle = '#7a5232';
-        c.fillRect(mx - 2, my - 2, 5, 3);
-        c.fillStyle = '#3a2414';
-        c.fillRect(mx, my - 1, 1, 1);
+        u.fillStyle = '#3a2414';
+        u.fillRect(mx - 2, my - 3, 5, 1);
+        u.fillRect(mx - 2, my + 1, 5, 1);
+        u.fillRect(mx - 3, my - 2, 1, 3);
+        u.fillRect(mx + 3, my - 2, 1, 3);
+        u.fillStyle = '#7a5232';
+        u.fillRect(mx - 2, my - 2, 5, 3);
+        u.fillStyle = '#3a2414';
+        u.fillRect(mx, my - 1, 1, 1);
       }
       if (s.fire[i] > 0) {
         const fl = (t * 12 + i) | 0;
-        c.fillStyle = fl % 2 ? '#ffc040' : '#ff6a20';
-        c.fillRect(mx - 2 + (fl % 3), my - 1, 2, 2);
-        c.fillStyle = '#fff4a0';
-        c.fillRect(mx - 1 + ((fl >> 1) % 3), my - 2, 1, 1);
+        u.fillStyle = fl % 2 ? '#ffc040' : '#ff6a20';
+        u.fillRect(mx - 2 + (fl % 3), my - 1, 2, 2);
+        u.fillStyle = '#fff4a0';
+        u.fillRect(mx - 1 + ((fl >> 1) % 3), my - 2, 1, 1);
       }
     }
     let flagCell = -1;
@@ -546,12 +560,8 @@ export class Renderer {
       const fy = Math.round(py0 + ly);
       const wave = (t * 8) | 0;
       const dir = relWind > 0 ? -1 : 1;
-      c.fillStyle = FLAG_COL[s.faction] ?? '#141414';
-      for (let k = 1; k <= 3; k++) c.fillRect(fx + dir * k, fy + 2 + ((wave + k) % 2), 1, 2);
-      if (s.surrendered) {
-        c.fillStyle = '#ffffff';
-        for (let k = 1; k <= 3; k++) c.fillRect(fx + dir * k, fy + 2 + ((wave + k) % 2), 1, 2);
-      }
+      u.fillStyle = s.surrendered ? '#ffffff' : FLAG_COL[s.faction] ?? '#141414';
+      for (let k = 1; k <= 3; k++) u.fillRect(fx + dir * k, fy + 2 + ((wave + k) % 2), 1, 2);
     }
     const phi = s.heading + Math.PI / 2;
     let k = 1;
@@ -563,10 +573,37 @@ export class Renderer {
     const ctx = this.ctx;
     const cs = Math.cos(phi) * k;
     const sn = Math.sin(phi) * k;
-    ctx.setTransform(cs, sn, -sn, cs, Math.round(s.x - ox), Math.round(s.y - oy));
+    this.rot(s.x - ox, s.y - oy, cs, sn);
     ctx.globalAlpha = alpha * (s.faction === 'ghost' ? 0.82 : 1);
-    ctx.drawImage(comp.canvas, -sp.ox, -sp.oy);
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(hullC.canvas, -sp.ox, -sp.oy);
+    if (this.artScale >= 2) {
+      for (const cm of s.crew) ctx.drawImage(this.crewSprite(ROLE[cm.role]?.shirt ?? 0xd8d0c0), cm.lx - 1.5, cm.ly - 1.5);
+      if (s.isPlayer && g.mode !== 'foot') {
+        let hx = 0;
+        let hy = s.halfLen - 6;
+        let helm = false;
+        for (const i of s.cells) if (d.part[i] === 11) {
+          const [lx, ly] = s.cellLocal(i);
+          hx = lx;
+          hy = ly + 2;
+          helm = true;
+        }
+        if (!helm) {
+          let maxY = -999;
+          for (const i of s.cells) {
+            const [lx, ly] = s.cellLocal(i);
+            if (ly > maxY && !d.part[i]) {
+              maxY = ly;
+              hx = lx;
+              hy = ly;
+            }
+          }
+        }
+        ctx.drawImage(this.crewSprite(0xb82a2a, true), hx - 1.5, hy - 1.5);
+      }
+    }
+    ctx.drawImage(topC.canvas, -sp.ox, -sp.oy);
+    this.base();
     ctx.globalAlpha = 1;
     if (s.faction === 'ghost' && Math.random() < 0.3) g.particles.ghost(s.x + (Math.random() - 0.5) * s.halfWid * 2, s.y + (Math.random() - 0.5) * s.halfLen * 2);
   }
@@ -631,8 +668,8 @@ export class Renderer {
   private drawAvatar(g: Game, x: number, y: number): void {
     const a = g.avatar!;
     const ctx = this.ctx;
-    const sx = Math.round(x);
-    const sy = Math.round(y);
+    const sx = this.snap(x);
+    const sy = this.snap(y);
     const step = a.moving ? Math.floor(a.walk) % 2 : 0;
     const hurt = a.hurt > 0 && ((this.frame >> 2) & 1);
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
@@ -669,7 +706,7 @@ export class Renderer {
       const r1 = ranged ? 8 : 10;
       for (let r = r0; r <= r1; r++) {
         const sw = ranged ? 0 : (a.swing / 0.25 - 0.5) * 1.6;
-        ctx.fillRect(Math.round(sx + Math.cos(ang + sw) * r), Math.round(sy - 5 + Math.sin(ang + sw) * r), 1, 1);
+        ctx.fillRect(this.snap(sx + Math.cos(ang + sw) * r), this.snap(sy - 5 + Math.sin(ang + sw) * r), 1, 1);
       }
     }
     if (a.dig > 0) {
@@ -685,8 +722,8 @@ export class Renderer {
 
   private drawMob(kind: string, x: number, y: number, anim: number, hurt: boolean, hpF: number): void {
     const ctx = this.ctx;
-    const sx = Math.round(x);
-    const sy = Math.round(y);
+    const sx = this.snap(x);
+    const sy = this.snap(y);
     if (sx < -10 || sy < -14 || sx > this.w + 10 || sy > this.h + 10) return;
     const step = Math.floor(anim * 6) % 2;
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
@@ -853,7 +890,7 @@ export class Renderer {
       const sy = L.dockY1 - oy - 14;
       if (sx < -60 || sy < -10 || sx > W + 60 || sy > H + 10) continue;
       const col = isl.port.faction === 0 ? 0x9ad0ff : isl.port.faction === 2 ? 0xff8a7a : 0xb8f0a0;
-      drawText(ctx, isl.port.name, sx, sy, col, true);
+      drawText(ctx, isl.port.name, sx, sy, col, true, this.scale);
     }
     for (const s of g.ships) {
       if (s.isPlayer || s.sinking >= 0) continue;
@@ -867,22 +904,22 @@ export class Renderer {
       if (hostile || recent || near || integ < 0.99) {
         const col = FACTION_COL[s.faction] ?? 0xffffff;
         const label = `${s.boss ? '! ' : ''}${s.name} L${s.level}`;
-        if (near || recent || s.boss) drawText(ctx, label, sx, sy - 6, col, true);
+        if (near || recent || s.boss) drawText(ctx, label, sx, sy - 6, col, true, this.scale);
         const bw = Math.max(16, Math.min(40, s.radius * 1.4));
-        this.bar(Math.round(sx - bw / 2), Math.round(sy), Math.round(bw), (integ - 0.22) / 0.78, hostile ? '#ff5a4a' : '#7ad86a');
-        if (s.surrendered) drawText(ctx, 'SURRENDERED', sx, sy - 12, 0xffffff, true);
+        this.bar(this.snap(sx - bw / 2), this.snap(sy), Math.round(bw), (integ - 0.22) / 0.78, hostile ? '#ff5a4a' : '#7ad86a');
+        if (s.surrendered) drawText(ctx, 'SURRENDERED', sx, sy - 12, 0xffffff, true, this.scale);
       }
     }
     for (const tx of g.texts) {
       const a = Math.min(1, tx.life / tx.max * 2);
       ctx.globalAlpha = a;
-      drawText(ctx, tx.text, tx.x - ox, tx.y - oy, tx.color, true);
+      drawText(ctx, tx.text, tx.x - ox, tx.y - oy, tx.color, true, this.scale);
     }
     ctx.globalAlpha = 1;
     if (g.mode === 'sail' && !g.uiOpen && !g.docked && g.player.guns.length) {
       const s = g.player;
-      const mx = Math.round(g.mouseWX - ox);
-      const my = Math.round(g.mouseWY - oy);
+      const mx = this.snap(g.mouseWX - ox);
+      const my = this.snap(g.mouseWY - oy);
       let bears = false;
       let ready = false;
       for (const ci of s.guns) {
@@ -911,7 +948,7 @@ export class Renderer {
         const dx = mx - sx;
         const dy = my - sy;
         const d = Math.hypot(dx, dy);
-        for (let k = 12; k < d - 6; k += 6) ctx.fillRect(Math.round(sx + (dx / d) * k), Math.round(sy + (dy / d) * k), 1, 1);
+        for (let k = 12; k < d - 6; k += 6) ctx.fillRect(this.snap(sx + (dx / d) * k), this.snap(sy + (dy / d) * k), 1, 1);
         ctx.globalAlpha = 1;
       }
     }
@@ -939,16 +976,16 @@ export class Renderer {
       const r = Math.min(W, H) / 2 - 14;
       const ex = Math.round(cx + Math.cos(ang) * Math.min(W / 2 - 12, r * 1.6) * 0.98);
       const ey = Math.round(cy + Math.sin(ang) * r);
-      const px = clamp(ex, 10, W - 10);
-      const py = clamp(ey, 10, H - 10);
+      const px = this.snap(clamp(ex, 10, W - 10));
+      const py = this.snap(clamp(ey, 10, H - 10));
       ctx.fillStyle = '#140e0a';
       ctx.fillRect(px - 2, py - 2, 5, 5);
       ctx.fillStyle = '#' + a.col.toString(16).padStart(6, '0');
       ctx.fillRect(px - 1, py - 1, 3, 3);
-      ctx.fillRect(Math.round(px + Math.cos(ang) * 4), Math.round(py + Math.sin(ang) * 4), 1, 1);
-      ctx.fillRect(Math.round(px + Math.cos(ang) * 3), Math.round(py + Math.sin(ang) * 3), 1, 1);
+      ctx.fillRect(this.snap(px + Math.cos(ang) * 4), this.snap(py + Math.sin(ang) * 4), 1, 1);
+      ctx.fillRect(this.snap(px + Math.cos(ang) * 3), this.snap(py + Math.sin(ang) * 3), 1, 1);
       const miles = Math.hypot(a.x - f.x, a.y - f.y) / 512;
-      drawText(ctx, `${a.label} ${miles < 10 ? miles.toFixed(1) : Math.round(miles)}MI`, px, py + 5, a.col, true);
+      drawText(ctx, `${a.label} ${miles < 10 ? miles.toFixed(1) : Math.round(miles)}MI`, px, py + 5, a.col, true, this.scale);
     }
   }
 }

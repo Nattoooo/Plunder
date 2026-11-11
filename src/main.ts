@@ -17,6 +17,23 @@ const game = new Game();
 const input = new Input(canvas);
 const ui = new UI(game);
 
+const QUALITY: Record<string, number> = { full: 1, balanced: 0.75, performance: 0.5 };
+
+function targetQuality(): number {
+  const q = game.profile.settings.quality;
+  if (QUALITY[q]) return QUALITY[q];
+  const dpr = window.devicePixelRatio || 1;
+  return Renderer.autoQualityFor(window.innerWidth * dpr * window.innerHeight * dpr);
+}
+
+let autoCap = 1;
+
+function applyRender(): void {
+  const auto = !QUALITY[game.profile.settings.quality];
+  renderer.autoQuality = auto;
+  renderer.resize(game.cam.zoom, auto ? Math.min(autoCap, targetQuality()) : targetQuality());
+}
+
 function applySettings(): void {
   const s = game.profile.settings;
   audio.volumes.master = s.master;
@@ -25,6 +42,7 @@ function applySettings(): void {
   audio.volumes.ambience = s.ambience;
   audio.applyVolumes();
   game.particles.quality = 0.3 + s.particles * 0.7;
+  applyRender();
 }
 
 function preview(): void {
@@ -64,7 +82,6 @@ ui.onStart = (name, cont) => {
     save();
   }
   game.cam.zoom = game.profile.settings.zoom;
-  renderer.resize(game.cam.zoom);
   applySettings();
 };
 
@@ -82,7 +99,7 @@ game.on('mode', (m) => {
 });
 game.env.onThunder = () => audio.ui('thunder');
 
-window.addEventListener('resize', () => renderer.resize(game.cam.zoom));
+window.addEventListener('resize', () => applyRender());
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) save();
 });
@@ -95,6 +112,9 @@ ui.showTitle();
 applySettings();
 
 let last = performance.now();
+const dts: number[] = [];
+let slowChecks = 0;
+let perfT = 0;
 let fpsFrames = 0;
 let fpsT = 0;
 let hudT = 0;
@@ -106,6 +126,26 @@ function frame(now: number): void {
   last = now;
   if (dt > 0.1) dt = 0.1;
   if (dt <= 0) dt = 0.0001;
+  if (!document.hidden) {
+    dts.push(dt);
+    if (dts.length > 180) dts.shift();
+  }
+  perfT += dt;
+  if (perfT > 2 && dts.length >= 120) {
+    perfT = 0;
+    const sorted = [...dts].sort((a, b) => a - b);
+    const fast = sorted[Math.floor(sorted.length * 0.1)];
+    const median = sorted[Math.floor(sorted.length * 0.5)];
+    const struggling = median > 1 / 50 || (median > fast * 1.45 && median > 1 / 100);
+    slowChecks = struggling ? slowChecks + 1 : 0;
+    if (renderer.autoQuality && slowChecks >= 2 && renderer.quality > 0.5) {
+      autoCap = renderer.quality > 0.75 ? 0.75 : 0.5;
+      applyRender();
+      dts.length = 0;
+      slowChecks = 0;
+      if (game.mode !== 'title') game.toast('Lowered render resolution to keep things smooth (Settings → Render quality).', '#a8e0ff');
+    }
+  }
   fpsFrames++;
   fpsT += dt;
   if (fpsT >= 0.5) {
@@ -119,7 +159,7 @@ function frame(now: number): void {
     if (z !== game.cam.zoom) {
       game.cam.zoom = z;
       game.profile.settings.zoom = z;
-      renderer.resize(z);
+      renderer.resize(z, renderer.quality);
     }
   }
   input.blocked = game.uiOpen;

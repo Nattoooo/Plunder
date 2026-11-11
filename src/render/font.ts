@@ -44,11 +44,11 @@ export function textWidth(s: string): number {
   return s.length * 4 + 1;
 }
 
-export function drawText(ctx: CanvasRenderingContext2D, s: string, x: number, y: number, color = 0xffffff, center = false): void {
+export function drawText(ctx: CanvasRenderingContext2D, s: string, x: number, y: number, color = 0xffffff, center = false, k = 1): void {
   const a = atlas(color);
   const str = s.toUpperCase();
-  let px = Math.round(center ? x - textWidth(str) / 2 : x);
-  const py = Math.round(y);
+  let px = Math.round((center ? x - textWidth(str) / 2 : x) * k) / k;
+  const py = Math.round(y * k) / k;
   for (let i = 0; i < str.length; i++) {
     const gi = IDX[str[i]];
     if (gi !== undefined && str[i] !== ' ') ctx.drawImage(a, gi * GW, 0, GW, GH, px - 1, py - 1, GW, GH);

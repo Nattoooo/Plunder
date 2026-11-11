@@ -240,7 +240,16 @@ export class UI {
       });
       return h('div', { cls: 'spread' }, h('span', {}, label), inp);
     };
-    const body = h('div', { cls: 'pbody fight' }, slider('Master volume', 'master'), slider('Music', 'music'), slider('Sound effects', 'sfx'), slider('Ambience', 'ambience'), slider('Particle detail', 'particles'), check('Screen shake', 'screenShake'), check('Show FPS (F3)', 'showFps'));
+    const qSel = h('select', {}, [['auto', 'Auto (adapts to your GPU)'], ['full', 'Full resolution'], ['balanced', 'Balanced (75%)'], ['performance', 'Performance (50%)']].map(([v, n]) => {
+      const o = h('option', { value: v }, n);
+      if (s.quality === v) o.setAttribute('selected', '');
+      return o;
+    })) as HTMLSelectElement;
+    qSel.addEventListener('change', () => {
+      s.quality = qSel.value;
+      this.onSettings?.();
+    });
+    const body = h('div', { cls: 'pbody fight' }, h('div', { cls: 'spread' }, h('span', {}, 'Render quality'), qSel), slider('Master volume', 'master'), slider('Music', 'music'), slider('Sound effects', 'sfx'), slider('Ambience', 'ambience'), slider('Particle detail', 'particles'), check('Screen shake', 'screenShake'), check('Show FPS (F3)', 'showFps'));
     const el = this.panel('Settings', 'Saved with your game', body, 'narrow');
     if (this.titleEl) {
       const wrap = h('div', { id: 'modal', style: 'z-index:5' }, el);
