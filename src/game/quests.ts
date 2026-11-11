@@ -65,7 +65,7 @@ export function bountyBoard(isl: Island, day: number): Quest[] {
       if (!dest) continue;
       const goods = ITEMS.filter((it) => it.cat === 'trade' || it.cat === 'supply' || it.cat === 'material');
       const item = rng.pick(goods);
-      const qty = Math.max(5, Math.round((rng.int(8, 25) * 30) / Math.max(8, item.price)));
+      const qty = Math.max(3, Math.min(Math.round((rng.int(8, 25) * 30) / Math.max(8, item.price)), Math.floor((18 + lvl * 6) / Math.max(0.5, item.weight))));
       const dist = Math.hypot(dest.x - isl.x, dest.y - isl.y);
       out.push({
         ...base,

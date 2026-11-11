@@ -33,6 +33,7 @@ export type Mode = 'title' | 'sail' | 'foot' | 'dead';
 
 export interface FloatLoot {
   id: number;
+  delay: number;
   x: number;
   y: number;
   vx: number;
@@ -305,7 +306,7 @@ export class Game implements ShipWorld, AIWorld {
   }
 
   dropLoot(x: number, y: number, gold: number, items: LootDrop[], kind = 0): void {
-    this.loot.push({ id: this.lootId++, x, y, vx: (Math.random() - 0.5) * 10, vy: (Math.random() - 0.5) * 10, life: 240, gold, items, kind, bob: Math.random() * 6 });
+    this.loot.push({ id: this.lootId++, delay: 0, x, y, vx: (Math.random() - 0.5) * 10, vy: (Math.random() - 0.5) * 10, life: 240, gold, items, kind, bob: Math.random() * 6 });
   }
 
   luck(): number {
@@ -407,6 +408,38 @@ export class Game implements ShipWorld, AIWorld {
     );
     const combat = this.env.time - ship.lastCombat < 12;
     audio.music?.play(this.docked ? 'port' : combat ? 'battle' : this.env.night ? 'night' : 'sea');
+  }
+
+  titleTick(dt: number): void {
+    this.env.update(dt, this.cam.x, this.cam.y);
+    for (const s of this.ships) {
+      if (s.isPlayer) continue;
+      if (s.ai) updateAI(s.ai as AIState, s, this, dt);
+      s.update(dt, this);
+      this.emitWake(s, dt);
+    }
+    this.ambient.update(dt, this.cam.x, this.cam.y, this.view.w, this.view.h, true, this.env.windAngle, this.env.windStrength, (x, y) => this.typeAt(x, y), this.particles);
+    this.particles.update(dt);
+  }
+
+  spawnTitleFleet(): void {
+    const isl = getIsland(START_ISLAND_ID)!;
+    const L = portLayout(isl)!;
+    const picks = ['merchant_sloop', 'navy_cutter', 'merchant_galleon', 'merchant_sloop'];
+    picks.forEach((id, i) => {
+      const t = TEMPLATES.find((x) => x.id === id)!;
+      const d = 220 + i * 160;
+      const side = i % 2 ? 1 : -1;
+      const x = L.berthX + L.dirX * d - L.dirY * side * (120 + i * 40);
+      const y = L.berthY + L.dirY * d + L.dirX * side * (120 + i * 40);
+      if (!this.openWater(x, y, 60)) return;
+      const e = this.spawnShip(t, 2, x, y);
+      e.heading = Math.atan2(L.dirX * side, -L.dirY * side);
+      const ai = e.ai as AIState;
+      ai.homeX = L.berthX + L.dirX * 500;
+      ai.homeY = L.berthY + L.dirY * 500;
+      e.sailTarget = 0.8;
+    });
   }
 
   private controlShip(dt: number, input: Input): void {
@@ -1824,7 +1857,8 @@ export class Game implements ShipWorld, AIWorld {
         this.loot.splice(i, 1);
         continue;
       }
-      if (this.mode === 'sail' && s.sinking < 0) {
+      if (l.delay > 0) l.delay -= dt;
+      else if (this.mode === 'sail' && s.sinking < 0) {
         const r = s.radius + 8;
         if (dist2(l.x, l.y, s.x, s.y) < r * r) {
           const left = this.addItems(l.items, l.gold, l.x, l.y, 'Picked up');
@@ -1890,8 +1924,27 @@ export class Game implements ShipWorld, AIWorld {
     }
   }
 
+  private stormT = 3;
+
   private updateWeatherFx(dt: number): void {
     const v = this.view;
+    const s = this.player;
+    if (this.env.storm > 0.55 && this.mode !== 'title' && !this.docked && s.sinking < 0) {
+      this.stormT -= dt;
+      if (this.stormT <= 0) {
+        this.stormT = 2.5 + Math.random() * 3;
+        const resist = Math.min(0.9, s.stormResist + (this.profile.crew.some((c) => c.traits.includes('sea_legs')) ? 0.15 : 0));
+        const ci = s.cells[(Math.random() * s.cells.length) | 0];
+        const dmg = (3 + this.env.storm * 5) * (1 - resist);
+        if (dmg > 0.5) {
+          s.damageCell(ci, dmg, 'round', this, null);
+          const [lx, ly] = s.cellLocal(ci);
+          const p = s.toWorld(lx, ly, tmpP);
+          this.particles.splash(p[0], p[1], 6);
+          this.sound('splash', p[0], p[1], 0.6);
+        }
+      }
+    }
     if (this.env.rain > 0.05) {
       const n = this.env.rain * 160 * dt * this.particles.quality * (v.w * v.h) / (480 * 270);
       let k = Math.floor(n) + (Math.random() < n % 1 ? 1 : 0);

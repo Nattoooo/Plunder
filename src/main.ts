@@ -38,8 +38,9 @@ function preview(): void {
   game.profile.heading = Math.atan2(L.dirY, L.dirX);
   game.loadWorld();
   game.mode = 'title';
-  game.cam.x = isl.x - 140;
-  game.cam.y = isl.y;
+  game.cam.x = L.berthX + L.dirX * 150;
+  game.cam.y = L.berthY + L.dirY * 150;
+  game.spawnTitleFleet();
 }
 
 function save(): void {
@@ -123,10 +124,9 @@ function frame(now: number): void {
   }
   input.blocked = game.uiOpen;
   if (game.mode === 'title') {
-    game.env.update(dt, game.cam.x, game.cam.y);
-    game.cam.x += dt * 9;
-    game.cam.y += Math.sin(now / 9000) * dt * 4;
-    game.particles.update(dt);
+    game.cam.x += Math.cos(now / 20000) * dt * 7;
+    game.cam.y += Math.sin(now / 14000) * dt * 5;
+    game.titleTick(dt);
   } else {
     const modal = ui.modal?.dataset.name;
     const paused = (game.uiOpen && modal !== 'port') || ui.mapOpen;

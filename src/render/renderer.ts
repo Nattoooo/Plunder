@@ -322,10 +322,11 @@ export class Renderer {
     const gx1 = Math.floor((ox + this.w) / G);
     const gy1 = Math.floor((oy + this.h) / G);
     const quality = g.particles.quality;
+    const rough = g.env.windStrength > 1.15 || g.env.storm > 0.3;
     for (let gx = gx0; gx <= gx1; gx++) {
       for (let gy = gy0; gy <= gy1; gy++) {
         const h = hash2(gx, gy, 77);
-        if ((h & 3) !== 0) continue;
+        if ((h & 3) !== 0 && !(rough && (h & 3) === 1)) continue;
         if (quality < 0.6 && (h & 4)) continue;
         const ph = ((h >>> 3) & 255) / 255;
         const f = (t / 3.2 + ph) % 1;

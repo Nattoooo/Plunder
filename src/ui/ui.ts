@@ -676,7 +676,11 @@ export class UI {
       actions.append(h('button', { cls: 'danger', onclick: () => {
         if (it.qty > 1 && !confirm(`Throw ${it.qty} ${d.name} overboard?`)) return;
         p.inv.removeEntry(it);
-        if (g.mode === 'sail') g.dropLoot(g.player.x - Math.cos(g.player.heading) * 20, g.player.y - Math.sin(g.player.heading) * 20, 0, [{ id: it.id, qty: it.qty, data: it.data }], 0);
+        if (g.mode === 'sail') {
+          const back = g.player.radius + 26;
+          g.dropLoot(g.player.x - Math.cos(g.player.heading) * back, g.player.y - Math.sin(g.player.heading) * back, 0, [{ id: it.id, qty: it.qty, data: it.data }], 0);
+          g.loot[g.loot.length - 1].delay = 6;
+        }
         g.syncCargo();
         this.openHold();
       } }, 'Drop'));
@@ -970,7 +974,13 @@ export class UI {
       status,
       result
     );
-    this.open('boarding', this.panel('Boarding Action!', `${res.enemy.captain} of the ${res.enemy.name}`, body, 'narrow', false), undefined, true);
+    let claimed = false;
+    this.open('boarding', this.panel('Boarding Action!', `${res.enemy.captain} of the ${res.enemy.name}`, body, 'narrow', false), () => {
+      if (res.win && !claimed) {
+        claimed = true;
+        g.claimLoot(res, []);
+      }
+    }, true);
     let i = 0;
     const lines = ['Steel rings across the deck!', 'Pistols crack in the smoke!', 'Your crew surges forward!', 'They fight like devils!', 'Cutlasses flash!', 'Bodies hit the water!'];
     const step = () => {
@@ -1001,6 +1011,7 @@ export class UI {
             return h('label', { cls: 'flex' }, cb, `${c.name} — ${ROLE[c.role].name} Lv ${c.level} (${c.wage}g/day)`);
           })) : '',
           h('button', { cls: 'primary mt', onclick: () => {
+            claimed = true;
             g.claimLoot(res, [...picks]);
             this.close();
           } }, 'Claim the plunder and scuttle her')
