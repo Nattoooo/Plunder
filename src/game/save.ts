@@ -2,6 +2,9 @@ import { Profile, Inventory } from './player';
 import { setNextCrewId } from './crew';
 import { KEELS } from '../data/components';
 import { resizeDesign } from './design';
+import { ITEM } from '../data/items';
+import { ROLE } from '../data/crew';
+import { COMPONENTS } from '../data/components';
 
 const KEY = 'plunder.save.v1';
 
@@ -81,7 +84,11 @@ export function loadGame(): { profile: Profile; seen: Set<number> } | null {
     p.settings = { ...new Profile().settings, ...(d.settings ?? {}) };
     p.stats = { ...new Profile().stats, ...(d.stats ?? {}) };
     p.inv = new Inventory();
-    p.inv.items = d.inv ?? [];
+    p.inv.items = (d.inv ?? []).filter((i: { id: string; qty: number }) => ITEM[i.id] && i.qty > 0);
+    p.crew = (p.crew ?? []).filter((c) => ROLE[c.role]);
+    for (const slot of ['weapon', 'armor', 'hat'] as const) if (p[slot] && !ITEM[p[slot]!]) p[slot] = null;
+    for (let i = 0; i < p.design.part.length; i++) if (!COMPONENTS[p.design.part[i]]) p.design.part[i] = 0;
+    for (let i = 0; i < p.design.hull.length; i++) if (!COMPONENTS[p.design.hull[i]]) p.design.hull[i] = 0;
     p.discovered = unrle(d.discovered ?? '', 500 * 500);
     let maxId = 0;
     for (const c of p.crew) {

@@ -12,7 +12,7 @@
   --blue: #8ac8ff;
   --parch: #e8d4a0;
   --ink: #3a2414;
-  --fs: clamp(12px, 1.3vh, 19px);
+  --fs: clamp(12px, 1.45vh, 22px);
   --px: calc(var(--fs) / 6);
 }
 
