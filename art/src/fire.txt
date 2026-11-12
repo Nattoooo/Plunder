@@ -1,0 +1,11 @@
+# Small flames burning on the deck. Effects take no outline. Orange q is the
+# outer flame, bright Q the tip and core. The base row is full width, so the fire
+# sits on the deck. fire-2 flickers: the tongue leans left, the core stays put.
+== fire-1
+.Q.
+qQq
+qqq
+== fire-2
+Q..
+qQq
+qqq

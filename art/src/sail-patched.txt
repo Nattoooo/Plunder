@@ -1,0 +1,18 @@
+# Small patched sail on the starter raft, seen from above with the bow up.
+# The yard (w) is the bottom row; the cloth bellies up over it. Light top-left:
+# p highlight on the left, C base, c shadow on the right and near the yard.
+# The patch is a 2x2 block of c, left of centre. Half-reefed and furled rows are
+# the cloth rolled up onto the yard, so the patch is hidden there.
+== sail-patched-full
+..pCCCc..
+.pCCCCCc.
+pCCccCCCc
+CCCccCCcc
+wwwwwwwww
+== sail-patched-half
+.pCCCCCc.
+pCCCCCCCc
+wwwwwwwww
+== sail-patched-furled
+pCCCCCCCc
+wwwwwwwww

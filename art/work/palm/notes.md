@@ -1,4 +1,1 @@
-# palm (19x20, flexible, unchanged)
-- Crown: flat canopy of drooping fronds (swap-colour foliage H h G g only), light top-left, G shading under fronds and in the gaps between them.
-- Coconuts: small dark-brown (J) cluster hanging under the crown centre, outlined by the crown's k.
-- Trunk: wood ramp v/w with k outline, leans right going up in even 3-row steps, widening into a root flare on the bottom row at the base.
+Palm (19x20): five-lobed crown with scalloped top edge and gaps in the underside so fronds droop to different depths (round 1 critique: no more dome). Crown is mirror-symmetric about x=9. h/H/G are the swap foliage chars only. Three coconuts (J) hang under the centre. Trunk is an S-curve (v left, w right), root flare at the base; trunk base centred near x=8, one px left of centre, deliberate lean.

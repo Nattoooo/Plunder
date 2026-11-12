@@ -37,13 +37,13 @@ kkkk
 .kuk.kuuk.kuk.
 .kTk.kuTk.kTk.
 kkkkkkkkkkkkkk
-uuutuuuuuutuuu
-TTTkkWwwWkkTTT
+uuuuukkkkuuuuu
+TTTTkWwwWkTTTT
 TTTkWWwwWWkTTT
-ttkMMMMMMMMkTt
-uukWWwwWWkuuuu
-TtkWWwwWWkTTtT
-TtkWWwwWWkTtTT
+tttkMMMMMMkttt
+uuukWWwwWWkuuu
+TTTkWWwwWWkTTT
+TTTkWWwwWWkTTT
 kkkkkkkkkkkkkk
 == fort-wall-side
 kuTTtk
@@ -73,9 +73,9 @@ kVk...
 kkk...
 == fort-crates
 ..kkkk..
-..kVVk..
-..kWWk..
+..kVWk..
+..kwwk..
 kkkkkkkk
-kVVkVVVk
-kWWkWWWk
+kVWkVVWk
+kwwkwwwk
 kkkkkkkk

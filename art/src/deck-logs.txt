@@ -1,9 +1,9 @@
-# Raft logs: four logs run fore-aft (bow up), each lit on its left flank (V), base v, shaded on its right flank (W).
-# The dark W seam between logs is the shadow of the log to its left, so every seam reads as a gap between round logs.
-# A rope lashing (D f, rope ramp) crosses all logs on row 2. No outline (tiling tile). Wood ramp only, 3 tones.
+# Raft logs: each log is 3 px across, fore-aft (bow up), a cylinder lit from the left: highlight V, base v, shadow W on its right flank.
+# The 2 px W gap between logs (W at col 4 plus W at col 0 of the next tile) is the dark space between round logs.
+# A rope lashing (D f, rope ramp) crosses all logs on row 2 and ties them together. No outline (tiling tile). Wood ramp only, 3 tones.
 == deck-logs
-WVvvW
-WVvvW
+WVvWW
+WVvWW
 DfffD
-WVvvW
-WVvvW
+WVvWW
+WVvWW

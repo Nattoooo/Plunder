@@ -1,0 +1,9 @@
+# Swivel gun: a small thin barrel on a yoke, set on a short post.
+== swivel-gun
+.kkk.
+.kNk.
+.kNk.
+.kNk.
+kKKKk
+kMnMk
+.kkk.

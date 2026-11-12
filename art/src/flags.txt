@@ -1,0 +1,17 @@
+# Flags on a short dark wooden pole (w, left column), flying right.
+# The pennant is R only, so the game can recolour it; it is one tone on purpose.
+# The pirate flag is K with k on its bottom edge for the shade.
+# The -2 frame flips the free edge (tail top <-> bottom): the same flag mid-ripple.
+# No outline: 2 px tall, the same call as grass-tuft and flowers.
+== flag-1
+wRRR
+wRR.
+== flag-2
+wRR.
+wRRR
+== pirate-flag-1
+wKKK
+wkk.
+== pirate-flag-2
+wKK.
+wkkk

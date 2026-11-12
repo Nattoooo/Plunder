@@ -16,3 +16,9 @@ Families the critic has passed. Match their style.
 - house-shutters (buildings) — round 2
 - pine (nature) — round 2
 - house-long (buildings) — round 1
+- shrine (props) — round 1
+- bows (ship) — round 1
+- sparkle (effects) — round 1
+- glint (effects) — round 1
+- muzzle-flash (effects) — round 1
+- cutlass-swing (effects) — round 1

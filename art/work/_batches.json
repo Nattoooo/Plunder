@@ -9,8 +9,8 @@
    "sea-serpent"
   ],
   "tier": "normal",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "reviewing"
  },
  "nature-small": {
   "families": [
@@ -31,8 +31,8 @@
    "whale"
   ],
   "tier": "normal",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "reviewing"
  },
  "houses": {
   "families": [
@@ -40,16 +40,16 @@
    "house-townhouse"
   ],
   "tier": "normal",
-  "round": 1,
-  "status": "revising"
+  "round": 2,
+  "status": "reviewing"
  },
  "fort": {
   "families": [
    "fort"
   ],
   "tier": "normal",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "reviewing"
  },
  "island-1": {
   "families": [
@@ -71,8 +71,8 @@
    "tavern"
   ],
   "tier": "normal",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "reviewing"
  },
  "props-small": {
   "families": [
@@ -97,8 +97,8 @@
    "shrine"
   ],
   "tier": "normal",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "revising"
  },
  "ship-tiles": {
   "families": [
@@ -151,8 +151,8 @@
    "sail-lateen"
   ],
   "tier": "normal",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "revising"
  },
  "ship-small": {
   "families": [
@@ -174,8 +174,8 @@
    "cutlass-swing"
   ],
   "tier": "tiny",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "done"
  },
  "icons-trade": {
   "families": [

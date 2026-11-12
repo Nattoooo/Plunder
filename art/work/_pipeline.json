@@ -329,8 +329,8 @@
   "batch": "props-large"
  },
  "shrine": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "props-large"
@@ -371,8 +371,8 @@
   "batch": "ship-tiles"
  },
  "bows": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "ship-large"
@@ -1120,29 +1120,29 @@
   "batch": "icons-treasure"
  },
  "sparkle": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "effects"
  },
  "glint": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "effects"
  },
  "muzzle-flash": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "effects"
  },
  "cutlass-swing": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "effects"
