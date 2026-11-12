@@ -1,6 +1,7 @@
 import { art } from './palette';
+import { rd, rdList } from './redraw';
 
-export const CRATE = art([
+const CRATE_0 = art([
   'kkkkkkkkkkk',
   'kVVVVVVVVVk',
   'kVWvvvvvWvk',
@@ -14,7 +15,7 @@ export const CRATE = art([
   'kkkkkkkkkkk'
 ]);
 
-export const BARREL = art([
+const BARREL_0 = art([
   '..kkkkkk..',
   '.kvVVVVvk.',
   '.kWvvvvWk.',
@@ -28,7 +29,7 @@ export const BARREL = art([
   '..kkkkkk..'
 ]);
 
-export const CHEST = art([
+const CHEST_0 = art([
   '..kkkkkkkkkk..',
   '.kvVVVVVVVVvk.',
   'kvVvvvvvvvvVvk',
@@ -42,7 +43,7 @@ export const CHEST = art([
   '.,,,,,,,,,,,,,'
 ]);
 
-export const LOCKED_CHEST = art([
+const LOCKED_CHEST_0 = art([
   '..kkkkkkkkkk..',
   '.kvVVMVVMVVvk.',
   'kvVvvMvvMvvVvk',
@@ -56,7 +57,7 @@ export const LOCKED_CHEST = art([
   '.,,,,,,,,,,,,,'
 ]);
 
-export const GOLD_CHEST = art([
+const GOLD_CHEST_0 = art([
   '..kkkkkkkkkk..',
   '.kyYYYYYYYYyk.',
   'kyYOyyYYyyOYyk',
@@ -69,9 +70,9 @@ export const GOLD_CHEST = art([
   '.kkkkkkkkkkkk.'
 ]);
 
-export const BOTTLE = art(['..kkk..', '..kJk..', '..klk..', '.kllLk.', 'kllLLlk', 'klppLlk', 'klppllk', 'kllllbk', 'kbllbbk', '.kkkkk.']);
+const BOTTLE_0 = art(['..kkk..', '..kJk..', '..klk..', '.kllLk.', 'kllLLlk', 'klppLlk', 'klppllk', 'kllllbk', 'kbllbbk', '.kkkkk.']);
 
-export const WRECK = art([
+const WRECK_0 = art([
   '.....................kk...........',
   '....................kVk...........',
   '...................kVkkkk.........',
@@ -91,11 +92,11 @@ export const WRECK = art([
   '...AAAAA..AAAAAAA...AAAAA.........'
 ]);
 
-export const QUEST_MARK = art(['.kkk.', 'kyYyk', 'kyYyk', 'kyYyk', 'kyyyk', '.kyk.', '..k..', '.kkk.', 'kyYyk', '.kkk.']);
+const QUEST_MARK_0 = art(['.kkk.', 'kyYyk', 'kyYyk', 'kyYyk', 'kyyyk', '.kyk.', '..k..', '.kkk.', 'kyYyk', '.kkk.']);
 
-export const DIG_SPOT = art(['....kkkk....', '..kkfFFfkk..', '.kfFfffFfDk.', 'kfFfffffffDk', '.kDffffffDk.', '..kkDDDDkk..', '....,,,,....']);
+const DIG_SPOT_0 = art(['....kkkk....', '..kkfFFfkk..', '.kfFfffFfDk.', 'kfFfffffffDk', '.kDffffffDk.', '..kkDDDDkk..', '....,,,,....']);
 
-export const XMARK = art([
+const XMARK_0 = art([
   'Rr.......rR',
   'rRr.....rRr',
   '.rRr...rRr.',
@@ -109,9 +110,9 @@ export const XMARK = art([
   'Rr.......rR'
 ]);
 
-export const WAYPOINT = art(['kk.......', 'kRRRk....', 'kReRRRk..', 'kRRRRRRk.', 'kRRRRk...', 'kRk......', 'kk.......', 'k........', 'k........', 'k........', 'k........', 'kk.......', ',,,......']);
+const WAYPOINT_0 = art(['kk.......', 'kRRRk....', 'kReRRRk..', 'kRRRRRRk.', 'kRRRRk...', 'kRk......', 'kk.......', 'k........', 'k........', 'k........', 'k........', 'kk.......', ',,,......']);
 
-export const LOST_CARGO = art([
+const LOST_CARGO_0 = art([
   '...kk.......',
   '...kRRRk....',
   '...kReRRk...',
@@ -128,8 +129,23 @@ export const LOST_CARGO = art([
   'kkkkkkkkkkk.'
 ]);
 
-export const SPARKLE = [art(['..Y..', '..Y..', 'YYPYY', '..Y..', '..Y..']), art(['.....', '..Y..', '.YPY.', '..Y..', '.....'])];
+const SPARKLE_0 = [art(['..Y..', '..Y..', 'YYPYY', '..Y..', '..Y..']), art(['.....', '..Y..', '.YPY.', '..Y..', '.....'])];
 
-export const GLINT = [art(['P']), art(['lPl']), art(['.l.', 'lPl', '.l.']), art(['l.l'])];
+const GLINT_0 = [art(['P']), art(['lPl']), art(['.l.', 'lPl', '.l.']), art(['l.l'])];
 
 export { CLAIM_STONE, CLAIM_OWNED, SHRINE, STRUCTURES } from './world';
+
+export const CRATE = rd('crate', CRATE_0);
+export const BARREL = rd('barrel', BARREL_0);
+export const CHEST = rd('chest', CHEST_0);
+export const LOCKED_CHEST = rd('locked-chest', LOCKED_CHEST_0);
+export const GOLD_CHEST = rd('gold-chest', GOLD_CHEST_0);
+export const BOTTLE = rd('bottle', BOTTLE_0);
+export const WRECK = rd('wreck', WRECK_0);
+export const QUEST_MARK = rd('quest-mark', QUEST_MARK_0);
+export const DIG_SPOT = rd('dig-spot', DIG_SPOT_0);
+export const XMARK = rd('x-mark', XMARK_0);
+export const WAYPOINT = rd('waypoint', WAYPOINT_0);
+export const LOST_CARGO = rd('lost-cargo', LOST_CARGO_0);
+export const SPARKLE = rdList(['sparkle-1', 'sparkle-2'], SPARKLE_0);
+export const GLINT = rdList(['glint-1', 'glint-2', 'glint-3', 'glint-4'], GLINT_0);

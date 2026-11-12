@@ -1,4 +1,5 @@
 import { art, Art, Swap } from './palette';
+import { rd } from './redraw';
 
 const SACK = art([
   '................',
@@ -1536,3 +1537,8 @@ export const ICONS: Record<string, Icon> = {
   bottle_message: ic(MESSAGE),
   sea_chart: ic(CHART)
 };
+
+for (const k in ICONS) {
+  const a = rd(k.replace(/_/g, '-'), ICONS[k].a);
+  if (a !== ICONS[k].a) ICONS[k] = { a };
+}

@@ -1,6 +1,7 @@
 import { art, Art } from './palette';
+import { rd } from './redraw';
 
-export const LAVA_TILE = art([
+const LAVA_TILE_0 = art([
   '1121111221111211',
   '1211112111112111',
   '2111123211121111',
@@ -19,7 +20,7 @@ export const LAVA_TILE = art([
   '1121111211111111'
 ]);
 
-export const DOCK_TEX = art(['VVVVVVVV', 'vvvvvvvv', 'vvvvvvvv', 'WWWWWWWW', 'VVVVVVVV', 'vvvvvvvv', 'vvvvvvvv', 'wwwwwwww']);
+const DOCK_TEX_0 = art(['VVVVVVVV', 'vvvvvvvv', 'vvvvvvvv', 'WWWWWWWW', 'VVVVVVVV', 'vvvvvvvv', 'vvvvvvvv', 'wwwwwwww']);
 
 type Ramp = number[];
 
@@ -75,3 +76,6 @@ export const WATER_STOPS: Ramp[] = [
 ];
 
 export const REEF_TINT: number[] = [0x5e6e4a, 0x8a5a6a, 0x6a8494, 0x4a3430, 0x4e5060];
+
+export const LAVA_TILE = rd('lava-tile', LAVA_TILE_0);
+export const DOCK_TEX = rd('dock-planks', DOCK_TEX_0);

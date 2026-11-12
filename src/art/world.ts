@@ -1,7 +1,8 @@
 import { art, Art, Swap } from './palette';
+import { rd } from './redraw';
 import { Canvas, crop, hcat, mirror } from './compose';
 
-export const TREE = art([
+const TREE_0 = art([
   '............gggggg............',
   '.........gggHHHHhhggg.........',
   '.......ggHHHHHHHhhhhhgg.......',
@@ -39,7 +40,7 @@ export const TREE = art([
   '.........,,,,,,,,,,,,,,,......'
 ]);
 
-export const JUNGLE_TREE = art([
+const JUNGLE_TREE_0 = art([
   '...........gggggggg...gggggggg.........',
   '........gggHHHHHHhhggggHHHHhhhggg......',
   '......ggHHHHHHHHhhhhhhHHHHhhhhhhhgg....',
@@ -72,7 +73,7 @@ export const JUNGLE_TREE = art([
   '...............,,,,,,,,,,,,,,..........'
 ]);
 
-export const PALM = art([
+const PALM_0 = art([
   '.............gggg....................',
   '.........ggggHHHHgg..gggg............',
   '.......ggHHHHhhhhhhggHHHHgggg........',
@@ -114,7 +115,7 @@ export const PALM = art([
   '..................,,,,,,,,...........'
 ]);
 
-export const PINE = art([
+const PINE_0 = art([
   '..........gg..........',
   '.........gHhg.........',
   '.........gHhg.........',
@@ -154,7 +155,7 @@ export const PINE = art([
   '........,,,,,,,.......'
 ]);
 
-export const SNOW_PINE = art([
+const SNOW_PINE_0 = art([
   '..........PP..........',
   '.........PPpL.........',
   '.........PPpL.........',
@@ -194,7 +195,7 @@ export const SNOW_PINE = art([
   '........,,,,,,,.......'
 ]);
 
-export const DEAD_TREE = art([
+const DEAD_TREE_0 = art([
   '.....j..............j.....',
   '.....jj............jj.....',
   '......jj....j.....jj......',
@@ -219,7 +220,7 @@ export const DEAD_TREE = art([
   '........,,,,,,,,,,,.......'
 ]);
 
-export const BUSH = art([
+const BUSH_0 = art([
   '.......gggggg.......',
   '....gggHHHHhhggg....',
   '...gHHHHHHhhhhhhg...',
@@ -234,7 +235,7 @@ export const BUSH = art([
   '...,,,,,,,,,,,,,,...'
 ]);
 
-export const BERRY_BUSH = art([
+const BERRY_BUSH_0 = art([
   '.......gggggg.......',
   '....gggHHHHhhggg....',
   '...gHHHeeHhhhhhhg...',
@@ -249,7 +250,7 @@ export const BERRY_BUSH = art([
   '...,,,,,,,,,,,,,,...'
 ]);
 
-export const REEDS = art([
+const REEDS_0 = art([
   '..jj..........',
   '.jJJj....jj...',
   '.jJJj...jJJj..',
@@ -266,7 +267,7 @@ export const REEDS = art([
   '.,,,,,,,,,,,,.'
 ]);
 
-export const BOULDER = art([
+const BOULDER_0 = art([
   '........mmmmmm..........',
   '.....mmmUUUUUummm.......',
   '...mmUUUUUUuuuuuumm.....',
@@ -284,7 +285,7 @@ export const BOULDER = art([
   '...,,,,,,,,,,,,,,,,,,...'
 ]);
 
-export const ROCK = art([
+const ROCK_0 = art([
   '...mmmm...',
   '.mmUUuumm.',
   'mUUuuuuTm.',
@@ -294,7 +295,7 @@ export const ROCK = art([
   '.,,,,,,,,.'
 ]);
 
-export const SKULL_ROCK = art([
+const SKULL_ROCK_0 = art([
   '..........mmmmmmmmmm..........',
   '.......mmmxxxxxxxxxxmmm.......',
   '.....mmxxxxxxxxxxxxxxxxmm.....',
@@ -317,7 +318,7 @@ export const SKULL_ROCK = art([
   '...,,,,,,,,,,,,,,,,,,,,,,,,...'
 ]);
 
-export const ICE_SHARD = art([
+const ICE_SHARD_0 = art([
   '.......b........',
   '......bPb.......',
   '......bPLb......',
@@ -336,14 +337,14 @@ export const ICE_SHARD = art([
   '.,,,,,,,,,,,,,,,'
 ]);
 
-export const TUFT = art([
+const TUFT_0 = art([
   '..h.....',
   '.hG..h..',
   '.Gh.hG..',
   'hGGhGGh.'
 ]);
 
-export const FLOWERS = art([
+const FLOWERS_0 = art([
   '..e....y..',
   '.eEe..yYy.',
   '..e....y..',
@@ -352,7 +353,7 @@ export const FLOWERS = art([
   '.hGhehGhh.'
 ]);
 
-export const MUSHROOMS = art([
+const MUSHROOMS_0 = art([
   '..RRRR....',
   '.ReeRRR...',
   'RRRRRRRR..',
@@ -361,7 +362,7 @@ export const MUSHROOMS = art([
   '..ppp.pp..'
 ]);
 
-export const SHELL = art([
+const SHELL_0 = art([
   '...p...',
   '.ppEpp.',
   'pEpEpEp',
@@ -983,7 +984,7 @@ const WATCHTOWER = art([
   '..,,,,,,,,,,,,,,,,,,,,,,,,..'
 ]);
 
-export const SHRINE = art([
+const SHRINE_0 = art([
   '...............kkkk...............',
   '..............kIPIIk..............',
   '.............kIIPIIIk.............',
@@ -1010,7 +1011,7 @@ export const SHRINE = art([
   '.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'
 ]);
 
-export const CLAIM_STONE = art([
+const CLAIM_STONE_0 = art([
   '.k...............',
   '.kkk.............',
   '.kppkk...........',
@@ -1151,4 +1152,36 @@ export const STRUCTURES: Record<string, Art> = {
   tavern: group(TAVERN.w + 8, TAVERN.h, [[TAVERN, 8, 0], [SIGN, 0, 30]])
 };
 
-export const CLAIM_OWNED: Art = { ...CLAIM_STONE, rows: CLAIM_STONE.rows.map((r) => r.replace(/[pP]/g, 'K')) };
+const CLAIM_OWNED_0: Art = { ...CLAIM_STONE_0, rows: CLAIM_STONE_0.rows.map((r) => r.replace(/[pP]/g, 'K')) };
+
+export const TREE = rd('tree', TREE_0);
+export const JUNGLE_TREE = rd('jungle-tree', JUNGLE_TREE_0);
+export const PALM = rd('palm', PALM_0);
+export const PINE = rd('pine', PINE_0);
+export const SNOW_PINE = rd('snow-pine', SNOW_PINE_0);
+export const DEAD_TREE = rd('dead-tree', DEAD_TREE_0);
+export const BUSH = rd('bush', BUSH_0);
+export const BERRY_BUSH = rd('berry-bush', BERRY_BUSH_0);
+export const REEDS = rd('reeds', REEDS_0);
+export const BOULDER = rd('boulder', BOULDER_0);
+export const ROCK = rd('rock', ROCK_0);
+export const SKULL_ROCK = rd('skull-rock', SKULL_ROCK_0);
+export const ICE_SHARD = rd('ice-shard', ICE_SHARD_0);
+export const TUFT = rd('grass-tuft', TUFT_0);
+export const FLOWERS = rd('flowers', FLOWERS_0);
+export const MUSHROOMS = rd('mushrooms', MUSHROOMS_0);
+export const SHELL = rd('shell', SHELL_0);
+export const SHRINE = rd('shrine', SHRINE_0);
+export const CLAIM_STONE = rd('claim-stone', CLAIM_STONE_0);
+export const CLAIM_OWNED: Art = rd('claim-stone-owned', CLAIM_OWNED_0);
+
+const HOUSE_NAMES = ['house-cottage', 'house-shutters', 'house-long', 'house-townhouse'];
+HOUSES.forEach((h, i) => {
+  const a = rd(HOUSE_NAMES[i], h.art);
+  if (a === h.art) return;
+  const wall = a.rows.findIndex((r) => /[Cc]/.test(r));
+  HOUSES[i] = { art: a, foot: Math.max(0, wall - 8) };
+});
+
+const STRUCTURE_NAMES: Record<string, string> = { lumber_camp: 'lumber-camp', dock: 'private-dock' };
+for (const k in STRUCTURES) if (k !== 'fort') STRUCTURES[k] = rd(STRUCTURE_NAMES[k] ?? k, STRUCTURES[k]);
