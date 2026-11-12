@@ -1,0 +1,81 @@
+# fort: stone fort pieces. Stone ramp t T u U, outline k. Fort flag colour B (only in fort-flagpole).
+# Battlements: wall merlons are 3 wide (k,fill,k) with a 1 px crenel, period 4, same on tower/gate.
+== fort-tower
+kkkk.kkkk.kkkk
+kuuk.kuuk.kuuk
+kuTk.kuTk.kuTk
+kkkkkkkkkkkkkk
+kuuutuuuutuuuk
+kTTTtTTTTtTTTk
+kTTTtTkkTtTTTk
+kttttttkkttttk
+kuutuukkuutuuk
+kTTtTTkkTTtTTk
+kTTtTTTTTTtTTk
+kttttttttttttk
+kuuutuuuutuuuk
+kTTTtTTTTtTTTk
+kTTTtTTTTtTTTk
+kttttttttttttk
+kTTTtTTTTtTTTk
+kkkkkkkkkkkkkk
+== fort-wall-front
+kkk.
+kuk.
+kTk.
+kkkk
+uuut
+TTTt
+TTTt
+tttt
+utuu
+TtTT
+TtTT
+kkkk
+== fort-gate
+.kkk.kkkk.kkk.
+.kuk.kuuk.kuk.
+.kTk.kuTk.kTk.
+kkkkkkkkkkkkkk
+uuutuuuuuutuuu
+TTTkkWwwWkkTTT
+TTTkWWwwWWkTTT
+ttkMMMMMMMMkTt
+uukWWwwWWkuuuu
+TtkWWwwWWkTTtT
+TtkWWwwWWkTtTT
+kkkkkkkkkkkkkk
+== fort-wall-side
+kuTTtk
+kuTTtk
+kuTTtk
+kTttTk
+== fort-wall-back
+kkk.
+kTk.
+kkkk
+uuuu
+TTTt
+TTTt
+kkkk
+== fort-flagpole
+kkkkkk
+kVBBBk
+kVBBBk
+kVBBBk
+kVkkkk
+kVk...
+kVk...
+kVk...
+kVk...
+kVk...
+kVk...
+kkk...
+== fort-crates
+..kkkk..
+..kVVk..
+..kWWk..
+kkkkkkkk
+kVVkVVVk
+kWWkWWWk
+kkkkkkkk

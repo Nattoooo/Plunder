@@ -1,0 +1,1 @@
+Hip roof in swap colours (e R r), plaster walls C/c. Double doors (wood, iron straps M, dark centre gap) are 9 px tall; two crate stacks stand on the ground at the sides for scale (waist height of captain).

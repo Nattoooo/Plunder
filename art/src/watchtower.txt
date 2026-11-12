@@ -16,8 +16,8 @@ kkkkkkkkkkkkkk
 ..kVkw..wkvk..
 ..kVk.ww.kvk..
 ..kVk.ww.kvk..
-.kVk..ww..kvk.
 .kVk.w..w.kvk.
-.kVk.w..w.kvk.
-kVk.wwwwww.kvk
+.kVkwwwwwwkvk.
+.kVk......kvk.
+kVkwwwwwwwwkvk
 kkk........kkk
