@@ -4,830 +4,995 @@
   "critic": "a366084e9e6fc2fd3",
   "round": 3,
   "status": "ready",
-  "model": "sonnet from round 2"
+  "model": "sonnet from round 2",
+  "tier": "tiny"
  },
  "tree": {
   "creator": "a8dfdcc7d656ede28",
   "critic": "a108e311b7e8381b7",
   "round": 2,
-  "status": "approved"
+  "status": "approved",
+  "tier": "normal"
  },
  "deck-planks": {
   "creator": "a28b348710d8fea1c",
   "critic": "a64097d6738073362",
   "round": 1,
-  "status": "approved"
+  "status": "approved",
+  "tier": "tiny"
  },
  "rum": {
   "creator": "aeff2080b94e1e93d",
   "critic": "a6e7e7a89f0c52bfc",
   "round": 2,
-  "status": "approved"
+  "status": "approved",
+  "tier": "tiny"
  },
  "house-cottage": {
   "creator": "a07bb23da03e05136",
   "critic": "a87d2636ca3ffd9a5",
   "round": 2,
-  "status": "approved"
+  "status": "approved",
+  "tier": "normal"
  },
  "crab": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "skeleton": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "wraith": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "gull": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "whale": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "sea-serpent": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "jungle-tree": {
   "round": 1,
   "status": "approved",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "palm": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "pine": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "dead-tree": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "bush": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "reeds": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "boulder": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "rock": {
   "round": 1,
   "status": "approved",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "skull-rock": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "ice-shard": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "grass-tuft": {
   "round": 1,
   "status": "approved",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "flowers": {
   "round": 1,
   "status": "revising",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "mushrooms": {
   "round": 1,
   "status": "ready",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "shell": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "lava-tile": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "house-shutters": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "house-long": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "house-townhouse": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "fort": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "plantation": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "lumber-camp": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "mine": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "fishery": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "distillery": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "warehouse": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "private-dock": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "watchtower": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "tavern": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "dock-planks": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "chests": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "crate": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "barrel": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "bottle": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "wreck": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "dig-spot": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "x-mark": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "claim-stone": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "shrine": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "quest-mark": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "waypoint": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "deck-logs": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "iron-bands": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "deck-damage": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "bows": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "stern-lantern": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "light-cannon": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "long-gun": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "carronade": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "swivel-gun": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "mortar": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "helm": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "rudder": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "mast": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "oar-bench": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "crew-quarters": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cargo-hold": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "galley": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "powder-magazine": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "workshop": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sick-bay": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "crows-nest": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "ram": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "figurehead": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sail-square": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "sail-patched": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sail-main": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "sail-lateen": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "normal"
  },
  "oar": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "flags": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "fire": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "deck-people": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sugar": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "tobacco": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "coffee": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "tea": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "spices": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "silk": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cotton": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "salt": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cocoa": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "indigo": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "wine": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "furs": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "whale-oil": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "porcelain": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "amber": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "rations": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "salted-pork": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "fruit": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "water": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "grog": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "medicine": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "fish": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cannonball": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "chain-shot": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "grapeshot": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "heated-shot": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "mortar-shell": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "pistol-shot": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "planks": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "iron-bars": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "canvas": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "rope": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "tar": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "brass": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "shovel": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "spyglass": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "compass": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sextant": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "lockpick": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "repair-kit": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "fishing-net": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "diving-helmet": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "rusty-cutlass": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cutlass": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "boarding-axe": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "rapier": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "flintlock": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "blunderbuss": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "musket": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "leather-vest": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "tricorn": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "captains-coat": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "silver-coins": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "gold-doubloon": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "pearl": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "black-pearl": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "ruby": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sapphire": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "emerald": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "diamond": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "gold-ring": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "necklace": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "chalice": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "candelabra": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "golden-idol": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "jeweled-crown": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "ancient-coin": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "jade-figurine": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "lucky-charm": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "kraken-ink": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "mermaid-scale": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "ghost-lantern": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cursed-skull": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "siren-conch": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "trident-shard": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "storm-glass": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "treasure-map": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "bottle-message": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sea-chart": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "sparkle": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "glint": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "muzzle-flash": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  },
  "cutlass-swing": {
   "round": 0,
   "status": "queued",
-  "model": "sonnet"
+  "model": "sonnet",
+  "tier": "tiny"
  }
 }
