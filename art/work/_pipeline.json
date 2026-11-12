@@ -65,8 +65,8 @@
   "batch": "characters"
  },
  "whale": {
-  "round": 3,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "nature-large"
@@ -322,8 +322,8 @@
   "batch": "props-small"
  },
  "claim-stone": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "props-large"

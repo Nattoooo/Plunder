@@ -19,7 +19,7 @@ kkkkkkk
 # gold-chest: open chest. Gold heaped above the rim, rim and body below.
 == gold-chest
 ..kYk..
-.kyOyk.
+.kYyOk.
 kVVVVVk
 kWWWWWk
 kkkkkkk

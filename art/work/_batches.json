@@ -32,7 +32,7 @@
   ],
   "tier": "normal",
   "round": 2,
-  "status": "reviewing"
+  "status": "done"
  },
  "houses": {
   "families": [
@@ -98,7 +98,7 @@
   ],
   "tier": "normal",
   "round": 2,
-  "status": "reviewing"
+  "status": "revising"
  },
  "ship-tiles": {
   "families": [

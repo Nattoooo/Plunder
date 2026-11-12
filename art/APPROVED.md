@@ -32,3 +32,5 @@ Families the critic has passed. Match their style.
 - sail-square (sails) — round 2
 - sail-main (sails) — round 2
 - sail-lateen (sails) — round 2
+- whale (characters) — round 2
+- claim-stone (props) — round 2
