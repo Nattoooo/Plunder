@@ -1,7 +1,8 @@
 # Deck people seen from above, 3 x 3. No outline: at 3 px it would eat the figure.
 # crew: hair on top (J, lit top-left), shirt shoulders in the crew shirt colours
 # (R, shaded r on the right), navy trousers as two legs apart (b) for a walking stride.
-# captain-deck: black tricorn (k, K centre) over a red coat (R, shaded r).
+# captain-deck: black tricorn (k, K centre) over a red coat (R), its hem and bottom
+# edge in shade r (bottom = shadow, as in the land captain's coat hem).
 == crew
 .J.
 RRr
@@ -9,4 +10,4 @@ b.b
 == captain-deck
 kKk
 RRR
-rRr
+rrr

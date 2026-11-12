@@ -1,9 +1,9 @@
-# Light cannon: slim barrel that swells toward the breech, on a wooden carriage with two wheels.
+# Light cannon: slim barrel that swells at the breech, on a wooden carriage with two wheels.
 == light-cannon
 .kkk.
 .kNk.
 kNNMk
 kNnMk
-kKKKk
+kvvvk
 kWKWk
 .kkk.

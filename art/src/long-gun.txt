@@ -1,4 +1,4 @@
-# Long gun: a long, thin barrel with a thicker breech and a short carriage base.
+# Long gun: a long, thin barrel with a thicker breech on a short wooden block.
 == long-gun
 .kkk.
 .kNk.
@@ -6,5 +6,5 @@
 .kNk.
 .kNk.
 kNnMk
-kKKKk
+kvvvk
 .kkk.

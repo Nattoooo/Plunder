@@ -6,12 +6,12 @@ vpC..
 vpCc.
 vpCc.
 vpCc.
+vpCc.
+vpCc.
+vpCc.
 vpCCc
 vpCCc
 vpCCc
-vpCCc
-vpCCc
-vCCCc
 == sail-lateen-half
 v..
 v..
@@ -22,13 +22,12 @@ vp.
 vpc
 vpc
 vpc
-vCc
-vCc
-vCc
-vcc
+vpc
+vpc
+vpc
+vpc
 == sail-lateen-furled
 v.
-vp
 vC
 vC
 vC
@@ -39,4 +38,5 @@ vC
 vC
 vC
 vC
-vc
+vC
+vC
