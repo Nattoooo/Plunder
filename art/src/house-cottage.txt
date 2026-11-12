@@ -1,23 +1,24 @@
 # house-cottage: single-storey plaster cottage, tiled hip roof, stone chimney.
 # Swap colours: roof tiles e R r, plaster walls C c (used nowhere else).
 == house-cottage
-..........kkkkkk....
-..........kuuuTk....
-....kkkkkkkkuTkk....
-...keeeeeeekuTkrk...
-...kerrrrrrkuTkrk...
+..........kkkkkkk...
+..........kuuuuTk...
+....kkkkkkkkuuTkk...
+...keeeeeeekuuTkk...
+...keRRRRRRkuuTkk...
 ..keRRRRRRRRRRRRrk..
-..kerrrrrrrrrrrrrk..
+..keRRRRRRRRRRRRrk..
 .keRRRRRRRRRRRRRRrk.
-.kerrrrrrrrrrrrrrrk.
+.keRRRRRRRRRRRRRRrk.
 keRRRRRRRRRRRRRRRRrk
 kerrrrrrrrrrrrrrrrrk
 kkkkkkkkkkkkkkkkkkkk
 .kcccccccccccccccck.
 .kCCCCCCCCCCCCCCCCk.
+.kCCCCCCCCCCCCCCCCk.
 .kCkkkkCwwwwCkkkkCk.
-.kCklBkCwWWWCklBkCk.
-.kCkBbkCwWWWCkBbkCk.
+.kCkllkCwWWWCkllkCk.
+.kCkBBkCwWWWCkBBkCk.
 .kCkkkkCwWWWCkkkkCk.
 .kCVVVVCwWyWCVVVVCk.
 .kCCCCCCwWWWCCCCCCk.
