@@ -25,3 +25,15 @@ On grass the base `h` matches the ground colour; the full `k` outline keeps the 
 - Interior 3 px wide (5 px with outline), about a third of the canopy, a sturdy broadleaf trunk next to the 6 px wide captain.
 - Row 16 widens by 1 px each side: the root flare where the trunk meets the ground (lit `vv` on the left, shaded `ww` on the right).
 - Row 17 is the bottom outline, so the trunk stands on the bottom row, outlined like the captain's feet.
+
+## Round 1
+
+The original notes above describe the round-0 draft; where they conflict, this section describes the sprite as it now stands.
+
+1. [MAJOR] G "I/H glyph" in the middle of the canopy: fixed. The column-7 stem (7,5), (7,6) is gone. The dome underside is now a short bar at (5-8,4), with (4,4) and (9,4) h. The shadow over the front cluster is (7-9,7); (6,7) is h. The two dark marks no longer touch, so each reads as the underside of its own clump.
+2. [MAJOR] H-against-G jumps and right-edge rim: fixed. Every H now has h between it and any G: (4,4) h next to the left cap, (9,4)/(10,4) h above the right cap, (6,7) h above the front cap, and (4,8) h (was G) beside (5,8) H. The 1 px G rim on the right is gone: (13,5)-(13,8) are h, and (12,4) is now inside the new outline (see 3). Right-side shade is only the lower-right wedge (10,8), (10-13,9), (9-12,10), plus the underside row 11.
+3. [MAJOR] Clusters not visible in the silhouette: fixed as directed. Row 4 now spans cols 2-12 (k at (2,4)/(12,4)), row 5 spans 1-13 (k at (1,5)/(13,5)), rows 6-9 span 0-14. Left edge by row: 5,3,2,2,2,1,0,0,0,0,1,2. The dome now sits on top as its own shape, and the side clumps step out below it. Caps redone to match: left (3,4), (2-3,5); right (9-10,5). The silhouette is still exactly symmetric.
+4. [MINOR] Three 1 px trunk stripes: fixed. Trunk rows 13-15 are `vvw` (lit left 2 px, shaded right 1 px), the flare row 16 is `vvvww`, and row 12 stays all w (the canopy's shadow on the trunk top).
+5. [MINOR] Crevice nicks (3,3), (11,3): fixed, both h. The outline step from fix 3 now separates the dome from the side clusters.
+
+Re-rendered and checked at zoom, 1x and 3x on grass and sand next to the captain: the canopy reads as clumps lit from the top left, with no dark glyph in the middle, and the trunk is a clean two-tone cylinder.
