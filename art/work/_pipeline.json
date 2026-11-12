@@ -25,8 +25,8 @@
  },
  "house-cottage": {
   "creator": "a07bb23da03e05136",
-  "critic": null,
-  "round": 0,
-  "status": "drawing"
+  "critic": "a87d2636ca3ffd9a5",
+  "round": 1,
+  "status": "reviewing"
  }
 }
