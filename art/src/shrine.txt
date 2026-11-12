@@ -1,0 +1,2 @@
+# Altar between two pillars with a glowing green gem.
+== shrine

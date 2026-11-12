@@ -1,0 +1,12 @@
+# Carved marker stone with a white flag on a pole; stone lit top left.
+== claim-stone
+...kkkk..
+...kPPPk.
+...kPPpk.
+...kkkk..
+...kw....
+.kkkwkk..
+kUUuuuTk.
+kUuKKuTk.
+kuuKKuTk.
+kkkkkkkk.
