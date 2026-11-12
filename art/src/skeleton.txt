@@ -1,24 +1,22 @@
-# Skeleton pirate, 9 x 9 (spec 5 x 8, flexible: widened to match captain's 9 px scale/arm swing).
-# Bone x/X, dark sockets/gaps K, outline k. Light from top left.
-
+# Skeleton pirate, 9 x 9 (spec 5 x 8, flexible: matches the captain's 9 px width/arm swing).
+# Bone x/X, dark sockets/gaps K, outline k. Light from top left. Feet end in k like the captain's boots.
 == skeleton-1
-...kkk...
-..kxxXk..
-..kKxKk..
-...kxk...
-kxkxXxkXk
-kxkxKxkXk
-kxkkxkkXk
+..kkkkk..
+.kxKxKXk.
 .kkxkxkk.
-.kxxkk...
-
+kxkkxkkXk
+kxkxxXkXk
+kxkKxKkXk
+kxkxxxkXk
+.kkxkxkk.
+..kk.k...
 == skeleton-2
-...kkk...
-..kxxXk..
-..kKxKk..
-...kxk...
-kxkxXxkXk
-kxkxKxkXk
-kxkkxkkXk
+..kkkkk..
+.kxKxKXk.
 .kkxkxkk.
-...kkxxk.
+kxkkxkkXk
+kxkxxXkXk
+kxkKxKkXk
+kxkxxxkXk
+.kkxkxkk.
+...k.kk..

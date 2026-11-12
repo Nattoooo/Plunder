@@ -1,0 +1,7 @@
+# Cutlass swing: steel blade on the diagonal, pointing up and right. Light edge on the top-left side, darker back on the bottom-right side. No outline (effect).
+== cutlass-swing
+....N
+...Nn
+..Nn.
+.Nn..
+Nn...

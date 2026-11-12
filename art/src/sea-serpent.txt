@@ -1,14 +1,12 @@
-# Sea serpent seen from above, facing right. Teal i/I scales (I highlight top-left),
+# Sea serpent from above, facing right. Teal i/I scales (I highlight top-left),
 # orange q dorsal fin on the spine, gold y eyes, red R mouth.
-
 == serpent-head
 .kkkkk.
-kIyiiik
-kiiikk.
+kiyiiik
+kIiRRk.
 kiiRRk.
 kiyiiik
 .kkkkk.
-
 == serpent-body-1
 .kkkk.
 kIIiik
@@ -16,22 +14,19 @@ kIiqik
 kiiqik
 kiiiik
 .kkkk.
-
 == serpent-body-2
 .kkk.
 kIiik
 kiqik
 kiiik
 .kkk.
-
 == serpent-body-3
 .kk.
 kIik
 kiik
 .kk.
-
 == serpent-tail
-kik..
-kIikk
-kiiqk
-kik..
+k.k..
+kIiik
+kiqik
+k.k..

@@ -1,0 +1,9 @@
+# Sparkle: gold four-point star marking dig spots and shrines. Large frame is the full star; small frame is the bright core alone, since a 3 x 3 box cannot shorten the arms. No outline (effect).
+== sparkle-1
+.y.
+yYy
+.y.
+== sparkle-2
+...
+.Y.
+...

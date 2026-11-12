@@ -4,7 +4,17 @@
 ....wPPPk
 ....wPPpk
 ....wkkkk
-....w....
+..kkkwkk.
+.kUuuuTk.
+.kUuKuTk.
+kUuKKKuTk
+kuuuKuuTk
+kkkkkkkkk
+== claim-stone-owned
+....kkkkk
+....wKKKk
+....wKKKk
+....wkkkk
 ..kkkwkk.
 .kUuuuTk.
 .kUuKuTk.

@@ -1,0 +1,10 @@
+# Glint: sunlight on water. Grows from one pixel to a 2 x 2 block at its brightest, then fades to blue. A 2 x 2 box cannot hold a plus, so the brightest frame is a solid block. No outline (effect).
+== glint-1
+P
+== glint-2
+PP
+== glint-3
+PP
+PP
+== glint-4
+lL

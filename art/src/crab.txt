@@ -1,14 +1,13 @@
-# Crab: 8 x 5 (spec 6 x 4, flexible; one px taller and two wider so claws, body and legs all read with the outline)
+# Crab: 8 x 5 (spec 6 x 4, flexible; wider/taller so claws, eyes and legs read with the outline)
 == crab-1
-kk....kk
-kekkkkek
-.keeeRk.
-.kRRRrk.
-k.k..k.k
-
+ke.kk.ek
+kekkkkRk
+.keeRRk.
+kkRRRrkk
+k.kkkk.k
 == crab-2
-kk....kk
-kekkkkek
-.keeeRk.
+ke.kk.ek
+kekkkkRk
+.keeRRk.
 .kRRRrk.
 .k.kk.k.

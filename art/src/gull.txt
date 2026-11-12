@@ -1,9 +1,11 @@
-# Seagull seen from above, head up, 5 x 3 (no outline: 3 px or less). Head and beak sit in the same cell in both frames; only the wings move.
+# Seagull from above, head up, 5 x 4 (no outline). Head/beak in the same cells in both frames; only wings move.
 == gull-1
-uPyPu
-.PPP.
+..y..
 ..P..
-== gull-2
-.PyP.
 uPPPu
+.PPU.
+== gull-2
+..y..
+uPPPu
+.PPU.
 ..P..

@@ -1,11 +1,11 @@
-# Broken hull seen from above, bow left. Dark flooded interior, snapped mast stub, fallen spar, jagged stern.
+# Broken hull seen from above, bow left. Dark flooded interior, ribs, snapped mast stub, jagged broken stern.
 == wreck
-...kkkkkkkkkk....
-..kVVVVVVVVvvkk..
-.kVvKKKKKKKKKvwk.
-kVvKKKkkkKKKKKvk.
-kVKKKkWWWkKKKwk..
-kVvKKkWvvWkkvwwk.
-.kVvKKkWWWkKKkk..
-..kwvvKKKKKKwk...
-....kkwwwwwwk....
+..kkkkkkkkkk.....
+.kVVVVVVVVVVkk...
+kVvKKWKKKWKKvwk..
+kVKKKWKkkWKKKwwk.
+kVKkkWkWWkWKKkvwk
+kVKkWkkWvkWKKKwk.
+kVvKkkKWkWKKKwk..
+.kwvKKKWKKKKwkk..
+..kkwwwwwwwkk....

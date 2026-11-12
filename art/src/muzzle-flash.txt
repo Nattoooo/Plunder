@@ -1,0 +1,5 @@
+# Muzzle flash: pale yellow core with gold edges, bursting from a pistol or musket shot. No outline (effect).
+== muzzle-flash
+yYy
+YYY
+yYy
