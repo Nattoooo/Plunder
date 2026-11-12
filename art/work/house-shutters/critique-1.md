@@ -1,0 +1,13 @@
+FAIL
+
+Reviewed against STYLE.md, specs.json (20x21, flexible, buildings), notes.md, src/house-shutters.txt, preview.png, and the approved house-cottage, captain, tree sprites.
+
+What passes: palette characters all legal (e R r roof; C c plaster only on wall; k outline; w W door; y knob; B l window). Roof is a clean copy of the cottage roof without chimney, light top-left, symmetric, no orphans. 20 wide, centred, base on the bottom row, transparent background. Reads as a house at 1x on both backgrounds.
+
+1. [MAJOR] house-shutters (3-6,11) and (8-11,11): the window lintels (row 11, k) and the door's top row (w) sit directly under the eave shadow row 10 (c), with zero plaster between. The cottage leaves two full C rows (13-14) above its windows and door. Here the door and windows jam into the roof, so the building looks squashed and the wall reads as a thin strip. Fix: insert two rows `.kCCCCCCCCCCCCCCCCk.` between row 10 and row 11, so the eave is followed by two plaster rows as in the cottage.
+
+2. [MAJOR] house-shutters (8-11,11-19): the door is 9 rows tall, the same height as the captain (9) with no headroom, and 1 row taller than the cottage's approved 8-row door. With no lintel gap it cannot read as "a door fits the captain", it reads as a slab running from the eave to the base. Fix: after the fix in issue 1, remove one body row of the door (delete one `.kCCCCCCwWWWCCCCCCk.` row, e.g. old row 19) so the door is 8 rows (top row w plus 7 rows) like the cottage, and the knob y stays at (10, third row below top, matching the cottage's relative position: 4th row of door). Resulting sprite is 20x22, which is acceptable for a flexible sprite; state it in notes. Windows then occupy rows 13-16 and sit mid-wall with C below them (rows 17-20 area), as in the cottage.
+
+3. [MINOR] house-shutters (3,12-13) and (6,12-13), (13,12-13) and (16,12-13): the shutters are 1 px B strips directly against the 2 px glass with no tone change, so they read as a blue window frame rather than shutters, and the window is a black box (k lintel and k sill). Acceptable at 1x, but the cottage's sill used V; consider replacing the sill k row (3-6,14) with `VVVV` under each window (outline stays on the wall edge) so the windows match the approved cottage. Optional.
+
+4. [MINOR] notes.md: says B is "not a swap colour"; B is the fort-flag swap colour. It does not appear elsewhere in this sprite so there is no conflict, but correct the note. Also the note says the sprite is "3 rows shorter than the cottage's 24"; the real difference is that two plaster rows were dropped from the wall, which is the cause of issues 1 and 2.
