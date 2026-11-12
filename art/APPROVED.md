@@ -9,3 +9,5 @@ Families the critic has passed. Match their style.
 - rock (nature) — round 1
 - grass-tuft (nature) — round 1
 - jungle-tree (nature) — round 1
+- skull-rock (nature) — round 1
+- boulder (nature) — round 2

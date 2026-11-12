@@ -1,5 +1,5 @@
-# Wildflowers: red, yellow, red blooms on short stems over a small leaf tuft.
+# Wildflowers: two red blooms and a yellow centre bloom on short green stems over a small leaf tuft. Light top-left.
 == flowers
 e.y.e
-.hGh.
+GhGGG
 .GGG.

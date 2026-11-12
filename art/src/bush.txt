@@ -1,16 +1,16 @@
-# Round leafy bush: low dome, light top-left, shadow bottom-right.
+# Round leafy bush: two-lobed crown, closed outline, light top-left, shadow bottom-right.
 == bush
-...kkkk...
-..kHHhhk..
-.kHhhhhhk.
+.kkk..kkk.
+kHHhkkhhhk
+kHhhhhhhhk
 khhhhhhhGk
 khhhhGGGGk
-.kkGGGGkk.
+.kkkkkkkk.
 == berry-bush
-# Same bush with three red berries.
-...kkkk...
-..kHHhhk..
-.kHhRhhhk.
-khhhhhhRGk
-khRhhGGGGk
-.kkGGGGkk.
+# Same bush with two red berry clusters of 2 px, each ringed by h.
+.kkk..kkk.
+kHHhkkhhhk
+kHhhhhRRhk
+khhRRhhhGk
+khhhhGGGGk
+.kkkkkkkk.

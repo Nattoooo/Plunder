@@ -1,0 +1,24 @@
+# house-shutters: cottage with blue shutters, hip roof, no chimney.
+# Swap colours: roof e R r, plaster C c. Blue shutters B (not swapped).
+== house-shutters
+....kkkkkkkkkkkk....
+...keeeeeeeeeeeek...
+...keRRRRRRRRRRrk...
+..keRRRRRRRRRRRRrk..
+..keRRRRRRRRRRRRrk..
+.keRRRRRRRRRRRRRRrk.
+.keRRRRRRRRRRRRRRrk.
+keRRRRRRRRRRRRRRRRrk
+kerrrrrrrrrrrrrrrrrk
+kkkkkkkkkkkkkkkkkkkk
+.kcccccccccccccccck.
+.kCkkkkCwwwwCkkkkCk.
+.kCBllBCwWWWCBllBCk.
+.kCBllBCwWWWCBllBCk.
+.kCkkkkCwWWWCkkkkCk.
+.kCCCCCCwWWWCCCCCCk.
+.kCCCCCCwWyWCCCCCCk.
+.kCCCCCCwWWWCCCCCCk.
+.kCCCCCCwWWWCCCCCCk.
+.kCCCCCCwWWWCCCCCCk.
+.kkkkkkkkkkkkkkkkkk.

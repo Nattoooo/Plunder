@@ -37,37 +37,37 @@
  },
  "crab": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
  "skeleton": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
  "wraith": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
  "gull": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
  "whale": {
-  "round": 1,
+  "round": 2,
   "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "sea-serpent": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -78,38 +78,38 @@
   "tier": "normal"
  },
  "palm": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "pine": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "normal"
  },
  "dead-tree": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "normal"
  },
  "bush": {
-  "round": 1,
+  "round": 2,
   "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "reeds": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
  "boulder": {
-  "round": 1,
-  "status": "reviewing",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -121,13 +121,13 @@
  },
  "skull-rock": {
   "round": 1,
-  "status": "reviewing",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal"
  },
  "ice-shard": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -145,7 +145,7 @@
  },
  "mushrooms": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -162,20 +162,20 @@
   "tier": "tiny"
  },
  "house-shutters": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "house-long": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "normal"
  },
  "house-townhouse": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "normal"
  },
