@@ -1,0 +1,42 @@
+== sail-lateen-full
+v....
+vp...
+vpC..
+vpC..
+vpCc.
+vpCc.
+vpCc.
+vpCCc
+vpCCc
+vpCCc
+vpCCc
+vpCCc
+vCCCc
+== sail-lateen-half
+v..
+v..
+v..
+v..
+vp.
+vp.
+vpc
+vpc
+vpc
+vCc
+vCc
+vCc
+vcc
+== sail-lateen-furled
+v.
+vp
+vC
+vC
+vC
+vC
+vC
+vC
+vC
+vC
+vC
+vC
+vc

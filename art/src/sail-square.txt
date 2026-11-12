@@ -1,0 +1,14 @@
+# Cloth p C c only; yard (wood) is the bottom row. Cloth bellies up.
+== sail-square-full
+...ppppCCcc..
+.pppppCCCCccc
+ppppppCCCCCcc
+ppppCCCCCCCcc
+WvvvvvvvvvvvW
+== sail-square-half
+..pppppCCCc..
+pppppCCCCCCcc
+WvvvvvvvvvvvW
+== sail-square-furled
+.ppCCCCCCCCcc
+WvvvvvvvvvvvW

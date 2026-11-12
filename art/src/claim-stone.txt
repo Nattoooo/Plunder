@@ -1,12 +1,13 @@
-# Carved marker stone with a white flag on a pole; stone lit top left.
+# Carved marker stone with a flag on a pole; stone lit top left, carved cross rune.
 == claim-stone
-...kkkk..
-...kPPPk.
-...kPPpk.
-...kkkk..
-...kw....
-.kkkwkk..
-kUUuuuTk.
-kUuKKuTk.
-kuuKKuTk.
-kkkkkkkk.
+....kkkkk
+....wPPPk
+....wPPpk
+....wkkkk
+....w....
+..kkkwkk.
+.kUuuuTk.
+.kUuKuTk.
+kUuKKKuTk
+kuuuKuuTk
+kkkkkkkkk

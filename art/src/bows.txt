@@ -1,0 +1,16 @@
+# Bow tips seen from above, point up. Bottom row is open: the hull continues below.
+# Hull wood only (V v W w D) plus the k outline. Light on the left, shadow on the right.
+== bow-small
+..k..
+.kVk.
+kVvwk
+== bow-medium
+....kk....
+..kkVwkk..
+kkVvvvwwkk
+== bow-large
+......kkk......
+....kkVvwkk....
+..kkVvvvvwwkk..
+.kVvvvvvvvwwwk.
+kVvvvvvvvvvwwwk
