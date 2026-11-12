@@ -1,0 +1,9 @@
+# One 4 px plank running fore-aft (bow up) plus a 1 px seam on its right.
+# Tiles to an even rhythm: plank, seam, plank, seam. No butt joints: in a
+# 5 px tile they would line up into a cross-grain grid across the deck.
+== deck-planks
+vvvvW
+vvvvW
+vvvvW
+vvvvW
+vvvvW

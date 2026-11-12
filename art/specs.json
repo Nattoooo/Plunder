@@ -1,0 +1,2553 @@
+{
+ "families": {
+  "captain": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "captain-down-1",
+     "folder": "characters",
+     "desc": "The captain (you) facing the camera, standing still: black tricorn hat with gold trim, red coat, navy trousers, boots",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-down-2",
+     "folder": "characters",
+     "desc": "Captain walking toward the camera, left foot forward",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-down-3",
+     "folder": "characters",
+     "desc": "Captain walking toward the camera, right foot forward",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-up-1",
+     "folder": "characters",
+     "desc": "Captain seen from behind, standing still",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-up-2",
+     "folder": "characters",
+     "desc": "Captain walking away, left foot forward",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-up-3",
+     "folder": "characters",
+     "desc": "Captain walking away, right foot forward",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-side-1",
+     "folder": "characters",
+     "desc": "Captain facing right, standing still (the game mirrors it for left)",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    },
+    {
+     "name": "captain-side-2",
+     "folder": "characters",
+     "desc": "Captain facing right, mid-stride",
+     "w": 6,
+     "h": 9,
+     "fixed": false
+    }
+   ]
+  },
+  "crab": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "crab-1",
+     "folder": "characters",
+     "desc": "Red beach crab, claws raised, legs in one position",
+     "w": 6,
+     "h": 4,
+     "fixed": false
+    },
+    {
+     "name": "crab-2",
+     "folder": "characters",
+     "desc": "The same crab with its legs in the other position",
+     "w": 6,
+     "h": 4,
+     "fixed": false
+    }
+   ]
+  },
+  "skeleton": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "skeleton-1",
+     "folder": "characters",
+     "desc": "Skeleton pirate walking toward the camera, left foot forward",
+     "w": 5,
+     "h": 8,
+     "fixed": false
+    },
+    {
+     "name": "skeleton-2",
+     "folder": "characters",
+     "desc": "Skeleton pirate, right foot forward",
+     "w": 5,
+     "h": 8,
+     "fixed": false
+    }
+   ]
+  },
+  "wraith": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "wraith-1",
+     "folder": "characters",
+     "desc": "Hooded ghost in a tattered green robe, no legs, glowing eyes, floating",
+     "w": 6,
+     "h": 8,
+     "fixed": false
+    },
+    {
+     "name": "wraith-2",
+     "folder": "characters",
+     "desc": "The same wraith with its hem rippled the other way",
+     "w": 6,
+     "h": 8,
+     "fixed": false
+    }
+   ]
+  },
+  "gull": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "gull-1",
+     "folder": "characters",
+     "desc": "Seagull seen from above, wings up",
+     "w": 5,
+     "h": 3,
+     "fixed": false
+    },
+    {
+     "name": "gull-2",
+     "folder": "characters",
+     "desc": "Seagull seen from above, wings down",
+     "w": 5,
+     "h": 3,
+     "fixed": false
+    }
+   ]
+  },
+  "whale": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "whale",
+     "folder": "characters",
+     "desc": "Whale seen from above, swimming right just under the surface",
+     "w": 14,
+     "h": 5,
+     "fixed": false
+    }
+   ]
+  },
+  "sea-serpent": {
+   "folder": "characters",
+   "sprites": [
+    {
+     "name": "serpent-head",
+     "folder": "characters",
+     "desc": "Sea serpent's head seen from above, facing right, jaws open",
+     "w": 7,
+     "h": 6,
+     "fixed": false
+    },
+    {
+     "name": "serpent-body-1",
+     "folder": "characters",
+     "desc": "Large body segment just behind the head",
+     "w": 6,
+     "h": 6,
+     "fixed": false
+    },
+    {
+     "name": "serpent-body-2",
+     "folder": "characters",
+     "desc": "Medium body segment",
+     "w": 5,
+     "h": 5,
+     "fixed": false
+    },
+    {
+     "name": "serpent-body-3",
+     "folder": "characters",
+     "desc": "Small body segment near the tail",
+     "w": 4,
+     "h": 4,
+     "fixed": false
+    },
+    {
+     "name": "serpent-tail",
+     "folder": "characters",
+     "desc": "Tail fin, facing right",
+     "w": 5,
+     "h": 4,
+     "fixed": false
+    }
+   ]
+  },
+  "tree": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "tree",
+     "folder": "nature",
+     "desc": "Broadleaf tree: round canopy of leaf clusters, brown trunk",
+     "w": 15,
+     "h": 18,
+     "fixed": false
+    }
+   ]
+  },
+  "jungle-tree": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "jungle-tree",
+     "folder": "nature",
+     "desc": "Jungle tree: wide flat umbrella canopy on a tall thin trunk",
+     "w": 20,
+     "h": 15,
+     "fixed": false
+    }
+   ]
+  },
+  "palm": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "palm",
+     "folder": "nature",
+     "desc": "Coconut palm: curved trunk, drooping fronds",
+     "w": 19,
+     "h": 20,
+     "fixed": false
+    }
+   ]
+  },
+  "pine": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "pine",
+     "folder": "nature",
+     "desc": "Pine tree: stacked layers of branches, short trunk",
+     "w": 11,
+     "h": 19,
+     "fixed": false
+    },
+    {
+     "name": "snow-pine",
+     "folder": "nature",
+     "desc": "The same pine with snow on each layer",
+     "w": 11,
+     "h": 19,
+     "fixed": false
+    }
+   ]
+  },
+  "dead-tree": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "dead-tree",
+     "folder": "nature",
+     "desc": "Bare, twisted grey-brown tree with forked branches",
+     "w": 13,
+     "h": 11,
+     "fixed": false
+    }
+   ]
+  },
+  "bush": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "bush",
+     "folder": "nature",
+     "desc": "Round leafy bush, about knee to waist high on the captain",
+     "w": 10,
+     "h": 6,
+     "fixed": false
+    },
+    {
+     "name": "berry-bush",
+     "folder": "nature",
+     "desc": "The same bush with clusters of red berries",
+     "w": 10,
+     "h": 6,
+     "fixed": false
+    }
+   ]
+  },
+  "reeds": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "reeds",
+     "folder": "nature",
+     "desc": "Cattail reeds with brown heads, for swamps",
+     "w": 7,
+     "h": 7,
+     "fixed": false
+    }
+   ]
+  },
+  "boulder": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "boulder",
+     "folder": "nature",
+     "desc": "Large grey boulder (blocks walking)",
+     "w": 12,
+     "h": 8,
+     "fixed": false
+    }
+   ]
+  },
+  "rock": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "rock",
+     "folder": "nature",
+     "desc": "Small grey rock",
+     "w": 5,
+     "h": 4,
+     "fixed": false
+    }
+   ]
+  },
+  "skull-rock": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "skull-rock",
+     "folder": "nature",
+     "desc": "Big pale rock shaped like a skull, for Skull Isles",
+     "w": 15,
+     "h": 10,
+     "fixed": false
+    }
+   ]
+  },
+  "ice-shard": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "ice-shard",
+     "folder": "nature",
+     "desc": "Cluster of pale blue ice crystals, for glaciers",
+     "w": 8,
+     "h": 8,
+     "fixed": false
+    }
+   ]
+  },
+  "grass-tuft": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "grass-tuft",
+     "folder": "nature",
+     "desc": "Small tuft of grass blades, low contrast against grass",
+     "w": 4,
+     "h": 2,
+     "fixed": false
+    }
+   ]
+  },
+  "flowers": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "flowers",
+     "folder": "nature",
+     "desc": "Small cluster of red and yellow wildflowers",
+     "w": 5,
+     "h": 3,
+     "fixed": false
+    }
+   ]
+  },
+  "mushrooms": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "mushrooms",
+     "folder": "nature",
+     "desc": "Two red-capped mushrooms",
+     "w": 5,
+     "h": 3,
+     "fixed": false
+    }
+   ]
+  },
+  "shell": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "shell",
+     "folder": "nature",
+     "desc": "Pink seashell lying on sand",
+     "w": 4,
+     "h": 2,
+     "fixed": false
+    }
+   ]
+  },
+  "lava-tile": {
+   "folder": "nature",
+   "sprites": [
+    {
+     "name": "lava-tile",
+     "folder": "nature",
+     "desc": "Glowing lava with darker cracks; fixed size, must tile seamlessly in every direction",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "house-cottage": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "house-cottage",
+     "folder": "buildings",
+     "desc": "Single-storey cottage: plaster walls, tiled hip roof, centred door, two windows, chimney",
+     "w": 20,
+     "h": 23,
+     "fixed": false
+    }
+   ]
+  },
+  "house-shutters": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "house-shutters",
+     "folder": "buildings",
+     "desc": "Single-storey cottage with blue window shutters, no chimney",
+     "w": 20,
+     "h": 21,
+     "fixed": false
+    }
+   ]
+  },
+  "house-long": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "house-long",
+     "folder": "buildings",
+     "desc": "Long single-storey house: four windows, centred door, chimney",
+     "w": 30,
+     "h": 23,
+     "fixed": false
+    }
+   ]
+  },
+  "house-townhouse": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "house-townhouse",
+     "folder": "buildings",
+     "desc": "Two-storey townhouse: three windows upstairs, door and two windows below, chimney",
+     "w": 20,
+     "h": 31,
+     "fixed": false
+    }
+   ]
+  },
+  "fort": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "fort-tower",
+     "folder": "buildings",
+     "desc": "Square stone corner tower: battlements around a flat top, arrow slit in the front",
+     "w": 14,
+     "h": 18,
+     "fixed": true
+    },
+    {
+     "name": "fort-wall-front",
+     "folder": "buildings",
+     "desc": "Front stone wall with battlements on top; tiles left to right",
+     "w": 4,
+     "h": 12,
+     "fixed": true
+    },
+    {
+     "name": "fort-gate",
+     "folder": "buildings",
+     "desc": "Arched gatehouse with heavy wooden doors, set into the front wall",
+     "w": 14,
+     "h": 12,
+     "fixed": true
+    },
+    {
+     "name": "fort-wall-side",
+     "folder": "buildings",
+     "desc": "Side wall seen from above as a walkway; tiles top to bottom",
+     "w": 6,
+     "h": 4,
+     "fixed": true
+    },
+    {
+     "name": "fort-wall-back",
+     "folder": "buildings",
+     "desc": "Back wall seen from inside the courtyard; tiles left to right",
+     "w": 4,
+     "h": 7,
+     "fixed": true
+    },
+    {
+     "name": "fort-flagpole",
+     "folder": "buildings",
+     "desc": "Flagpole with a square flag (use the fort flag colour)",
+     "w": 6,
+     "h": 12,
+     "fixed": true
+    },
+    {
+     "name": "fort-crates",
+     "folder": "buildings",
+     "desc": "A few stacked wooden crates for the courtyard",
+     "w": 8,
+     "h": 7,
+     "fixed": true
+    }
+   ]
+  },
+  "plantation": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "plantation",
+     "folder": "buildings",
+     "desc": "Rows of tall green crops beside a small hut",
+     "w": 37,
+     "h": 22,
+     "fixed": false
+    }
+   ]
+  },
+  "lumber-camp": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "lumber-camp",
+     "folder": "buildings",
+     "desc": "Open-sided wooden shed on posts beside a pile of cut logs",
+     "w": 32,
+     "h": 12,
+     "fixed": false
+    }
+   ]
+  },
+  "mine": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "mine",
+     "folder": "buildings",
+     "desc": "Timber-framed tunnel entrance in a grey rocky hillside, with an ore cart",
+     "w": 30,
+     "h": 13,
+     "fixed": false
+    }
+   ]
+  },
+  "fishery": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "fishery",
+     "folder": "buildings",
+     "desc": "Small fishing hut beside a wooden rack of hanging fish",
+     "w": 31,
+     "h": 21,
+     "fixed": false
+    }
+   ]
+  },
+  "distillery": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "distillery",
+     "folder": "buildings",
+     "desc": "Cottage with a big copper pot still and a chimney",
+     "w": 26,
+     "h": 23,
+     "fixed": false
+    }
+   ]
+  },
+  "warehouse": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "warehouse",
+     "folder": "buildings",
+     "desc": "Wide barn with large double doors and stacked crates",
+     "w": 34,
+     "h": 21,
+     "fixed": false
+    }
+   ]
+  },
+  "private-dock": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "private-dock",
+     "folder": "buildings",
+     "desc": "Short wooden jetty with mooring posts",
+     "w": 20,
+     "h": 7,
+     "fixed": false
+    }
+   ]
+  },
+  "watchtower": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "watchtower",
+     "folder": "buildings",
+     "desc": "Tall wooden lookout tower on cross-braced legs, with a small roof",
+     "w": 14,
+     "h": 21,
+     "fixed": false
+    }
+   ]
+  },
+  "tavern": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "tavern",
+     "folder": "buildings",
+     "desc": "Two-storey inn with a hanging sign beside the door",
+     "w": 25,
+     "h": 32,
+     "fixed": false
+    }
+   ]
+  },
+  "dock-planks": {
+   "folder": "buildings",
+   "sprites": [
+    {
+     "name": "dock-planks",
+     "folder": "buildings",
+     "desc": "Wooden pier planks for town docks; fixed size, tiles along the pier",
+     "w": 4,
+     "h": 4,
+     "fixed": true
+    }
+   ]
+  },
+  "chests": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "chest",
+     "folder": "props",
+     "desc": "Closed wooden treasure chest with gold trim",
+     "w": 7,
+     "h": 6,
+     "fixed": false
+    },
+    {
+     "name": "locked-chest",
+     "folder": "props",
+     "desc": "Iron-banded chest with a padlock",
+     "w": 7,
+     "h": 6,
+     "fixed": false
+    },
+    {
+     "name": "gold-chest",
+     "folder": "props",
+     "desc": "Open chest overflowing with gold coins",
+     "w": 7,
+     "h": 5,
+     "fixed": false
+    }
+   ]
+  },
+  "crate": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "crate",
+     "folder": "props",
+     "desc": "Wooden crate",
+     "w": 6,
+     "h": 6,
+     "fixed": false
+    },
+    {
+     "name": "lost-cargo",
+     "folder": "props",
+     "desc": "Crate with a small red flag, marking cargo lost when your ship sank",
+     "w": 6,
+     "h": 7,
+     "fixed": false
+    }
+   ]
+  },
+  "barrel": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "barrel",
+     "folder": "props",
+     "desc": "Wooden barrel",
+     "w": 5,
+     "h": 6,
+     "fixed": false
+    }
+   ]
+  },
+  "bottle": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "bottle",
+     "folder": "props",
+     "desc": "Message in a bottle: green glass, cork, rolled paper inside",
+     "w": 4,
+     "h": 5,
+     "fixed": false
+    }
+   ]
+  },
+  "wreck": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "wreck",
+     "folder": "props",
+     "desc": "Broken, half-sunk ship hull with a snapped mast, seen from above",
+     "w": 17,
+     "h": 9,
+     "fixed": false
+    }
+   ]
+  },
+  "dig-spot": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "dig-spot",
+     "folder": "props",
+     "desc": "Small mound of disturbed sand where treasure is buried",
+     "w": 6,
+     "h": 4,
+     "fixed": false
+    }
+   ]
+  },
+  "x-mark": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "x-mark",
+     "folder": "props",
+     "desc": "Big red X on the ground, from a treasure map",
+     "w": 6,
+     "h": 6,
+     "fixed": false
+    }
+   ]
+  },
+  "claim-stone": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "claim-stone",
+     "folder": "props",
+     "desc": "Carved marker stone with a white flag: an island you can buy",
+     "w": 9,
+     "h": 10,
+     "fixed": false
+    },
+    {
+     "name": "claim-stone-owned",
+     "folder": "props",
+     "desc": "The same stone with a black flag: an island you own",
+     "w": 9,
+     "h": 10,
+     "fixed": false
+    }
+   ]
+  },
+  "shrine": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "shrine",
+     "folder": "props",
+     "desc": "Stone altar between two pillars holding a glowing green gem",
+     "w": 17,
+     "h": 12,
+     "fixed": false
+    }
+   ]
+  },
+  "quest-mark": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "quest-mark",
+     "folder": "props",
+     "desc": "Gold exclamation mark floating over a quest location",
+     "w": 3,
+     "h": 5,
+     "fixed": false
+    }
+   ]
+  },
+  "waypoint": {
+   "folder": "props",
+   "sprites": [
+    {
+     "name": "waypoint",
+     "folder": "props",
+     "desc": "Small red flag on a pole, marking your waypoint",
+     "w": 5,
+     "h": 7,
+     "fixed": false
+    }
+   ]
+  },
+  "deck-planks": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "deck-planks",
+     "folder": "ship",
+     "desc": "Wooden deck planks; tiles seamlessly; hull wood colours (recoloured for pine, oak and iron hulls)",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "deck-logs": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "deck-logs",
+     "folder": "ship",
+     "desc": "Lashed logs for rafts; tiles seamlessly",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "iron-bands": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "iron-bands",
+     "folder": "ship",
+     "desc": "Iron bands laid over the planks of an Ironbound hull; transparent between the bands",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "deck-damage": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "damage-crack",
+     "folder": "ship",
+     "desc": "Cracked, splintered planks; transparent except the damage",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    },
+    {
+     "name": "damage-hole",
+     "folder": "ship",
+     "desc": "Hole in the deck showing dark water; transparent around it",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "bows": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "bow-small",
+     "folder": "ship",
+     "desc": "Pointed front tip of a 1-cell-wide hull, point at the top",
+     "w": 5,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "bow-medium",
+     "folder": "ship",
+     "desc": "Pointed front tip of a 2-cell-wide hull",
+     "w": 10,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "bow-large",
+     "folder": "ship",
+     "desc": "Pointed front tip of a 3-cell-wide hull",
+     "w": 15,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "stern-lantern": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "stern-lantern",
+     "folder": "ship",
+     "desc": "Small brass lantern hanging off the back of the ship",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    }
+   ]
+  },
+  "light-cannon": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "light-cannon",
+     "folder": "ship",
+     "desc": "Small cannon on a wooden carriage, barrel pointing up",
+     "w": 5,
+     "h": 7,
+     "fixed": true
+    }
+   ]
+  },
+  "long-gun": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "long-gun",
+     "folder": "ship",
+     "desc": "Cannon with a long, slim barrel",
+     "w": 5,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "carronade": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "carronade",
+     "folder": "ship",
+     "desc": "Cannon with a short, fat barrel",
+     "w": 5,
+     "h": 7,
+     "fixed": true
+    }
+   ]
+  },
+  "swivel-gun": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "swivel-gun",
+     "folder": "ship",
+     "desc": "Small swivel gun on a post",
+     "w": 5,
+     "h": 7,
+     "fixed": true
+    }
+   ]
+  },
+  "mortar": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "mortar",
+     "folder": "ship",
+     "desc": "Squat round mortar seen from above, wide dark mouth",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "helm": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "helm",
+     "folder": "ship",
+     "desc": "Ship's wheel",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "rudder": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "rudder",
+     "folder": "ship",
+     "desc": "Wooden rudder blade; sticks out 2 px below the cell",
+     "w": 5,
+     "h": 7,
+     "fixed": true
+    }
+   ]
+  },
+  "mast": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "mast",
+     "folder": "ship",
+     "desc": "Base of a mast with rigging lines (sails are drawn over it)",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "oar-bench": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "oar-bench",
+     "folder": "ship",
+     "desc": "Rowing bench across the deck (oars are a separate sprite)",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "crew-quarters": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "crew-quarters",
+     "folder": "ship",
+     "desc": "Deck hatch with a ladder going below",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "cargo-hold": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "cargo-hold",
+     "folder": "ship",
+     "desc": "Closed cargo hatch with two iron straps",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "galley": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "galley",
+     "folder": "ship",
+     "desc": "Iron cooking stove with a chimney pipe and a glow of fire",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "powder-magazine": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "powder-magazine",
+     "folder": "ship",
+     "desc": "Four powder kegs seen from above",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "workshop": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "workshop",
+     "folder": "ship",
+     "desc": "Carpenter's workbench with a hammer",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "sick-bay": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "sick-bay",
+     "folder": "ship",
+     "desc": "Cot with a red cross",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  },
+  "crows-nest": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "crows-nest",
+     "folder": "ship",
+     "desc": "Round lookout basket seen from above, drawn on top of the sails",
+     "w": 6,
+     "h": 6,
+     "fixed": true
+    }
+   ]
+  },
+  "ram": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "ram",
+     "folder": "ship",
+     "desc": "Pointed iron ram plate on the bow, sticking out forward",
+     "w": 5,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "figurehead": {
+   "folder": "ship",
+   "sprites": [
+    {
+     "name": "figurehead",
+     "folder": "ship",
+     "desc": "Gold carved figurehead on the bow, sticking out forward",
+     "w": 5,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "sail-square": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "sail-square-full",
+     "folder": "sails",
+     "desc": "Square sail, full",
+     "w": 13,
+     "h": 5,
+     "fixed": true
+    },
+    {
+     "name": "sail-square-half",
+     "folder": "sails",
+     "desc": "Square sail, half-reefed",
+     "w": 13,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "sail-square-furled",
+     "folder": "sails",
+     "desc": "Square sail, furled on its yard",
+     "w": 13,
+     "h": 2,
+     "fixed": true
+    }
+   ]
+  },
+  "sail-patched": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "sail-patched-full",
+     "folder": "sails",
+     "desc": "Small sail on the starter raft, full",
+     "w": 9,
+     "h": 5,
+     "fixed": true
+    },
+    {
+     "name": "sail-patched-half",
+     "folder": "sails",
+     "desc": "Small sail, half-reefed",
+     "w": 9,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "sail-patched-furled",
+     "folder": "sails",
+     "desc": "Small sail, furled",
+     "w": 9,
+     "h": 2,
+     "fixed": true
+    }
+   ]
+  },
+  "sail-main": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "sail-main-full",
+     "folder": "sails",
+     "desc": "Great mainsail with a topsail above it on its own yard, both full",
+     "w": 17,
+     "h": 9,
+     "fixed": true
+    },
+    {
+     "name": "sail-main-half",
+     "folder": "sails",
+     "desc": "Mainsail and topsail, half-reefed",
+     "w": 17,
+     "h": 5,
+     "fixed": true
+    },
+    {
+     "name": "sail-main-furled",
+     "folder": "sails",
+     "desc": "Mainsail and topsail, both furled",
+     "w": 17,
+     "h": 3,
+     "fixed": true
+    }
+   ]
+  },
+  "sail-lateen": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "sail-lateen-full",
+     "folder": "sails",
+     "desc": "Triangular lateen sail on a long spar down the left edge, cloth bellying right, full",
+     "w": 5,
+     "h": 13,
+     "fixed": true
+    },
+    {
+     "name": "sail-lateen-half",
+     "folder": "sails",
+     "desc": "Lateen sail, half-reefed",
+     "w": 3,
+     "h": 13,
+     "fixed": true
+    },
+    {
+     "name": "sail-lateen-furled",
+     "folder": "sails",
+     "desc": "Lateen sail, furled along its spar",
+     "w": 2,
+     "h": 13,
+     "fixed": true
+    }
+   ]
+  },
+  "oar": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "oar",
+     "folder": "sails",
+     "desc": "Wooden oar, handle on the left and blade on the right",
+     "w": 7,
+     "h": 2,
+     "fixed": true
+    }
+   ]
+  },
+  "flags": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "flag-1",
+     "folder": "sails",
+     "desc": "Pennant flag flying to the right, pole on the left (use the pennant colour)",
+     "w": 4,
+     "h": 2,
+     "fixed": true
+    },
+    {
+     "name": "flag-2",
+     "folder": "sails",
+     "desc": "The same pennant mid-ripple",
+     "w": 4,
+     "h": 2,
+     "fixed": true
+    },
+    {
+     "name": "pirate-flag-1",
+     "folder": "sails",
+     "desc": "Plain black pirate flag flying to the right",
+     "w": 4,
+     "h": 2,
+     "fixed": true
+    },
+    {
+     "name": "pirate-flag-2",
+     "folder": "sails",
+     "desc": "The same black flag mid-ripple",
+     "w": 4,
+     "h": 2,
+     "fixed": true
+    }
+   ]
+  },
+  "fire": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "fire-1",
+     "folder": "sails",
+     "desc": "Small flames burning on the deck",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "fire-2",
+     "folder": "sails",
+     "desc": "The same flames flickered",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    }
+   ]
+  },
+  "deck-people": {
+   "folder": "sails",
+   "sprites": [
+    {
+     "name": "crew",
+     "folder": "sails",
+     "desc": "A sailor seen from above, walking on the deck (shirt in the crew shirt colours)",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "captain-deck",
+     "folder": "sails",
+     "desc": "The captain seen from above at the helm: black tricorn, red coat",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    }
+   ]
+  },
+  "sugar": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "sugar",
+     "folder": "icons",
+     "desc": "Sugar: Burlap sack of white sugar",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "rum": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "rum",
+     "folder": "icons",
+     "desc": "Rum: Clay jug of rum with a cork",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "tobacco": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "tobacco",
+     "folder": "icons",
+     "desc": "Tobacco: Bundle of dried tobacco leaves tied with string",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "coffee": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "coffee",
+     "folder": "icons",
+     "desc": "Coffee: A few roasted coffee beans",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "tea": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "tea",
+     "folder": "icons",
+     "desc": "Tea: Small wooden tea crate with a leaf stamp",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "spices": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "spices",
+     "folder": "icons",
+     "desc": "Spices: Sack of orange spices",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "silk": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "silk",
+     "folder": "icons",
+     "desc": "Silk: Rolled bolts of pink silk",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "cotton": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "cotton",
+     "folder": "icons",
+     "desc": "Cotton: White cotton bolls on a stem",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "salt": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "salt",
+     "folder": "icons",
+     "desc": "Salt: Bowl or sack of coarse white salt",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "cocoa": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "cocoa",
+     "folder": "icons",
+     "desc": "Cocoa: Orange cocoa pod",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "indigo": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "indigo",
+     "folder": "icons",
+     "desc": "Indigo: Stack of blue dye bricks",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "wine": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "wine",
+     "folder": "icons",
+     "desc": "Wine: Red wine bottle with a label",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "furs": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "furs",
+     "folder": "icons",
+     "desc": "Furs: Brown fur pelt",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "whale-oil": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "whale-oil",
+     "folder": "icons",
+     "desc": "Whale Oil: Tin can or lamp of whale oil",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "porcelain": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "porcelain",
+     "folder": "icons",
+     "desc": "Porcelain: Blue and white vase",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "amber": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "amber",
+     "folder": "icons",
+     "desc": "Amber: Polished golden-orange amber stone",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "rations": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "rations",
+     "folder": "icons",
+     "desc": "Hardtack Rations: Stack of square ship biscuits",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "salted-pork": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "salted-pork",
+     "folder": "icons",
+     "desc": "Salted Pork: Salted ham leg",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "fruit": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "fruit",
+     "folder": "icons",
+     "desc": "Fresh Fruit: An orange and a green fruit",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "water": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "water",
+     "folder": "icons",
+     "desc": "Fresh Water: Small wooden water barrel",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "grog": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "grog",
+     "folder": "icons",
+     "desc": "Grog: Wooden tankard of grog",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "medicine": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "medicine",
+     "folder": "icons",
+     "desc": "Herbal Remedy: Green bottle with a red cross",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "fish": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "fish",
+     "folder": "icons",
+     "desc": "Fish: Silver-blue fish",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "cannonball": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "cannonball",
+     "folder": "icons",
+     "desc": "Cannonballs: Pyramid of black cannonballs",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "chain-shot": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "chain-shot",
+     "folder": "icons",
+     "desc": "Chain Shot: Two iron balls joined by a chain",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "grapeshot": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "grapeshot",
+     "folder": "icons",
+     "desc": "Grapeshot: Canvas bag of small shot",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "heated-shot": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "heated-shot",
+     "folder": "icons",
+     "desc": "Heated Shot: Glowing red-hot cannonball",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "mortar-shell": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "mortar-shell",
+     "folder": "icons",
+     "desc": "Mortar Shells: Round black bomb with a lit fuse",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "pistol-shot": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "pistol-shot",
+     "folder": "icons",
+     "desc": "Pistol Shot: Small leather pouch of lead balls",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "planks": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "planks",
+     "folder": "icons",
+     "desc": "Planks: Stack of wooden planks",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "iron-bars": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "iron-bars",
+     "folder": "icons",
+     "desc": "Iron Bars: Stack of iron ingots",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "canvas": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "canvas",
+     "folder": "icons",
+     "desc": "Canvas: Rolled bolt of sail canvas",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "rope": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "rope",
+     "folder": "icons",
+     "desc": "Rope: Coil of rope",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "tar": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "tar",
+     "folder": "icons",
+     "desc": "Pine Tar: Bucket of black tar with a brush",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "brass": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "brass",
+     "folder": "icons",
+     "desc": "Brass Fittings: Brass gear or fittings",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "shovel": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "shovel",
+     "folder": "icons",
+     "desc": "Shovel: Shovel",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "spyglass": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "spyglass",
+     "folder": "icons",
+     "desc": "Spyglass: Brass telescope",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "compass": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "compass",
+     "folder": "icons",
+     "desc": "Compass: Brass compass with a red needle",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "sextant": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "sextant",
+     "folder": "icons",
+     "desc": "Sextant: Brass sextant",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "lockpick": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "lockpick",
+     "folder": "icons",
+     "desc": "Lockpick Set: Picks on a ring",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "repair-kit": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "repair-kit",
+     "folder": "icons",
+     "desc": "Repair Kit: Red toolbox",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "fishing-net": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "fishing-net",
+     "folder": "icons",
+     "desc": "Fishing Net: Bundled net with floats",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "diving-helmet": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "diving-helmet",
+     "folder": "icons",
+     "desc": "Diving Helmet: Brass diving helmet with a round window",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "rusty-cutlass": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "rusty-cutlass",
+     "folder": "icons",
+     "desc": "Rusty Cutlass: Pitted, rusty cutlass",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "cutlass": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "cutlass",
+     "folder": "icons",
+     "desc": "Cutlass: Clean steel cutlass with a gold guard",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "boarding-axe": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "boarding-axe",
+     "folder": "icons",
+     "desc": "Boarding Axe: Short axe",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "rapier": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "rapier",
+     "folder": "icons",
+     "desc": "Rapier: Slim sword with a swept hilt",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "flintlock": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "flintlock",
+     "folder": "icons",
+     "desc": "Flintlock Pistol: Flintlock pistol",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "blunderbuss": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "blunderbuss",
+     "folder": "icons",
+     "desc": "Blunderbuss: Short gun with a flared barrel",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "musket": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "musket",
+     "folder": "icons",
+     "desc": "Musket: Long musket",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "leather-vest": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "leather-vest",
+     "folder": "icons",
+     "desc": "Leather Vest: Brown leather vest",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "tricorn": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "tricorn",
+     "folder": "icons",
+     "desc": "Tricorn Hat: Black tricorn hat with gold trim",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "captains-coat": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "captains-coat",
+     "folder": "icons",
+     "desc": "Captain's Coat: Crimson long coat with gold buttons",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "silver-coins": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "silver-coins",
+     "folder": "icons",
+     "desc": "Silver Coins: Stack of silver coins",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "gold-doubloon": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "gold-doubloon",
+     "folder": "icons",
+     "desc": "Gold Doubloons: Stack of gold coins",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "pearl": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "pearl",
+     "folder": "icons",
+     "desc": "Pearl: White pearl in an open oyster shell",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "black-pearl": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "black-pearl",
+     "folder": "icons",
+     "desc": "Black Pearl: Dark pearl in an open oyster shell",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "ruby": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "ruby",
+     "folder": "icons",
+     "desc": "Ruby: Red cut gem",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "sapphire": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "sapphire",
+     "folder": "icons",
+     "desc": "Sapphire: Blue cut gem",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "emerald": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "emerald",
+     "folder": "icons",
+     "desc": "Emerald: Green cut gem",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "diamond": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "diamond",
+     "folder": "icons",
+     "desc": "Diamond: Sparkling white cut gem",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "gold-ring": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "gold-ring",
+     "folder": "icons",
+     "desc": "Gold Ring: Gold ring set with a red stone",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "necklace": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "necklace",
+     "folder": "icons",
+     "desc": "Jeweled Necklace: Gold necklace with a green pendant",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "chalice": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "chalice",
+     "folder": "icons",
+     "desc": "Golden Chalice: Golden cup",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "candelabra": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "candelabra",
+     "folder": "icons",
+     "desc": "Silver Candelabra: Three-armed silver candle holder with lit candles",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "golden-idol": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "golden-idol",
+     "folder": "icons",
+     "desc": "Golden Idol: Small golden statue with a grinning face",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "jeweled-crown": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "jeweled-crown",
+     "folder": "icons",
+     "desc": "Jeweled Crown: Gold crown set with gems",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "ancient-coin": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "ancient-coin",
+     "folder": "icons",
+     "desc": "Ancient Coin: Worn bronze coin",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "jade-figurine": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "jade-figurine",
+     "folder": "icons",
+     "desc": "Jade Figurine: Jade frog statuette",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "lucky-charm": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "lucky-charm",
+     "folder": "icons",
+     "desc": "Lucky Charm: Horseshoe charm",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "kraken-ink": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "kraken-ink",
+     "folder": "icons",
+     "desc": "Kraken Ink: Pot of purple ink with a quill",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "mermaid-scale": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "mermaid-scale",
+     "folder": "icons",
+     "desc": "Mermaid Scale: Iridescent teal scale",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "ghost-lantern": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "ghost-lantern",
+     "folder": "icons",
+     "desc": "Ghost Lantern: Lantern with a green ghostly flame",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "cursed-skull": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "cursed-skull",
+     "folder": "icons",
+     "desc": "Cursed Skull: Skull with glowing purple eyes",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "siren-conch": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "siren-conch",
+     "folder": "icons",
+     "desc": "Siren Conch: Conch shell, pink inside",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "trident-shard": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "trident-shard",
+     "folder": "icons",
+     "desc": "Trident Shard: Broken pale-blue trident tip",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "storm-glass": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "storm-glass",
+     "folder": "icons",
+     "desc": "Storm Glass: Glass orb holding a tiny lightning bolt",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "treasure-map": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "treasure-map",
+     "folder": "icons",
+     "desc": "Treasure Map: Old parchment map with a red X",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "bottle-message": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "bottle-message",
+     "folder": "icons",
+     "desc": "Message in a Bottle: Green bottle with a rolled message inside",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "sea-chart": {
+   "folder": "icons",
+   "sprites": [
+    {
+     "name": "sea-chart",
+     "folder": "icons",
+     "desc": "Sea Chart: Rolled chart showing blue sea and an island",
+     "w": 8,
+     "h": 8,
+     "fixed": true
+    }
+   ]
+  },
+  "sparkle": {
+   "folder": "effects",
+   "sprites": [
+    {
+     "name": "sparkle-1",
+     "folder": "effects",
+     "desc": "Gold four-point star marking dig spots and shrines, large frame",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    },
+    {
+     "name": "sparkle-2",
+     "folder": "effects",
+     "desc": "The same star, small frame",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    }
+   ]
+  },
+  "glint": {
+   "folder": "effects",
+   "sprites": [
+    {
+     "name": "glint-1",
+     "folder": "effects",
+     "desc": "Sunlight glint on the water: a single white pixel",
+     "w": 1,
+     "h": 1,
+     "fixed": true
+    },
+    {
+     "name": "glint-2",
+     "folder": "effects",
+     "desc": "Glint growing: a short horizontal line",
+     "w": 2,
+     "h": 1,
+     "fixed": true
+    },
+    {
+     "name": "glint-3",
+     "folder": "effects",
+     "desc": "Glint at its brightest: a small plus shape",
+     "w": 2,
+     "h": 2,
+     "fixed": true
+    },
+    {
+     "name": "glint-4",
+     "folder": "effects",
+     "desc": "Glint fading: two pixels apart",
+     "w": 2,
+     "h": 1,
+     "fixed": true
+    }
+   ]
+  },
+  "muzzle-flash": {
+   "folder": "effects",
+   "sprites": [
+    {
+     "name": "muzzle-flash",
+     "folder": "effects",
+     "desc": "Yellow-white burst from a pistol or musket shot",
+     "w": 3,
+     "h": 3,
+     "fixed": true
+    }
+   ]
+  },
+  "cutlass-swing": {
+   "folder": "effects",
+   "sprites": [
+    {
+     "name": "cutlass-swing",
+     "folder": "effects",
+     "desc": "Cutlass blade pointing up and to the right, shown during a sword swing",
+     "w": 5,
+     "h": 5,
+     "fixed": true
+    }
+   ]
+  }
+ },
+ "notes": {
+  "characters": [
+   "Folder characters, 22 sprites, all flexible. People and land creatures are seen from the front and slightly above, standing on the bottom row. Sea creatures are seen from straight above and face right, because the game rotates them to their heading."
+  ],
+  "nature": [
+   "Folder nature, 18 sprites. All flexible except the lava tile. Draw leaves with the four foliage colours from the table above, so each sea can recolour them (green in the tropics, grey-green in the north, brown in the volcanic south). Trees stand with the base of the trunk at the bottom centre; they are about twice the captain's height."
+  ],
+  "buildings": [
+   "Folder buildings, 21 sprites. Buildings show their front wall and roof, with the bottom of the wall on the bottom row. Doors are about 8 px tall so the captain fits through them. Draw roofs and plaster walls in the swap colours so towns can vary them.",
+   "The game assembles town forts and the player's Coastal Fort (45 to 77 px wide) from these pieces, so the stone, battlements and outline must match across all of them and the tiling edges must line up exactly.",
+   "The ten buildings a player can put on an island they own. The Coastal Fort is built from the fort pieces above, so it has no file of its own."
+  ],
+  "props": [
+   "Folder props, 15 sprites, all flexible. Crates, barrels and the bottle also float at sea as loot, so they should read on blue water as well as on sand. The wreck is seen from straight above."
+  ],
+  "ship": [
+   "Folder ship, 27 sprites, all fixed size. Ships are built on a grid of 5 × 5 px deck cells and seen from straight above, bow up. Each part's bottom 5 × 5 sits on one deck cell. Parts taller than 5 px stick out above the cell toward the bow (the rudder is the exception: it sticks out below, past the stern). Guns are drawn pointing up; the game turns them to face out over the side."
+  ],
+  "sails": [
+   "Folder sails, 21 sprites, all fixed size, all seen from straight above. A sail's wooden yard (the pole it hangs from) is its bottom row, and the cloth bellies upward because the wind pushes it forward. Use only the sail cloth colours for the cloth, since every ship recolours its sails. Each sail comes full, half-reefed and furled (rolled up on its yard)."
+  ],
+  "icons": [
+   "Folder icons, 80 sprites, all fixed at 8 × 8 px. The inventory shows them at double size. One object per icon, centred and filling most of the square, at a slight angle from above. Keep the same outline and lighting across the whole set so the hold looks consistent."
+  ],
+  "effects": [
+   "Folder effects, 8 sprites, all fixed size. These are tiny, so keep them to a few bright pixels with a clear shape."
+  ]
+ }
+}
