@@ -1,10 +1,10 @@
-# Rum: clay jug with a cork, handle on the right. Light from top left.
+# Rum: clay jug with a cork, ear handle on the right. Light from top left.
 == rum
 ..kk....
-.kvWk...
-.kfDkkk.
-kfFDDkDk
-kfDDdkdk
+.kJjkk..
+.kfDkDk.
+kffDDkDk
+kDDDdkdk
 kDDDdkk.
 kDDddk..
 .kkkk...
