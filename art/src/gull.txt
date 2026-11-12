@@ -1,7 +1,7 @@
-# Seagull seen from above, head up: beak and head on row 0, wings on the middle row (wingtips raised on row 0 in gull-1).
+# Seagull seen from above, head up, 5 x 3 (no outline: 3 px or less). Head and beak sit in the same cell in both frames; only the wings move.
 == gull-1
 uPyPu
-.PPU.
+.PPP.
 ..P..
 == gull-2
 .PyP.

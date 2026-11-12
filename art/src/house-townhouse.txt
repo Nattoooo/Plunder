@@ -1,0 +1,34 @@
+# house-townhouse: two-storey plaster townhouse, tiled roof, stone chimney.
+# Swap colours: roof tiles e R r, plaster walls C c (used nowhere else).
+== house-townhouse
+...........kkkkkk...
+...........kuuuTk...
+...........kuuuTk...
+....kkkkkkkkuuuTk...
+...keeeeeeekuuuTkk..
+..keRRRRRRRRRRRRRrk.
+..keRRRRRRRRRRRRRrk.
+.keRRRRRRRRRRRRRRrk.
+.keRRRRRRRRRRRRRRrk.
+kerrrrrrrrrrrrrrrrrk
+kkkkkkkkkkkkkkkkkkkk
+.kcccccccccccccccck.
+.kCCCCCCCCCCCCCCCCk.
+.kCkkkkCkkkkCkkkkCk.
+.kCkllkCkllkCkllkCk.
+.kCkBBkCkBBkCkBBkCk.
+.kCkkkkCkkkkCkkkkCk.
+.kCVVVVCVVVVCVVVVCk.
+.kCCCCCCCCCCCCCCCCk.
+.kcccccccccccccccck.
+.kCCCCCCCCCCCCCCCCk.
+.kCCCCCCCCCCCCCCCCk.
+.kCkkkkCwwwwCkkkkCk.
+.kCkllkCwWWWCkllkCk.
+.kCkBBkCwWWWCkBBkCk.
+.kCkkkkCwWWWCkkkkCk.
+.kCVVVVCwWyWCVVVVCk.
+.kCCCCCCwWWWCCCCCCk.
+.kCCCCCCwWWWCCCCCCk.
+.kCCCCCCwWWWCCCCCCk.
+.kkkkkkkkkkkkkkkkkk.

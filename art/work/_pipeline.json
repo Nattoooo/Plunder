@@ -61,7 +61,7 @@
  },
  "whale": {
   "round": 2,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -79,7 +79,7 @@
  },
  "palm": {
   "round": 1,
-  "status": "reviewing",
+  "status": "revising",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -90,8 +90,8 @@
   "tier": "normal"
  },
  "dead-tree": {
-  "round": 1,
-  "status": "revising",
+  "round": 2,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -138,8 +138,8 @@
   "tier": "tiny"
  },
  "flowers": {
-  "round": 1,
-  "status": "revising",
+  "round": 2,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -162,14 +162,14 @@
   "tier": "tiny"
  },
  "house-shutters": {
-  "round": 1,
-  "status": "revising",
+  "round": 2,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "house-long": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
