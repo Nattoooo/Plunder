@@ -4,89 +4,82 @@
 # trousers b (navy); boots are the k outline pixels on the bottom row; hair J/j.
 
 == captain-down-1
-kk.kkk.kk
+k..kkk..k
 kykKKKkOk
-.kyyyyOk.
+kyyyyyyOk
 .kskskSk.
 .kssssSk.
 .kRRpRRk.
 .ksRpRSk.
 .kbbkbbk.
 ..kk.kk..
-
 == captain-down-2
-kk.kkk.kk
+k..kkk..k
 kykKKKkOk
-.kyyyyOk.
+kyyyyyyOk
 .kskskSk.
 .kssssSk.
-.ksRpRRk.
 .kRRpRRk.
+.ksRpRRk.
 .kkbkbbk.
 ...k.kk..
-
 == captain-down-3
-kk.kkk.kk
+k..kkk..k
 kykKKKkOk
-.kyyyyOk.
+kyyyyyyOk
 .kskskSk.
 .kssssSk.
-.kRRpRSk.
 .kRRpRRk.
+.kRRpRSk.
 .kbbkbkk.
 ..kk.k...
-
 == captain-up-1
-kk.kkk.kk
+k..kkk..k
 kykKKKkOk
-.kkkkkkk.
+kykkkkkOk
 .kJJJJjk.
 ..kJjJk..
 .kRRjRRk.
 .ksRRRSk.
 .kbbkbbk.
 ..kk.kk..
-
 == captain-up-2
-kk.kkk.kk
+k..kkk..k
 kykKKKkOk
-.kkkkkkk.
+kykkkkkOk
 .kJJJJjk.
 ..kJjJk..
 .kRRjRSk.
 .kRRRRRk.
 .kbbkbkk.
 ..kk.k...
-
 == captain-up-3
-kk.kkk.kk
+k..kkk..k
 kykKKKkOk
-.kkkkkkk.
+kykkkkkOk
 .kJJJJjk.
 ..kJjJk..
 .ksRjRRk.
 .kRRRRRk.
 .kkbkbbk.
 ...k.kk..
-
 == captain-side-1
-kk.kkkk..
+k..kkkk..
 kykKKKKk.
-.kyyyyyOk
+kykkyyyOk
 .kJJsksk.
 ..kjssSk.
 ..kRRpk..
 ..kRsRk..
 .kRRbbk..
-..kkkkkk.
-
+..kkkkk..
 == captain-side-2
-kk.kkkk..
+k..kkkk..
 kykKKKKk.
-.kyyyyyOk
+kykkyyyOk
 .kJJsksk.
 ..kjssSk.
 ..kRRpk..
 ..kRRsk..
-.kRbkbk..
-..kk.kkk.
+.kRRbkbk.
+...kk.kk.

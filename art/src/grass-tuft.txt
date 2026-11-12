@@ -1,4 +1,4 @@
-# Grass tuft: three blades fanning up from a darker base, no outline (low contrast ground detail).
+# Grass tuft: two outer blades flicking up from a V of blades, no outline (low contrast ground detail).
 == grass-tuft
-h.h.
-GhGh
+h..h
+GhhG

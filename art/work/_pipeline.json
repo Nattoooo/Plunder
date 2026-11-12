@@ -2,8 +2,8 @@
  "captain": {
   "creator": "a743a2302295322b8",
   "critic": "a366084e9e6fc2fd3",
-  "round": 2,
-  "status": "revising",
+  "round": 3,
+  "status": "ready",
   "model": "sonnet from round 2"
  },
  "tree": {
@@ -31,98 +31,98 @@
   "status": "approved"
  },
  "crab": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "skeleton": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "wraith": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "gull": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "whale": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "sea-serpent": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "jungle-tree": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet"
  },
  "palm": {
   "round": 0,
-  "status": "drawing",
+  "status": "queued",
   "model": "sonnet"
  },
  "pine": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "dead-tree": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "bush": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "reeds": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "boulder": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "rock": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet"
  },
  "skull-rock": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "ice-shard": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "grass-tuft": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet"
  },
  "flowers": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "revising",
   "model": "sonnet"
  },
  "mushrooms": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "ready",
   "model": "sonnet"
  },
  "shell": {

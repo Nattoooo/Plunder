@@ -91,3 +91,24 @@ footprint is unchanged. Only the tricorn's two raised wings use cols 0 and 8. Se
 9. [MINOR] Width: **noted.** I may not edit specs.json, so this note states it instead: the captain sprite is
    9 x 9, with a 7 px wide body and feet. Measure doors, crates and tree widths against the 7 px body. Measure
    against the 9 px width only where the hat brim matters, such as clearing a door frame.
+
+## Round 2
+
+Size unchanged: 9 x 9, body and feet 7 wide (cols 1-7), as instructed to keep the footprint.
+
+1. [MAJOR] Hat reads as ears/horns: **fixed as suggested.** Rows 0-2 are now `k..kkk..k`, `kykKKKkOk`, and a 9 px brim
+   (`kyyyyyyOk` front, `kykkkkkOk` back). The corner gold connects orthogonally to the brim, which now sweeps wider
+   than the head. Side: rear wing `k..kkkk..`, black rear brim, gold only along the front brim (`kykkyyyOk`).
+2. [MAJOR] Swinging hand merges with face: **fixed.** Down-2/3 row 5 is plain coat; the near hand stays at the cuff
+   (6), the other is hidden. Up frames unchanged.
+3. [MAJOR] Width vs door: **not fixable inside my family.** I may not edit specs or the cottage. The body cannot
+   be 6 wide while keeping a centre column for the eyes, and I was told to keep the footprint. Decision for the
+   coordinator: widen the door to 7 px, or measure doors against the 7 px body.
+4. [MINOR] Front chin taper: **not done.** With eyes at cols 3/5, cheeks at 2/6 need skin below them; a tapered chin
+   orphans them (the Round 1 issue 4 regression). The back view's taper is hair, not face.
+5. [MINOR] Lifted leg: **kept.** Raising the boot to row 7 merges it into a black bar with the outline (Round 1
+   issue 5); the 1x/3x context shows the step.
+6. [MINOR] Side-2 coat tail: **fixed.** Row 7 is `.kRRbkbk.`, two coat pixels as in side-1; rear leg moved to col 4.
+7. [MINOR] Side boots: **fixed.** Side-1 row 8 `..kkkkk..` (toe stops at the outline column); side-2 `...kk.kk.`.
+8. [MINOR] Flat coat: **accepted.** Any `r` pixel touches the outline and reads black at 1x (Round 1 issue 8); the
+   light direction is shown on the hat, hair and skin.

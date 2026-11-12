@@ -7,7 +7,7 @@ khhhhhhhGk
 khhhhGGGGk
 .kkGGGGkk.
 == berry-bush
-# Same bush with three red berries (R with dark r under-edge pixel omitted for clarity).
+# Same bush with three red berries.
 ...kkkk...
 ..kHHhhk..
 .kHhRhhhk.

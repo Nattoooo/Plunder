@@ -1,0 +1,5 @@
+FAIL
+1. [MAJOR] flowers (0,0) and (4,0): the red `e` blooms touch nothing orthogonally. Row 1 is `.hGh.`, so (0,1) and (4,1) are transparent, and each bloom links to the tuft only by a diagonal corner. They read as floating orphan pixels. The notes say "on short stems", but no stem exists. Fix: row 0 `e.y.e`, row 1 `ehGhe`, row 2 `.GGG.`. Alternatively draw the stems as `G` at (0,1) and (4,1) and keep `h` at (1,1) and (3,1) as `.hGh.` merged into `GhGhG`.
+2. [MINOR] flowers (1,1),(3,1): `h` highlight is mirrored on both sides, so there is no top-left light. Fix: use `G` at (3,1) and keep `h` at (1,1) only.
+3. [MINOR] flowers (1..3,2): the `G` tuft is the same hue as grass, the main ground colour, and almost disappears in the 1x and 3x context previews. Only the three bloom pixels read. Fix: keep the `h` leaf pixels, and make sure the blooms stay clearly visible with the stems in issue 1 giving them mass.
+4. [MINOR] flowers: spec size 5x3, no outline, bottom-row standing and centring all OK. `e` is a roof/shirt swap char, but it is not swapped within this sprite, so it is acceptable. Using `R` for the red bloom would be marginally safer for palette discipline.

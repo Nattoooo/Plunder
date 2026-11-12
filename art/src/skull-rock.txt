@@ -1,0 +1,11 @@
+== skull-rock
+....kkkkkkk....
+..kkUUUUUUUkk..
+.kUUUUUUUUUUuk.
+kUUUUUUUUUUuuTk
+kUUkkkUUUkkkuTk
+kUUkkkUkUkkkuTk
+.kUUUUUkUUUuTk.
+..kUUkUUUkUuk..
+..kUUkUUUkUTk..
+...kkkkkkkkk...

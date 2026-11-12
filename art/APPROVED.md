@@ -6,3 +6,6 @@ Families the critic has passed. Match their style.
 - rum (icons) — round 2
 - house-cottage (buildings) — round 2
 - tree (nature) — round 2
+- rock (nature) — round 1
+- grass-tuft (nature) — round 1
+- jungle-tree (nature) — round 1
