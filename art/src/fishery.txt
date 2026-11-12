@@ -1,18 +1,18 @@
 # fishery: plaster hut beside a wooden drying rack with hanging fish. Swap: roof e R r, plaster C c.
 == fishery
-...kkkkkkkk....................
-..keeeeeeeek...................
-.keRRRRRRRRrk..................
-keRRRRRRRRRRrk.................
-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-.kcccccccccck.kVVVVVVVVVVVVVVvk
-.kCCCCCCCCCCk.kvvvvvvvvvvvvvvvk
-.kCCCCCCwWwCk.kVkNNn.NNn.NNnkwk
-.kCkkkkCwWwCk.kVkNNn.NNn.NNnkwk
-.kCkllkCwWwCk.kVknnn.nnn.nnnkwk
-.kCkBBkCwWwCk.kVk.n...n...n.kwk
-.kCkkkkCwWwCk.kVke.e.e.e.e.ekwk
-.kCVVVVCwWyCk.kVk...........kwk
-.kCCCCCCwWwCk.kVk...........kwk
-.kCCCCCCwWwCk.kVk...........kwk
-.kkkkkkkkkkkk.kkk...........kkk
+...kkkkkkkk.......................
+..keeeeeeeek......................
+.keRRRRRRRRrk.....................
+keRRRRRRRRRRrk....................
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+.kcccccccccck.kVVVVVVVVVVVVVVVVVvk
+.kCCCCCCCCCCk.kvvvvvvvvvvvvvvvvvvk
+.kCCCCCCwWwCk.kVk.kk...kk...kk.kwk
+.kCkkkkCwWwCk.kVkkLNk.kLNk.kLNkkwk
+.kCkllkCwWwCk.kVkkLNk.kLNk.kLNkkwk
+.kCkBBkCwWwCk.kVkklnk.klnk.klnkkwk
+.kCkkkkCwWwCk.kVk.kk...kk...kk.kwk
+.kCVVVVCwWyCk.kVk.ee...ee...ee.kwk
+.kCCCCCCwWwCk.kVk..............kwk
+.kCCCCCCwWwCk.kVk..............kwk
+.kkkkkkkkkkkk.kkk..............kkk

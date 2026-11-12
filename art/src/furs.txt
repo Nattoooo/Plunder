@@ -1,0 +1,10 @@
+# Furs: brown pelt, highlight top left, shadow bottom right. Light top left.
+== furs
+..kkkk..
+.kVVJJk.
+kVJJJJWk
+kVJJJJWk
+kJJJJJWk
+kJJJJWWk
+.kJJWWk.
+..kkkk..

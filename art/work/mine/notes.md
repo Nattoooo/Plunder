@@ -1,0 +1,1 @@
+Stone hillside dome (U/T/t, lit top-left) with a timber frame entrance (V lintel, V w posts), dark opening and a rail line on the floor. Ore cart at right: wood box, ore heap with iron/steel tones, two iron wheels. 30x13.

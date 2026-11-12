@@ -1,0 +1,1 @@
+Small plaster hut (roof e R r, plaster C c, door and window as on the cottage) beside three rows of tall crops in the foliage ramp H h G g. Crops differ in height so they read as plants, with single y pixels as ripe ears. Soil D at each base. Size 37x21 (spec 37x22, flexible).

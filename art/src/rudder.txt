@@ -1,0 +1,9 @@
+# Wooden rudder blade. Rows 0-4 sit on the stern cell, rows 5-6 hang past it.
+== rudder
+.kkk.
+kVvwk
+kVvwk
+kVvwk
+kVvwk
+kVvwk
+.kkk.

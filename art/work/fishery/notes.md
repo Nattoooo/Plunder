@@ -1,0 +1,1 @@
+Plaster hut (roof e R r, plaster C c) beside a wooden drying rack: top beam, two posts, three blue/white fish hanging by their heads with red tails. 34x16 (wider than spec to fit three fish; flexible).

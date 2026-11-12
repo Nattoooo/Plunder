@@ -1,9 +1,9 @@
 # Whale from above, facing right: notched tail flukes, tapered stock, round head, two pectoral flippers, light back strip, shaded belly edge.
 == whale
 kk....kk........
-kBk..kBBkkkkk...
-kBBkkkBBllllBBk.
-.kBBBBBBllllBBBk
+kBk..kBBkkkkkk..
+kBBkkkBBlllBBBk.
+.kBBBBBBBllBBBBk
 kBBkkkBBBBbbbbk.
-kBk..kBbkkkkk...
+kBk..kBbkkkkkk..
 kk....kk........

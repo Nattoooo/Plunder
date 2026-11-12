@@ -1,0 +1,10 @@
+# Salt: heap of white crystals in a wooden bowl. Light top left.
+== salt
+...kk...
+..kPPk..
+.kPPpCk.
+kVVVVVVk
+.kvvvWk.
+.kvvWWk.
+..kWWk..
+...kk...

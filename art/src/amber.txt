@@ -1,0 +1,10 @@
+# Amber: polished golden stone with a glint top left, shadow bottom right. Light top left.
+== amber
+..kkkk..
+.kyOOOk.
+kYyOOOOk
+kyOOOOOk
+kOOOOOok
+.kOOOok.
+..koook.
+...kk...
