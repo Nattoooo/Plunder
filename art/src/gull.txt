@@ -1,11 +1,11 @@
-# Seagull from above, head up, 5 x 4 (no outline). Head/beak in the same cells in both frames; only wings move.
+# Seagull from above, head up, 5 x 4 (no outline). Rows 0-1 (beak, head) identical in both frames; wings up are foreshortened, wings down are full span.
 == gull-1
 ..y..
 ..P..
-uPPPu
+.uPu.
 .PPU.
 == gull-2
 ..y..
+..P..
 uPPPu
 .PPU.
-..P..

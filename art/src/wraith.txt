@@ -1,20 +1,21 @@
-# Wraith: 7 x 8 (spec 6 x 8, flexible; 7 wide so two eyes sit symmetrically in a 3 px hood opening).
-# Teal robe i, dark hood opening K, glowing eyes I (the only I), no legs; hem is three 1 px tatters that swap sides.
+# Wraith: 7 x 8. Teal hooded robe i, 3x3 dark hood opening K with glowing eyes I inside, ragged hem that shifts between frames.
 == wraith-1
 ..kkk..
 .kiiik.
 kiKKKik
 kiIKIik
-kiiKiik
+kiKKKik
 kiiiiik
 kiiiiik
+kikikik
 .k.k.k.
 == wraith-2
 ..kkk..
 .kiiik.
 kiKKKik
 kiIKIik
-kiiKiik
+kiKKKik
 kiiiiik
 kiiiiik
+kikikik
 k.k.k.k

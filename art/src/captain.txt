@@ -6,7 +6,7 @@
 == captain-down-1
 kk.kkk.kk
 kykKKKkOk
-kyyyOyyOk
+kykkOkkOk
 .kskskSk.
 .kssssSk.
 .kRRpRRk.
@@ -16,7 +16,7 @@ kyyyOyyOk
 == captain-down-2
 kk.kkk.kk
 kykKKKkOk
-kyyyOyyOk
+kykkOkkOk
 .kskskSk.
 .kssssSk.
 .kRRpRRk.
@@ -26,7 +26,7 @@ kyyyOyyOk
 == captain-down-3
 kk.kkk.kk
 kykKKKkOk
-kyyyOyyOk
+kykkOkkOk
 .kskskSk.
 .kssssSk.
 .kRRpRRk.
@@ -49,8 +49,8 @@ kykKKKkOk
 kykkkkkOk
 .kJJJJjk.
 .kJJjJjk.
-.kRRjRSk.
-.kRRRRRk.
+.kRRjRRk.
+.kRRRRSk.
 .kbbkbkk.
 ..kk.k...
 == captain-up-3
@@ -59,8 +59,8 @@ kykKKKkOk
 kykkkkkOk
 .kJJJJjk.
 .kJJjJjk.
-.ksRjRRk.
-.kRRRRRk.
+.kRRjRRk.
+.ksRRRRk.
 .kkbkbbk.
 ...k.kk..
 == captain-side-1
@@ -72,7 +72,7 @@ kykkyyyOk
 ..kRRpk..
 ..kRsRk..
 .kRRbbk..
-..kkkkk..
+..kk.kk..
 == captain-side-2
 kk.kkkk..
 kykKKKKk.
