@@ -183,12 +183,29 @@ function bandPalette(w: Float32Array, out: Float32Array): void {
   put(11, deep, deep, 0);
 }
 
-function bandOf(d: number): number {
+const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map((v) => (v + 0.5) / 16);
+const DITHER = 0.4;
+
+function dith(pos: number, th: number, max: number): number {
+  let b = Math.floor(pos);
+  const f = pos - b;
+  if (b < max && f > 1 - DITHER && th < (f - (1 - DITHER)) / DITHER) b++;
+  return b;
+}
+
+function bandOf(d: number, th: number): number {
   if (d < 2.2) return 0;
-  if (d < 28) return 1 + Math.min(3, Math.floor(((d - 2.2) / 25.8) * 4));
-  if (d < 90) return 5 + Math.min(2, Math.floor(((d - 28) / 62) * 3));
-  if (d < 220) return 8 + Math.min(2, Math.floor(((d - 90) / 130) * 3));
+  if (d < 28) return dith(1 + ((d - 2.2) / 25.8) * 4, th, 11);
+  if (d < 90) return dith(5 + ((d - 28) / 62) * 3, th, 11);
+  if (d < 220) return dith(8 + ((d - 90) / 130) * 3, th, 11);
   return 11;
+}
+
+const REEF_K = [0, 0.07, 0.15, 0.22, 0.28];
+
+function reefLevel(m: number, th: number): number {
+  const pos = m < -0.03 ? (m + 0.06) / 0.03 : m < 0 ? 1 + (m + 0.03) / 0.03 : m < 0.04 ? 2 + m / 0.04 : m < 0.09 ? 3 + (m - 0.04) / 0.05 : 4;
+  return REEF_K[dith(pos, th, 4)];
 }
 
 const palTL = new Float32Array(BANDS * 3);
@@ -327,12 +344,13 @@ export function renderChunk(cx: number, cy: number): ChunkResult {
           const rd = 16 - reef * 10;
           if (rd < d) d = rd;
         }
-        const b = bandOf(d) * 3;
+        const th = BAYER[((wy & 3) << 2) | (wx & 3)];
+        const b = bandOf(d, th) * 3;
         let r = rowL[b] + (rowR[b] - rowL[b]) * fxc[i];
         let gg = rowL[b + 1] + (rowR[b + 1] - rowL[b + 1]) * fxc[i];
         let bb = rowL[b + 2] + (rowR[b + 2] - rowL[b + 2]) * fxc[i];
-        if (!frost && m > -0.03) {
-          const k = m < 0 ? 0.07 : m < 0.04 ? 0.15 : m < 0.09 ? 0.22 : 0.28;
+        if (!frost && m > -0.06) {
+          const k = reefLevel(m, th);
           r += (tR - r) * k;
           gg += (tG - gg) * k;
           bb += (tB - bb) * k;
