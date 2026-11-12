@@ -14,3 +14,4 @@ Families the critic has passed. Match their style.
 - bush (nature) — round 2
 - flowers (nature) — round 2
 - house-shutters (buildings) — round 2
+- pine (nature) — round 2

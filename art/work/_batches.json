@@ -1,0 +1,287 @@
+{
+ "characters": {
+  "families": [
+   "captain",
+   "crab",
+   "skeleton",
+   "wraith",
+   "gull",
+   "sea-serpent"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "nature-small": {
+  "families": [
+   "reeds",
+   "ice-shard",
+   "mushrooms",
+   "shell",
+   "lava-tile"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "nature-large": {
+  "families": [
+   "palm",
+   "dead-tree",
+   "whale"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "houses": {
+  "families": [
+   "house-long",
+   "house-townhouse"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "fort": {
+  "families": [
+   "fort"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "island-1": {
+  "families": [
+   "plantation",
+   "lumber-camp",
+   "mine",
+   "fishery",
+   "distillery"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "island-2": {
+  "families": [
+   "warehouse",
+   "private-dock",
+   "watchtower",
+   "tavern"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "props-small": {
+  "families": [
+   "chests",
+   "crate",
+   "barrel",
+   "bottle",
+   "dig-spot",
+   "x-mark",
+   "quest-mark",
+   "waypoint",
+   "dock-planks"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "props-large": {
+  "families": [
+   "wreck",
+   "claim-stone",
+   "shrine"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "ship-tiles": {
+  "families": [
+   "deck-logs",
+   "iron-bands",
+   "deck-damage",
+   "stern-lantern"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "ship-guns": {
+  "families": [
+   "light-cannon",
+   "long-gun",
+   "carronade",
+   "swivel-gun",
+   "mortar"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "ship-parts": {
+  "families": [
+   "helm",
+   "rudder",
+   "mast",
+   "oar-bench",
+   "crew-quarters",
+   "cargo-hold",
+   "galley",
+   "powder-magazine",
+   "workshop",
+   "sick-bay",
+   "crows-nest",
+   "ram",
+   "figurehead"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "ship-large": {
+  "families": [
+   "bows",
+   "sail-square",
+   "sail-main",
+   "sail-lateen"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
+ },
+ "ship-small": {
+  "families": [
+   "sail-patched",
+   "oar",
+   "flags",
+   "fire",
+   "deck-people"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "effects": {
+  "families": [
+   "sparkle",
+   "glint",
+   "muzzle-flash",
+   "cutlass-swing"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "icons-trade": {
+  "families": [
+   "sugar",
+   "tobacco",
+   "coffee",
+   "tea",
+   "spices",
+   "silk",
+   "cotton",
+   "salt",
+   "cocoa",
+   "indigo",
+   "wine",
+   "furs",
+   "whale-oil",
+   "porcelain",
+   "amber"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "icons-supplies": {
+  "families": [
+   "rations",
+   "salted-pork",
+   "fruit",
+   "water",
+   "grog",
+   "medicine",
+   "fish",
+   "cannonball",
+   "chain-shot",
+   "grapeshot",
+   "heated-shot",
+   "mortar-shell",
+   "pistol-shot",
+   "planks",
+   "iron-bars",
+   "canvas",
+   "rope",
+   "tar",
+   "brass"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "icons-gear": {
+  "families": [
+   "shovel",
+   "spyglass",
+   "compass",
+   "sextant",
+   "lockpick",
+   "repair-kit",
+   "fishing-net",
+   "diving-helmet",
+   "rusty-cutlass",
+   "cutlass",
+   "boarding-axe",
+   "rapier",
+   "flintlock",
+   "blunderbuss",
+   "musket",
+   "leather-vest",
+   "tricorn",
+   "captains-coat"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ },
+ "icons-treasure": {
+  "families": [
+   "silver-coins",
+   "gold-doubloon",
+   "pearl",
+   "black-pearl",
+   "ruby",
+   "sapphire",
+   "emerald",
+   "diamond",
+   "gold-ring",
+   "necklace",
+   "chalice",
+   "candelabra",
+   "golden-idol",
+   "jeweled-crown",
+   "ancient-coin",
+   "jade-figurine",
+   "lucky-charm",
+   "kraken-ink",
+   "mermaid-scale",
+   "ghost-lantern",
+   "cursed-skull",
+   "siren-conch",
+   "trident-shard",
+   "storm-glass",
+   "treasure-map",
+   "bottle-message",
+   "sea-chart"
+  ],
+  "tier": "tiny",
+  "round": 0,
+  "status": "drawing"
+ }
+}

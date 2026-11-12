@@ -139,7 +139,7 @@ def main(family):
             print(f"note {name}: {w}x{h} (spec {s['w']}x{s['h']}, flexible)")
     if errors:
         print("ERRORS:\n" + "\n".join(errors))
-        sys.exit(1)
+        raise SystemExit(1)
     work = ROOT / "work" / family
     work.mkdir(parents=True, exist_ok=True)
     folder = spec["folder"]
