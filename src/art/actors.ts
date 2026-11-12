@@ -8,9 +8,9 @@ const DOWN_BODY = [
   '..ksssssSk..',
   '...kjjjjk...',
   '..kRRppRRk..',
-  '.kRRRpyRRRk.',
+  '.kRRRppRRRk.',
   'kRrkRppRkrRk',
-  'kRrkRpyRkrRk',
+  'kRrkRppRkrRk',
   'kssJJJyJJssk',
   '.kkRRRRRRkk.'
 ];
@@ -39,7 +39,7 @@ const SIDE_BODY = [
   '...kjssssk..',
   '....kjjSk...',
   '...kRRpRk...',
-  '...kRRpyRk..',
+  '...kRRppRk..',
   '...kRrRRk...',
   '...kRrRRk...',
   '...kJsJJk...',

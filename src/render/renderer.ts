@@ -11,7 +11,10 @@ import type { Ship } from '../game/ship';
 import { poisNear, POI } from '../game/pois';
 import { shipSprite, pruneSprites } from './shipSprite';
 import { artCanvas } from './artCanvas';
-import { Art, flipX, ramp, shade as shadeHex } from '../art/palette';
+import { Art, Swap, flipX, ramp, shade as shadeHex } from '../art/palette';
+import { noShadow } from '../art/compose';
+import { OBJS, MAX_OBJ_W, MAX_OBJ_H } from '../world/objects';
+import { structurePlaces } from '../world/structPlace';
 import { SAILS, PARTS, OAR, CREW, CAPTAIN, FLAG, JOLLY, FIRE } from '../art/ship';
 import { sprites } from './sprites';
 import { CRATE, BARREL, GOLD_CHEST, BOTTLE, WRECK, QUEST_MARK, LOST_CARGO, GLINT, CLAIM_STONE, CLAIM_OWNED, CHEST, LOCKED_CHEST, SPARKLE, DIG_SPOT, SHRINE, XMARK, WAYPOINT, STRUCTURES } from '../art/props';
@@ -200,8 +203,7 @@ export class Renderer {
     for (const m of g.monsters) this.drawMonster(m, ox, oy, t);
     for (const s of g.ships) if (this.onScreen(s, ox, oy)) this.drawShipShadow(s, ox, oy);
     for (const s of g.ships) if (this.onScreen(s, ox, oy)) this.drawShip(g, s, ox, oy, t);
-    for (const m of g.mobs) this.drawMob(m.kind, m.x - ox, m.y - oy, m.anim, m.hurt > 0, m.hp / m.maxHp, !!g.avatar && g.avatar.x < m.x);
-    if (g.avatar) this.drawAvatar(g, g.avatar.x - ox, g.avatar.y - oy);
+    this.drawStanding(g, ox, oy, tmpPOI);
     for (const p of g.projectiles) {
       const sx = p.x - ox;
       const sy = p.y - oy;
@@ -325,7 +327,7 @@ export class Renderer {
         if (tt !== T_DEEP && tt !== T_OCEAN && tt !== T_SHALLOW) continue;
         const fr = Math.min(3, Math.floor((f / 0.4) * 4));
         const spr = artCanvas(GLINT[fr === 3 ? 3 : fr]);
-        ctx.globalAlpha = tt === T_SHALLOW ? 0.45 : 0.7;
+        ctx.globalAlpha = tt === T_SHALLOW ? 0.3 : 0.5;
         ctx.drawImage(spr, this.snap(wx - ox), this.snap(wy - oy));
       }
     }
@@ -334,28 +336,15 @@ export class Renderer {
 
   private drawLandObjects(g: Game, ox: number, oy: number, pois: POI[]): void {
     const ctx = this.ctx;
-    const S = sprites();
     const t = g.env.time;
     for (const p of pois) {
+      if (p.kind !== 'dig' || !g.poiAvailable(p)) continue;
       const sx = this.snap(p.x - ox);
       const sy = this.snap(p.y - oy);
       if (sx < -30 || sy < -30 || sx > this.w + 30 || sy > this.h + 30) continue;
-      if (p.kind === 'claim') {
-        const own = g.profile.ownedIsland(p.island);
-        ctx.drawImage(artCanvas(own ? CLAIM_OWNED : CLAIM_STONE), sx - 4, sy - 16);
-        if (own) this.drawStructures(g, own.structures, p.x, p.y, ox, oy);
-        continue;
-      }
-      if (!g.poiAvailable(p)) continue;
-      if (p.kind === 'chest') ctx.drawImage(artCanvas(p.locked ? LOCKED_CHEST : CHEST), sx - 7, sy - 8);
-      else if (p.kind === 'dig') {
-        ctx.drawImage(artCanvas(DIG_SPOT), sx - 6, sy - 4);
-        const sp = ((t * 2 + p.id) | 0) % 4;
-        if (sp < 2) ctx.drawImage(artCanvas(SPARKLE[sp]), sx - 2, sy - 6);
-      } else if (p.kind === 'shrine') {
-        ctx.drawImage(artCanvas(SHRINE), sx - 8, sy - 14);
-        if (((t * 3) | 0) % 2) ctx.drawImage(artCanvas(SPARKLE[0]), sx - 2, sy - 18);
-      }
+      ctx.drawImage(artCanvas(DIG_SPOT), sx - 6, sy - 4);
+      const sp = ((t * 2 + p.id) | 0) % 4;
+      if (sp < 2) ctx.drawImage(artCanvas(SPARKLE[sp]), sx - 2, sy - 6);
     }
     for (const it of g.profile.inv.items) {
       if (it.id !== 'treasure_map' || !it.data) continue;
@@ -363,26 +352,108 @@ export class Renderer {
       const sy = this.snap(it.data.y - oy);
       if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(artCanvas(XMARK), sx - 5, sy - 5);
     }
-    if (g.profile.waypoint) {
-      const sx = this.snap(g.profile.waypoint.x - ox);
-      const sy = this.snap(g.profile.waypoint.y - oy);
-      if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(artCanvas(WAYPOINT), sx - 1, sy - 12);
+  }
+
+  private stand: { by: number; f: () => void }[] = [];
+  private seen = new Set<string>();
+  private solids = new WeakMap<Art, Art>();
+
+  private solid(a: Art): Art {
+    let s = this.solids.get(a);
+    if (!s) {
+      s = noShadow(a);
+      this.solids.set(a, s);
+    }
+    return s;
+  }
+
+  private gatherOcc(g: Game, x0: number, y0: number, x1: number, by: number, ox: number, oy: number): void {
+    const ctx = this.ctx;
+    const cxa = Math.floor((x0 - MAX_OBJ_W) / CHUNK);
+    const cxb = Math.floor((x1 + MAX_OBJ_W) / CHUNK);
+    const cya = Math.floor(by / CHUNK);
+    const cyb = Math.floor((by + MAX_OBJ_H) / CHUNK);
+    for (let cx = cxa; cx <= cxb; cx++) for (let cy = cya; cy <= cyb; cy++) {
+      const ch = g.chunks.get(cx, cy);
+      if (!ch || !ch.occ.length) continue;
+      const oc = ch.occ;
+      for (let k = 0; k < oc.length; k += 3) {
+        const o = OBJS[oc[k]];
+        const qx = oc[k + 1];
+        const qy = oc[k + 2];
+        const depth = qy + o.fy1;
+        if (depth <= by || qy >= by || qx >= x1 || qx + o.art.w <= x0 || qy + o.art.h <= y0) continue;
+        const key = `${oc[k]},${qx},${qy}`;
+        if (this.seen.has(key)) continue;
+        this.seen.add(key);
+        const art = this.solid(o.art);
+        this.stand.push({ by: depth, f: () => ctx.drawImage(artCanvas(art, o.swap), this.snap(qx - ox), this.snap(qy - oy)) });
+      }
     }
   }
 
-  private drawStructures(g: Game, list: string[], x: number, y: number, ox: number, oy: number): void {
+  private drawStanding(g: Game, ox: number, oy: number, pois: POI[]): void {
     const ctx = this.ctx;
-    const offs = [[-30, -16], [24, -18], [-34, 16], [28, 18], [-4, -36], [0, 32], [-56, 0], [52, -2]];
+    const L = this.stand;
+    L.length = 0;
+    this.seen.clear();
+    const t = g.env.time;
+    const W = this.w;
+    const H = this.h;
+    const put = (a: Art, x: number, y: number, swap?: Swap, extra?: () => void) => {
+      if (x + a.w < ox - 4 || x > ox + W + 4 || y + a.h < oy - 4 || y > oy + H + 4) return;
+      L.push({ by: y + a.h - 1, f: () => {
+        ctx.drawImage(artCanvas(a, swap), this.snap(x - ox), this.snap(y - oy));
+        if (extra) extra();
+      } });
+      this.gatherOcc(g, x, y, x + a.w, y + a.h - 1, ox, oy);
+    };
+    for (const s of g.ships) if (this.onScreen(s, ox, oy) && s.sinking < 0) this.gatherOcc(g, s.x - s.radius, s.y - s.radius, s.x + s.radius, s.y, ox, oy);
+    for (const p of pois) {
+      if (p.kind === 'claim') {
+        const own = g.profile.ownedIsland(p.island);
+        const a = own ? CLAIM_OWNED : CLAIM_STONE;
+        put(a, Math.round(p.x) - (a.w >> 1), Math.round(p.y) - a.h + 1);
+        if (own) this.addStructures(p.island, own.structures, p.x, p.y, put);
+        continue;
+      }
+      if (!g.poiAvailable(p)) continue;
+      if (p.kind === 'chest') put(p.locked ? LOCKED_CHEST : CHEST, Math.round(p.x) - 7, Math.round(p.y) - 8);
+      else if (p.kind === 'shrine') {
+        const sx = Math.round(p.x);
+        const sy = Math.round(p.y);
+        put(SHRINE, sx - (SHRINE.w >> 1), sy - SHRINE.h + 1, undefined, () => {
+          if (((t * 3) | 0) % 2) ctx.drawImage(artCanvas(SPARKLE[0]), this.snap(sx - ox) - 2, this.snap(sy - oy) - SHRINE.h - 2);
+        });
+      }
+    }
+    for (const m of g.mobs) {
+      if (m.x < ox - 30 || m.x > ox + W + 30 || m.y < oy - 30 || m.y > oy + H + 40) continue;
+      L.push({ by: m.y, f: () => this.drawMob(m.kind, m.x - ox, m.y - oy, m.anim, m.hurt > 0, m.hp / m.maxHp, !!g.avatar && g.avatar.x < m.x) });
+      this.gatherOcc(g, m.x - 8, m.y - 18, m.x + 8, m.y, ox, oy);
+    }
+    if (g.avatar) {
+      const a = g.avatar;
+      L.push({ by: a.y, f: () => this.drawAvatar(g, a.x - ox, a.y - oy) });
+      this.gatherOcc(g, a.x - 7, a.y - 18, a.x + 7, a.y, ox, oy);
+    }
+    if (g.profile.waypoint) {
+      const wp = g.profile.waypoint;
+      put(WAYPOINT, Math.round(wp.x) - 1, Math.round(wp.y) - 12);
+    }
+    L.sort((a, b) => a.by - b.by);
+    for (const e of L) e.f();
+  }
+
+  private addStructures(island: number, list: string[], x: number, y: number, put: (a: Art, x: number, y: number, swap?: Swap) => void): void {
+    const at = structurePlaces(island, x, y, list);
     list.forEach((st, i) => {
       const def = STRUCT[st];
-      if (!def) return;
       const art = STRUCTURES[st];
-      if (!art) return;
-      const spr = artCanvas(art);
-      const o = offs[i % offs.length];
-      const sx = this.snap(Math.round(x + o[0] - spr.width / 2) - ox);
-      const sy = this.snap(Math.round(y + o[1] - spr.height / 2) - oy);
-      ctx.drawImage(spr, sx, sy);
+      const px = at[i * 2];
+      const py = at[i * 2 + 1];
+      if (!def || !art || !Number.isFinite(px)) return;
+      put(art, Math.round(px - art.w / 2), Math.round(py - art.h + 1), ramp2(def.roof));
     });
   }
 
@@ -464,7 +535,6 @@ export class Renderer {
         ctx.drawImage(artCanvas(CAPTAIN), hx - 3, hy - 3);
       }
     }
-    const rel = Number.isFinite(s.sailAngle) ? angleDiff(s.heading, s.sailAngle) : 0;
     const state = s.sail < 0.2 ? 'furled' : s.sail < 0.7 ? 'half' : 'full';
     const windSide = angleDiff(s.heading, g.env.windAngle) < 0;
     const sailSwap = ramp(ghost ? 0x7a9a8a : s.design.sailColor);
@@ -483,9 +553,7 @@ export class Renderer {
       }
       const [lx, ly] = s.cellLocal(i);
       at();
-      ctx.translate(lx, ly);
-      ctx.rotate(rel);
-      ctx.drawImage(artCanvas(a, sailSwap), -ax, -ay);
+      ctx.drawImage(artCanvas(a, sailSwap), lx - ax, ly - ay);
       if (!flagAt) flagAt = [lx, ly];
     }
     for (const i of s.cells) {
@@ -801,4 +869,8 @@ export class Renderer {
 
 function shade(c: number, f: number): number {
   return (Math.min(255, (((c >> 16) & 255) * f) | 0) << 16) | (Math.min(255, (((c >> 8) & 255) * f) | 0) << 8) | Math.min(255, ((c & 255) * f) | 0);
+}
+
+function ramp2(c: number): Swap {
+  return { e: shade(c, 1.18), R: c, r: shade(c, 0.8) };
 }

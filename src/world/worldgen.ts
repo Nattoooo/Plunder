@@ -1,6 +1,6 @@
 import { WORLD_SEED, hash2, fbm, RNG, noise2 } from '../core/rng';
 import { islandName, portName } from './names';
-import { HOUSES, FORT } from '../art/world';
+import { HOUSES, FORTS, WALLS } from '../art/world';
 
 export const UNITS_PER_MILE = 512;
 export const WORLD_MILES = 1000;
@@ -354,13 +354,27 @@ export function heightAt(x: number, y: number, out: HeightSample): HeightSample 
   return out;
 }
 
-export function reefField(x: number, y: number, biome: number): number {
+export const reefOut = { margin: -1, base: -9 };
+
+const REEF_TH = [0.75, 0.63, 0.66, 0.8, 0.8];
+
+export function reefThreshold(w: Float32Array): number {
+  let t = 0;
+  for (let i = 0; i < 5; i++) t += w[i] * REEF_TH[i];
+  return t;
+}
+
+export function reefField(x: number, y: number, th: number): number {
   const macro = fbm(x / 1400, y / 1400, WORLD_SEED + 21, 3);
-  const th = biome === B_CORAL ? 0.63 : biome === B_SHALLOWS ? 0.75 : biome === B_FROST ? 0.66 : 0.8;
-  if (macro < th) return -1;
+  reefOut.base = (macro - th) * 6;
+  if (macro < th) {
+    reefOut.margin = -1;
+    return -1;
+  }
   const base = (macro - th) * 6;
   const micro = fbm(x / 15, y / 15, WORLD_SEED + 22, 2);
-  if (micro > 0.67 - Math.min(0.05, base * 0.03)) return 0.6;
+  reefOut.margin = micro - (0.67 - Math.min(0.05, base * 0.03));
+  if (reefOut.margin > 0) return 0.6;
   return base > 0.15 ? 0 : -0.5;
 }
 
@@ -456,8 +470,8 @@ export function portLayout(isl: Island): PortLayout | null {
     dirY: dy,
     berthX: cx + dx * 70,
     berthY: cy + dy * 70,
-    townX: cx - dx * (34 + size * 12),
-    townY: cy - dy * (34 + size * 12),
+    townX: cx - dx * (70 + size * 40),
+    townY: cy - dy * (70 + size * 40),
     houses: [],
     paths: [],
     fortX: 0,
@@ -466,24 +480,25 @@ export function portLayout(isl: Island): PortLayout | null {
   };
   const rng = new RNG(isl.seed ^ 0x99);
   const bwid = beachWidth(isl.r);
-  const radius = 34 + size * 26;
-  const count = 6 + size * 6;
+  const radius = 70 + size * 45;
+  const count = 4 + size * 4;
   const roofs = isl.port.faction === F_CROWN ? [0, 1, 2, 0] : isl.port.faction === F_BRETHREN ? [4, 2, 4, 0] : [5, 3, 2, 0];
   const okAt = (x: number, y: number) => heightAt(x, y, hs).h > bwid + 3;
   const overlaps = (x: number, y: number, w: number, h: number) => {
-    for (const o of L.houses) if (x < o.x + o.w + 3 && x + w + 3 > o.x && y < o.y + o.h + 3 && y + h + 3 > o.y) return true;
+    for (const o of L.houses) if (x < o.x + o.w + 10 && x + w + 10 > o.x && y < o.y + o.h + 10 && y + h + 10 > o.y) return true;
     const ddx = x + w / 2 - cx;
-    const ddy = y + h / 2 - cy;
-    if (ddx * ddx + ddy * ddy < 26 * 26) return true;
+    const ddy = y + h - cy;
+    if (ddx * ddx + ddy * ddy < 44 * 44) return true;
     return false;
   };
-  const fw = FORT.w;
-  const fh = FORT.h;
-  for (let a = 0; a < 40; a++) {
-    const fx = L.townX + (rng.next() - 0.5) * radius * 1.6;
-    const fy = L.townY + (rng.next() - 0.5) * radius * 1.6;
-    if (okAt(fx, fy) && okAt(fx + fw, fy) && okAt(fx, fy + fh) && okAt(fx + fw, fy + fh) && !overlaps(fx, fy, fw, fh)) {
-      L.houses.push({ x: Math.round(fx), y: Math.round(fy), w: fw, h: fh, kind: 1, color: 0 });
+  const fortArt = FORTS[Math.min(FORTS.length, size) - 1];
+  const fw = fortArt.w;
+  const fh = fortArt.h;
+  for (let a = 0; a < 60; a++) {
+    const fx = L.townX - fw / 2 + (rng.next() - 0.5) * radius * 1.4;
+    const fy = L.townY - fh / 2 + (rng.next() - 0.5) * radius * 1.4;
+    if (okAt(fx, fy) && okAt(fx + fw, fy) && okAt(fx, fy + fh) && okAt(fx + fw, fy + fh) && okAt(fx + fw / 2, fy + fh / 2) && okAt(fx + fw / 2, fy) && okAt(fx + fw / 2, fy + fh) && !overlaps(fx, fy, fw, fh)) {
+      L.houses.push({ x: Math.round(fx), y: Math.round(fy), w: fw, h: fh, kind: 1, color: Math.min(FORTS.length, size) - 1 });
       L.fortX = fx + fw / 2;
       L.fortY = fy + fh / 2;
       break;
@@ -496,17 +511,18 @@ export function portLayout(isl: Island): PortLayout | null {
     const ddy = py - L.townY;
     if (ddx * ddx + ddy * ddy > radius * radius) continue;
     const variant = rng.int(0, HOUSES.length - 1);
-    const w = HOUSES[variant].w;
-    const h = HOUSES[variant].h;
-    if (!okAt(px, py) || !okAt(px + w, py) || !okAt(px, py + h) || !okAt(px + w, py + h)) continue;
-    if (overlaps(px, py, w, h)) continue;
-    const hx = Math.round(px);
-    const hy = Math.round(py);
-    L.houses.push({ x: hx, y: hy, w, h, kind: 0, color: (variant << 4) | rng.pick(roofs) });
+    const w = HOUSES[variant].art.w;
+    const h = HOUSES[variant].art.h;
+    const hx = Math.round(px - w / 2);
+    const hy = Math.round(py - h / 2);
+    if (!okAt(hx, hy) || !okAt(hx + w, hy) || !okAt(hx, hy + h) || !okAt(hx + w, hy + h)) continue;
+    if (overlaps(hx, hy, w, h)) continue;
+    const wallCol = rng.int(0, WALLS.length - 1);
+    L.houses.push({ x: hx, y: hy, w, h, kind: 0, color: (variant << 8) | (wallCol << 4) | rng.pick(roofs) });
     L.lights.push(hx + w / 2, hy + h - 3);
   }
   const nodes: number[] = [Math.round(L.dockX0), Math.round(L.dockY0), Math.round(L.townX), Math.round(L.townY)];
-  for (const hsx of L.houses) nodes.push(Math.round(hsx.x + hsx.w / 2), Math.round(hsx.y + hsx.h + 1));
+  for (const hsx of L.houses) nodes.push(Math.round(hsx.x + (hsx.w - 2) / 2), Math.round(hsx.y + hsx.h + 2));
   const n = nodes.length / 2;
   const inTree = new Uint8Array(n);
   const bestD = new Float64Array(n).fill(Infinity);

@@ -7,6 +7,7 @@ export interface Chunk {
   img: CanvasImageSource | null;
   types: Uint8Array;
   lights: number[];
+  occ: number[];
   used: number;
 }
 
@@ -18,6 +19,7 @@ interface WorkerMsg {
   pixels: Uint8ClampedArray;
   types: Uint8Array;
   lights: number[];
+  occ: number[];
 }
 
 export interface MapTile {
@@ -72,7 +74,7 @@ export class ChunkManager {
   private receive(wi: number, m: WorkerMsg): void {
     this.busy[wi]--;
     this.pending.delete(m.key);
-    if (m.t === 'c') this.store(m.cx, m.cy, m.pixels, m.types, m.lights);
+    if (m.t === 'c') this.store(m.cx, m.cy, m.pixels, m.types, m.lights, m.occ);
     else {
       const tile: MapTile = { img: null, used: this.frame };
       this.tiles.set(m.key as string, tile);
@@ -81,9 +83,9 @@ export class ChunkManager {
     this.pump();
   }
 
-  private store(cx: number, cy: number, pixels: Uint8ClampedArray, types: Uint8Array, lights: number[]): void {
+  private store(cx: number, cy: number, pixels: Uint8ClampedArray, types: Uint8Array, lights: number[], occ: number[]): void {
     const key = cx * CHUNKS + cy;
-    const ch: Chunk = { cx, cy, img: null, types, lights, used: this.frame };
+    const ch: Chunk = { cx, cy, img: null, types, lights, occ, used: this.frame };
     this.chunks.set(key, ch);
     this.generated++;
     toImage(pixels, CHUNK, CHUNK, (img) => (ch.img = img));
@@ -132,7 +134,7 @@ export class ChunkManager {
         this.pending.delete(j.key);
         if (j.t === 'c') {
           const r = renderChunk(j.a, j.b);
-          this.store(j.a, j.b, r.pixels, r.types, r.lights);
+          this.store(j.a, j.b, r.pixels, r.types, r.lights, r.occ);
         } else {
           const p = renderMapTile(j.a, j.b, j.c);
           const tile: MapTile = { img: null, used: this.frame };

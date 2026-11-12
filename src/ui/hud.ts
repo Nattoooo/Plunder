@@ -141,10 +141,6 @@ export class HUD {
     if (s.anchored) st.push('Anchored');
     if (s.rowing && s.stats?.oarPower) st.push('Rowing');
     if (g.mode === 'foot') st.push('Ashore');
-    if (Number.isFinite(s.sailAngle)) {
-      const rel = Math.round((((s.sailAngle - s.heading + Math.PI * 3) % (Math.PI * 2)) - Math.PI) * 180 / Math.PI);
-      if (Math.abs(rel) >= 2) st.push(`Sail ${Math.abs(rel)}° ${rel < 0 ? 'port' : 'starboard'}`);
-    }
     if (s.sail > 0.05 && s.stats) {
       const wf = s.windFactor(g.env);
       st.push(wf > 0.95 ? 'Good wind' : wf > 0.7 ? 'Fair wind' : 'Into the wind');

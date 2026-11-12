@@ -25,7 +25,7 @@ npm run build
 | Key | Action |
 | --- | --- |
 | W / S | Draw (raise) or furl the sail: Furled → Half → Full |
-| A / D | Rotate the sail. The hull swings to follow it and holds that course until you turn the sail again |
+| A / D | Turn the sail, and the ship with it. It holds that course until you turn again |
 | Hold left mouse | Fire every cannon that bears on the cursor |
 | R | Swap ammunition (round, chain, grape, heated shot) |
 | Right-click | Set a waypoint |
@@ -55,7 +55,7 @@ On foot: WASD to walk, left-click to attack, E to interact.
 
 ## Tech
 
-TypeScript + Vite, no game framework. The world is rendered with Canvas 2D at full screen resolution, with pixel art scaled by whole numbers and rotated freely so ships, sails and the camera move smoothly. Every sprite, tile, item icon and font glyph is hand-authored pixel art in `src/art`, stored as palette-indexed strings. Terrain chunks and map tiles are generated in Web Workers. All sound effects and music are synthesised at runtime with the Web Audio API, with positional falloff for in-world sounds.
+TypeScript + Vite, no game framework. The world is rendered with Canvas 2D at full screen resolution, with pixel art scaled by whole numbers and rotated freely so ships, sails and the camera move smoothly. Every sprite, tile, item icon and font glyph is hand-authored pixel art in `src/art`, stored as palette-indexed strings. Buildings and forts are assembled from hand-drawn wall, roof, door and tower pieces. Trees, houses and forts are drawn in a side-on view and depth-sorted against characters, so you can walk behind them. Terrain chunks and map tiles are generated in Web Workers. All sound effects and music are synthesised at runtime with the Web Audio API, with positional falloff for in-world sounds.
 
 ```
 src/

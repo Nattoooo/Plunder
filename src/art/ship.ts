@@ -12,14 +12,14 @@ export const RAIL_CAP: Record<number, string> = { 1: 'W', 2: 'V', 3: 'V', 4: 'n'
 export const DECK_PLANK = art([
   'VvvvWVvvvW',
   'VvvvWwWWwW',
-  'VvDvWVvvvW',
-  'VvvvWVvvDW',
   'VvvvWVvvvW',
-  'VvvDWVvvvW',
+  'VvvvWVvvvW',
+  'VvvvWVvvvW',
+  'VvvvWVvvvW',
   'wWWwWVvvvW',
-  'VvvvWVDvvW',
   'VvvvWVvvvW',
-  'VDvvWVvvvW'
+  'VvvvWVvvvW',
+  'VvvvWVvvvW'
 ]);
 
 export const DECK_LOG = art([
@@ -282,11 +282,11 @@ export const PARTS: Record<string, PartArt> = {
       '..........',
       '.kkkkkkkk.',
       '.kVVVVVVk.',
-      '.kVkVkVkk.',
+      '.kMMMMMMk.',
+      '.kvvvvvvk.',
       '.kVVVVVVk.',
-      '.kVkVkVkk.',
-      '.kVVVVVVk.',
-      '.kVkVkVkk.',
+      '.kMMMMMMk.',
+      '.kvvvvvvk.',
       '.kkkkkkkk.',
       '..........'
     ])
@@ -309,31 +309,31 @@ export const PARTS: Record<string, PartArt> = {
   powder_magazine: {
     ay: 0,
     art: art([
-      '.kkk.kkk..',
-      'kvVvkvVvk.',
-      'kRRRkRRRk.',
-      'kvvWkvvWk.',
-      '.kkk.kkk..',
-      '.kkk.kkk..',
-      'kvVvkvVvk.',
-      'kRRRkRRRk.',
-      'kvvWkvvWk.',
-      '.kkk.kkk..'
+      '.kkkk.kkkk',
+      'kVvvWkVvvW',
+      'kvjjwkvjjw',
+      'kvjjwkvjjw',
+      '.kWWk.kWWk',
+      '.kkkk.kkkk',
+      'kVvvWkVvvW',
+      'kvjjwkvjjw',
+      'kvjjwkvjjw',
+      '.kWWk.kWWk'
     ])
   },
   workshop: {
     ay: 0,
     art: art([
       '..........',
-      'kkkkkkkkk.',
-      'kVVVVVVVk.',
-      'kvvvvnNvk.',
-      'kWWWWnNWk.',
-      'kkkkkkkkk.',
-      '.kM..kVk..',
-      '.kMMk.Vk..',
-      '..kk..Vk..',
-      '......kk..'
+      '.kkkk.....',
+      '.kNMkkkkk.',
+      '.kMmkWWWk.',
+      '.kkkkkkkk.',
+      'kkkkkkkkkk',
+      'kVVVVVVVVk',
+      'kvvvvvvvvk',
+      'kWk....kWk',
+      'kkk....kkk'
     ])
   },
   sick_bay: {
@@ -430,41 +430,41 @@ export const SAILS: Record<string, SailSet> = {
     ax: 13,
     full: art([
       '........kkkkkkkkkk........',
-      '......kkpppppppCCCkk......',
-      '....kkpppcppppCCcCcckk....',
-      '..kkpppppcpppCCCcCCccckk..',
-      '.kpppppppcppCCCCcCCCcccck.',
-      '.kpppppppcCCCCCCcCCCcccck.',
-      '.kppppppCcCCCCCCcCCccccck.',
-      '.kppppCCCcCCCCCCcccccccck.',
-      '.kppCCCCCcCCCCcccccccccck.',
+      '......kkppppppCCCCkk......',
+      '....kkppppppCCCCCCcckk....',
+      '..kkppppppCCCCCCCCccccck..',
+      '.kpppppppCCCCCCCCCcccccck.',
+      '.kppppppCCCCCCCCCCcccccck.',
+      '.kpppppCCCCCCCCCCccccccck.',
+      '.kppppCCCCCCCCCCcccccccck.',
+      '.kppCCCCCCCCCCCccccccccck.',
       SQ_YARD
     ]),
     half: art([
       '....kkkkkkkkkkkkkkkkkk....',
-      '..kkpppppcpppCCCcCCccckk..',
-      '.kpppppppcCCCCCCcCCCcccck.',
-      '.kppppCCCcCCCCCCcccccccck.',
-      '.kppCCCCCcCCCCcccccccccck.',
+      '..kkpppppppCCCCCCCccccck..',
+      '.kpppppCCCCCCCCCCcccccck..',
+      '.kppppCCCCCCCCCCcccccccck.',
+      '.kppCCCCCCCCCCCccccccccck.',
       SQ_YARD
     ]),
-    furled: art(['.kkkkkkkkkkkkkkkkkkkkkkkk.', 'kCpCCDCCpCCpCCpCCpCCDCCpCk', SQ_YARD])
+    furled: art(['.kkkkkkkkkkkkkkkkkkkkkkkk.', 'kppppCCCCCCCCCCCCCCccccck', SQ_YARD].map((r) => r.padEnd(26, 'k').slice(0, 26)))
   },
   patch: {
     ax: 9,
     full: art([
       '.....kkkkkkkk.....',
-      '...kkCCCfCCcckk...',
-      '..kCCCCffCCCccck..',
-      '.kCCCCCffCCCCccck.',
-      '.kCCdDdCCCCCcccck.',
-      '.kCCDfDCCCCCcccck.',
-      '.kCCdDdCCCfCcccck.',
-      '.kcCCCCCCCCCcccck.',
+      '...kkppCCCCCcckk..',
+      '..kppppCCCCCccck..',
+      '.kpppCCCCCCCcccck.',
+      '.kppCCCCCCCCcccck.',
+      '.kppCCCCCCCCcccck.',
+      '.kpCCCCCCCCccccck.',
+      '.kpCCCCCCCCccccck.',
       'kWWWWWWWVVWWWWWWWk'
     ]),
-    half: art(['...kkkkkkkkkkkk...', '..kCCCCffCCCccck..', '.kCCdDdCCCCCcccck.', '.kcCCCCCCfCCcccck.', 'kWWWWWWWVVWWWWWWWk']),
-    furled: art(['.kkkkkkkkkkkkkkkk.', 'kCpCCpCfCCpCCpCCpk', 'kWWWWWWWVVWWWWWWWk'])
+    half: art(['...kkkkkkkkkkkk...', '..kppCCCCCCcccck..', '.kpCCCCCCCCccccck.', '.kpCCCCCCCccccck..', 'kWWWWWWWVVWWWWWWWk']),
+    furled: art(['.kkkkkkkkkkkkkkkk.', 'kppCCCCCCCCCCcccck', 'kWWWWWWWVVWWWWWWWk'])
   },
   lateen: {
     ax: 1,
@@ -528,25 +528,25 @@ export const SAILS: Record<string, SailSet> = {
     furled: art([
       '.k..',
       'kWk.',
-      'kWCk',
+      'kWpk',
+      'kWpk',
       'kWpk',
       'kWCk',
-      'kWDk',
       'kWCk',
-      'kWpk',
       'kWCk',
-      'kWpk',
-      'kWDk',
       'kWCk',
-      'kWpk',
       'kWCk',
-      'kWpk',
-      'kWDk',
       'kWCk',
-      'kWpk',
       'kWCk',
-      'kWpk',
-      'kWDk',
+      'kWCk',
+      'kWCk',
+      'kWck',
+      'kWck',
+      'kWck',
+      'kWck',
+      'kWck',
+      'kWck',
+      'kWck',
       'kWk.',
       'kW..',
       'kW..',
@@ -577,7 +577,7 @@ export const SAILS: Record<string, SailSet> = {
     ]),
     half: art([
       '......kkkkkkkkkkkkkkkkkkkkkk......',
-      '......kCpCCpCCpCCpCCpCCpCCk.......',
+      '......kppppCCCCCCCCCCcccccck......',
       '......kWWWWWWWWWVVWWWWWWWWWk......',
       '..kkppppppppppppCCCCCCCCcccccckk..',
       '.kppppppppppppCCCCCCCCCCcccccccck.',
@@ -588,9 +588,9 @@ export const SAILS: Record<string, SailSet> = {
     ]),
     furled: art([
       '......kkkkkkkkkkkkkkkkkkkkkk......',
-      '......kCpCCpCCpCCpCCpCCpCCk.......',
+      '......kppppCCCCCCCCCCcccccck......',
       '.kkkkkkWWWWWWWWWVVWWWWWWWWWkkkkkk.',
-      'kCpCCpCCDCCpCCpCCpCCpCCDCCpCCpCCpk',
+      'kppppppppCCCCCCCCCCCCCCCcccccccck.',
       'kWWWWWWWWWWWWWWWVVWWWWWWWWWWWWWWWk'
     ])
   }
@@ -604,8 +604,8 @@ export const FLAG = [
   art(['kkkkkkk.', 'kRRRRRRk', 'kRRRRkk.', 'kkkkk...'])
 ];
 export const JOLLY = [
-  art(['kkkkkkk.', 'kKKpKKKk', 'kKpppKk.', 'kkkkkk..']),
-  art(['kkkkkk..', 'kKKpKKk.', 'kKpppKKk', 'kkkkkkk.'])
+  art(['kkkkk...', 'kKKKKkk.', 'kKKKKKKk', 'kkkkkkk.']),
+  art(['kkkkkkk.', 'kKKKKKKk', 'kKKKKkk.', 'kkkkk...'])
 ];
 
 export const FIRE = [

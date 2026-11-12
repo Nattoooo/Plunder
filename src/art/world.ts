@@ -1,263 +1,1154 @@
 import { art, Art, Swap } from './palette';
-
-export const PALM = art([
-  '....kk....kk...',
-  '...khhk..khhk..',
-  '..khHhhkkhHhhk.',
-  '.khhhhhhhhhhhhk',
-  'khHhkhhOOhhkhhk',
-  'khhk.khOOOhk.kk',
-  '.kk..khJJhk....',
-  '......kJJk.....',
-  '......kJjk.....',
-  '.......kJJk....',
-  '.......kJjk....',
-  '.......kJJk....',
-  '........kJJk...',
-  '........kJjk...',
-  '........kJJk...',
-  '......,,kJJk,..',
-  '.....,,,kkkk,,.',
-  '......,,,,,,,..'
-]);
+import { Canvas, crop, hcat, mirror } from './compose';
 
 export const TREE = art([
-  '.....kkkkkk.....',
-  '...kkhHHhhhkk...',
-  '..khHHhhhhhhhk..',
-  '.khHhhhhhhhGhhk.',
-  '.khhhhhhhGhhhGk.',
-  'khHhhhhhhhhhhhGk',
-  'khhhhGhhhhhhhGGk',
-  'kGhhhhhhhhhGhGGk',
-  '.kGhhhhhGhhhGGk.',
-  '.kGGhhhhhhGGGk..',
-  '..kkGGGGGGGkk...',
-  '.....kkJJkk.....',
-  '......kJJk......',
-  '......kJjk......',
-  '....,,kJJk,,....',
-  '...,,,,kk,,,,...',
-  '.....,,,,,,.....'
+  '............gggggg............',
+  '.........gggHHHHhhggg.........',
+  '.......ggHHHHHHHhhhhhgg.......',
+  '......gHHHHHHHHhhhhhhhhg......',
+  '....ggHHHHHHHHhhhhhhhhhhgg....',
+  '...gHHGHHHHHHhhhhhhhhhhhhhg...',
+  '..gHHHHGHHHHhhhhhhhhhhhGhhhg..',
+  '.gHHHHHhGHhhhhhhhhhhhhGhhhhhg.',
+  '.gHHHHhhhGhhhhhhhhhhhGhhHHhhg.',
+  'gHHHHhhhhhGhhhhhhhhhGhhHHHHhhg',
+  'gHHHhhhhhhhGhhhhhhGGhhHHHHhhhg',
+  'gHHhhhhhhhhhGGGGGGhhhhhHHhhhhg',
+  'gHhhhhhhhhhhhhhhhhhhhhhhhhhhGg',
+  'ghhhhhhhhhhhhhhhhhhhhhhhhhhGGg',
+  'ghhhhhGGhhhhhhhhhhhhhhhhhGGGGg',
+  'gGhhGGHHHGhhhhhhhhGGhhhhGGGGGg',
+  '.gGGhHHHHhGhhhhhGGhHHhGGGGGGg.',
+  '.gGhhHHHhhhGGGGGhhHHHhhGGGGGg.',
+  '..gGhhhhhhhhhhhhhhhhhhhhGGGg..',
+  '..gGGhhhhhhhhhhhhhhhhhGGGGGg..',
+  '...gGGGhhhhhhhhhhhhGGGGGGGg...',
+  '....ggGGGGGhhhhhGGGGGGGGgg....',
+  '......ggGGGGGGGGGGGGGGgg......',
+  '........gggGGjJJGGGggg........',
+  '...........gjJJJjg............',
+  '............jJDJjj............',
+  '............jJDJjj............',
+  '............jJDJjj............',
+  '............jJDJjj............',
+  '............jJDJJj............',
+  '...........jJJDJJjj...........',
+  '..........jJJjJJJjjj..........',
+  '........,,jjj,jjj,jjj,,.......',
+  '.......,,,,,,,,,,,,,,,,,,,....',
+  '.........,,,,,,,,,,,,,,,......'
 ]);
 
 export const JUNGLE_TREE = art([
-  '...kkk...kkkk...',
-  '..kHhhkkkhhHhk..',
-  '.khhhhGhhhhhhhk.',
-  'khHhhhhhhGhHhhhk',
-  'khhhGhhHhhhhhGhk',
-  'kGhhhhhhhhGhhhGk',
-  '.kGhHhhGhhhhhGk.',
-  'khhhhhhhhhhhGGGk',
-  'kGGhhGhhhhGGGgk.',
-  '.kgGGGGGGGGggk..',
-  '..kkgggkJkggkk..',
-  '......kJJk......',
-  '.....kJJjk......',
-  '....,kJJJk,,....',
-  '...,,,kkkk,,,...',
-  '.....,,,,,,.....'
+  '...........gggggggg...gggggggg.........',
+  '........gggHHHHHHhhggggHHHHhhhggg......',
+  '......ggHHHHHHHHhhhhhhHHHHhhhhhhhgg....',
+  '....ggHHHHHHHHhhhhhhhhhhhhhhhhhhhhhgg..',
+  '...gHHHHHHHHhhhhhhhhhhhhhhhhhhhhhhhhhg.',
+  '..gHHHHHhhhhhhhhhhhhhhhhhhhhhhhhhhhhGg.',
+  '.gHHHHhhhhhhhGGGhhhhhhhhhhhGGGhhhhGGGg.',
+  'gHHHhhhhhhhhGHHHGhhhhhhhhhGHHHGhhGGGGg.',
+  'ghhhhhhhhhhGHHhhhGhhhhhhhGHHhhhGGGGGGg.',
+  'gGhhhhhhhhhGhhhhhhGhhhhhhGhhhhhhGGGGGg.',
+  'gGGhhhhhhhGhhhhhhhhGGGGGGhhhhhhhhGGGg..',
+  '.gGGGGhhGGhhhhhhhhhhhhhhhhhhhhhhGGGg...',
+  '..ggGGGGGGhhhhhhhhhhhhhhhhhhhhGGGGg....',
+  '....gggGGGGGGhhhhhhhhhhhhhhGGGGGgg.....',
+  '.......gGgggGGGGGGGGGGGGGGGGGgg........',
+  '.......gG...gggGGGGjJJjGGGggg..........',
+  '.......gG.......gggjJJJjggGg...........',
+  '.......gg..........jJDJj.gGg...........',
+  '...................jJDJj..gG...........',
+  '...................jJDJj..gg...........',
+  '...................jJDJj...............',
+  '...................jJDJj...............',
+  '...................jJDJj...............',
+  '...................jJDJj...............',
+  '..................jjJDJjj..............',
+  '.................jJjJDJjJj.............',
+  '................jJjjJDJjjJj............',
+  '..............,,jjj,jjjj,jjj,,.........',
+  '.............,,,,,,,,,,,,,,,,,,,.......',
+  '...............,,,,,,,,,,,,,,..........'
+]);
+
+export const PALM = art([
+  '.............gggg....................',
+  '.........ggggHHHHgg..gggg............',
+  '.......ggHHHHhhhhhhggHHHHgggg........',
+  '.....ggHHhhhhhhGGGGhhhhhhHHHHgg......',
+  '...ggHHhhhGGGGgg..ghhhhhhhhhhhHgg....',
+  '..gHHhhGGgg......gHhhGGGGGGhhhhhHg...',
+  '.gHhhGgg........gHhGgg....ggGGhhhHg..',
+  '.ghhGg.....ggggghhGg.........ggGhhhg.',
+  'gHhGg....ggHHHHhhhgjj..........gGhhg.',
+  'ghGg...ggHHhhhhhhhGjJjgggg......gGhg.',
+  'gGg...gHHhhGGGGGhhhgjJHHHHgg.....gGg.',
+  'gg...gHhhGGg....gGhgjjhhhhhHgg....gg.',
+  'g...gHhGg........ggjJjgGGGhhhHg......',
+  '...gHhGg..........jJjj...ggGhhhg.....',
+  '...ghGg...........jJj......gGhhg.....',
+  '...gGg............jJj.......gGhg.....',
+  '...gg..............jJj.......gGg.....',
+  '...................jJj........gg.....',
+  '...................jJDj..............',
+  '....................jJj..............',
+  '....................jJDj.............',
+  '....................jJJj.............',
+  '.....................jJj.............',
+  '.....................jJDj............',
+  '.....................jJJj............',
+  '.....................jJDj............',
+  '.....................jJJj............',
+  '.....................jJDj............',
+  '....................jjJJj............',
+  '....................jJJDj............',
+  '....................jJJJj............',
+  '....................jJJDj............',
+  '...................jjJJJj............',
+  '...................jJJJDj............',
+  '...................jJJJJjj...........',
+  '..................jjJJJDJj...........',
+  '.................,jjjjjjjj,..........',
+  '................,,,,,,,,,,,,,........',
+  '..................,,,,,,,,...........'
 ]);
 
 export const PINE = art([
-  '.....k.....',
-  '....kGk....',
-  '....kHk....',
-  '...kGhGk...',
-  '...kGGgk...',
-  '..kGhGGGk..',
-  '..kkGGgkk..',
-  '..kGhGGGk..',
-  '.kGhGGGGgk.',
-  '.kkGGGGgkk.',
-  '.kGhGGGGGk.',
-  'kGhGGGGGGgk',
-  'kkkGGGGgkkk',
-  '...kkJkk...',
-  '....kJk....',
-  '..,,kjk,,..',
-  '.,,,,k,,,,.',
-  '...,,,,,...'
+  '..........gg..........',
+  '.........gHhg.........',
+  '.........gHhg.........',
+  '........gHHhGg........',
+  '........gHhhGg........',
+  '.......gHHhhGGg.......',
+  '......gHHhhhhGGg......',
+  '.....ggGGhhhGGGgg.....',
+  '.......gHHhhhGg.......',
+  '......gHHhhhhhGg......',
+  '.....gHHhhhhhhGGg.....',
+  '.....gHhhhhhhhGGg.....',
+  '....gHHhhhhhhhhGGg....',
+  '...gHHhhhhhhhhhGGGg...',
+  '..ggGGGhhhhhhGGGGGgg..',
+  '.....gHHhhhhhhGGg.....',
+  '....gHHhhhhhhhhGGg....',
+  '...gHHhhhhhhhhhhGGg...',
+  '...gHhhhhhhhhhhhGGg...',
+  '..gHHhhhhhhhhhhhhGGg..',
+  '.gHHhhhhhhhhhhhhhGGGg.',
+  'gggGGGGhhhhhhhGGGGGggg',
+  '....gHHhhhhhhhhhGGg...',
+  '...gHHhhhhhhhhhhhGGg..',
+  '..gHHhhhhhhhhhhhhhGGg.',
+  '..gHhhhhhhhhhhhhhhGGg.',
+  '.gHHhhhhhhhhhhhhhhhGGg',
+  'gHHhhhhhhhhhhhhhhhGGGg',
+  'gGGGGGhhhhhhhhhGGGGGGg',
+  '.ggggGGGGGGGGGGGGGgggg',
+  '.....ggggjJJjgggg.....',
+  '.........jJDj.........',
+  '.........jJDj.........',
+  '.........jJDj.........',
+  '.......,,jJJj,,.......',
+  '......,,,,,,,,,,,.....',
+  '........,,,,,,,.......'
 ]);
 
 export const SNOW_PINE = art([
-  '.....k.....',
-  '....kpk....',
-  '....kPk....',
-  '...kpGpk...',
-  '...kGGgk...',
-  '..kpPpGpk..',
-  '..kkGGgkk..',
-  '..kpPGpGk..',
-  '.kGpGGpGgk.',
-  '.kkGGGGgkk.',
-  '.kpPpGpGpk.',
-  'kGpGGpGGpgk',
-  'kkkGGGGgkkk',
-  '...kkJkk...',
-  '....kJk....',
-  '..,,kjk,,..',
-  '.,,,,k,,,,.',
-  '...,,,,,...'
+  '..........PP..........',
+  '.........PPpL.........',
+  '.........PPpL.........',
+  '........PPPppL........',
+  '........gPPpLg........',
+  '.......gHPPpLGg.......',
+  '......gHHhPpGGGg......',
+  '.....ggGGhhhGGGgg.....',
+  '.......LPPPPpL........',
+  '......gPPPPppLg.......',
+  '.....gHPPhhpPLGg......',
+  '.....gHhhhhhhhGGg.....',
+  '....gHHhhhhhhhhGGg....',
+  '...gHHhhhhhhhhhGGGg...',
+  '..ggGGGhhhhhhGGGGGgg..',
+  '.....LPPPPPpppL.......',
+  '....gPPPPPPppppLg.....',
+  '...gHPPhhhPPhhhPLGg...',
+  '...gHhhhhhhhhhhhGGg...',
+  '..gHHhhhhhhhhhhhhGGg..',
+  '.gHHhhhhhhhhhhhhhGGGg.',
+  'gggGGGGhhhhhhhGGGGGggg',
+  '....LPPPPPPppppL......',
+  '...gPPPPPPPpppppLg....',
+  '..gHPPhhhPPPhhhhPLGg..',
+  '..gHhhhhhhhhhhhhhhGGg.',
+  '.gHHhhhhhhhhhhhhhhhGGg',
+  'gHHhhhhhhhhhhhhhhhGGGg',
+  'gGGGGGhhhhhhhhhGGGGGGg',
+  '.ggggGGGGGGGGGGGGGgggg',
+  '.....ggggjJJjgggg.....',
+  '.........jJDj.........',
+  '.........jJDj.........',
+  '.........jJDj.........',
+  '.......,,jJJj,,.......',
+  '......,,,,,,,,,,,.....',
+  '........,,,,,,,.......'
 ]);
 
 export const DEAD_TREE = art([
-  'k....k...k.',
-  'Jk..kJ..kJ.',
-  '.Jk.kJ.kJ..',
-  '..JkJJkJ...',
-  '...kJJJk...',
-  '....JJk....',
-  '....kJJ..k.',
-  '....kJJkJk.',
-  '....kJJJk..',
-  '....kJJk...',
-  '....kJJk...',
-  '....kJjk...',
-  '..,,kJJk,..',
-  '.,,,kkkk,,.',
-  '...,,,,,...'
+  '.....j..............j.....',
+  '.....jj............jj.....',
+  '......jj....j.....jj......',
+  '..j....jj...j....jj....j..',
+  '..jj....jJ..jj..jJ....jj..',
+  '...jj...jJ...j.jJ....jj...',
+  '....jjj..jJ..jjJj..jjj....',
+  '......jjjjJ..jJj.jjj......',
+  '........jjJJjJJjjj........',
+  '..........jJJJjj..........',
+  '...........jJDj...........',
+  '...........jJDj...........',
+  '...........jJDj...........',
+  '...........jJDjj..........',
+  '...........jJDJj..........',
+  '..........jJJDJj..........',
+  '..........jJJDJj..........',
+  '.........jJjJDJjj.........',
+  '........jJj.jJjjJj........',
+  '.......,jj,,jjj,,jj,......',
+  '......,,,,,,,,,,,,,,,,....',
+  '........,,,,,,,,,,,.......'
 ]);
 
-export const BUSH = art(['...kkkkk...', '.kkhHhhhkk.', 'khHhhhhhhGk', 'khhhhhGhhGk', 'kGhhhhhhGGk', '.kkGGGGGkk.', '..,,,,,,,..']);
-export const BERRY_BUSH = art(['...kkkkk...', '.kkhHhehkk.', 'khHehhhhhGk', 'khhhhehhhGk', 'kGhehhhhGGk', '.kkGGGGGkk.', '..,,,,,,,..']);
-export const TUFT = art(['.h..h.', 'hGhhGh', 'GgGGgG', '.,,,,.']);
-export const FLOWERS = art(['.e...y.', 'eYe.yOy', '.e.h.y.', '.h.h.h.', '..,,,..']);
-export const ROCK = art(['..kkkk..', '.kuUuTk.', 'kuUuTTtk', 'kTTTTttk', '.kkkkkk.', '.,,,,,,.']);
+export const BUSH = art([
+  '.......gggggg.......',
+  '....gggHHHHhhggg....',
+  '...gHHHHHHhhhhhhg...',
+  '..gHHHHHhhhhhhhhhg..',
+  '.gHHHHhhhhhhhhhhhGg.',
+  '.gHHhhhhhhhhhhhhGGg.',
+  'gHhhhhhhhhGhhhhGGGGg',
+  'ghhhhhhhhGGhhhGGGGGg',
+  'gGhhhhhGGGhhhGGGGGGg',
+  '.gGGGGGGGGGGGGGGGGg.',
+  '..gggggggggggggggg..',
+  '...,,,,,,,,,,,,,,...'
+]);
+
+export const BERRY_BUSH = art([
+  '.......gggggg.......',
+  '....gggHHHHhhggg....',
+  '...gHHHeeHhhhhhhg...',
+  '..gHHHHeRhhhhhhhhg..',
+  '.gHHHHhhhhhhheehhGg.',
+  '.gHHhhhhhhhhheRhGGg.',
+  'gHhhheehhhGhhhhGGGGg',
+  'ghhhheRhhGGhhhGGGGGg',
+  'gGhhhhhGGGhhhGeeGGGg',
+  '.gGGGGGGGGGGGGeRGGg.',
+  '..gggggggggggggggg..',
+  '...,,,,,,,,,,,,,,...'
+]);
+
+export const REEDS = art([
+  '..jj..........',
+  '.jJJj....jj...',
+  '.jJJj...jJJj..',
+  '.jJJj...jJJj..',
+  '.jJJj.h.jJJj..',
+  '..hj..h..jh...',
+  '..h..hG..hh.h.',
+  '.hh..hG..hG.h.',
+  '.hG.hhG.hhG.G.',
+  '.hG.hG..hG.hG.',
+  'hhG.hGhhhGhhG.',
+  'hGGhGGhGGGhGGh',
+  'GGGGGGGGGGGGGG',
+  '.,,,,,,,,,,,,.'
+]);
+
 export const BOULDER = art([
-  '....kkkkk....',
-  '..kkuUUuTkk..',
-  '.kuUUuuTTTtk.',
-  'kuUuuTTTTTttk',
-  'kTuTTTTTtTttk',
-  'kTTTTTTtttttk',
-  '.kkTTtttttkk.',
-  '...kkkkkkk...',
-  '..,,,,,,,,,..'
+  '........mmmmmm..........',
+  '.....mmmUUUUUummm.......',
+  '...mmUUUUUUuuuuuumm.....',
+  '..mUUUUUUuuuuuuuuuumm...',
+  '.mUUUUUuuuuuuuuuuuuuum..',
+  '.mUUUuuuuuuuuuuuuuuuuTm.',
+  'muuuuuuuuuuuuuuuuuuuTTm.',
+  'mTuuuuuuuuuuuuuuuuuTTTTm',
+  'mTTuuuuuuuuuuuuuTTTTTTTm',
+  'mTTTTuuuuuuuuTTTTTTTTTtm',
+  '.mTTTTTTTTTTTTTTTTTTTttm',
+  '.mtTTTTTTTTTTTTTTTTtttm.',
+  '..mmtttttttttttttttmmm..',
+  '....mmmmmmmmmmmmmmmm....',
+  '...,,,,,,,,,,,,,,,,,,...'
 ]);
-export const REEDS = art(['..J...J..', '.kJk.kJk.', '..h..Jh..', '..h.h.h..', '.hh.h.hh.', '.h.hhh.h.', 'h.hGhGh.h', 'GhGgGgGhG', '.,,,,,,,.']);
-export const MUSHROOMS = art(['.kkk....', 'kReRk.kk', 'kkkkkkek', '.kpk.kkk', '.kpk..p.', '.,,,,,,.']);
-export const SHELL = art(['.kkk.', 'kEpEk', 'kpEpk', '.kkk.']);
-export const SKULL_ROCK = art([
-  '....kkkkkkk....',
-  '..kkuUUUUuukk..',
-  '.kuUUuuuuuuTTk.',
-  'kuUuuuuuuuuTTtk',
-  'kuukkkuuukkkTtk',
-  'kuukKkuuukKkTtk',
-  'kuuukuuuuuktTtk',
-  'kTuuuuukuuuTttk',
-  '.kTTukkkkkTttk.',
-  '.kTtkTkTkTktk..',
-  '..kkkkkkkkkk...',
-  '.,,,,,,,,,,,,..'
-]);
-export const ICE_SHARD = art(['...kk...', '..kPpk..', '.kPLlpk.', 'kPLllLlk', 'klLlllbk', '.kkkkkk.', '.,,,,,,.']);
 
-export const HOUSES: Art[] = [
-  art([
-    '..kkkkkkkkkk..',
-    '.keeeeeeeeeek.',
-    'kRRRrRRRrRRRrk',
-    'krrrrrrrrrrrrk',
-    'kRrRRRrRRRrRRk',
-    'krrrrrrrrrrrrk',
-    'kRRRrRRRrRRRrk',
-    'kkkkkkkkkkkkkk',
-    '.kCCCCCCCCCCk.',
-    '.kCkykCCkykCk.',
-    '.kCCCCwwCCCCk.',
-    '.kccccwwcccck.',
-    '.kkkkkkkkkkkk.',
-    '..,,,,,,,,,,,,'
-  ]),
-  art([
-    '...kkkkkk...',
-    '..keeeeeek..',
-    '.kRRRRRRRRk.',
-    'krrrrrrrrrrk',
-    'kRrRRRrRRRrk',
-    'krrrrrrrrrrk',
-    'kkkkkkkkkkkk',
-    '.kCCCCCCCCk.',
-    '.kCkykwwCCk.',
-    '.kccccwwcck.',
-    '.kkkkkkkkkk.',
-    '..,,,,,,,,,,'
-  ]),
-  art([
-    '..kkkkkkkkkkkkkk..',
-    '.keeeeeeeeeeeeeek.',
-    'kRRRrRRRrRRRrRRRrk',
-    'krrrrrrrrrrrrrrrrk',
-    'kRrRRRrRRRrRRRrRRk',
-    'krrrrrrrrrrrrrrrrk',
-    'kRRRrRRRrRRRrRRRrk',
-    'kkkkkkkkkkkkkkkkkk',
-    '.kCCCCCCCCCCCCCCk.',
-    '.kCkykCCwwCCkykCk.',
-    '.kCCCCCCwwCCCCCCk.',
-    '.kccccccwwcccccck.',
-    '.kkkkkkkkkkkkkkkk.',
-    '..,,,,,,,,,,,,,,,,'
-  ]),
-  art([
-    '........kkk.',
-    '...kkkkkTuTk',
-    '..keeeeekTk.',
-    '.kRRRRRRRRk.',
-    'krrrrrrrrrrk',
-    'kRrRRRrRRRrk',
-    'krrrrrrrrrrk',
-    'kRRRrRRRrRRk',
-    'kkkkkkkkkkkk',
-    '.kCCCCCCCCk.',
-    '.kCkykCkykk.',
-    '.kCCCCCCCCk.',
-    '.kCCCwwCCCk.',
-    '.kccckwccck.',
-    '.kkkkkkkkkk.',
-    '..,,,,,,,,,,'
-  ])
+export const ROCK = art([
+  '...mmmm...',
+  '.mmUUuumm.',
+  'mUUuuuuTm.',
+  'muuuuuTTTm',
+  'mTTuTTTTtm',
+  '.mmmmmmmm.',
+  '.,,,,,,,,.'
+]);
+
+export const SKULL_ROCK = art([
+  '..........mmmmmmmmmm..........',
+  '.......mmmxxxxxxxxxxmmm.......',
+  '.....mmxxxxxxxxxxxxxxxxmm.....',
+  '....mxxxxxxxxxxxxxxxxxxxXm....',
+  '...mxxxxxxxxxxxxxxxxxxxxXXm...',
+  '..mxxxxxxxxxxxxxxxxxxxxxxXXm..',
+  '..mxxxxxxxxxxxxxxxxxxxxxxXXm..',
+  '.mxxxxmmmmxxxxxxxxxmmmmxxxXXm.',
+  '.mxxxmkkkkmxxxxxxxmkkkkmxxXXm.',
+  '.mxxmkkkkkkmxxxxxmkkkkkkmxXXm.',
+  '.mxxmkkkkkkmxxxxxmkkkkkkmxXXm.',
+  '.mxxxmkkkkmxxxmxxxmkkkkmxxXXm.',
+  '.mXxxxmmmmxxxmkmxxxmmmmxxXXXm.',
+  '..mXxxxxxxxxmkkkmxxxxxxxXXXm..',
+  '..mXXxxxxxxxmmmmmxxxxxxXXXXm..',
+  '...mXXxxxxxxxxxxxxxxxxXXXXm...',
+  '....mXXmxmxmxmxmxmxmXXXXXm....',
+  '....mXXmxmxmxmxmxmxmXXXXm.....',
+  '.....mmmmmmmmmmmmmmmmmmmm.....',
+  '...,,,,,,,,,,,,,,,,,,,,,,,,...'
+]);
+
+export const ICE_SHARD = art([
+  '.......b........',
+  '......bPb.......',
+  '......bPLb......',
+  '.....bPPLb......',
+  '.....bPLlb...b..',
+  '..b..bPLlb..bPb.',
+  '.bPb.bPLlb..bPLb',
+  '.bPLbbPLllb.bPLb',
+  '.bPLlbPLllbbPLlb',
+  'bPPLlbPLlllbPLlb',
+  'bPLLlbPLlllbPLlb',
+  'bPLllbPLlllbPLlb',
+  'bPLllbPLllllbllb',
+  'bPLllbPLllllbllb',
+  '.bbbbbbbbbbbbbbb',
+  '.,,,,,,,,,,,,,,,'
+]);
+
+export const TUFT = art([
+  '..h.....',
+  '.hG..h..',
+  '.Gh.hG..',
+  'hGGhGGh.'
+]);
+
+export const FLOWERS = art([
+  '..e....y..',
+  '.eEe..yYy.',
+  '..e....y..',
+  '..h.e..h..',
+  '..heEe.h..',
+  '.hGhehGhh.'
+]);
+
+export const MUSHROOMS = art([
+  '..RRRR....',
+  '.ReeRRR...',
+  'RRRRRRRR..',
+  '..ppp.RRR.',
+  '..ppp.pp..',
+  '..ppp.pp..'
+]);
+
+export const SHELL = art([
+  '...p...',
+  '.ppEpp.',
+  'pEpEpEp',
+  '.ccccc.'
+]);
+
+const ROOF_L = art([
+  '......kk',
+  '......kr',
+  '.....kee',
+  '.....krr',
+  '.....kee',
+  '....kRRR',
+  '....kRRR',
+  '....krrr',
+  '...keeee',
+  '...kRRRR',
+  '...kRRRR',
+  '..krrrrr',
+  '..keeeee',
+  '..kRRRRR',
+  '.kRRRRRR',
+  '.krrrrrr',
+  '.keeeeee',
+  'kRRRRRRR',
+  'krrrrrrr',
+  'kkkkkkkk'
+]);
+
+const ROOF_M = art([
+  'kkkkkk',
+  'rrrrrr',
+  'eeeeee',
+  'rrrrrr',
+  'eeeeee',
+  'RRRRRR',
+  'RRRRRR',
+  'rrrrrr',
+  'eeeeee',
+  'RRRRRR',
+  'RRRRRR',
+  'rrrrrr',
+  'eeeeee',
+  'RRRRRR',
+  'RRRRRR',
+  'rrrrrr',
+  'eeeeee',
+  'RRRRRR',
+  'rrrrrr',
+  'kkkkkk'
+]);
+
+const WALL_EDGE = art([
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k',
+  'k'
+]);
+
+const WALL_POST = art([
+  'ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'Ww',
+  'ww',
+  'uT',
+  'TT',
+  'TT',
+  'kk'
+]);
+
+const SEG_PLAIN = art([
+  'wwwwwwwwww',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'cccccccccc',
+  'cccccccccc',
+  'wwwwwwwwww',
+  'uuuuuuuuuu',
+  'TTTTTTTTTT',
+  'TTTTTTTTTT',
+  'kkkkkkkkkk'
+]);
+
+const SEG_WINDOW = art([
+  'wwwwwwwwww',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CjjjjjjjjC',
+  'CjlbbWbbjC',
+  'CjbbbWbbjC',
+  'CjWWWWWWjC',
+  'CjbbbWbbjC',
+  'CjbbbWbljC',
+  'CjjjjjjjjC',
+  'CwDDDDDDwC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'cccccccccc',
+  'cccccccccc',
+  'wwwwwwwwww',
+  'uuuuuuuuuu',
+  'TTTTTTTTTT',
+  'TTTTTTTTTT',
+  'kkkkkkkkkk'
+]);
+
+const SEG_DOOR = art([
+  'wwwwwwwwww',
+  'CCCCCCCCCC',
+  'CjjjjjjjjC',
+  'CjwwwwwwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'CjwwwwwwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'CjWWwWWwjC',
+  'cjwwwwwwjc',
+  'cjWWwWWwjc',
+  'wjWWwWWwjw',
+  'ujjjjjjjju',
+  'TuuuuuuuuT',
+  'TTTTTTTTTT',
+  'kkkkkkkkkk'
+]);
+
+const SEG_SHUTTER = art([
+  'wwwwwwwwww',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'jjjjjjjjjj',
+  'BjlbbWbbjB',
+  'BjbbbWbbjB',
+  'BjWWWWWWjB',
+  'BjbbbWbbjB',
+  'BjbbbWbljB',
+  'jjjjjjjjjj',
+  'CwDDDDDDwC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'CCCCCCCCCC',
+  'cccccccccc',
+  'cccccccccc',
+  'wwwwwwwwww',
+  'uuuuuuuuuu',
+  'TTTTTTTTTT',
+  'TTTTTTTTTT',
+  'kkkkkkkkkk'
+]);
+
+const CHIMNEY = art([
+  '.kkkkkk.',
+  'kmMMMMmk',
+  'kmmmmmmk',
+  'kTuuuuTk',
+  'kTTTTTTk',
+  'kuuTuuuk',
+  'kTTTTTTk',
+  'kuuuuTuk',
+  'kTTTTTTk',
+  'kuTuuuuk'
+]);
+
+const SIGN = art([
+  '.jj.........',
+  '.jJjjjjjjj..',
+  '..j......j..',
+  '.kkkkkkkkkk.',
+  '.kffffffffk.',
+  '.kfyYyyyYfk.',
+  '.kfyyyyyyfk.',
+  '.kffffffffk.',
+  '.kkkkkkkkkk.'
+]);
+
+const TOWER = art([
+  'kkkkkk..kkkkkk..kkkkkk..kkkk',
+  'kUUUUk..kUUUUk..kUUUUk..kUUk',
+  'kuuuuk..kuuuuk..kuuuuk..kuuk',
+  'kuuuukkkkuuuukkkkuuuukkkkuuk',
+  'kuTTTTTTTTTTTTTTTTTTTTTTTTuk',
+  'kuTnnnnnnnnnnnnnnnnnnnnnnTuk',
+  'kuTnNNNNNNNNNNNNNNNNNNNNnTuk',
+  'kuTnNNNNNNNNNNNNNNNNNNNNnTuk',
+  'kuTnNNNNNNNNNNNNNNNNNNNNnTuk',
+  'kuTnNNNNNNNNNNNNNNNNNNNNnTuk',
+  'kuTnnnnnnnnnnnnnnnnnnnnnnTuk',
+  'kuTTTTTTTTTTTTTTTTTTTTTTTTuk',
+  'kuuuuuuuuuuuuuuuuuuuuuuuuuuk',
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkk',
+  'kUUUUUUuUUUUUUuUUUUUUuUUUUUk',
+  'kuuuuuuTuuuuuuTuuuuuuTuuuuuk',
+  'kuuuuuuTuuuuuuTuuuuuuTuuuuuk',
+  'kTTTTTTTTTTTTTTTTTTTTTTTTTTk',
+  'kUUUuUUUUUUuUUUUUUuUUUUUUUuk',
+  'kuuuTuuuuuuTuuuuuuTuuuuuuuTk',
+  'kuuuTuuuuuuTkkkuuuTuuuuuuuTk',
+  'kTTTTTTTTTTkmmkTTTTTTTTTTTTk',
+  'kUUUUUUuUUUkmmkUUUuUUUUUUUuk',
+  'kuuuuuuTuuukmmkuuuTuuuuuuuTk',
+  'kuuuuuuTuuukkkkuuuTuuuuuuuTk',
+  'kTTTTTTTTTTTTTTTTTTTTTTTTTTk',
+  'kUUUuUUUUUUuUUUUUUuUUUUUUUuk',
+  'kuuuTuuuuuuTuuuuuuTuuuuuuuTk',
+  'kuuuTuuuuuuTuuuuuuTuuuuuuuTk',
+  'kTTTTTTTTTTTTTTTTTTTTTTTTTTk',
+  'kUUUUUUuUUUUUUuUUUUUUuUUUUUk',
+  'kuuuuuuTuuuuuuTuuuuuuTuuuuuk',
+  'kuuuuuuTuuuuuuTuuuuuuTuuuuuk',
+  'kTTTTTTTTTTTTTTTTTTTTTTTTTTk',
+  'kttttttttttttttttttttttttttk',
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkk'
+]);
+
+const FWALL = art([
+  'kkkk....',
+  'kUUk....',
+  'kuuk....',
+  'kuukkkkk',
+  'kuuuuuuu',
+  'kkkkkkkk',
+  'UUUuUUUU',
+  'uuuTuuuu',
+  'uuuTuuuu',
+  'TTTTTTTT',
+  'UuUUUUuU',
+  'uTuuuuTu',
+  'uTuuuuTu',
+  'TTTTTTTT',
+  'UUUuUUUU',
+  'uuuTuuuu',
+  'uuuTuuuu',
+  'TTTTTTTT',
+  'UuUUUUuU',
+  'uTuuuuTu',
+  'uTuuuuTu',
+  'TTTTTTTT',
+  'tttttttt',
+  'kkkkkkkk'
+]);
+
+const GATE = art([
+  'kkkk....kkkk....kkkk....kkkk',
+  'kUUk....kUUk....kUUk....kUUk',
+  'kuukkkkkkuukkkkkkuukkkkkkuuk',
+  'kuuuuuuuuuuuuuuuuuuuuuuuuuuk',
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkk',
+  'UUUuUUUUUkkkkkkkkkkUUUUuUUUU',
+  'uuuTuuuukkuUuUuUuUkkuuuTuuuu',
+  'uuuTuuukkUjjjjjjjjUkkuuTuuuu',
+  'TTTTTTkkujWWWwWWWwjukkTTTTTT',
+  'UuUUUUkUjWWWwWWWwWWjUkUUUuUU',
+  'uTuuukUjWWWwWWWwWWWwjUkuuuTu',
+  'uTuuukujWWWwWWWwWWWwjukuuuTu',
+  'TTTTTkujWWWwWWWwWWWwjukTTTTT',
+  'UUUuUkUjWWWwWWWwWWWwjUkUUUUU',
+  'uuuTukujWWWwWWWwWWWwjukuuTuu',
+  'uuuTukujWWWwWWWwWWWwjukuuTuu',
+  'TTTTTkujWWWwWWWwWWWwjukTTTTT',
+  'UuUUUkUjWWWwWWWwWWWwjUkUUuUU',
+  'uTuuukujWWWwWWWwWWWwjukuuuTu',
+  'uTuuukujWWWwWWWwWWWwjukuuuTu',
+  'TTTTTkujWWWwWWWwWWWwjukTTTTT',
+  'ttttTkujjjjjjjjjjjjjjukTtttt',
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkk'
+]);
+
+const SWALL = art([
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk',
+  'kuTnNNNNnTuk'
+]);
+
+const BWALL = art([
+  'kkkk....',
+  'kUUk....',
+  'kuuk....',
+  'kuukkkkk',
+  'kuuuuuuu',
+  'kkkkkkkk',
+  'UUUuUUUU',
+  'uuuTuuuu',
+  'uuuTuuuu',
+  'TTTTTTTT',
+  'UuUUUUuU',
+  'uTuuuuTu',
+  'tttttttt',
+  'kkkkkkkk'
+]);
+
+const FLAGPOLE = art([
+  '.k..........',
+  'kNkkkkkkkkk.',
+  'kNkBBBBBBBBk',
+  'kNkBBBBBBBBk',
+  'kNkBBBByBBBk',
+  'kNkBBByYyBBk',
+  'kNkBBBByBBBk',
+  'kNkBBBBBBBBk',
+  'kNkkkkkkkkk.',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kNk.........',
+  'kmk.........',
+  'kkkk........'
+]);
+
+const CANNON = art([
+  '....kkkk....',
+  '...kmMMmk...',
+  '...kmMMmk...',
+  '...kmMMmk...',
+  '..kkmMMmkk..',
+  '.kwkmMMmkwk.',
+  '.kWkmmmmkWk.',
+  '.kWkkkkkkWk.',
+  '.kwwwwwwwwk.',
+  '.kjkkkkkkjk.',
+  '..k......k..'
+]);
+
+const CRATES = art([
+  '.kkkkkkkk.......',
+  '.kVVVVVVk.......',
+  '.kVvvvvVk.......',
+  '.kVvVVvVkkkkkkk.',
+  '.kVvvvvVkVVVVVk.',
+  '.kVVVVVVkVvvvVk.',
+  '.kkkkkkkkVvVvVk.',
+  'kkkkkkkk.VvvvVk.',
+  'kVVVVVVk.VVVVVk.',
+  'kVvvvvVk.kkkkkk.',
+  'kVvVVvVk........',
+  'kVvvvvVk........',
+  'kVVVVVVk........',
+  'kkkkkkkk........'
+]);
+
+const SEG_BARNDOOR = art([
+  'wwwwwwwwwwwwwwwwwwww',
+  'CCCCCCCCCCCCCCCCCCCC',
+  'CjjjjjjjjjjjjjjjjjjC',
+  'CjWWwWWwWjjWWwWWwWjC',
+  'CjWWwWWwWjjWWwWWwWjC',
+  'CjWjwWWwjjjjWwWWjWjC',
+  'CjWWjWWjWjjWjWWjWWjC',
+  'CjWWwjjwWjjWwjjwWWjC',
+  'CjWWwjjwWjjWwjjwWWjC',
+  'CjWWjWWjWjjWjWWjWWjC',
+  'CjWjwWWwjjjjWwWWjWjC',
+  'CjWWwWWwWjjWWwWWwWjC',
+  'CjWWwWWwWjjWWwWWwWjC',
+  'CjjjjjjjjjjjjjjjjjjC',
+  'cjWWwWWwWjjWWwWWwWjc',
+  'cjWWwWWwWjjWWwWWwWjc',
+  'wjWWwWWwWjjWWwWWwWjw',
+  'ujjjjjjjjjjjjjjjjjju',
+  'TuuuuuuuuuuuuuuuuuuT',
+  'TTTTTTTTTTTTTTTTTTTT',
+  'kkkkkkkkkkkkkkkkkkkk'
+]);
+
+const CROPS = art([
+  '..H.....',
+  '.hHh..H.',
+  '.hGh.hHh',
+  '..Gh.hGh',
+  '.hGhh.Gh',
+  '.hG.hhG.',
+  '..G.hGG.',
+  '.hGh.G..',
+  '.hGh.Gh.',
+  '..G..G..',
+  ',,,,,,,,'
+]);
+
+const LOGS = art([
+  '..........kkkkkk..........',
+  '.........kfFFFfDk.........',
+  '....kkkkkfFDDfFDkkkkk.....',
+  '...kfFFFfDfFFFfDkfFFFfk...',
+  '...kFfDDfDkfffDkfFDDfDk...',
+  '...kfFDDfDkkkkkkfFDDfDk...',
+  '...kfFFFfDkfFFFfDkfFFfk...',
+  '...kkfffDkfFDDfFDkfffkk...',
+  '..kfFFFfDkfFDDfFDkfFFFfk..',
+  '..kFfDDfDkfFFFfDkkFfDDfDk.',
+  '..kfFDDfDkkfffDkkkfFDDfDk.',
+  '..kfFFFfDk.kkkkk..kfFFFfk.',
+  '..kkfffDkk.........kfffkk.',
+  '...kkkkkk...........kkkk..',
+  '..,,,,,,,,,,,,,,,,,,,,,,,,'
+]);
+
+const SHED = art([
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk',
+  'krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk',
+  'keeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeek',
+  'kRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRk',
+  'krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk',
+  'keeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeek',
+  'kRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRk',
+  'krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk',
+  'keeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeek',
+  'kRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRk',
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk',
+  '.kWwk..kkkkkkkkkkkkkkkkkkkkk..kWwk..',
+  '.kWwk..kKKKKKKKKKKKKKKKKKKKk..kWwk..',
+  '.kWwk..kKKKKKKKKKKKKKKKKKKKk..kWwk..',
+  '.kWwk..kKKKKKKKKKKKKKKKKKKKk..kWwk..',
+  '.kWwk..kNNNNNNNNNNNNNNNNNNNk..kWwk..',
+  '.kWwk..kmmmmmmmmmmmmmmmmmmmk..kWwk..',
+  '.kWwk..kkkkkkkkkkkkkkkkkkkkk..kWwk..',
+  '.kWwk..kVVVVVVVVVVVVVVVVVVVk..kWwk..',
+  '.kWwk..kwkk.............kkwk..kWwk..',
+  '.kWwk..kwk...............kwk..kWwk..',
+  '.kkkk..kkk...............kkk..kkkk..',
+  '.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'
+]);
+
+const MINE = art([
+  '..............mmmmmmmmm...................',
+  '..........mmmmuUUUUuuuummmm...............',
+  '.......mmmuUUUUuuuuuuuuuuuummm............',
+  '.....mmuUUUUuuuuuuuuuuuuuuuuuumm..........',
+  '....muUUUuuuuuuuuuuuuuuuuuuuuuuumm........',
+  '...muUUuuuuuuuuuuuuuuuuuuuuuuuuuuTm.......',
+  '..muUuuuuuuuuuTTTTTTTTTTTuuuuuuuuTTm......',
+  '..mUuuuuuuuuTTTTTTTTTTTTTTTuuuuuTTTTm.....',
+  '.muuuuuuuuTTTkkkkkkkkkkkkkTTTuuuTTTTm.....',
+  '.muuuuuuuTTkkWWWWWWWWWWWWWkkTTuuTTTTTm....',
+  'muuuuuuuTTkWwwwwwwwwwwwwwwWkTTTTTTTTTm....',
+  'muuuuuuTTTkWwkkkkkkkkkkkkwWkTTTTTTTTTTm...',
+  'mTuuuuuTTTkWwkkkkkkkkkkkkwWkTTTTTTTTTTm...',
+  'mTTuuuTTTTkWwkkkkkkkkkkkkwWkTTTTTTTTTtm...',
+  'mTTTTTTTTTkWwkkkkkkkkkkkkwWkTTTTTTTTtttm..',
+  'mTTTTTTTTTkWwkkkkkkkkkkkkwWkTTTTTTTttttm..',
+  'mtTTTTTTTTkWwkkkkkkkkkkkkwWkTTTTTTtttttm..',
+  'mttTTTTTTTkWwkknnkkkknnkkwWkTTTTtttttttm..',
+  'mtttTTTTTTkWwknnkkkkkknnkwWkTTTttttttttm..',
+  '.mtttttTTTkWwnnkkkkkkkknnwWkTtttttttttm...',
+  '.mmtttttttkWwnkkkkkkkkkknwWkttttttttttm...',
+  '...mmmmmmmmmmnmmmmmmmmmmnmmmmmmmmmmmmm....',
+  '............n..........n..................',
+  '...........n............n.................',
+  '..........n..............n................',
+  '..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,..'
+]);
+
+const CART = art([
+  '..kkkkkkkkkkkk..',
+  '.kmMMMMMMMMMMmk.',
+  '.kMuuTuuuTuuuMk.',
+  '.kMTtTTtTTtTTMk.',
+  '.kmMMMMMMMMMMmk.',
+  '.kmmmmmmmmmmmmk.',
+  '..kkkkkkkkkkkk..',
+  '..kmmk....kmmk..',
+  '..kMmk....kMmk..',
+  '...kk......kk...'
+]);
+
+const RACK = art([
+  '.kk.....................kk.',
+  '.kWk...................kWk.',
+  '.kWkkkkkkkkkkkkkkkkkkkkkWk.',
+  '.kWwwwwwwwwwwwwwwwwwwwwwWk.',
+  '.kWk.k...k.k...k.k...k.kWk.',
+  '.kWk.kn.nk.kn.nk.kn.nk.kWk.',
+  '.kWk..knk...knk...knk..kWk.',
+  '.kWk..kNk...kNk...kNk..kWk.',
+  '.kWk.knNnk.knNnk.knNnk.kWk.',
+  '.kWk.knNnk.knNnk.knNnk.kWk.',
+  '.kWk.knNnk.knNnk.knNnk.kWk.',
+  '.kWk..knk...knk...knk..kWk.',
+  '.kWk...k.....k.....k...kWk.',
+  '.kWk...................kWk.',
+  '.kWk...................kWk.',
+  '.kkk...................kkk.',
+  '.,,,,,,,,,,,,,,,,,,,,,,,,,.'
+]);
+
+const STILL = art([
+  '.....kk.........',
+  '....kOOk........',
+  '....kyOk........',
+  '...kkOOkk.......',
+  '..koyyyOOk......',
+  '.koyYyyyOOkkkkk.',
+  '.kOyyyyyOOoNNNk.',
+  '.kOyyyyyOOkkkNk.',
+  '.koOOOOOOok.kNk.',
+  '..koooooook.kNk.',
+  '..kkkkkkkkk.kNk.',
+  '..kmMmMmMmk.kNk.',
+  '..kmQqQqQmk.kkk.',
+  '..kkkkkkkkk.....',
+  '.,,,,,,,,,,,,,,.'
+]);
+
+const PIER = art([
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk..',
+  'kVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVk..',
+  'kvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvk..',
+  'kwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwk..',
+  'kVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVk..',
+  'kvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvk..',
+  'kwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwk..',
+  'kVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVk..',
+  'kvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvk..',
+  'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk..',
+  '.kWk.......kWk.......kWk........kWk.....',
+  '.kWk.......kWk.......kWk........kWk.....',
+  '.kwk.......kwk.......kwk........kwk.....',
+  '.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,..'
+]);
+
+const WATCHTOWER = art([
+  '......kkkkkkkkkkkkkkkk......',
+  '....kkrrrrrrrrrrrrrrrrkk....',
+  '...keeeeeeeeeeeeeeeeeeeek...',
+  '..kRRRRRRRRRRRRRRRRRRRRRRk..',
+  '.krrrrrrrrrrrrrrrrrrrrrrrrk.',
+  '.kkkkkkkkkkkkkkkkkkkkkkkkkk.',
+  '...kWk...............kWk....',
+  '...kWk...............kWk....',
+  '...kWk...............kWk....',
+  '..kkkkkkkkkkkkkkkkkkkkkkkk..',
+  '..kVWVVWVVWVVWVVWVVWVVWVk...',
+  '..kVWVVWVVWVVWVVWVVWVVWVk...',
+  '..kkkkkkkkkkkkkkkkkkkkkkkk..',
+  '..kwwwwwwwwwwwwwwwwwwwwwwk..',
+  '..kkkkkkkkkkkkkkkkkkkkkkkk..',
+  '...kWk..kk.......kk..kWk....',
+  '...kWk...kk.....kk...kWk....',
+  '...kWk....kk...kk....kWk....',
+  '...kWk.....kk.kk.....kWk....',
+  '...kWk......kkk......kWk....',
+  '...kWk.....kk.kk.....kWk....',
+  '...kWk....kk...kk....kWk....',
+  '...kWk...kk.....kk...kWk....',
+  '...kWk..kk.......kk..kWk....',
+  '...kWkkkkkkkkkkkkkkkkkWk....',
+  '...kWwwwwwwwwwwwwwwwwwWk....',
+  '...kWkkkkkkkkkkkkkkkkkWk....',
+  '...kWk..kk.......kk..kWk....',
+  '...kWk...kk.....kk...kWk....',
+  '...kWk....kk...kk....kWk....',
+  '...kWk.....kk.kk.....kWk....',
+  '...kWk......kkk......kWk....',
+  '...kWk.....kk.kk.....kWk....',
+  '...kWk....kk...kk....kWk....',
+  '...kWk...kk.....kk...kWk....',
+  '...kWk..kk.......kk..kWk....',
+  '...kWk.kk.........kk.kWk....',
+  '...kWkkk...........kkkWk....',
+  '...kWk...............kWk....',
+  '..kkWkk.............kkWkk...',
+  '..,,,,,,,,,,,,,,,,,,,,,,,,..'
+]);
+
+export const SHRINE = art([
+  '...............kkkk...............',
+  '..............kIPIIk..............',
+  '.............kIIPIIIk.............',
+  '.............kIIiIIIk.............',
+  '..............kIiIIk..............',
+  '...............kiik...............',
+  '..mmmmm........kkkk........mmmmm..',
+  '..mUUUm.....mmmmmmmmmm.....mUUUm..',
+  '..muuum....mUUUUUUUUUUm....muuum..',
+  '..mmmmm...mUuuuuuuuuuuTm...mmmmm..',
+  '...muTm...mmmmmmmmmmmmmm....muTm..',
+  '...muTm....muuuuuuuuuTm.....muTm..',
+  '...muTm....muTTTTTTTTTm.....muTm..',
+  '...muTm....muTiiIIiiTTm.....muTm..',
+  '...muTm....muTiIiiIiTTm.....muTm..',
+  '...muTm....muTTiiiiTTTm.....muTm..',
+  '...muTm....muTTTTTTTTTm.....muTm..',
+  '...muTm....muuuuuuuuuTm.....muTm..',
+  '...muTm...mmmmmmmmmmmmmm....muTm..',
+  '...muTm...mUUUUUUUUUUUUTm...muTm..',
+  '..mmmmmm..muuuuuuuuuuuuTm..mmmmmm.',
+  '..mTTTTm..mmmmmmmmmmmmmmm..mTTTTm.',
+  '..mmmmmm...................mmmmmm.',
+  '.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'
+]);
+
+export const CLAIM_STONE = art([
+  '.k...............',
+  '.kkk.............',
+  '.kppkk...........',
+  '.kpppPkk.........',
+  '.kppPpppkk.......',
+  '.kpppPppk........',
+  '.kpppkk..........',
+  '.kkk.............',
+  '.k....mmmmmm.....',
+  '.k...mUUUUUTm....',
+  '.k..mUuuuuuTTm...',
+  '.k..mUuyyyuTTm...',
+  '.k..muyYYyuTTm...',
+  '.k..muuyyuuTTm...',
+  '.k..muuuuuuTTm...',
+  '.k..mTuuuuTTtm...',
+  '.k..mTTTTTTttm...',
+  '.k..mTTTTTttttm..',
+  '.kk.mmmmmmmmmmm..',
+  '.,,,,,,,,,,,,,,,.'
+]);
+
+
+const ROOF_R = mirror(ROOF_L);
+const POST_R = mirror(WALL_POST);
+const SEGS: Record<string, Art> = { W: SEG_WINDOW, D: SEG_DOOR, S: SEG_SHUTTER, P: SEG_PLAIN, B: SEG_BARNDOOR };
+
+function wall(segs: string): Art {
+  return hcat(WALL_EDGE, WALL_POST, ...segs.split('').map((c) => SEGS[c]), POST_R, WALL_EDGE);
+}
+
+function roof(w: number): Art {
+  return new Canvas(w, ROOF_M.h).tileX(ROOF_M, 8, w - 8, 0).put(ROOF_L, 0, 0).put(ROOF_R, w - 8, 0).art();
+}
+
+export interface Building {
+  art: Art;
+  foot: number;
+}
+
+function building(lower: string, upper = '', chimney = -1): Building {
+  const lw = wall(lower);
+  const full = upper ? wall(upper) : null;
+  const uw = full ? crop(full, 0, 0, full.w, 17) : null;
+  const ww = Math.max(lw.w, uw?.w ?? 0);
+  const rw = ww + 4;
+  const top = chimney >= 0 ? 4 : 0;
+  const h = top + ROOF_M.h + (uw ? uw.h : 0) + lw.h + 1;
+  const c = new Canvas(rw + 2, h);
+  if (chimney >= 0) c.put(CHIMNEY, chimney, 0);
+  c.put(roof(rw), 0, top);
+  let y = top + ROOF_M.h;
+  if (uw) {
+    c.put(uw, 2, y);
+    y += uw.h;
+  }
+  c.put(lw, 2, y);
+  c.fill(',', 4, h - 1, rw + 2, h);
+  return { art: c.art(), foot: h - lw.h - 8 };
+}
+
+export const HOUSES: Building[] = [
+  building('WDW', '', 26),
+  building('SDS'),
+  building('WSDSW', '', 12),
+  building('WDW', 'SWS', 27)
 ];
 
 export const ROOFS: Swap[] = [
-  { R: 0xa83a32, r: 0x7a2420, e: 0xd0644e },
-  { R: 0x3d5a8a, r: 0x2a3e64, e: 0x5a7eb0 },
-  { R: 0x8f5b3a, r: 0x6a4026, e: 0xb07a50 },
-  { R: 0x5f8a4a, r: 0x426634, e: 0x7cac60 },
-  { R: 0x4a3a32, r: 0x322620, e: 0x6a564a },
-  { R: 0xc2903a, r: 0x9a6c26, e: 0xe0b45a }
+  { e: 0xc8584a, R: 0xa8443a, r: 0x86342e },
+  { e: 0x5a7eb0, R: 0x46689a, r: 0x37547e },
+  { e: 0xae7a52, R: 0x926240, r: 0x764e34 },
+  { e: 0x749e5c, R: 0x5e864a, r: 0x4b6c3c },
+  { e: 0x6a5a50, R: 0x56483f, r: 0x433831 },
+  { e: 0xd4a450, R: 0xb88a3c, r: 0x987030 }
 ];
 
-export const FORT = art([
-  '.kkkkkk................kkkkkk.',
-  'kuUUUUuk..............kuUUUUuk',
-  'kUTTTTUkkkkkkkkkkkkkkkkUTTTTUk',
-  'kUTmmTUuUuUuUuUuUuUuUuuUTmmTUk',
-  'kUTmmTUTTTTTTTTTTTTTTTTUTmmTUk',
-  'kuUUUUukkkkkkkkkkkkkkkkuUUUUuk',
-  '.kuTTuk.ffffffffffffff.kuTTuk.',
-  '.kuTtuk.ffffffffffffff.kuTtuk.',
-  '.kuTTuk.fffffkkfffffff.kuTTuk.',
-  '.kuTtuk.ffffkBBBkfffff.kuTtuk.',
-  '.kuTTuk.ffffkBBBBkffff.kuTTuk.',
-  '.kuTtuk.ffffkBBkkfffff.kuTtuk.',
-  '.kuTTuk.ffffkJkffffff..kuTTuk.',
-  '.kuTtuk.ffffkJkfffffff.kuTtuk.',
-  '.kuTTuk.ffffkJkfffffff.kuTTuk.',
-  '.kuTtuk.fffkJJJkffffff.kuTtuk.',
-  '.kuTTuk.ffffffffffffff.kuTTuk.',
-  '.kuTtuk.ffffffffffffff.kuTtuk.',
-  '.kuUUuk.ffffffffffffff.kuUUuk.',
-  'kuUUUUukkkkkkk..kkkkkkkuUUUUuk',
-  'kUTTTTUuUuUuUk..kUuUuUuUTTTTUk',
-  'kUTmmTUTTTTTTkwwkTTTTTTUTmmTUk',
-  'kUTmmTUtttttTkwwkTttttTUTmmTUk',
-  'kuUUUUukkkkkkkwwkkkkkkkuUUUUuk',
-  '.kkkkkk......kkkk......kkkkkk.',
-  '..,,,,,,,,,,,,,,,,,,,,,,,,,,,,'
-]);
+export const WALLS: Swap[] = [
+  {},
+  { C: 0xe8d8a8, c: 0xbca878 },
+  { C: 0xc8d8dc, c: 0x98aab0 },
+  { C: 0xe0b8a0, c: 0xb48c78 }
+];
 
+function fort(tiles: number, depth: number, barracks: boolean): Art {
+  const TW = TOWER.w;
+  const W = TW * 2 + tiles * 8;
+  const H = TOWER.h + depth + FWALL.h;
+  const c = new Canvas(W + 2, H + 1);
+  const cy0 = TOWER.h;
+  const cy1 = H - FWALL.h;
+  c.fill('f', 20, cy0 - 2, W - 20, cy1 + 5);
+  c.fill('D', 20, cy0 - 2, W - 20, cy0 + 2);
+  c.put(TOWER, 0, 0).put(TOWER, W - TW, 0);
+  c.tileX(BWALL, TW, W - TW, TOWER.h - BWALL.h);
+  c.tileY(SWALL, 8, cy0, H - TOWER.h);
+  c.tileY(SWALL, W - 20, cy0, H - TOWER.h);
+  c.put(FLAGPOLE, 30, cy1 - FLAGPOLE.h - 2);
+  if (barracks) {
+    const b = building('WDW').art;
+    const bx = Math.round(W / 2 - b.w / 2 + 6);
+    const by = cy0 + Math.round(depth * 0.62) - b.h;
+    c.put(b, bx, by);
+    c.put(CRATES, bx + b.w - 2, by + b.h - CRATES.h - 1);
+  } else c.put(CRATES, W - 46, cy1 - CRATES.h - 2);
+  c.put(TOWER, 0, H - TOWER.h).put(TOWER, W - TW, H - TOWER.h);
+  c.tileX(FWALL, TW, W - TW, H - FWALL.h);
+  c.put(GATE, Math.round((W - GATE.w) / 2), H - GATE.h);
+  c.fill(',', 3, H, W + 2, H + 1);
+  return c.art();
+}
+
+export const FORTS: Art[] = [fort(6, 40, false), fort(9, 52, true), fort(12, 62, true)];
 export const FORT_FLAG: Swap[] = [{ B: 0x2a4a9a }, { B: 0x3a8a4a }, { B: 0x1a1a1a }];
+
+function group(w: number, h: number, parts: [Art, number, number][]): Art {
+  const c = new Canvas(w, h);
+  for (const [a, x, y] of parts) c.put(a, x, y);
+  return c.art();
+}
+
+const HUT = building('DP').art;
+const FISH_HUT = building('DS').art;
+const STILL_HOUSE = building('WD', '', 6).art;
+const BARN = building('WBW').art;
+const TAVERN = building('WDW', 'SWS', 27).art;
+
+export const STRUCTURES: Record<string, Art> = {
+  plantation: group(42 + HUT.w, 44, [[CROPS, 0, 12], [CROPS, 8, 12], [CROPS, 16, 12], [CROPS, 24, 12], [CROPS, 32, 12], [CROPS, 0, 22], [CROPS, 8, 22], [CROPS, 16, 22], [CROPS, 24, 22], [CROPS, 32, 22], [CROPS, 0, 32], [CROPS, 8, 32], [CROPS, 16, 32], [CROPS, 24, 32], [CROPS, 32, 32], [HUT, 42, 0]]),
+  lumber_camp: group(64, 23, [[SHED, 0, 0], [LOGS, 38, 8]]),
+  mine: group(60, 26, [[MINE, 0, 0], [CART, 44, 15]]),
+  fishery: group(62, FISH_HUT.h, [[FISH_HUT, 0, 0], [RACK, 34, FISH_HUT.h - RACK.h]]),
+  distillery: group(52, STILL_HOUSE.h, [[STILL_HOUSE, 0, 0], [STILL, 35, STILL_HOUSE.h - STILL.h]]),
+  warehouse: group(BARN.w + 16, BARN.h, [[BARN, 0, 0], [CRATES, BARN.w, BARN.h - CRATES.h - 1]]),
+  dock: PIER,
+  watchtower: WATCHTOWER,
+  fort: fort(4, 30, false),
+  tavern: group(TAVERN.w + 8, TAVERN.h, [[TAVERN, 8, 0], [SIGN, 0, 30]])
+};
+
+export const CLAIM_OWNED: Art = { ...CLAIM_STONE, rows: CLAIM_STONE.rows.map((r) => r.replace(/[pP]/g, 'K')) };
