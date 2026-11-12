@@ -1,23 +1,23 @@
 # Carved marker stone with a flag on a pole; stone lit top left, carved cross rune.
 == claim-stone
 ....kkkkk
-....wPPPk
-....wPPpk
-....wkkkk
-..kkkwkk.
+...kwPPPk
+...kwPPpk
+...kwkkkk
+..kkwkk..
 .kUuuuTk.
 .kUuKuTk.
 kUuKKKuTk
-kuuuKuuTk
+kUuuKuuTk
 kkkkkkkkk
 == claim-stone-owned
 ....kkkkk
-....wKKKk
-....wKKKk
-....wkkkk
-..kkkwkk.
+...kwMKKk
+...kwMKKk
+...kwkkkk
+..kkwkk..
 .kUuuuTk.
 .kUuKuTk.
 kUuKKKuTk
-kuuuKuuTk
+kUuuKuuTk
 kkkkkkkkk

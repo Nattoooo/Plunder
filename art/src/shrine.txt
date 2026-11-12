@@ -1,13 +1,13 @@
 # Altar between two pillars holding a glowing green gem; pillars lit top left.
 == shrine
 kkkkk.......kkkkk
-kUUTk.......kUUTk
-kTTTk...k...kTTTk
+kUuTk..kHk..kUuTk
+kUuTk.kHYGk.kUuTk
 kUuTk..kHk..kUuTk
 kUuTk.kHhGk.kUuTk
 kUuTk..kGk..kUuTk
 kUuTk...k...kUuTk
-kUuTkUUUUuTTkUuTk
+kTTTkTTTTTTTkTTTk
 kUuTkkkkkkkkkUuTk
 kUuTkuuuuuTTkUuTk
 kUUTkuuuuuTTkUUTk
