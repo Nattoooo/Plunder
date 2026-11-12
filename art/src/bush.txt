@@ -1,0 +1,16 @@
+# Round leafy bush: low dome, light top-left, shadow bottom-right.
+== bush
+...kkkk...
+..kHHhhk..
+.kHhhhhhk.
+khhhhhhhGk
+khhhhGGGGk
+.kkGGGGkk.
+== berry-bush
+# Same bush with three red berries (R with dark r under-edge pixel omitted for clarity).
+...kkkk...
+..kHHhhk..
+.kHhRhhhk.
+khhhhhhRGk
+khRhhGGGGk
+.kkGGGGkk.

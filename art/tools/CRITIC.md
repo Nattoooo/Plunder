@@ -8,7 +8,7 @@ Read before judging:
 - The artist's notes: `art/work/<family>/notes.md`.
 - The pixel grid: `art/src/<family>.txt` (use it to cite exact pixels).
 - Open `art/work/<family>/preview.png`, and `family.png` if present, with the Read tool. Look at them closely.
-- Approved families in the same folder (`art/APPROVED.md`, their `art/work/<family>/preview.png`) for consistency.
+- The style reference (the approved pilot set): `art/work/captain/preview.png`, `art/work/house-cottage/preview.png`, `art/work/tree/preview.png`, `art/work/deck-planks/preview.png`, `art/work/rum/preview.png`, plus anything in `art/APPROVED.md` from the same folder. The family must look like it belongs with these.
 
 Judge each sprite on:
 1. Silhouette: filled in solid black, would anyone name the object?
@@ -28,7 +28,7 @@ Write `art/work/<family>/critique-<round>.md`:
 
 PASS only when there are zero BLOCKER and zero MAJOR issues and you would ship it unchanged in a polished commercial game. MINOR notes may accompany a PASS.
 
-On a re-review, first go through every earlier issue and state fixed or not fixed, then review the whole family fresh. Don't contradict your earlier direction with new taste preferences, but do raise every real problem.
+On a re-review you may be a fresh agent: read every earlier `critique-*.md` for the family first. Then go through every earlier issue and state fixed or not fixed, then review the whole family fresh. Don't contradict your earlier direction with new taste preferences, but do raise every real problem.
 
 Never edit the sprite or source files.
 
