@@ -32,7 +32,7 @@
   ],
   "tier": "normal",
   "round": 1,
-  "status": "reviewing"
+  "status": "revising"
  },
  "houses": {
   "families": [
@@ -152,7 +152,7 @@
   ],
   "tier": "normal",
   "round": 2,
-  "status": "reviewing"
+  "status": "done"
  },
  "ship-small": {
   "families": [

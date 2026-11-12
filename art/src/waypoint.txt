@@ -1,0 +1,10 @@
+# waypoint: red flag on a wood pole. The pole stands at the left, the flag hangs
+# from its top to the right. Outline on the outer silhouette only.
+== waypoint
+kWRRk
+kWRRk
+kWRrk
+kWkk.
+kWk..
+kWk..
+kkk..

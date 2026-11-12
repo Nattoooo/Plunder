@@ -5,10 +5,10 @@
 kVVVVVVVVVVVVVvvvk......kkk.....
 kwwwwwwwwwwwwwwwwk.....kFFDk....
 .kVwKKKKKKKKKKwWk......kFDDk....
-.kVwKKKKKKKKKKwWk.....kkkkkkk...
-.kVwKKKKKKKKKKwWk....kFFDkFFDk..
-.kVwKKVVVVVVKKwWk....kFDDkFDDk..
-.kVwKKwKKKKwKKwWk...kkkkkkkkkkk.
-.kVwKKwKKKKwKKwWk..kFFDkFFDkFFDk
-.kVwKKwKKKKwKKwWk..kFDDkFDDkFDDk
+.kVwkkkkkkkkkkwWk.....kkkkkkk...
+.kVwkFFDDDDDDkwWk....kFFDkFFDk..
+.kVwVVVVVVVVVVwWk....kFDDkFDDk..
+.kVwKwKKKKKKwKwWk...kkkkkkkkkkk.
+.kVwKwKKKKKKwKwWk..kFFDkFFDkFFDk
+.kVwKwKKKKKKwKwWk..kFDDkFDDkFDDk
 .kkkkkkkkkkkkkkkkk..kkk.kkk.kkk.

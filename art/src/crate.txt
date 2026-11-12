@@ -1,0 +1,18 @@
+# crate: wood box, lit top face, one plank seam across the middle.
+== crate
+kkkkkk
+kVVVVk
+kvvvvk
+kwwwwk
+kvvvWk
+kkkkkk
+# lost-cargo: the same crate with a red flag on a short pole at its top left.
+# The crate is 3 px tall here (one row less) to fit the 7 px height.
+== lost-cargo
+kwRRk.
+kwRrk.
+kkkkkk
+kVVVVk
+kvvvvk
+kwwwwk
+kkkkkk

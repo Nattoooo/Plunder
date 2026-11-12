@@ -1,0 +1,8 @@
+# x-mark: bold red X, two pixels thick. Ground mark, so no outline.
+== x-mark
+RR..RR
+.RRRR.
+..RR..
+..RR..
+.RRRR.
+RR..RR

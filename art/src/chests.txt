@@ -1,0 +1,25 @@
+# chest: closed wood chest, light from top left. Lid is a lit band, a gold strap
+# marks the lid seam, a gold clasp sits dead centre.
+== chest
+.kkkkk.
+kVVVVVk
+kOOOOOk
+kvvvvWk
+kvvyvWk
+kkkkkkk
+# locked-chest: same chest, iron band across the lid seam, iron padlock on it.
+# The lock is 3 px wide and 2 px tall, with a dark keyhole.
+== locked-chest
+.kkkkk.
+kVVVVVk
+kMMMMMk
+kvNNNWk
+kvMmMWk
+kkkkkkk
+# gold-chest: open chest. Gold heaped above the rim, rim and body below.
+== gold-chest
+..kYk..
+.kyOyk.
+kVVVVVk
+kWWWWWk
+kkkkkkk

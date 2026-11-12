@@ -1,0 +1,7 @@
+# dig-spot: loose sand heaped into a mound. Ground mark, so no outline.
+# Light from top left: F on the crest, d on the right and bottom.
+== dig-spot
+..FF..
+.FDDd.
+FDDDdd
+DDDddd

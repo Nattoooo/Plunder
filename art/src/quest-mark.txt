@@ -1,0 +1,8 @@
+# quest-mark: gold exclamation mark. At 3 px wide an outline would eat the shape,
+# so it has none (STYLE allows this for very small sprites).
+== quest-mark
+.y.
+.y.
+.y.
+...
+.y.

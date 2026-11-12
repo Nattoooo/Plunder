@@ -1,0 +1,8 @@
+# dock-planks: pier boards laid across the pier, seams along the bottom edge.
+# Tiles along the pier (repeats on y). No outline (tiling tile), same plank and
+# seam tones as deck-planks.
+== dock-planks
+vvvv
+vvvv
+vvvv
+WWWW

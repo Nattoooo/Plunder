@@ -27,3 +27,8 @@ Families the critic has passed. Match their style.
 - iron-bands (ship) — round 1
 - deck-damage (ship) — round 1
 - stern-lantern (ship) — round 1
+- palm (nature) — round 1
+- dead-tree (nature) — round 1
+- sail-square (sails) — round 2
+- sail-main (sails) — round 2
+- sail-lateen (sails) — round 2

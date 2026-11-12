@@ -1,0 +1,8 @@
+# barrel: wood staves with two iron hoops. Narrow rounded top and base.
+== barrel
+.kkk.
+kVVvk
+kMMMk
+kvvWk
+kMMMk
+.kkk.

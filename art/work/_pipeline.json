@@ -86,7 +86,7 @@
  },
  "palm": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "nature-large"
@@ -98,8 +98,8 @@
   "tier": "normal"
  },
  "dead-tree": {
-  "round": 2,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "nature-large"
@@ -511,8 +511,8 @@
   "batch": "ship-parts"
  },
  "sail-square": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "ship-large"
@@ -525,15 +525,15 @@
   "batch": "ship-small"
  },
  "sail-main": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "ship-large"
  },
  "sail-lateen": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "ship-large"
