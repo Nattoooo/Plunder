@@ -1,0 +1,23 @@
+# plantation: small plaster hut beside three rows of tall green crops. Swap: roof e R r, plaster C c, foliage H h G g.
+== plantation
+..................kkk....kkk....kkk..
+.................kHHhk..kHHhk..kHHhk.
+................kHHhhGkkHHhhGkkHHhhGk
+................kHhhGGkkHHhGgkkHhhGGk
+................kHhhGGkkHhGGgkkHHhGgk
+...kkkkkkkkk....kHHhGgkkHhhGGkkHhGGgk
+..keeeeeeeeek...kHhGGgkkHhhGGkkHhhGGk
+.keRRRRRRRRRrk..kHhhGGkkHHhGgkkHhhGGk
+keRRRRRRRRRRRrk.kHhhGGkkHhGGgkkHHhGgk
+kkkkkkkkkkkkkkk.kHHhGgkkHhhGGkkHhGGgk
+.kccccccccccck..kHhGGgkkHhhGGkkHhhGGk
+.kCCCCCCCCCCCk..kHhhGGkkHHhGgkkHhhGGk
+.kCCCCCCCwWwCk..kHhhGGkkHhGGgkkHHhGgk
+.kCkkkkCCwWwCk..kHHhGgkkHhhGGkkHhGGgk
+.kCkllkCCwWwCk..kHhGGgkkHhhGGkkHhhGGk
+.kCkBBkCCwWwCk..kHhhGGkkHHhGgkkHhhGGk
+.kCkkkkCCwWwCk..kHhhGGkkHhGGgkkHHhGgk
+.kCVVVVCCwWyCk..kHHhGgkkHhhGGkkHhGGgk
+.kCCCCCCCwWwCk..kHhGGgkkHhhGGkkHhhGGk
+.kCCCCCCCwWwCk..kDDDDDkkDDDDDkkDDDDDk
+.kkkkkkkkkkkkk..kkkkkkkkkkkkkkkkkkkkk

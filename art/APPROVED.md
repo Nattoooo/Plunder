@@ -22,3 +22,4 @@ Families the critic has passed. Match their style.
 - glint (effects) — round 1
 - muzzle-flash (effects) — round 1
 - cutlass-swing (effects) — round 1
+- house-townhouse (buildings) — round 2

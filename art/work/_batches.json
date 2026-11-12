@@ -41,7 +41,7 @@
   ],
   "tier": "normal",
   "round": 2,
-  "status": "reviewing"
+  "status": "done"
  },
  "fort": {
   "families": [
@@ -108,8 +108,8 @@
    "stern-lantern"
   ],
   "tier": "tiny",
-  "round": 0,
-  "status": "drawing"
+  "round": 1,
+  "status": "reviewing"
  },
  "ship-guns": {
   "families": [
@@ -151,8 +151,8 @@
    "sail-lateen"
   ],
   "tier": "normal",
-  "round": 1,
-  "status": "revising"
+  "round": 2,
+  "status": "reviewing"
  },
  "ship-small": {
   "families": [
