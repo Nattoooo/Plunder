@@ -12,3 +12,5 @@ Families the critic has passed. Match their style.
 - skull-rock (nature) — round 1
 - boulder (nature) — round 2
 - bush (nature) — round 2
+- flowers (nature) — round 2
+- house-shutters (buildings) — round 2

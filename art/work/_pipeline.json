@@ -60,8 +60,8 @@
   "tier": "tiny"
  },
  "whale": {
-  "round": 2,
-  "status": "revising",
+  "round": 3,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -139,7 +139,7 @@
  },
  "flowers": {
   "round": 2,
-  "status": "reviewing",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -163,7 +163,7 @@
  },
  "house-shutters": {
   "round": 2,
-  "status": "reviewing",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -174,8 +174,8 @@
   "tier": "normal"
  },
  "house-townhouse": {
-  "round": 0,
-  "status": "drawing",
+  "round": 1,
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -187,13 +187,13 @@
  },
  "plantation": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "normal"
  },
  "lumber-camp": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "normal"
  },

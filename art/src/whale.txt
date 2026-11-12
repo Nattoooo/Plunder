@@ -1,7 +1,7 @@
 == whale
 kk....kkkkkk..
 kBkkkklllllBk.
-.kBBBBBlllBBBBk
+.kBBBBlllBBBBk
 kBkkkkBbbbbbk.
 kk....kkBbkk..
 ........kkk...
