@@ -350,22 +350,22 @@
   "batch": "props-small"
  },
  "deck-logs": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-tiles"
  },
  "iron-bands": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-tiles"
  },
  "deck-damage": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-tiles"
@@ -378,8 +378,8 @@
   "batch": "ship-large"
  },
  "stern-lantern": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-tiles"

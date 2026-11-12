@@ -23,3 +23,7 @@ Families the critic has passed. Match their style.
 - muzzle-flash (effects) — round 1
 - cutlass-swing (effects) — round 1
 - house-townhouse (buildings) — round 2
+- deck-logs (ship) — round 1
+- iron-bands (ship) — round 1
+- deck-damage (ship) — round 1
+- stern-lantern (ship) — round 1
