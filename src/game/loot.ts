@@ -5,7 +5,7 @@ import type { TreasureMapData } from './player';
 
 export type LootKind = 'flotsam' | 'chest' | 'buried' | 'treasure' | 'wreck' | 'shrine' | 'merchant' | 'pirate' | 'navy' | 'ghost' | 'hunter' | 'mob' | 'bottle';
 
-const MIX: Record<LootKind, Partial<Record<ItemCat, number>>> = {
+export const MIX: Record<LootKind, Partial<Record<ItemCat, number>>> = {
   flotsam: { supply: 40, material: 25, ammo: 15, trade: 15, treasure: 5, map: 3 },
   chest: { treasure: 45, equip: 12, tool: 10, supply: 10, ammo: 8, map: 8, relic: 2 },
   buried: { treasure: 80, relic: 3, equip: 7, map: 5 },
@@ -21,7 +21,7 @@ const MIX: Record<LootKind, Partial<Record<ItemCat, number>>> = {
   bottle: { map: 100 }
 };
 
-const GOLD: Record<LootKind, [number, number, number]> = {
+export const GOLD: Record<LootKind, [number, number, number]> = {
   flotsam: [0, 14, 0.5],
   chest: [20, 60, 1],
   buried: [30, 80, 1],
@@ -37,7 +37,7 @@ const GOLD: Record<LootKind, [number, number, number]> = {
   bottle: [0, 0, 0]
 };
 
-const ROLLS: Record<LootKind, [number, number]> = {
+export const ROLLS: Record<LootKind, [number, number]> = {
   flotsam: [1, 2],
   chest: [2, 4],
   buried: [1, 3],

@@ -85,7 +85,7 @@ class Buf {
   }
 }
 
-export function buildSprite(d: Design, hullHp: Float32Array | null, partHp: Float32Array | null, pivotX: number, pivotY: number, reuse?: ShipSprite): ShipSprite {
+export function shipPixels(d: Design, hullHp: Float32Array | null, partHp: Float32Array | null): { px: Uint32Array<ArrayBuffer>; w: number; h: number } {
   const W = d.w * CELL + PAD * 2;
   const H = d.h * CELL + PAD * 2;
   const b = new Buf(W, H);
@@ -203,6 +203,12 @@ export function buildSprite(d: Design, hullHp: Float32Array | null, partHp: Floa
       b.blit(pa.art, ox, oy, undefined, dir, f, pa.ay);
     }
   }
+  return { px: b.px, w: W, h: H };
+}
+
+export function buildSprite(d: Design, hullHp: Float32Array | null, partHp: Float32Array | null, pivotX: number, pivotY: number, reuse?: ShipSprite): ShipSprite {
+  const { px, w: W, h: H } = shipPixels(d, hullHp, partHp);
+  const b = { px };
   const cv = reuse && reuse.canvas.width === W && reuse.canvas.height === H ? reuse.canvas : document.createElement('canvas');
   const sh = reuse && reuse.shadow.width === W && reuse.shadow.height === H ? reuse.shadow : document.createElement('canvas');
   cv.width = W;

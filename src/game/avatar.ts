@@ -71,9 +71,16 @@ export interface Mob {
 }
 
 let mobId = 1;
+export const MOB_BASE: Record<MobKind, { hp: number; dmg: number; speed: number }> = {
+  crab: { hp: 12, dmg: 3, speed: 28 },
+  skeleton: { hp: 26, dmg: 5, speed: 32 },
+  wraith: { hp: 38, dmg: 8, speed: 38 }
+};
+export const MOB_LEVEL_SCALE = 0.18;
+
 export function makeMob(kind: MobKind, x: number, y: number, level: number, island: number): Mob {
-  const base = kind === 'crab' ? { hp: 12, dmg: 3, speed: 28 } : kind === 'skeleton' ? { hp: 26, dmg: 5, speed: 32 } : { hp: 38, dmg: 8, speed: 38 };
-  const s = 1 + (level - 1) * 0.18;
+  const base = MOB_BASE[kind];
+  const s = 1 + (level - 1) * MOB_LEVEL_SCALE;
   return {
     id: mobId++,
     kind,
