@@ -1,0 +1,34 @@
+# tavern
+== tavern
+...............kkkk......
+...............kuTk......
+........kkkkkkkkuTk......
+.......keeeeeeekuTk......
+......kRRRRRRRRkuTk......
+.....kRRRRRRRRRkuTkk.....
+....kRRRRRRRRRRRRRRRk....
+...kRRRRRRRRRRRRRRRRRk...
+..kRRRRRRRRRRRRRRRRRRRk..
+.kRRRRRRRRRRRRRRRRRRRRRk.
+kkkkkkkkkkkkkkkkkkkkkkkkk
+.kccccccccccccccccccccck.
+.kCCCCCCCCCCCCCCCCCCCCck.
+.kCCCCCCCCCCCCCCCCCCCCck.
+.kCkkkkkCCkkkkkCCkkkkkck.
+.kCkllBkCCkllBkCCkllBkck.
+.kCkBBBkCCkBBBkCCkBBBkck.
+.kCkBBBkCCkBBBkCCkBBBkck.
+.kCkVVVkCCkVVVkCCkVVVkck.
+.kCCCCCCCCCCCCCCCCCCCCck.
+.kVVVVVVVVVVVVVVVVVVVVVk.
+.kwwwwwwwwwwwwwwwwwwwwwk.
+.kCCCCCCCCCCCCkkkkkkCCck.
+.kCCkkkkkkkCCCkVWWwkCCck.
+.kCCCkCCCkCCCCkVWWwkCCck.
+.kCCkkkkkkkCCCkVWWwkCCck.
+.kCCkyyyyOkCCCkVWWwkCCck.
+.kCCkyyyyOkCCCkVWywkCCck.
+.kCCkOOOOOkCCCkVWWwkCCck.
+.kCCkkkkkkkCCCkVWWwkCCck.
+.kCCCCCCCCCCCCkVWWwkCCck.
+.kkkkkkkkkkkkkkkkkkkkkkk.

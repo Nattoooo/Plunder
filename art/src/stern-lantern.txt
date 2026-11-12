@@ -1,0 +1,6 @@
+# Brass lantern seen from above: brass ring lit on the top-left (y), shaded bottom-right (O, o), pale glass in the centre (Y).
+# 3 x 3, so the outline is dropped (STYLE: 3 px or less may drop it, and a 1 px outline would eat the lantern).
+== stern-lantern
+yyO
+yYO
+OOo

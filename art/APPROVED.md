@@ -15,3 +15,4 @@ Families the critic has passed. Match their style.
 - flowers (nature) — round 2
 - house-shutters (buildings) — round 2
 - pine (nature) — round 2
+- house-long (buildings) — round 1

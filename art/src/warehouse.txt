@@ -1,0 +1,23 @@
+# warehouse
+== warehouse
+........kkkkkkkkkkkkkkkkkk........
+.......keeeeeeeeeeeeeeeeeek.......
+......kRRRRRRRRRRRRRRRRRRRRk......
+.....kRRRRRRRRRRRRRRRRRRRRRRk.....
+....kRRRRRRRRRRRRRRRRRRRRRRRRk....
+...kRRRRRRRRRRRRRRRRRRRRRRRRRRk...
+..kRRRRRRRRRRRRRRRRRRRRRRRRRRRRk..
+.krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk.
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+.kcccccccccccccccccccccccccccccck.
+.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.
+.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.
+.kCCCCCCCCCkkkkkkkkkkkkCCkkkkkCck.
+.kCCCCCCCCCkVWWwKKVWWwkCCkVVVkCck.
+.kCCCCCCCCCkVWWwKKVWWwkCCkvvwkCck.
+.kCCCCCCCCCkMMMMKKMMMMkCCkkkkkCck.
+.kCkkkkkkkCkVWWwKKVWWwkCkkkkkkkck.
+.kCkVVVVVkCkVWWwKKVWWwkCkVVVVVkck.
+.kCkwwwwwkCkMMMMKKMMMMkCkwwwwwkck.
+.kCkvvvvwkCkVWWwKKVWWwkCkvvvvwkck.
+.kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.

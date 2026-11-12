@@ -183,7 +183,7 @@
  },
  "house-long": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "houses"

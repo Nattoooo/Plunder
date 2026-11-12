@@ -1,0 +1,14 @@
+# Cracked plank: a diagonal split (1-1-1 steps) with light splintered fibres (V) on its upper-right side. No outline (effect).
+# Hole: a 3 x 3 pit of deep water (a) inside a 1 px dark wood rim (w), corners transparent. No outline (effect).
+== damage-crack
+wV...
+.ww..
+..wV.
+...ww
+....w
+== damage-hole
+.www.
+waaaw
+waaaw
+waaaw
+.www.
