@@ -3,7 +3,7 @@
   "creator": "a743a2302295322b8",
   "critic": "a366084e9e6fc2fd3",
   "round": 3,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet from round 2",
   "tier": "tiny"
  },
@@ -37,37 +37,37 @@
  },
  "crab": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "skeleton": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "wraith": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "gull": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "whale": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "sea-serpent": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -79,37 +79,37 @@
  },
  "palm": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "normal"
  },
  "pine": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "dead-tree": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "bush": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "reeds": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "boulder": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
@@ -121,13 +121,13 @@
  },
  "skull-rock": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "normal"
  },
  "ice-shard": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
@@ -145,25 +145,25 @@
  },
  "mushrooms": {
   "round": 1,
-  "status": "ready",
+  "status": "reviewing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "shell": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "lava-tile": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "tiny"
  },
  "house-shutters": {
   "round": 0,
-  "status": "queued",
+  "status": "drawing",
   "model": "sonnet",
   "tier": "normal"
  },
