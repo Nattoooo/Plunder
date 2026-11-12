@@ -1,15 +1,16 @@
+# Broadleaf tree: top dome cluster, two side clusters, one front cluster; trunk with root flare.
 == tree
 .....kkkkk.....
 ...kkHHHhhkk...
 ..kHHHhhhhhhk..
-..kHhhhhhhhGk..
-.kHHhGGGGGHhGk.
+..kGhhhhhhhGk..
+.kHHGGGGGGHhGk.
 kHHhhhhGHHhhhGk
 khhhhhhGhhhhhGk
-khhhhhGGGhhhGGk
+khhhhhGGGGhhhGk
 khhhGHHhhhGhhGk
-khhGGhhhhhhGGGk
-.kGGGhhhhhGGGk.
+khhGGhhhhhGGGGk
+.kGGGhhhhGGGGk.
 ..kkkGGGGGkkk..
 .....kwwwk.....
 .....kvWwk.....
@@ -17,3 +18,4 @@ khhGGhhhhhhGGGk
 .....kvWwk.....
 ....kvvWwwk....
 ....kkkkkkk....
+

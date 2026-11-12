@@ -1,0 +1,92 @@
+# Captain: 7 x 9 (spec 6 x 9, flexible). Odd width gives a centre column for the
+# tricorn's front point, the shirt line and a nose-gap between the two eyes.
+# Hat K (black) with gold trim y/O; skin s/S; coat R/r; shirt p; trousers B/b;
+# boots are the k outline pixels on the bottom row; hair J/j.
+
+== captain-down-1
+.kkkkk.
+kyKKKOk
+kkyyykk
+kskskSk
+.kssSk.
+kRRpRrk
+kRRpRrk
+ksBkbSk
+.kk.kk.
+
+== captain-down-2
+.kkkkk.
+kyKKKOk
+kkyyykk
+kskskSk
+.kssSk.
+kRRpRrk
+ksRpRrk
+.kkkbrk
+....kk.
+
+== captain-down-3
+.kkkkk.
+kyKKKOk
+kkyyykk
+kskskSk
+.kssSk.
+kRRpRrk
+kRRpRSk
+kRBkkk.
+.kk....
+
+== captain-up-1
+.kkkkk.
+kKKKKKk
+kyyyyOk
+kJJJJjk
+.kJjJk.
+kRRjRrk
+kRRRRrk
+ksBkbSk
+.kk.kk.
+
+== captain-up-2
+.kkkkk.
+kKKKKKk
+kyyyyOk
+kJJJJjk
+.kJjJk.
+kRRjRrk
+kRRRRSk
+kRBkkk.
+.kk....
+
+== captain-up-3
+.kkkkk.
+kKKKKKk
+kyyyyOk
+kJJJJjk
+.kJjJk.
+kRRjRrk
+ksRRRrk
+.kkkbrk
+....kk.
+
+== captain-side-1
+.kkkkk.
+kyKKKKk
+kkyyyOk
+kJJsksk
+.kjsSk.
+.kRRpk.
+.kRRRk.
+kRsBbk.
+.kkkkk.
+
+== captain-side-2
+.kkkkk.
+kyKKKKk
+kkyyyOk
+kJJsksk
+.kjsSk.
+.kRRpk.
+.kRRsk.
+kRBkbk.
+.kk.kkk
