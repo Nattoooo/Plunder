@@ -2,7 +2,10 @@ import type { Game } from '../game/game';
 import { COMPONENTS, ComponentDef, KEELS } from '../data/components';
 import { ITEM } from '../data/items';
 import { Design, cloneDesign, validateDesign, summarize, resizeDesign, autoDir, CELL, hasHull } from '../game/design';
-import { buildSprite, partIcon, PAD } from '../render/shipSprite';
+import { buildSprite, partPreview, PAD } from '../render/shipSprite';
+import { artCanvas } from '../render/artCanvas';
+import { SAILS, PARTS } from '../art/ship';
+import { ramp } from '../art/palette';
 import { audio } from '../audio/audio';
 import { h, gold } from './dom';
 
@@ -20,7 +23,7 @@ const iconCache = new Map<string, string>();
 function icon(key: string): string {
   let u = iconCache.get(key);
   if (!u) {
-    u = partIcon(key, 3);
+    u = partPreview(key, 3);
     iconCache.set(key, u);
   }
   return u;
@@ -271,18 +274,18 @@ export class Shipwright {
       const c = COMPONENTS[p];
       const x = this.ox + (i % d.w) * cp;
       const y = this.oy + ((i / d.w) | 0) * cp;
-      if (c.sail) {
-        ctx.fillStyle = 'rgba(240,230,200,0.75)';
-        const span = c.sail.span * cp * 0.9;
-        if (c.sail.style === 'lateen') ctx.fillRect(x + cp / 2, y - cp * 0.6, cp * 0.35, cp * 1.4);
-        else ctx.fillRect(x + cp / 2 - span / 2, y + cp * 0.15, span, cp * 0.3);
+      const k2 = cp / CELL;
+      if (c.sail && SAILS[c.sail.style]) {
+        const set = SAILS[c.sail.style];
+        const a = set.full;
+        const ay = set.ay ?? a.h - 1;
+        ctx.globalAlpha = 0.9;
+        ctx.drawImage(artCanvas(a, ramp(d.sailColor)), x + cp / 2 - set.ax * k2, y + cp / 2 - ay * k2, a.w * k2, a.h * k2);
+        ctx.globalAlpha = 1;
       }
       if (c.key === 'crows_nest') {
-        ctx.strokeStyle = '#3a2414';
-        ctx.lineWidth = Math.max(2, cp / 8);
-        ctx.beginPath();
-        ctx.arc(x + cp / 2, y + cp / 2, cp * 0.38, 0, Math.PI * 2);
-        ctx.stroke();
+        const a = PARTS.crows_nest.art;
+        ctx.drawImage(artCanvas(a), x + cp / 2 - (a.w / 2) * k2, y + cp / 2 - (a.h / 2) * k2, a.w * k2, a.h * k2);
       }
     }
     const issues = validateDesign(d);

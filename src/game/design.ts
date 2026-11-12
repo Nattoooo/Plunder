@@ -1,7 +1,7 @@
 import { COMPONENTS, ComponentDef, KEELS } from '../data/components';
 import { PART_CHARS } from '../data/fleets';
 
-export const CELL = 8;
+export const CELL = 10;
 
 export interface Design {
   w: number;

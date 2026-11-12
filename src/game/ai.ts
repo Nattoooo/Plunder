@@ -87,8 +87,9 @@ export function updateAI(ai: AIState, ship: Ship, w: AIWorld, dt: number): void 
     ai.think = 0.25 + Math.random() * 0.1;
     think(ai, ship, w);
   }
-  const d = angleDiff(ship.heading, ai.desired + ai.avoid);
-  ship.turnInput = clamp(d * 2.2, -1, 1);
+  const sa = Number.isFinite(ship.sailAngle) ? ship.sailAngle : ship.heading;
+  const d = angleDiff(sa, ai.desired + ai.avoid);
+  ship.turnInput = clamp(d * 3, -1, 1);
 }
 
 function think(ai: AIState, ship: Ship, w: AIWorld): void {

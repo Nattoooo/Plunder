@@ -1051,6 +1051,7 @@ export class Game implements ShipWorld, AIWorld {
     s.x = L.berthX;
     s.y = L.berthY;
     s.heading = Math.atan2(L.dirY, L.dirX);
+    s.sailAngle = s.heading;
     s.speed = 0;
     s.sailTarget = 0;
     s.sail = 0;

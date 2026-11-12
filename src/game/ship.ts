@@ -56,6 +56,7 @@ export interface Stats {
 }
 
 export const SINK_AT = 0.22;
+export const SAIL_SWING = 1.15;
 
 interface PendingShot {
   ci: number;
@@ -85,6 +86,7 @@ export class Ship {
   sail = 0;
   sailTarget = 0;
   turnInput = 0;
+  sailAngle = NaN;
   rowing = false;
   anchored = false;
   hullHp!: Float32Array;
@@ -447,7 +449,14 @@ export class Ship {
     this.sail = approach(this.sail, this.sailTarget, dt * 0.55 * s.sailHandling);
     const tf = 0.35 + 0.65 * Math.min(1, Math.abs(this.speed) / 30);
     const prevHeading = this.heading;
-    this.heading = wrapAngle(this.heading + this.turnInput * s.turnRate * tf * dt);
+    if (!Number.isFinite(this.sailAngle)) this.sailAngle = this.heading;
+    const ti = Number.isFinite(this.turnInput) ? clamp(this.turnInput, -1, 1) : 0;
+    const sailTurn = 1.5 + Math.min(1, s.sailHandling * 0.4);
+    let rel = angleDiff(this.heading, this.sailAngle + ti * sailTurn * dt);
+    rel = clamp(rel, -SAIL_SWING, SAIL_SWING);
+    const step = s.turnRate * tf * dt;
+    this.heading = wrapAngle(this.heading + clamp(rel, -step, step));
+    this.sailAngle = wrapAngle(this.heading + rel - clamp(rel, -step, step));
     const target = this.targetSpeed(w.env);
     if (this.speed < target) {
       const a = Math.max(5, target * 0.2) * s.accel;
@@ -888,7 +897,7 @@ export class Ship {
         const mates = this.crew.filter((o) => o.station === c.station);
         const idx = mates.indexOf(c);
         const [cx, cy] = this.cellLocal(c.station);
-        c.tx = cx + (mates.length > 1 ? (idx === 0 ? -1.5 : 1.5) : 0);
+        c.tx = cx + (mates.length > 1 ? (idx === 0 ? -2.5 : 2.5) : 0);
         c.ty = cy + 1;
       } else {
         c.wander -= dt;

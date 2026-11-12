@@ -25,7 +25,7 @@ npm run build
 | Key | Action |
 | --- | --- |
 | W / S | Draw (raise) or furl the sail: Furled → Half → Full |
-| A / D | Turn the sail to steer. The ship holds its heading until you turn again |
+| A / D | Rotate the sail. The hull swings to follow it and holds that course until you turn the sail again |
 | Hold left mouse | Fire every cannon that bears on the cursor |
 | R | Swap ammunition (round, chain, grape, heated shot) |
 | Right-click | Set a waypoint |
@@ -55,15 +55,16 @@ On foot: WASD to walk, left-click to attack, E to interact.
 
 ## Tech
 
-TypeScript + Vite, no game framework. The world is rendered with Canvas 2D at a low internal resolution and scaled up with nearest-neighbour filtering. Terrain chunks and map tiles are generated in Web Workers. All sound effects and music are synthesised at runtime with the Web Audio API, with positional falloff for in-world sounds.
+TypeScript + Vite, no game framework. The world is rendered with Canvas 2D at full screen resolution, with pixel art scaled by whole numbers and rotated freely so ships, sails and the camera move smoothly. Every sprite, tile, item icon and font glyph is hand-authored pixel art in `src/art`, stored as palette-indexed strings. Terrain chunks and map tiles are generated in Web Workers. All sound effects and music are synthesised at runtime with the Web Audio API, with positional falloff for in-world sounds.
 
 ```
 src/
   core/    rng + noise, math, input
   world/   deterministic world generation, terrain, chunk streaming, worker
-  data/    items, crew roles, ship components, structures, enemy fleets, icons
+  art/     hand-drawn pixel art: palette, ships, characters, terrain, world, props, item icons
+  data/    items, crew roles, ship components, structures, enemy fleets
   game/    simulation: ships, crew, AI, combat, loot, economy, quests, saves
-  render/  renderer, ship sprites, pixel font, sprites
+  render/  renderer, ship sprite composition, pixel font, light and fog effects
   ui/      HUD, maps, shipwright and all panels
   audio/   synthesised sound effects and music
 ```

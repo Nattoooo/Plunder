@@ -9,22 +9,21 @@ import { CELL } from '../game/design';
 import type { Game } from '../game/game';
 import type { Ship } from '../game/ship';
 import { poisNear, POI } from '../game/pois';
-import { shipSprite, pruneSprites, PAD } from './shipSprite';
-import { sprites, structureSprite } from './sprites';
+import { shipSprite, pruneSprites } from './shipSprite';
+import { artCanvas } from './artCanvas';
+import { Art, flipX, ramp, shade as shadeHex } from '../art/palette';
+import { SAILS, PARTS, OAR, CREW, CAPTAIN, FLAG, JOLLY, FIRE } from '../art/ship';
+import { sprites } from './sprites';
+import { CRATE, BARREL, GOLD_CHEST, BOTTLE, WRECK, QUEST_MARK, LOST_CARGO, GLINT, CLAIM_STONE, CLAIM_OWNED, CHEST, LOCKED_CHEST, SPARKLE, DIG_SPOT, SHRINE, XMARK, WAYPOINT, STRUCTURES } from '../art/props';
 import { drawText } from './font';
 import { SEGMENTS } from '../game/monster';
-import { makeSprite } from './sprites';
+import { CAPTAIN_DOWN, CAPTAIN_UP, CAPTAIN_SIDE, CUTLASS, PISTOL_FLASH, CRAB, SKELETON, WRAITH, GULL, GULL_SHADOW, WHALE, SERPENT_HEAD, SERPENT_SEG, SERPENT_TAIL, SUBMERGED, FOOT_SHADOW } from '../art/actors';
 
 const tmpIsl: Island[] = [];
 const tmpPOI: POI[] = [];
 
 const FACTION_COL: Record<string, number> = { pirate: 0xff6a5a, navy: 0x8ac8ff, merchant: 0xa8e890, ghost: 0x80ffc0, hunter: 0xffa040, player: 0xffe080 };
-const FLAG_COL: Record<string, string> = { pirate: '#141414', navy: '#2a4a9a', merchant: '#3a8a4a', ghost: '#3a6a5a', hunter: '#8a2a1a', player: '#141414' };
-
-interface Comp {
-  canvas: HTMLCanvasElement;
-  ctx: CanvasRenderingContext2D;
-}
+const FLAG_HEX: Record<string, number> = { pirate: 0x141414, navy: 0x2a4a9a, merchant: 0x3a8a4a, ghost: 0x3a6a5a, hunter: 0x8a2a1a, player: 0x141414 };
 
 export class Renderer {
   canvas: HTMLCanvasElement;
@@ -39,34 +38,7 @@ export class Renderer {
   dpr = 1;
   quality = 1;
   autoQuality = true;
-  private comps = new Map<number, Comp>();
-  private crewSprites = new Map<number, HTMLCanvasElement>();
-  private structSprites = new Map<string, HTMLCanvasElement>();
   private frame = 0;
-  private circles = new Map<string, HTMLCanvasElement>();
-  private gullA = makeSprite(['w...w', '.wgw.', '..g..'], { w: '#f4f4f0', g: '#9a9aa0' });
-  private gullB = makeSprite(['.....', 'wwgww', '..g..'], { w: '#f4f4f0', g: '#9a9aa0' });
-  private whale = makeSprite([
-    '....kkkkkkkk......',
-    '..kkbbbbbbbbkk....',
-    '.kbbBBbbbbbbbbkk.k',
-    'kbbbbbbbbbbbbbbbkk',
-    '.kbbbbbbbbbbbbkk.k',
-    '..kkbbbbbbbbkk....',
-    '....kkkkkkkk......'
-  ], { k: '#1e2a36', b: '#3a4a5c', B: '#7a8a9c' });
-  private serpentHead = makeSprite([
-    '...kkkk....',
-    '.kkGGGGkk..',
-    'kGGgggggGk.',
-    'kGgygggggkk',
-    'kgggggggggr',
-    'kGgygggggkk',
-    'kGGgggggGk.',
-    '.kkGGGGkk..',
-    '...kkkk....'
-  ], { k: '#0e2018', G: '#3a8a5a', g: '#2a6a44', y: '#ffe040', r: '#c83a3a' });
-
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d', { alpha: false })!;
@@ -86,7 +58,7 @@ export class Renderer {
     this.quality = quality;
     const pw = Math.round(window.innerWidth * this.dpr);
     const ph = Math.round(window.innerHeight * this.dpr);
-    this.baseScale = Math.max(2, Math.round(ph / 290));
+    this.baseScale = Math.max(2, Math.round(ph / 384));
     this.artScale = clamp(this.baseScale + zoom, 1, this.baseScale + 3);
     this.scale = this.artScale * quality;
     const cw = Math.max(1, Math.round(pw * quality));
@@ -192,31 +164,34 @@ export class Renderer {
       if (sx < -30 || sy < -30 || sx > W + 30 || sy > H + 30) continue;
       if (p.kind === 'flotsam') {
         const bob = this.snap(Math.sin(t * 2 + p.id) * 0.8);
-        const spr = p.id % 2 ? S.crate : S.barrel;
-        ctx.drawImage(spr, sx - 3, sy - 3 + bob);
-        if ((this.frame >> 4) % 3 === 0) ctx.drawImage(S.glint[0], sx - 4, sy + 3);
+        const spr = p.id % 2 ? CRATE : BARREL;
+        ctx.drawImage(artCanvas(spr), sx - (spr.w >> 1), sy - (spr.h >> 1) + bob);
+        if ((this.frame >> 4) % 3 === 0) ctx.drawImage(artCanvas(GLINT[2]), sx - 7, sy + 4);
       } else if (p.kind === 'bottle') {
         const bob = this.snap(Math.sin(t * 2.4 + p.id));
-        ctx.drawImage(S.bottle, sx - 1, sy - 3 + bob);
-      } else if (p.kind === 'wreck') ctx.drawImage(S.wreck, sx - 10, sy - 8);
+        ctx.drawImage(artCanvas(BOTTLE), sx - 3, sy - 5 + bob);
+      } else if (p.kind === 'wreck') ctx.drawImage(artCanvas(WRECK), sx - 17, sy - 10);
     }
     for (const q of g.profile.quests) {
       if (q.kind !== 'salvage' || q.done) continue;
       const sx = this.snap(q.x - ox);
       const sy = this.snap(q.y - oy);
-      if (sx > -30 && sy > -30 && sx < W + 30 && sy < H + 30) ctx.drawImage(S.questWreck, sx - 10, sy - 8);
+      if (sx > -30 && sy > -30 && sx < W + 30 && sy < H + 30) {
+        ctx.drawImage(artCanvas(WRECK), sx - 17, sy - 10);
+        ctx.drawImage(artCanvas(QUEST_MARK), sx - 2, this.snap(sy - 24 + Math.sin(t * 3) * 1.5));
+      }
     }
     if (g.profile.lost) {
       const sx = this.snap(g.profile.lost.x - ox);
       const sy = this.snap(g.profile.lost.y - oy);
-      if (sx > -20 && sy > -20 && sx < W + 20 && sy < H + 20) ctx.drawImage(S.lostCargo, sx - 4, sy - 4);
+      if (sx > -20 && sy > -20 && sx < W + 20 && sy < H + 20) ctx.drawImage(artCanvas(LOST_CARGO), sx - 6, sy - 10);
     }
     g.particles.draw(ctx, ox, oy, W, H, 0, Sc);
     for (const l of g.loot) {
       const sx = this.snap(l.x - ox);
       const sy = this.snap(l.y - oy + Math.sin(l.bob * 2) * 0.8);
       if (sx < -10 || sy < -10 || sx > W + 10 || sy > H + 10) continue;
-      const spr = l.kind === 2 ? S.goldchest : l.kind === 1 ? S.barrel : S.crate;
+      const spr = artCanvas(l.kind === 2 ? GOLD_CHEST : l.kind === 1 ? BARREL : CRATE);
       if (l.life < 20 && (this.frame >> 3) % 2 === 0) continue;
       ctx.drawImage(spr, sx - (spr.width >> 1), sy - (spr.height >> 1));
     }
@@ -225,7 +200,7 @@ export class Renderer {
     for (const m of g.monsters) this.drawMonster(m, ox, oy, t);
     for (const s of g.ships) if (this.onScreen(s, ox, oy)) this.drawShipShadow(s, ox, oy);
     for (const s of g.ships) if (this.onScreen(s, ox, oy)) this.drawShip(g, s, ox, oy, t);
-    for (const m of g.mobs) this.drawMob(m.kind, m.x - ox, m.y - oy, m.anim, m.hurt > 0, m.hp / m.maxHp);
+    for (const m of g.mobs) this.drawMob(m.kind, m.x - ox, m.y - oy, m.anim, m.hurt > 0, m.hp / m.maxHp, !!g.avatar && g.avatar.x < m.x);
     if (g.avatar) this.drawAvatar(g, g.avatar.x - ox, g.avatar.y - oy);
     for (const p of g.projectiles) {
       const sx = p.x - ox;
@@ -247,28 +222,6 @@ export class Renderer {
     this.drawOverlays(g, ox, oy, t);
     this.drawWorldUI(g, ox, oy, t);
     if (this.frame % 300 === 0) pruneSprites(new Set(g.ships.map((s) => s.id)));
-    if (this.frame % 300 === 0) for (const k of this.comps.keys()) if (!g.ships.some((s) => s.id === Math.abs(k))) this.comps.delete(k);
-  }
-
-  private circle(r: number, body: string, light: string, edge: string): HTMLCanvasElement {
-    const key = `${r}${body}${light}`;
-    let c = this.circles.get(key);
-    if (c) return c;
-    const d = r * 2 + 1;
-    c = document.createElement('canvas');
-    c.width = d;
-    c.height = d;
-    const x = c.getContext('2d')!;
-    for (let j = 0; j < d; j++) for (let i = 0; i < d; i++) {
-      const dx = i - r;
-      const dy = j - r;
-      const dd = Math.sqrt(dx * dx + dy * dy);
-      if (dd > r + 0.3) continue;
-      x.fillStyle = dd > r - 0.9 ? edge : dx + dy < -r * 0.5 ? light : body;
-      x.fillRect(i, j, 1, 1);
-    }
-    this.circles.set(key, c);
-    return c;
   }
 
   private drawMonster(m: import('../game/monster').SeaMonster, ox: number, oy: number, t: number): void {
@@ -278,23 +231,20 @@ export class Renderer {
     if (hx < -120 || hy < -120 || hx > this.w + 120 || hy > this.h + 120) return;
     const sub = m.depth;
     const hurt = m.hurtT > 0 && ((this.frame >> 1) & 1);
-    ctx.globalAlpha = m.dead ? Math.max(0, 1 - m.deathT / 5) * (1 - sub * 0.7) : 1 - sub * 0.72;
+    const swap = sub > 0.5 ? SUBMERGED : undefined;
+    ctx.globalAlpha = m.dead ? Math.max(0, 1 - m.deathT / 5) * (1 - sub * 0.6) : 1 - sub * 0.6;
     for (let i = SEGMENTS - 1; i >= 1; i--) {
-      const r = Math.round(m.segRadius(i));
-      const sx = this.snap(m.segs[i * 2] - ox);
-      const sy = this.snap(m.segs[i * 2 + 1] - oy);
-      const spr = sub > 0.5 ? this.circle(r, '#0e2a30', '#123438', '#0a1e22') : hurt ? this.circle(r, '#ffffff', '#ffffff', '#c0c0c0') : this.circle(r, i % 2 ? '#2a6a44' : '#2f744a', '#4aa070', '#0e2018');
-      ctx.drawImage(spr, sx - r, sy - r);
-      if (sub < 0.5 && i % 2 === 0 && i < SEGMENTS - 2) {
-        ctx.fillStyle = '#a83a3a';
-        ctx.fillRect(sx, sy - 1, 1, 2);
-      }
+      const px = m.segs[i * 2];
+      const py = m.segs[i * 2 + 1];
+      const qx = m.segs[(i - 1) * 2];
+      const qy = m.segs[(i - 1) * 2 + 1];
+      const ang = Math.atan2(qy - py, qx - px);
+      const spr = i === SEGMENTS - 1 ? SERPENT_TAIL : SERPENT_SEG[i < 4 ? 0 : i < 8 ? 1 : 2];
+      this.rot(px - ox, py - oy, Math.cos(ang), Math.sin(ang));
+      if (!hurt) ctx.drawImage(artCanvas(spr, swap), -Math.floor(spr.w / 2), -Math.floor(spr.h / 2));
     }
-    const c = Math.cos(m.heading);
-    const sn = Math.sin(m.heading);
-    this.rot(hx, hy, c, sn);
-    if (sub < 0.5) ctx.drawImage(this.serpentHead, -4, -4);
-    else ctx.drawImage(this.circle(5, '#0e2a30', '#123438', '#0a1e22'), -5, -5);
+    this.rot(hx, hy, Math.cos(m.heading), Math.sin(m.heading));
+    if (!hurt) ctx.drawImage(artCanvas(SERPENT_HEAD, swap), -5, -5);
     this.base();
     ctx.globalAlpha = 1;
     if (!m.dead && sub < 0.5 && m.hp < m.maxHp) {
@@ -314,7 +264,7 @@ export class Renderer {
       const sn = Math.sin(w.heading);
       ctx.globalAlpha = a * 0.85;
       this.rot(w.x - ox, w.y - oy, c, sn);
-      ctx.drawImage(this.whale, -9, -3);
+      ctx.drawImage(artCanvas(WHALE), -14, -5);
     }
     this.base();
     ctx.globalAlpha = 1;
@@ -336,9 +286,8 @@ export class Renderer {
       const sx = this.snap(gl.x - ox);
       const sy = this.snap(gl.y - oy);
       if (sx < -10 || sy < -20 || sx > this.w + 10 || sy > this.h + 20) continue;
-      ctx.fillStyle = 'rgba(6,20,36,0.3)';
-      ctx.fillRect(sx + 1, sy + 14, 3, 1);
-      ctx.drawImage(Math.floor(gl.flap) % 2 ? this.gullA : this.gullB, sx - 2, sy - 1);
+      ctx.drawImage(artCanvas(GULL_SHADOW), sx + 2, sy + 16);
+      ctx.drawImage(artCanvas(GULL[Math.floor(gl.flap) % 2]), sx - 4, sy - 3);
     }
   }
 
@@ -375,7 +324,7 @@ export class Renderer {
         const tt = ch.types[Math.floor(wy - cy * CHUNK) * CHUNK + Math.floor(wx - cx * CHUNK)];
         if (tt !== T_DEEP && tt !== T_OCEAN && tt !== T_SHALLOW) continue;
         const fr = Math.min(3, Math.floor((f / 0.4) * 4));
-        const spr = S.glint[fr === 3 ? 0 : fr];
+        const spr = artCanvas(GLINT[fr === 3 ? 3 : fr]);
         ctx.globalAlpha = tt === T_SHALLOW ? 0.45 : 0.7;
         ctx.drawImage(spr, this.snap(wx - ox), this.snap(wy - oy));
       }
@@ -393,47 +342,43 @@ export class Renderer {
       if (sx < -30 || sy < -30 || sx > this.w + 30 || sy > this.h + 30) continue;
       if (p.kind === 'claim') {
         const own = g.profile.ownedIsland(p.island);
-        ctx.drawImage(own ? S.claimOwned : S.claim, sx - 3, sy - 8);
+        ctx.drawImage(artCanvas(own ? CLAIM_OWNED : CLAIM_STONE), sx - 4, sy - 16);
         if (own) this.drawStructures(g, own.structures, p.x, p.y, ox, oy);
         continue;
       }
       if (!g.poiAvailable(p)) continue;
-      if (p.kind === 'chest') ctx.drawImage(p.locked ? S.lockedChest : S.chest, sx - 4, sy - 4);
+      if (p.kind === 'chest') ctx.drawImage(artCanvas(p.locked ? LOCKED_CHEST : CHEST), sx - 7, sy - 8);
       else if (p.kind === 'dig') {
-        if (((t * 2 + p.id) | 0) % 3 === 0) ctx.drawImage(S.sparkle, sx - 1, sy - 1);
-        ctx.fillStyle = '#c8b07a';
-        ctx.fillRect(sx - 2, sy, 1, 1);
-        ctx.fillRect(sx + 1, sy + 1, 1, 1);
-        ctx.fillRect(sx, sy - 1, 1, 1);
+        ctx.drawImage(artCanvas(DIG_SPOT), sx - 6, sy - 4);
+        const sp = ((t * 2 + p.id) | 0) % 4;
+        if (sp < 2) ctx.drawImage(artCanvas(SPARKLE[sp]), sx - 2, sy - 6);
       } else if (p.kind === 'shrine') {
-        ctx.drawImage(S.shrine, sx - 5, sy - 6);
-        if (((t * 3) | 0) % 2) ctx.drawImage(S.sparkle, sx - 1, sy - 9);
+        ctx.drawImage(artCanvas(SHRINE), sx - 8, sy - 14);
+        if (((t * 3) | 0) % 2) ctx.drawImage(artCanvas(SPARKLE[0]), sx - 2, sy - 18);
       }
     }
     for (const it of g.profile.inv.items) {
       if (it.id !== 'treasure_map' || !it.data) continue;
       const sx = this.snap(it.data.x - ox);
       const sy = this.snap(it.data.y - oy);
-      if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(S.xmark, sx - 3, sy - 3);
+      if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(artCanvas(XMARK), sx - 5, sy - 5);
     }
     if (g.profile.waypoint) {
       const sx = this.snap(g.profile.waypoint.x - ox);
       const sy = this.snap(g.profile.waypoint.y - oy);
-      if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(S.waypoint, sx - 2, sy - 7);
+      if (sx > -10 && sy > -10 && sx < this.w + 10 && sy < this.h + 10) ctx.drawImage(artCanvas(WAYPOINT), sx - 1, sy - 12);
     }
   }
 
   private drawStructures(g: Game, list: string[], x: number, y: number, ox: number, oy: number): void {
     const ctx = this.ctx;
-    const offs = [[-22, -12], [16, -14], [-26, 10], [20, 12], [-6, -26], [0, 22], [-40, 0], [36, -2]];
+    const offs = [[-30, -16], [24, -18], [-34, 16], [28, 18], [-4, -36], [0, 32], [-56, 0], [52, -2]];
     list.forEach((st, i) => {
       const def = STRUCT[st];
       if (!def) return;
-      let spr = this.structSprites.get(st);
-      if (!spr) {
-        spr = structureSprite(def.color, def.roof, st);
-        this.structSprites.set(st, spr);
-      }
+      const art = STRUCTURES[st];
+      if (!art) return;
+      const spr = artCanvas(art);
       const o = offs[i % offs.length];
       const sx = this.snap(Math.round(x + o[0] - spr.width / 2) - ox);
       const sy = this.snap(Math.round(y + o[1] - spr.height / 2) - oy);
@@ -455,114 +400,8 @@ export class Renderer {
     ctx.globalAlpha = 1;
   }
 
-  private crewSprite(shirt: number, captain = false): HTMLCanvasElement {
-    const key = captain ? -1 : shirt;
-    let c = this.crewSprites.get(key);
-    if (c) return c;
-    c = document.createElement('canvas');
-    c.width = 3;
-    c.height = 3;
-    const x = c.getContext('2d')!;
-    const hex = '#' + shirt.toString(16).padStart(6, '0');
-    x.fillStyle = hex;
-    x.fillRect(0, 1, 3, 1);
-    x.fillRect(1, 2, 1, 1);
-    x.fillStyle = captain ? '#141414' : '#4a2e1a';
-    x.fillRect(1, 0, 1, 2);
-    if (captain) {
-      x.fillStyle = '#141414';
-      x.fillRect(0, 0, 3, 1);
-    }
-    this.crewSprites.set(key, c);
-    return c;
-  }
-
-  private comp(key: number, w: number, h: number): Comp {
-    let c = this.comps.get(key);
-    if (!c || c.canvas.width !== w || c.canvas.height !== h) {
-      const canvas = document.createElement('canvas');
-      canvas.width = w;
-      canvas.height = h;
-      c = { canvas, ctx: canvas.getContext('2d')! };
-      c.ctx.imageSmoothingEnabled = false;
-      this.comps.set(key, c);
-    }
-    return c;
-  }
-
   private drawShip(g: Game, s: Ship, ox: number, oy: number, t: number): void {
     const sp = shipSprite(s);
-    const cw = sp.canvas.width;
-    const chh = sp.canvas.height;
-    const hullC = this.comp(s.id, cw, chh);
-    const topC = this.comp(-s.id, cw, chh);
-    const c = hullC.ctx;
-    const u = topC.ctx;
-    c.clearRect(0, 0, cw, chh);
-    u.clearRect(0, 0, cw, chh);
-    c.drawImage(sp.canvas, 0, 0);
-    const px0 = PAD + s.pivotX;
-    const py0 = PAD + s.pivotY;
-    const d = s.design;
-    const relWind = angleDiff(s.heading, g.env.windAngle);
-    let trim = clamp(relWind * 0.45, -0.55, 0.55) + s.turnInput * 0.22;
-    trim = clamp(trim, -0.65, 0.65);
-    const slope = Math.tan(trim);
-    const sailCol = s.design.sailColor;
-    for (const i of s.cells) {
-      const p = d.part[i];
-      if (!p) continue;
-      const comp = COMPONENTS[p];
-      const [lx, ly] = s.cellLocal(i);
-      const mx = Math.round(px0 + lx);
-      const my = Math.round(py0 + ly);
-      if (comp.oar && s.partHp[i] > 0) {
-        const rowing = s.rowing && s.stationEff[i] > 0;
-        const ph = rowing ? Math.sin(t * 6 + i) : 0;
-        const ext = 5;
-        const sh = Math.round(ph * 1.5);
-        c.fillStyle = '#5a3a1e';
-        const lc = Math.round(px0 + lx - CELL / 2);
-        const rc = Math.round(px0 + lx + CELL / 2);
-        for (let k = 1; k <= ext; k++) {
-          c.fillRect(lc - k, my + Math.round((sh * k) / ext), 1, 1);
-          c.fillRect(rc + k - 1, my + Math.round((sh * k) / ext), 1, 1);
-        }
-      }
-      if (comp.sail && s.partHp[i] > 0) this.drawSail(u, comp.sail.style, comp.sail.span, mx, my, s.sail, slope, sailCol, s.partHp[i] / comp.hp, i, s.faction === 'ghost');
-      if (comp.key === 'crows_nest') {
-        u.fillStyle = '#3a2414';
-        u.fillRect(mx - 2, my - 3, 5, 1);
-        u.fillRect(mx - 2, my + 1, 5, 1);
-        u.fillRect(mx - 3, my - 2, 1, 3);
-        u.fillRect(mx + 3, my - 2, 1, 3);
-        u.fillStyle = '#7a5232';
-        u.fillRect(mx - 2, my - 2, 5, 3);
-        u.fillStyle = '#3a2414';
-        u.fillRect(mx, my - 1, 1, 1);
-      }
-      if (s.fire[i] > 0) {
-        const fl = (t * 12 + i) | 0;
-        u.fillStyle = fl % 2 ? '#ffc040' : '#ff6a20';
-        u.fillRect(mx - 2 + (fl % 3), my - 1, 2, 2);
-        u.fillStyle = '#fff4a0';
-        u.fillRect(mx - 1 + ((fl >> 1) % 3), my - 2, 1, 1);
-      }
-    }
-    let flagCell = -1;
-    for (const i of s.cells) if (COMPONENTS[d.part[i]]?.sail && s.partHp[i] > 0) {
-      flagCell = i;
-      break;
-    }
-    if (flagCell >= 0) {
-      const [lx, ly] = s.cellLocal(flagCell);
-      const fx = Math.round(px0 + lx);
-      const fy = Math.round(py0 + ly);
-      const wave = (t * 8) | 0;
-      const dir = relWind > 0 ? -1 : 1;
-      u.fillStyle = s.surrendered ? '#ffffff' : FLAG_COL[s.faction] ?? '#141414';
-      for (let k = 1; k <= 3; k++) u.fillRect(fx + dir * k, fy + 2 + ((wave + k) % 2), 1, 2);
-    }
     const phi = s.heading + Math.PI / 2;
     let k = 1;
     let alpha = 1;
@@ -573,19 +412,42 @@ export class Renderer {
     const ctx = this.ctx;
     const cs = Math.cos(phi) * k;
     const sn = Math.sin(phi) * k;
-    this.rot(s.x - ox, s.y - oy, cs, sn);
-    ctx.globalAlpha = alpha * (s.faction === 'ghost' ? 0.82 : 1);
-    ctx.drawImage(hullC.canvas, -sp.ox, -sp.oy);
+    const X = s.x - ox;
+    const Y = s.y - oy;
+    const ghost = s.faction === 'ghost';
+    const at = () => this.rot(X, Y, cs, sn);
+    at();
+    ctx.globalAlpha = alpha * (ghost ? 0.82 : 1);
+    ctx.drawImage(sp.canvas, -sp.ox, -sp.oy);
+    const d = s.design;
+    const oarC = artCanvas(OAR);
+    for (const i of s.cells) {
+      const comp = COMPONENTS[d.part[i]];
+      if (!comp?.oar || s.partHp[i] <= 0) continue;
+      const [lx, ly] = s.cellLocal(i);
+      const rowing = s.rowing && s.stationEff[i] > 0;
+      const sw = rowing ? Math.sin(t * 5 + i) * 0.5 : 0.25;
+      for (const side of [-1, 1]) {
+        at();
+        ctx.translate(lx + side * (CELL / 2 - 1), ly);
+        ctx.rotate(side > 0 ? sw : Math.PI - sw);
+        ctx.drawImage(oarC, 0, -1);
+      }
+    }
+    at();
     if (this.artScale >= 2) {
-      for (const cm of s.crew) ctx.drawImage(this.crewSprite(ROLE[cm.role]?.shirt ?? 0xd8d0c0), cm.lx - 1.5, cm.ly - 1.5);
+      for (const cm of s.crew) {
+        const shirt = ROLE[cm.role]?.shirt ?? 0xd8d0c0;
+        ctx.drawImage(artCanvas(CREW, { R: shirt, r: shadeHex(shirt, 0.72) }), cm.lx - 3, cm.ly - 3);
+      }
       if (s.isPlayer && g.mode !== 'foot') {
         let hx = 0;
-        let hy = s.halfLen - 6;
+        let hy = s.halfLen - 8;
         let helm = false;
         for (const i of s.cells) if (d.part[i] === 11) {
           const [lx, ly] = s.cellLocal(i);
           hx = lx;
-          hy = ly + 2;
+          hy = ly + 4;
           helm = true;
         }
         if (!helm) {
@@ -599,70 +461,70 @@ export class Renderer {
             }
           }
         }
-        ctx.drawImage(this.crewSprite(0xb82a2a, true), hx - 1.5, hy - 1.5);
+        ctx.drawImage(artCanvas(CAPTAIN), hx - 3, hy - 3);
       }
     }
-    ctx.drawImage(topC.canvas, -sp.ox, -sp.oy);
+    const rel = Number.isFinite(s.sailAngle) ? angleDiff(s.heading, s.sailAngle) : 0;
+    const state = s.sail < 0.2 ? 'furled' : s.sail < 0.7 ? 'half' : 'full';
+    const windSide = angleDiff(s.heading, g.env.windAngle) < 0;
+    const sailSwap = ramp(ghost ? 0x7a9a8a : s.design.sailColor);
+    let flagAt: [number, number] | null = null;
+    for (const i of s.cells) {
+      const comp = COMPONENTS[d.part[i]];
+      if (!comp?.sail || s.partHp[i] <= 0) continue;
+      const set = SAILS[comp.sail.style];
+      if (!set) continue;
+      let a: Art = set[state];
+      let ax = set.ax;
+      const ay = set.ay ?? a.h - 1;
+      if (comp.sail.style === 'lateen' && windSide) {
+        a = this.flipped(a);
+        ax = a.w - 1 - ax;
+      }
+      const [lx, ly] = s.cellLocal(i);
+      at();
+      ctx.translate(lx, ly);
+      ctx.rotate(rel);
+      ctx.drawImage(artCanvas(a, sailSwap), -ax, -ay);
+      if (!flagAt) flagAt = [lx, ly];
+    }
+    for (const i of s.cells) {
+      if (d.part[i] !== 23 || s.partHp[i] <= 0) continue;
+      const [lx, ly] = s.cellLocal(i);
+      at();
+      const nest = PARTS.crows_nest.art;
+      ctx.drawImage(artCanvas(nest), lx - nest.w / 2, ly - nest.h / 2);
+      if (!flagAt) flagAt = [lx, ly];
+    }
+    if (flagAt) {
+      const frame = Math.floor(t * 4 + s.id) % 2;
+      const jolly = s.faction === 'pirate' || s.isPlayer;
+      const f = jolly && !s.surrendered ? JOLLY[frame] : FLAG[frame];
+      const col = s.surrendered ? 0xf6f0e0 : FLAG_HEX[s.faction] ?? 0xa82c34;
+      at();
+      ctx.translate(flagAt[0], flagAt[1]);
+      ctx.rotate(g.env.windAngle - phi);
+      ctx.drawImage(artCanvas(f, jolly && !s.surrendered ? undefined : { R: col }), 0, -2);
+    }
+    for (const i of s.cells) {
+      if (s.fire[i] <= 0) continue;
+      const [lx, ly] = s.cellLocal(i);
+      at();
+      ctx.drawImage(artCanvas(FIRE[Math.floor(t * 8 + i) % 2]), lx - 3, ly - 5);
+    }
     this.base();
     ctx.globalAlpha = 1;
-    if (s.faction === 'ghost' && Math.random() < 0.3) g.particles.ghost(s.x + (Math.random() - 0.5) * s.halfWid * 2, s.y + (Math.random() - 0.5) * s.halfLen * 2);
+    if (ghost && Math.random() < 0.3) g.particles.ghost(s.x + (Math.random() - 0.5) * s.halfWid * 2, s.y + (Math.random() - 0.5) * s.halfLen * 2);
   }
 
-  private drawSail(c: CanvasRenderingContext2D, style: string, span: number, mx: number, my: number, deploy: number, slope: number, col: number, hpF: number, seed: number, ghost: boolean): void {
-    const half = Math.round((span * CELL) / 2);
-    const depth = Math.round(1 + deploy * (style === 'main' ? 5 : 4));
-    const base = '#' + col.toString(16).padStart(6, '0');
-    const dark = '#' + shade(col, 0.78).toString(16).padStart(6, '0');
-    const light = '#' + shade(col, 1.08).toString(16).padStart(6, '0');
-    if (style === 'lateen') {
-      const len = Math.round(span * CELL * 0.9);
-      const side = slope >= 0 ? 1 : -1;
-      const widthMax = Math.round(1 + deploy * 5);
-      for (let r = 0; r < len; r++) {
-        const y = my - 2 - r + Math.round(len * 0.25);
-        const f = r / len;
-        const wdt = Math.round(widthMax * (1 - Math.abs(f - 0.35) / 0.65));
-        const xOff = Math.round(side * f * 2);
-        c.fillStyle = '#5a3a1e';
-        c.fillRect(mx + xOff, y, 1, 1);
-        if (deploy < 0.05 || wdt <= 0) continue;
-        c.fillStyle = r % 4 === 0 ? dark : base;
-        if (side > 0) c.fillRect(mx + xOff + 1, y, wdt, 1);
-        else c.fillRect(mx + xOff - wdt, y, wdt, 1);
-      }
-      return;
+  private flips = new WeakMap<Art, Art>();
+  private flipped(a: Art): Art {
+    let f = this.flips.get(a);
+    if (!f) {
+      f = flipX(a);
+      this.flips.set(a, f);
     }
-    const tiers = style === 'main' ? 2 : 1;
-    for (let tier = 0; tier < tiers; tier++) {
-      const hw = tier === 0 ? half : Math.round(half * 0.7);
-      const dp = tier === 0 ? depth : Math.max(1, depth - 2);
-      const yoff = tier === 0 ? 0 : -dp - 2;
-      for (let x = -hw; x <= hw; x++) {
-        const dy = Math.round(x * slope);
-        const yy = my + dy + yoff;
-        c.fillStyle = '#4a2e18';
-        c.fillRect(mx + x, yy, 1, 1);
-        if (deploy < 0.05) {
-          if (Math.abs(x) < hw) {
-            c.fillStyle = light;
-            c.fillRect(mx + x, yy - 1, 1, 1);
-          }
-          continue;
-        }
-        const edge = Math.abs(x) >= hw - 1;
-        const belly = edge ? dp - 1 : dp;
-        for (let k = 1; k <= belly; k++) {
-          let fc = base;
-          if (k === belly) fc = dark;
-          else if (k === 1) fc = light;
-          if (style === 'patch' && ((x + k + seed) % 5 === 0)) fc = '#a8946a';
-          if (ghost && ((x * 3 + k * 7 + seed) % 4 === 0)) continue;
-          if (hpF < 0.5 && ((x * 7 + k * 13 + seed) % 6 === 0)) continue;
-          c.fillStyle = fc;
-          c.fillRect(mx + x, yy - k, 1, 1);
-        }
-      }
-    }
+    return f;
   }
 
   private drawAvatar(g: Game, x: number, y: number): void {
@@ -670,101 +532,48 @@ export class Renderer {
     const ctx = this.ctx;
     const sx = this.snap(x);
     const sy = this.snap(y);
-    const step = a.moving ? Math.floor(a.walk) % 2 : 0;
-    const hurt = a.hurt > 0 && ((this.frame >> 2) & 1);
-    ctx.fillStyle = 'rgba(0,0,0,0.3)';
-    ctx.fillRect(sx - 3, sy, 6, 2);
-    const coat = hurt ? '#ffffff' : '#a82a2a';
+    const walk = a.moving ? 1 + (Math.floor(a.walk) % 2) : 0;
     const f = a.facing;
-    ctx.fillStyle = '#2a1e14';
-    ctx.fillRect(sx - 2 + (step ? 1 : 0), sy - 2, 1, 2);
-    ctx.fillRect(sx + 1 - (step ? 1 : 0), sy - 2, 1, 2);
-    ctx.fillStyle = '#3a3048';
-    ctx.fillRect(sx - 2, sy - 4, 4, 2);
-    ctx.fillStyle = coat;
-    ctx.fillRect(sx - 2, sy - 8, 4, 4);
-    ctx.fillStyle = '#e8c040';
-    if (f !== 0) ctx.fillRect(sx - (f === 3 ? 1 : 0), sy - 7, 1, 2);
-    ctx.fillStyle = '#e0b088';
-    ctx.fillRect(sx - 3, sy - 7 + (step ? 1 : 0), 1, 2);
-    ctx.fillRect(sx + 2, sy - 7 + (step ? 0 : 1), 1, 2);
-    ctx.fillRect(sx - 1, sy - 10, 3, 2);
-    if (f === 2) {
-      ctx.fillStyle = '#141014';
-      ctx.fillRect(sx - 1, sy - 9, 1, 1);
-      ctx.fillRect(sx + 1, sy - 9, 1, 1);
-    }
-    ctx.fillStyle = '#18141c';
-    ctx.fillRect(sx - 2, sy - 11, 5, 1);
-    ctx.fillRect(sx - 1, sy - 12, 3, 1);
+    const set = f === 0 ? CAPTAIN_UP : f === 2 ? CAPTAIN_DOWN : CAPTAIN_SIDE;
+    let spr = set[walk];
+    if (f === 3) spr = this.flipped(spr);
+    ctx.drawImage(artCanvas(FOOT_SHADOW), sx - 5, sy - 2);
+    if (!(a.hurt > 0 && (this.frame >> 2) & 1)) ctx.drawImage(artCanvas(spr), sx - spr.w / 2, sy - spr.h + 1);
     if (a.swing > 0) {
-      const ang = a.dir;
       const p = g.profile.weapon;
       const ranged = p === 'flintlock' || p === 'musket' || p === 'blunderbuss';
-      ctx.fillStyle = ranged ? '#ffd060' : '#e0e6f0';
-      const r0 = ranged ? 6 : 4;
-      const r1 = ranged ? 8 : 10;
-      for (let r = r0; r <= r1; r++) {
-        const sw = ranged ? 0 : (a.swing / 0.25 - 0.5) * 1.6;
-        ctx.fillRect(this.snap(sx + Math.cos(ang + sw) * r), this.snap(sy - 5 + Math.sin(ang + sw) * r), 1, 1);
+      if (ranged) {
+        const fx = sx + Math.cos(a.dir) * 9;
+        const fy = sy - 8 + Math.sin(a.dir) * 9;
+        ctx.drawImage(artCanvas(PISTOL_FLASH), this.snap(fx - 2.5), this.snap(fy - 2.5));
+      } else {
+        const sw = (a.swing / 0.25 - 0.5) * 1.8;
+        const S = this.scale;
+        const ang = a.dir + sw + Math.PI / 4;
+        const c = Math.cos(ang);
+        const sn = Math.sin(ang);
+        ctx.setTransform(c * S, sn * S, -sn * S, c * S, Math.round((sx + Math.cos(a.dir) * 3) * S), Math.round((sy - 8) * S));
+        ctx.drawImage(artCanvas(CUTLASS), 0, -CUTLASS.h);
+        this.base();
       }
     }
-    if (a.dig > 0) {
-      ctx.fillStyle = '#9aa0aa';
-      const k = Math.floor(a.dig * 4) % 2;
-      ctx.fillRect(sx + 3, sy - 6 + k * 2, 1, 4);
-      ctx.fillStyle = '#c8b07a';
-      ctx.fillRect(sx + 2, sy - 2 + k, 3, 1);
-      this.bar(sx - 6, sy - 16, 12, a.dig / 2.2, '#ffd040');
-    }
-    if (a.hp < a.maxHp) this.bar(sx - 6, sy - 15 - (a.dig > 0 ? 3 : 0), 12, a.hp / a.maxHp, '#ff5a4a');
+    if (a.dig > 0) this.bar(sx - 7, sy - 22, 14, a.dig / 2.2, '#ffd040');
+    if (a.hp < a.maxHp) this.bar(sx - 7, sy - 22 - (a.dig > 0 ? 4 : 0), 14, a.hp / a.maxHp, '#ff5a4a');
   }
 
-  private drawMob(kind: string, x: number, y: number, anim: number, hurt: boolean, hpF: number): void {
+  private drawMob(kind: string, x: number, y: number, anim: number, hurt: boolean, hpF: number, flip: boolean): void {
     const ctx = this.ctx;
     const sx = this.snap(x);
     const sy = this.snap(y);
-    if (sx < -10 || sy < -14 || sx > this.w + 10 || sy > this.h + 10) return;
-    const step = Math.floor(anim * 6) % 2;
-    ctx.fillStyle = 'rgba(0,0,0,0.3)';
-    ctx.fillRect(sx - 3, sy, 6, 1);
-    if (kind === 'crab') {
-      ctx.fillStyle = hurt ? '#ffffff' : '#d84a2a';
-      ctx.fillRect(sx - 2, sy - 3, 5, 3);
-      ctx.fillRect(sx - 4 + step, sy - 4, 1, 2);
-      ctx.fillRect(sx + 4 - step, sy - 4, 1, 2);
-      ctx.fillStyle = '#141014';
-      ctx.fillRect(sx - 1, sy - 3, 1, 1);
-      ctx.fillRect(sx + 1, sy - 3, 1, 1);
-      ctx.fillStyle = '#a83a1a';
-      ctx.fillRect(sx - 3, sy - 1 + step, 1, 1);
-      ctx.fillRect(sx + 3, sy - step, 1, 1);
-    } else if (kind === 'skeleton') {
-      ctx.fillStyle = hurt ? '#ff6a5a' : '#e8e2cc';
-      ctx.fillRect(sx - 1, sy - 11, 3, 3);
-      ctx.fillRect(sx, sy - 8, 1, 4);
-      ctx.fillRect(sx - 2, sy - 7, 5, 1);
-      ctx.fillRect(sx - 1, sy - 5, 3, 1);
-      ctx.fillRect(sx - 1 + step, sy - 4, 1, 4);
-      ctx.fillRect(sx + 1 - step, sy - 4, 1, 4);
-      ctx.fillStyle = '#141014';
-      ctx.fillRect(sx - 1, sy - 10, 1, 1);
-      ctx.fillRect(sx + 1, sy - 10, 1, 1);
-      ctx.fillStyle = '#9aa0aa';
-      ctx.fillRect(sx + 3, sy - 9 + step, 1, 5);
-    } else {
-      ctx.globalAlpha = 0.75;
-      ctx.fillStyle = hurt ? '#ffffff' : '#80f0b0';
-      ctx.fillRect(sx - 2, sy - 12 + step, 5, 4);
-      ctx.fillRect(sx - 3, sy - 8 + step, 7, 4);
-      ctx.fillRect(sx - 2, sy - 4 + step, 5, 2);
-      ctx.fillRect(sx - 1 + step, sy - 2 + step, 1, 1);
-      ctx.fillStyle = '#103020';
-      ctx.fillRect(sx - 1, sy - 10 + step, 1, 1);
-      ctx.fillRect(sx + 1, sy - 10 + step, 1, 1);
-      ctx.globalAlpha = 1;
-    }
-    if (hpF < 1) this.bar(sx - 5, sy - 15, 10, hpF, '#ff5a4a');
+    if (sx < -20 || sy < -24 || sx > this.w + 20 || sy > this.h + 20) return;
+    const fr = Math.floor(anim * (kind === 'crab' ? 6 : 4)) % 2;
+    let spr = kind === 'crab' ? CRAB[fr] : kind === 'skeleton' ? SKELETON[fr] : WRAITH[fr];
+    if (flip) spr = this.flipped(spr);
+    ctx.drawImage(artCanvas(FOOT_SHADOW), sx - 5, sy - 2);
+    if (kind === 'wraith') ctx.globalAlpha = 0.82;
+    if (!(hurt && (this.frame >> 1) & 1)) ctx.drawImage(artCanvas(spr), sx - spr.w / 2, sy - spr.h + 1);
+    ctx.globalAlpha = 1;
+    if (hpF < 1) this.bar(sx - 6, sy - spr.h - 4, 12, hpF, '#ff5a4a');
   }
 
   private bar(x: number, y: number, w: number, f: number, col: string): void {
@@ -907,7 +716,7 @@ export class Renderer {
         if (near || recent || s.boss) drawText(ctx, label, sx, sy - 6, col, true, this.scale);
         const bw = Math.max(16, Math.min(40, s.radius * 1.4));
         this.bar(this.snap(sx - bw / 2), this.snap(sy), Math.round(bw), (integ - 0.22) / 0.78, hostile ? '#ff5a4a' : '#7ad86a');
-        if (s.surrendered) drawText(ctx, 'SURRENDERED', sx, sy - 12, 0xffffff, true, this.scale);
+        if (s.surrendered) drawText(ctx, 'SURRENDERED', sx, sy - 14, 0xffffff, true, this.scale);
       }
     }
     for (const tx of g.texts) {

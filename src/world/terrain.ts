@@ -1,4 +1,7 @@
-import { WORLD_SEED, hash2, hashf, noise2, fbm } from '../core/rng';
+import { WORLD_SEED, hash2, noise2, fbm } from '../core/rng';
+import { Art, Swap, pixels } from '../art/palette';
+import { TEX, LAND_RAMPS, WATER_RAMPS, REEF_RAMPS, REEF_TILES, DOCK_TEX, texTone } from '../art/terrain';
+import { PALM, TREE, JUNGLE_TREE, PINE, SNOW_PINE, DEAD_TREE, BUSH, BERRY_BUSH, TUFT, FLOWERS, ROCK, BOULDER, REEDS, MUSHROOMS, SHELL, SKULL_ROCK, ICE_SHARD, HOUSES, ROOFS, FORT, FORT_FLAG } from '../art/world';
 import {
   CHUNK, WORLD_SIZE, Island, islandsInRect, islandHeight, reefField, biomeWeights, beachWidth, portLayout, heightAt, HeightSample,
   B_SHALLOWS, B_CORAL, B_FROST, B_ASHEN, B_MIST,
@@ -40,22 +43,6 @@ export function walkable(t: number): boolean {
 function abgr(c: number): number {
   return (0xff000000 | ((c & 0xff) << 16) | (c & 0xff00) | ((c >> 16) & 0xff)) >>> 0;
 }
-
-const WATER_PAL: number[][] = [
-  [0x1b4776, 0x1f4e80, 0x24649a, 0x2a6fa6, 0x3593ad, 0x46aebb, 0xd8f1ee, 0x3a8a70, 0x2e705e, 0xd8ecf4],
-  [0x16447a, 0x1a4c86, 0x1e72a6, 0x2480b2, 0x30b2bb, 0x4ccac6, 0xe2f7f2, 0xd8806a, 0xb85e5a, 0xd8ecf4],
-  [0x1a2c44, 0x1e344e, 0x284660, 0x2e506c, 0x4b7488, 0x5e8a9c, 0xe6f2f7, 0x7a9cae, 0x6a8a9a, 0xdcecf4],
-  [0x2c2838, 0x322d40, 0x3e384c, 0x463f54, 0x5a5262, 0x685e6e, 0xb8aaa4, 0x7a5444, 0x643e32, 0xc8c0bc],
-  [0x183736, 0x1c3e3c, 0x264f4b, 0x2c5852, 0x3c6a60, 0x4a7a6c, 0xbcd4c6, 0x5a6a4a, 0x4a5a3e, 0xd0dcd4]
-];
-
-const LAND_PAL: number[][] = [
-  [0xe8d49a, 0xd6bd80, 0x62b04c, 0x4f9a42, 0x2f7036, 0x24592c, 0x8d8878, 0x726d60, 0xb4ae9e, 0x9a9484, 0xf2f6fa, 0xdce6ee, 0xff7a24, 0xd8401a, 0x4e6a3e, 0x3e5832, 0xb08a5a, 0x987448],
-  [0xeedca4, 0xdcc488, 0x6ab84e, 0x56a244, 0x2c7a3a, 0x22622e, 0x948a7a, 0x787064, 0xbab2a2, 0xa09888, 0xf2f6fa, 0xdce6ee, 0xff7a24, 0xd8401a, 0x4e6a3e, 0x3e5832, 0xb08a5a, 0x987448],
-  [0xa29e92, 0x8c887e, 0x7e9278, 0x6a7e66, 0x2e5040, 0x234034, 0x6f7682, 0x5a616c, 0xe8f0f6, 0xd0dce6, 0xf6faff, 0xdfe9f2, 0xff7a24, 0xd8401a, 0x4a5a4a, 0x3a4a3c, 0x9a8a72, 0x847460],
-  [0x5a5254, 0x4a4446, 0x7a6c62, 0x685c52, 0x5a4a40, 0x483c34, 0x4a4246, 0x3a3436, 0x363032, 0x2a2427, 0xd8d0cc, 0xbcb4b0, 0xffa030, 0xe84a18, 0x4a463a, 0x3a3830, 0x6a5a4a, 0x5a4a3c],
-  [0xb8ad8a, 0xa29876, 0x4f6c47, 0x415a3b, 0x2e4636, 0x22382a, 0x676c66, 0x545954, 0x8e928c, 0x787c76, 0xe8ecea, 0xd2d8d4, 0xff7a24, 0xd8401a, 0x3e503a, 0x30402e, 0x8a7a5a, 0x746648]
-];
 
 const BAYER = new Float32Array([0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map((v) => (v + 0.5) / 16));
 
@@ -133,94 +120,10 @@ function argmax5(w: Float32Array): number {
   return b;
 }
 
-type Sprite = { w: number; h: number; px: string; block: number };
-function spr(rows: string[], block = 1): Sprite {
-  return { w: rows[0].length, h: rows.length, px: rows.join(''), block };
-}
-
-const SPR_PALM = spr([
-  '..dd.d...',
-  '.dGGgGd..',
-  'dGg.tgGgd',
-  'd..kt..Gd',
-  '....t....',
-  '....tk...',
-  '....t....',
-  '...Tt....'
-]);
-const SPR_TREE = spr([
-  '..dddd..',
-  '.dGGGgd.',
-  'dGGggggd',
-  'dGgggggd',
-  'dggggdgd',
-  '.ddggdd.',
-  '...tT...',
-  '...tT...'
-]);
-const SPR_PINE = spr([
-  '...d...',
-  '..dgd..',
-  '..dGd..',
-  '.dGgdd.',
-  '.dggGd.',
-  'dGggggd',
-  'ddgggdd',
-  '...T...',
-  '...T...'
-]);
-const SPR_SNOWPINE = spr([
-  '...w...',
-  '..wgd..',
-  '..dwd..',
-  '.wGgwd.',
-  '.dggGw.',
-  'wwggwgd',
-  'ddgwgdd',
-  '...T...',
-  '...T...'
-]);
-const SPR_DEAD = spr([
-  'T..T..T',
-  '.T.T.T.',
-  '..TTT..',
-  '...T.T.',
-  '..TT...',
-  '...T...',
-  '...T...'
-]);
-const SPR_BUSH = spr(['.dgd.', 'dGggd', 'dgggd', '.ddd.'], 0);
-const SPR_ROCK = spr(['.RR.', 'Rrrk', 'kkkk'], 0);
-const SPR_BOULDER = spr(['..RRR..', '.RRrrr.', 'RRrrrrk', 'Rrrrrkk', '.kkkkk.'], 2);
-const SPR_TUFT = spr(['g.g', 'dgd'], 0);
-const SPR_FLOWER = spr(['.f.', 'fyf', '.g.'], 0);
-const SPR_SKULLROCK = spr(['.RRRRR.', 'RRrrrRR', 'R.kRk.R', 'RrrrrrR', '.RkRkR.', '..k.k..'], 2);
-const SPR_REEDS = spr(['.y..y', 'g.y.g', 'g.g.g', 'gdgdg', 'ddddd'], 0);
-const SPR_SHELL = spr(['wf', 'fw'], 0);
-
 const BAYER4 = (x: number, y: number) => BAYER[(y & 3) * 4 + (x & 3)];
 
-function spriteColors(biome: number): Record<string, number> {
-  switch (biome) {
-    case B_FROST:
-      return { d: 0x1e3a2e, g: 0x2e5a44, G: 0x3e7058, t: 0x6a5040, T: 0x4a3828, k: 0x1a2420, R: 0x9aa2ac, r: 0x7a828c, y: 0xc8c070, f: 0xd0e0f0, w: 0xf6faff };
-    case B_ASHEN:
-      return { d: 0x2e2620, g: 0x4a3c30, G: 0x5e4c3c, t: 0x3e3028, T: 0x2a201a, k: 0x141012, R: 0x5a5054, r: 0x403a3c, y: 0xa08040, f: 0xff8040, w: 0xc0b0a8 };
-    case B_MIST:
-      return { d: 0x1a2a20, g: 0x2e4434, G: 0x3e5a44, t: 0x4a3c30, T: 0x34281e, k: 0x101814, R: 0x8a8e88, r: 0x6a6e68, y: 0xa0a060, f: 0xb090c0, w: 0xe0e8e4 };
-    default:
-      return { d: 0x1c4a24, g: 0x2f7a32, G: 0x4aa040, t: 0x7a5434, T: 0x5a3a22, k: 0x1a2a18, R: 0xa8a294, r: 0x86806e, y: 0xf0d040, f: 0xe85a7a, w: 0xfff4e0 };
-  }
-}
-const SPR_COLS: Record<string, number>[] = [0, 1, 2, 3, 4].map((b) => {
-  const c = spriteColors(b);
-  const o: Record<string, number> = {};
-  for (const k in c) o[k] = abgr(c[k]);
-  return o;
-});
-
 const GRID = 2;
-const MARGIN = 12;
+const MARGIN = 24;
 const GN = (CHUNK + MARGIN * 2) / GRID + 1;
 
 export interface ChunkResult {
@@ -234,42 +137,57 @@ const hGrid = new Float32Array(GN * GN);
 const iGrid = new Int16Array(GN * GN);
 const rGrid = new Float32Array(GN * GN);
 const nGrid = new Float32Array(GN * GN);
-const wGrid = new Float32Array(GN * GN);
 
-function biomePalette(x: number, y: number): number[] {
-  biomeWeights(x, y, wW);
+
+const RAMP_A: Record<string, number[][]> = {};
+for (const k in LAND_RAMPS) RAMP_A[k] = LAND_RAMPS[k].map((r) => r.map((c) => abgr(c)));
+const ICE_A = LAND_RAMPS.ice[0].map((c) => abgr(c));
+const REEF_A = REEF_RAMPS.map((r) => r.map((c) => abgr(c)));
+const SHADED = new Set([T_GRASS, T_FOREST, T_ROCK, T_PEAK, T_SNOW]);
+
+function landColor(t: number, biome: number, wx: number, wy: number, slope: number, hd: number): number {
+  let key = 'sand';
+  let tex = TEX.sand;
+  switch (t) {
+    case T_GRASS: key = 'grass'; tex = TEX.grass; break;
+    case T_FOREST: key = 'forest'; tex = TEX.forest; break;
+    case T_ROCK: key = 'rock'; tex = TEX.rock; break;
+    case T_PEAK: key = 'peak'; tex = TEX.rock; break;
+    case T_SNOW: key = 'snow'; tex = TEX.snow; break;
+    case T_LAVA: key = 'lava'; tex = TEX.lava; break;
+    case T_SWAMP: key = 'swamp'; tex = TEX.swamp; break;
+    case T_ICE: key = 'ice'; tex = TEX.ice; break;
+  }
+  const ramps = RAMP_A[key];
+  const ramp = ramps[biome] ?? ramps[0];
+  let tone = texTone(tex, wx, wy);
+  if (SHADED.has(t)) {
+    if (slope > 1.2) tone++;
+    else if (slope < -1.2) tone--;
+  }
+  if (t === T_SAND && hd < 1.6) tone = 1;
+  return ramp[tone < 1 ? 0 : tone > 4 ? 3 : tone - 1];
+}
+
+function waterRamp(w: Float32Array): number[] {
   const out: number[] = [];
-  for (let k = 0; k < 10; k++) {
+  for (let k = 0; k < 5; k++) {
     let r = 0, g = 0, b = 0;
     for (let i = 0; i < 5; i++) {
-      const c = WATER_PAL[i][k];
-      r += ((c >> 16) & 255) * wW[i];
-      g += ((c >> 8) & 255) * wW[i];
-      b += (c & 255) * wW[i];
+      const c = WATER_RAMPS[i][k];
+      r += ((c >> 16) & 255) * w[i];
+      g += ((c >> 8) & 255) * w[i];
+      b += (c & 255) * w[i];
     }
-    out.push(abgr((Math.round(r) << 16) | (Math.round(g) << 8) | Math.round(b)));
+    out.push((Math.round(r) << 16) | (Math.round(g) << 8) | Math.round(b));
   }
-  return out;
+  const deep = out[0];
+  const darker = (Math.round(((deep >> 16) & 255) * 0.86) << 16) | (Math.round(((deep >> 8) & 255) * 0.86) << 8) | Math.round((deep & 255) * 0.86);
+  return [darker, ...out].map((c) => abgr(c));
 }
 
-const LAND_ABGR = LAND_PAL.map((p) => p.map(abgr));
 const EDGE_A = abgr(0x14161e);
 const EDGE_B = abgr(0x1a1c26);
-
-function landColorIndex(t: number): number {
-  switch (t) {
-    case T_SAND: return 0;
-    case T_GRASS: return 2;
-    case T_FOREST: return 4;
-    case T_ROCK: return 6;
-    case T_PEAK: return 8;
-    case T_SNOW: return 10;
-    case T_LAVA: return 12;
-    case T_SWAMP: return 14;
-    case T_TOWN: return 16;
-    default: return 0;
-  }
-}
 
 export function renderChunk(cx: number, cy: number): ChunkResult {
   const x0 = cx * CHUNK;
@@ -285,8 +203,10 @@ export function renderChunk(cx: number, cy: number): ChunkResult {
   biomeWeights(x0 + CHUNK / 2, y0 + CHUNK / 2, wW);
   const chunkBiome = argmax5(wW);
   const frost = chunkBiome === B_FROST;
-  const wp = biomePalette(x0 + CHUNK / 2, y0 + CHUNK / 2);
-  const reefPossible = fbm((x0 + 128) / 1400, (y0 + 128) / 1400, WORLD_SEED + 21, 3) > 0.5;
+  const wr = waterRamp(wW);
+  const rr = REEF_A[chunkBiome];
+  const reefPossible = fbm((x0 + 128) / 1400, (y0 + 128) / 1400, WORLD_SEED + 21, 3) > 0.38;
+  const edgeChunk = x0 < EDGE_MARGIN + CHUNK || y0 < EDGE_MARGIN + CHUNK || x0 + CHUNK > WORLD_SIZE - EDGE_MARGIN - CHUNK || y0 + CHUNK > WORLD_SIZE - EDGE_MARGIN - CHUNK;
   for (let j = 0; j < GN; j++) {
     const wy = gy0 + j * GRID;
     for (let i = 0; i < GN; i++) {
@@ -304,8 +224,7 @@ export function renderChunk(cx: number, cy: number): ChunkResult {
       hGrid[g] = best;
       iGrid[g] = bi;
       rGrid[g] = reefPossible && best < -3 ? reefField(wx, wy, chunkBiome) : -1;
-      nGrid[g] = noise2(wx / 14, wy / 14, WORLD_SEED + 5);
-      wGrid[g] = best < -40 ? fbm(wx / 90, wy / 90, WORLD_SEED + 6, 2) : 0.5;
+      nGrid[g] = edgeChunk ? noise2(wx / 14, wy / 14, WORLD_SEED + 5) : 0;
     }
   }
   const edge = x0 < EDGE_MARGIN || y0 < EDGE_MARGIN || x0 + CHUNK > WORLD_SIZE - EDGE_MARGIN || y0 + CHUNK > WORLD_SIZE - EDGE_MARGIN;
@@ -334,45 +253,31 @@ export function renderChunk(cx: number, cy: number): ChunkResult {
         const isl = chunkIslands[iGrid[fx < 0.5 ? (fy < 0.5 ? g : g + GN) : fy < 0.5 ? g + 1 : g + GN + 1]] ?? chunkIslands[iGrid[g]];
         if (!isl) {
           types[o] = T_SHALLOW;
-          px[o] = wp[4];
+          px[o] = wr[3];
           continue;
         }
         const t = landType(isl, hd, wx, wy);
         types[o] = t;
-        const pal = LAND_ABGR[isl.type === I_GLACIER ? B_FROST : isl.type === I_VOLCANO ? B_ASHEN : isl.biome];
-        const ci = landColorIndex(t);
-        const slope = h00 - h11;
-        let dark = nz + bay * 0.55 > 0.78;
-        if (slope > 1.2) dark = false;
-        else if (slope < -1.2) dark = true;
-        let c = pal[ci + (dark ? 1 : 0)];
-        if (t === T_SAND && hd < 1.6) c = pal[1];
-        if (t === T_LAVA) c = nz + bay * 0.5 > 0.7 ? pal[13] : pal[12];
-        px[o] = c;
+        const biome = isl.type === I_GLACIER ? B_FROST : isl.type === I_VOLCANO ? B_ASHEN : isl.biome;
+        px[o] = landColor(t, biome, wx, wy, h00 - h11, hd);
       } else {
         const reef = (rGrid[g] * (1 - fx) + rGrid[g + 1] * fx) * (1 - fy) + (rGrid[g + GN] * (1 - fx) + rGrid[g + GN + 1] * fx) * fy;
         const t = waterType(hd, reef, frost);
         types[o] = t;
-        let c: number;
         if (t === T_REEF) {
-          const hv = hashf(wx, wy, 91);
-          c = hv < 0.22 ? wp[5] : hv < 0.5 ? wp[8] : wp[7];
+          const rh = Math.imul(wx >> 4, 73856093) ^ Math.imul(wy >> 4, 19349663);
+          px[o] = rr[texTone(REEF_TILES[rh & 3], rh & 4 ? 15 - (wx & 15) : wx, wy) - 1];
         }
-        else if (t === T_ICE) c = nz + bay * 0.5 > 0.8 ? wp[6] : wp[9];
-        else if (t === T_FOAM) c = hd > -1.6 || bay < 0.35 ? wp[6] : wp[5];
-        else if (hd > -28 || reef > -0.25) {
-          const tt = (hd + 28) / 18;
-          c = tt > bay ? wp[5] : wp[4];
-          if (reef > -0.25 && hd < -28) c = reef > -0.1 + bay * 0.25 ? wp[5] : wp[4];
-        } else if (hd > -40) c = (hd + 40) / 12 > bay ? wp[4] : wp[3];
-        else if (hd > -90) c = nz + bay * 0.3 > 0.72 ? wp[3] : wp[2];
-        else if (hd > -140) c = (hd + 140) / 50 > bay ? wp[2] : (nz > 0.6 ? wp[1] : wp[0]);
-        else c = nz + bay * 0.25 > 0.7 ? wp[1] : wp[0];
-        px[o] = c;
+        else if (t === T_ICE) px[o] = ICE_A[texTone(TEX.ice, wx, wy) - 1];
+        else {
+          const sh = hd + (bay - 0.5) * 7;
+          const tex = sh > -3 ? TEX.foam : sh > -28 || reef > -0.25 ? TEX.shallow : sh > -90 ? TEX.ocean : TEX.deep;
+          px[o] = wr[texTone(tex, wx, wy)];
+        }
       }
     }
   }
-  decorate(x0, y0, px, types, chunkBiome);
+  decorate(x0, y0, px, types);
   for (let k = 0; k < nI; k++) {
     const isl = chunkIslands[k];
     if (isl.port) drawTown(isl, x0, y0, px, types, lights);
@@ -380,19 +285,63 @@ export function renderChunk(cx: number, cy: number): ChunkResult {
   return { pixels: buf, types, lights };
 }
 
-function decorate(x0: number, y0: number, px: Uint32Array, types: Uint8Array, chunkBiome: number): void {
-  const C = 6;
+interface Deco {
+  art: Art;
+  block: number;
+}
+
+const D = (a: Art, block: number): Deco => ({ art: a, block });
+const DECO = {
+  palm: D(PALM, 1),
+  tree: D(TREE, 1),
+  jungle: D(JUNGLE_TREE, 1),
+  pine: D(PINE, 1),
+  snowPine: D(SNOW_PINE, 1),
+  dead: D(DEAD_TREE, 1),
+  bush: D(BUSH, 0),
+  berry: D(BERRY_BUSH, 0),
+  tuft: D(TUFT, 0),
+  flowers: D(FLOWERS, 0),
+  rock: D(ROCK, 0),
+  boulder: D(BOULDER, 2),
+  reeds: D(REEDS, 0),
+  mushrooms: D(MUSHROOMS, 0),
+  shell: D(SHELL, 0),
+  skull: D(SKULL_ROCK, 2),
+  ice: D(ICE_SHARD, 2)
+};
+
+const FOLIAGE: (Swap | undefined)[] = [
+  undefined,
+  { h: 0x4aa850, H: 0x96dc6a },
+  { h: 0x3e6a54, H: 0x5a8a6e, G: 0x2a4a3a, g: 0x1a3226 },
+  { h: 0x5e5236, H: 0x7a6a46, G: 0x463c2a, g: 0x2e2618 },
+  { h: 0x3e6a44, H: 0x5e8a5a, G: 0x2a4a32, g: 0x18301e }
+];
+
+const pxCache = new Map<string, Uint32Array>();
+function artPx(a: Art, swap: Swap | undefined, key: string): Uint32Array {
+  let p = pxCache.get(key);
+  if (!p) {
+    p = pixels(a, swap);
+    pxCache.set(key, p);
+  }
+  return p;
+}
+
+function decorate(x0: number, y0: number, px: Uint32Array, types: Uint8Array): void {
+  const C = 9;
   const cx0 = Math.floor((x0 - MARGIN) / C);
-  const cy0 = Math.floor((y0 - MARGIN) / C);
-  const cx1 = Math.floor((x0 + CHUNK + 2) / C);
-  const cy1 = Math.floor((y0 + CHUNK + 2) / C);
+  const cy0 = Math.floor((y0 - 2) / C);
+  const cx1 = Math.floor((x0 + CHUNK + MARGIN) / C);
+  const cy1 = Math.floor((y0 + CHUNK + MARGIN) / C);
   for (let gy = cy0; gy <= cy1; gy++) {
     for (let gx = cx0; gx <= cx1; gx++) {
       const hsh = hash2(gx, gy, WORLD_SEED + 31);
       const roll = (hsh & 0xffff) / 65536;
       if (roll > 0.8) continue;
-      const ax = gx * C + ((hsh >>> 16) & 3);
-      const ay = gy * C + ((hsh >>> 18) & 3);
+      const ax = gx * C + ((hsh >>> 16) & 7);
+      const ay = gy * C + ((hsh >>> 19) & 7);
       const lx = ax - x0;
       const ly = ay - y0;
       const gi = Math.round((lx + MARGIN) / GRID);
@@ -400,104 +349,94 @@ function decorate(x0: number, y0: number, px: Uint32Array, types: Uint8Array, ch
       if (gi < 0 || gj < 0 || gi >= GN || gj >= GN) continue;
       const g = gj * GN + gi;
       const hd = hGrid[g];
-      if (hd <= 1.5) {
-        continue;
-      }
+      if (hd <= 2) continue;
       const isl = chunkIslands[iGrid[g]];
       if (!isl) continue;
       const t = landType(isl, hd, ax, ay);
       const biome = isl.type === I_GLACIER ? B_FROST : isl.type === I_VOLCANO ? B_ASHEN : isl.biome;
-      let s: Sprite | null = null;
-      const r2 = ((hsh >>> 20) & 0xfff) / 4096;
+      const tropic = biome <= B_CORAL;
+      let d: Deco | null = null;
+      const r2 = ((hsh >>> 22) & 0x3ff) / 1024;
       if (t === T_FOREST) {
-        if (roll < 0.62) {
-          if (biome === B_FROST) s = r2 < 0.3 ? SPR_SNOWPINE : SPR_PINE;
-          else if (biome === B_ASHEN) s = r2 < 0.7 ? SPR_DEAD : SPR_BUSH;
-          else if (biome === B_MIST) s = r2 < 0.25 ? SPR_DEAD : SPR_TREE;
-          else s = r2 < 0.25 ? SPR_PALM : SPR_TREE;
-        } else if (roll < 0.7) s = SPR_BUSH;
+        if (roll < 0.55) {
+          if (biome === B_FROST) d = r2 < 0.35 ? DECO.snowPine : DECO.pine;
+          else if (biome === B_ASHEN) d = r2 < 0.75 ? DECO.dead : DECO.bush;
+          else if (biome === B_MIST) d = r2 < 0.25 ? DECO.dead : r2 < 0.7 ? DECO.tree : DECO.jungle;
+          else if (isl.type === I_JUNGLE) d = r2 < 0.2 ? DECO.palm : DECO.jungle;
+          else d = r2 < 0.25 ? DECO.palm : r2 < 0.45 ? DECO.jungle : DECO.tree;
+        } else if (roll < 0.66) d = r2 < 0.3 && tropic ? DECO.berry : DECO.bush;
+        else if (roll < 0.7 && biome === B_MIST) d = DECO.mushrooms;
       } else if (t === T_GRASS) {
-        if (roll < 0.06) s = biome === B_FROST ? SPR_PINE : biome === B_ASHEN ? SPR_DEAD : biome <= B_CORAL ? (r2 < 0.5 ? SPR_PALM : SPR_TREE) : SPR_TREE;
-        else if (roll < 0.13) s = SPR_BUSH;
-        else if (roll < 0.22) s = SPR_TUFT;
-        else if (roll < 0.26 && biome !== B_ASHEN) s = SPR_FLOWER;
-        else if (roll < 0.28) s = SPR_ROCK;
+        if (roll < 0.06) d = biome === B_FROST ? DECO.pine : biome === B_ASHEN ? DECO.dead : tropic ? (r2 < 0.5 ? DECO.palm : DECO.tree) : DECO.tree;
+        else if (roll < 0.12) d = r2 < 0.25 && tropic ? DECO.berry : DECO.bush;
+        else if (roll < 0.24) d = DECO.tuft;
+        else if (roll < 0.29 && biome !== B_ASHEN && biome !== B_FROST) d = DECO.flowers;
+        else if (roll < 0.31) d = DECO.rock;
       } else if (t === T_SAND) {
-        if (roll < 0.035 && biome <= B_CORAL && hd > 4 && isl.type !== I_GLACIER) s = SPR_PALM;
-        else if (roll < 0.05) s = SPR_ROCK;
-        else if (roll < 0.065 && biome <= B_CORAL) s = SPR_SHELL;
+        if (roll < 0.05 && tropic && hd > 5 && isl.type !== I_GLACIER) d = DECO.palm;
+        else if (roll < 0.07) d = DECO.rock;
+        else if (roll < 0.1 && tropic) d = DECO.shell;
       } else if (t === T_ROCK) {
-        if (roll < 0.06) s = SPR_BOULDER;
-        else if (roll < 0.14) s = SPR_ROCK;
-        else if (roll < 0.16 && isl.type === I_SKULL) s = SPR_SKULLROCK;
+        if (roll < 0.07) d = DECO.boulder;
+        else if (roll < 0.16) d = DECO.rock;
+        else if (roll < 0.19 && isl.type === I_SKULL) d = DECO.skull;
       } else if (t === T_SNOW) {
-        if (roll < 0.05) s = SPR_SNOWPINE;
-        else if (roll < 0.09) s = SPR_ROCK;
+        if (roll < 0.06) d = DECO.snowPine;
+        else if (roll < 0.1) d = DECO.ice;
+        else if (roll < 0.13) d = DECO.rock;
       } else if (t === T_SWAMP) {
-        if (roll < 0.22) s = SPR_REEDS;
-        else if (roll < 0.3) s = SPR_DEAD;
+        if (roll < 0.24) d = DECO.reeds;
+        else if (roll < 0.3) d = DECO.dead;
+        else if (roll < 0.36) d = DECO.mushrooms;
       }
-      if (isl.type === I_SKULL && t === T_GRASS && roll < 0.04) s = SPR_SKULLROCK;
-      if (!s) continue;
-      blit(s, lx - (s.w >> 1), ly - s.h + 1, px, types, SPR_COLS[biome]);
+      if (isl.type === I_SKULL && t === T_GRASS && roll < 0.05) d = DECO.skull;
+      if (!d) continue;
+      const a = d.art;
+      const sw = FOLIAGE[biome];
+      stamp(artPx(a, sw, `${biome}:${a.rows[0]}${a.h}${a.w}`), a, lx - (a.w >> 1), ly - a.h + 1, px, types, d.block);
     }
   }
 }
 
-function blit(s: Sprite, sx: number, sy: number, px: Uint32Array, types: Uint8Array, cols: Record<string, number>): void {
-  const shadow = 0;
-  for (let y = 0; y < s.h; y++) {
-    for (let x = 0; x < s.w; x++) {
-      const ch = s.px[y * s.w + x];
-      if (ch === '.') continue;
-      const tx = sx + x + 1;
-      const ty = sy + y + 1;
-      if (tx < 0 || ty < 0 || tx >= CHUNK || ty >= CHUNK) continue;
-      const o = ty * CHUNK + tx;
-      const c = px[o];
-      px[o] = (0xff000000 | (((((c >> 16) & 255) * 0.62) | 0) << 16) | (((((c >> 8) & 255) * 0.62) | 0) << 8) | (((c & 255) * 0.62) | 0)) >>> 0;
-    }
-  }
-  for (let y = 0; y < s.h; y++) {
-    for (let x = 0; x < s.w; x++) {
-      const ch = s.px[y * s.w + x];
-      if (ch === '.') continue;
+function stamp(p: Uint32Array, a: Art, sx: number, sy: number, px: Uint32Array, types: Uint8Array, block: number, blockAll = false): void {
+  for (let y = 0; y < a.h; y++) {
+    const ty = sy + y;
+    if (ty < 0 || ty >= CHUNK) continue;
+    const row = a.rows[y];
+    for (let x = 0; x < a.w; x++) {
       const tx = sx + x;
-      const ty = sy + y;
-      if (tx < 0 || ty < 0 || tx >= CHUNK || ty >= CHUNK) continue;
+      if (tx < 0 || tx >= CHUNK) continue;
+      const ch = row[x];
+      if (ch === '.') continue;
       const o = ty * CHUNK + tx;
-      px[o] = cols[ch] ?? shadow;
-      if (s.block === 1 && (ch === 'T' || ch === 't') && y >= s.h - 2) types[o] = T_TREE;
-      else if (s.block === 2 && y >= s.h - 3) types[o] = T_TREE;
+      if (ch === ',') {
+        px[o] = darken(px[o], 0.62);
+        continue;
+      }
+      px[o] = p[y * a.w + x];
+      if (blockAll) types[o] = T_HOUSE;
+      else if (block === 1 && (ch === 'J' || ch === 'j') && y >= a.h - 6) types[o] = T_TREE;
+      else if (block === 2 && y >= a.h - 4) types[o] = T_TREE;
     }
   }
 }
 
-const DOCK_A = abgr(0x8a6038);
-const DOCK_B = abgr(0x6a4426);
-const DOCK_P = abgr(0x3e2614);
-const OUTLINE = abgr(0x241a14);
-const WALL = abgr(0xe2d2b0);
-const WALL_D = abgr(0xbca880);
-const DOOR = abgr(0x4a2e1a);
-const STONE = abgr(0x8e8a80);
-const STONE_D = abgr(0x6a665e);
-const STONE_L = abgr(0xaaa69a);
-const FLAG = [abgr(0x2a4a9a), abgr(0x3a8a4a), abgr(0x1a1a1a)];
-const PATH_A = abgr(0xb89462);
-const PATH_B = abgr(0xa4804e);
-
-function shade(c: number, f: number): number {
-  return (0xff000000 | (Math.min(255, (((c >> 16) & 255) * f) | 0) << 16) | (Math.min(255, (((c >> 8) & 255) * f) | 0) << 8) | Math.min(255, ((c & 255) * f) | 0)) >>> 0;
+function darken(c: number, f: number): number {
+  return (0xff000000 | ((((c >> 16) & 255) * f) << 16) | ((((c >> 8) & 255) * f) << 8) | ((c & 255) * f)) >>> 0;
 }
+
+const TOWN_A = LAND_RAMPS.town[0].map((c) => abgr(c));
+const DOCK_PX = pixels(DOCK_TEX);
+const POST = abgr(0x3a2214);
+const POST_K = abgr(0x1b1220);
 
 function drawTown(isl: Island, x0: number, y0: number, px: Uint32Array, types: Uint8Array, lights: number[]): void {
   const L = portLayout(isl);
   if (!L) return;
-  const minX = Math.min(L.dockX1, L.townX) - 200;
-  const maxX = Math.max(L.dockX1, L.townX) + 200;
-  const minY = Math.min(L.dockY1, L.townY) - 200;
-  const maxY = Math.max(L.dockY1, L.townY) + 200;
+  const minX = Math.min(L.dockX1, L.townX) - 220;
+  const maxX = Math.max(L.dockX1, L.townX) + 220;
+  const minY = Math.min(L.dockY1, L.townY) - 220;
+  const maxY = Math.max(L.dockY1, L.townY) + 220;
   if (maxX < x0 || minX > x0 + CHUNK || maxY < y0 || minY > y0 + CHUNK) return;
   for (let p = 0; p < L.paths.length; p += 4) {
     line(L.paths[p] - x0, L.paths[p + 1] - y0, L.paths[p + 2] - x0, L.paths[p + 3] - y0, 1, (x, y) => {
@@ -505,35 +444,35 @@ function drawTown(isl: Island, x0: number, y0: number, px: Uint32Array, types: U
       const t = types[o];
       if (t >= T_SAND && t <= T_SWAMP && t !== T_PEAK) {
         types[o] = T_TOWN;
-        px[o] = BAYER4(x + x0, y + y0) > 0.7 ? PATH_B : PATH_A;
+        px[o] = TOWN_A[texTone(TEX.town, x + x0, y + y0) - 1];
       }
     });
   }
   const dx = L.dirX;
   const dy = L.dirY;
   const len = Math.hypot(L.dockX1 - L.dockX0, L.dockY1 - L.dockY0);
-  const bx0 = Math.floor(Math.min(L.dockX0, L.dockX1) - 6 - x0);
-  const bx1 = Math.ceil(Math.max(L.dockX0, L.dockX1) + 6 - x0);
-  const by0 = Math.floor(Math.min(L.dockY0, L.dockY1) - 6 - y0);
-  const by1 = Math.ceil(Math.max(L.dockY0, L.dockY1) + 6 - y0);
+  const bx0 = Math.floor(Math.min(L.dockX0, L.dockX1) - 8 - x0);
+  const bx1 = Math.ceil(Math.max(L.dockX0, L.dockX1) + 8 - x0);
+  const by0 = Math.floor(Math.min(L.dockY0, L.dockY1) - 8 - y0);
+  const by1 = Math.ceil(Math.max(L.dockY0, L.dockY1) + 8 - y0);
   for (let y = Math.max(0, by0); y <= Math.min(CHUNK - 1, by1); y++) {
     for (let x = Math.max(0, bx0); x <= Math.min(CHUNK - 1, bx1); x++) {
       const rx = x + x0 - L.dockX0;
       const ry = y + y0 - L.dockY0;
       const along = rx * dx + ry * dy;
       const across = -rx * dy + ry * dx;
-      if (along < 0 || along > len || across < -4.5 || across > 4.5) continue;
+      if (along < 0 || along > len || across < -5.5 || across > 5.5) continue;
       const o = y * CHUNK + x;
-      const edgeP = Math.abs(across) > 3.6;
-      if (edgeP) {
-        if ((Math.floor(along) & 7) < 2) {
-          px[o] = DOCK_P;
+      if (Math.abs(across) > 4.5) {
+        const k = Math.floor(along) & 7;
+        if (k < 2) {
+          px[o] = k === 0 ? POST_K : POST;
           types[o] = T_DOCK;
-        } else if (types[o] <= T_FOAM) px[o] = shade(px[o], 0.7);
+        } else if (types[o] <= T_FOAM) px[o] = darken(px[o], 0.7);
         continue;
       }
       types[o] = T_DOCK;
-      px[o] = (Math.floor(along) % 3 === 0) ? DOCK_B : DOCK_A;
+      px[o] = DOCK_PX[(Math.floor(along) & 7) * 8 + (Math.floor(across + 4.5) & 7)];
     }
   }
   const faction = isl.port!.faction;
@@ -541,68 +480,19 @@ function drawTown(isl: Island, x0: number, y0: number, px: Uint32Array, types: U
     const hx = h.x - x0;
     const hy = h.y - y0;
     if (hx + h.w + 2 < 0 || hy + h.h + 2 < 0 || hx > CHUNK || hy > CHUNK) continue;
-    if (h.kind === 1) drawFort(hx, hy, h.w, h.h, px, types, faction);
-    else drawHouse(hx, hy, h.w, h.h, h.color, px, types);
+    if (h.kind === 1) stamp(artPx(FORT, FORT_FLAG[faction], `fort${faction}`), FORT, hx, hy, px, types, 0, true);
+    else {
+      const v = h.color >> 4;
+      const art = HOUSES[v];
+      const roof = h.color & 15;
+      stamp(artPx(art, ROOFS[roof], `house${v}:${roof}`), art, hx, hy, px, types, 0, true);
+    }
   }
   for (let i = 0; i < L.lights.length; i += 2) {
     const lx = L.lights[i] - x0;
     const ly = L.lights[i + 1] - y0;
     if (lx >= 0 && ly >= 0 && lx < CHUNK && ly < CHUNK) lights.push(L.lights[i], L.lights[i + 1]);
   }
-}
-
-function put(px: Uint32Array, types: Uint8Array, x: number, y: number, c: number, t: number): void {
-  if (x < 0 || y < 0 || x >= CHUNK || y >= CHUNK) return;
-  const o = y * CHUNK + x;
-  px[o] = c;
-  if (t >= 0) types[o] = t;
-}
-
-function drawHouse(x: number, y: number, w: number, h: number, roof: number, px: Uint32Array, types: Uint8Array): void {
-  for (let j = 0; j <= h; j++) for (let i = 0; i <= w; i++) {
-    const o = (y + j + 1) * CHUNK + (x + i + 1);
-    if (x + i + 1 >= 0 && y + j + 1 >= 0 && x + i + 1 < CHUNK && y + j + 1 < CHUNK) px[o] = shade(px[o], 0.6);
-  }
-  const roofH = h - 3;
-  const rd = shade(roof, 0.75);
-  const rl = shade(roof, 1.18);
-  for (let j = 0; j < h; j++) {
-    for (let i = 0; i < w; i++) {
-      let c: number;
-      const edge = i === 0 || j === 0 || i === w - 1 || j === h - 1;
-      if (edge) c = OUTLINE;
-      else if (j < roofH) c = j === (roofH >> 1) ? rl : (j < roofH >> 1 ? roof : rd);
-      else if (j === roofH) c = OUTLINE;
-      else c = i === (w >> 1) ? DOOR : (i === 2 || i === w - 3) && j === roofH + 1 ? abgr(0x6a8ab0) : (j === h - 2 ? WALL_D : WALL);
-      put(px, types, x + i, y + j, c, T_HOUSE);
-    }
-  }
-}
-
-function drawFort(x: number, y: number, w: number, h: number, px: Uint32Array, types: Uint8Array, faction: number): void {
-  for (let j = 0; j < h; j++) {
-    for (let i = 0; i < w; i++) {
-      const edge = i === 0 || j === 0 || i === w - 1 || j === h - 1;
-      const wall = i < 3 || j < 3 || i >= w - 3 || j >= h - 3;
-      let c: number;
-      let t = T_HOUSE;
-      if (edge) c = (i + j) % 2 === 0 && (j === 0 || i === 0) ? STONE_L : OUTLINE;
-      else if (wall) c = (i * 3 + j) % 5 === 0 ? STONE_D : STONE;
-      else {
-        c = BAYER4(i, j) > 0.6 ? PATH_B : PATH_A;
-        t = T_HOUSE;
-      }
-      put(px, types, x + i, y + j, c, t);
-    }
-  }
-  const cx = x + (w >> 1);
-  const cy = y + (h >> 1);
-  for (let j = 0; j < 5; j++) put(px, types, cx, cy - j, OUTLINE, T_HOUSE);
-  for (let j = 0; j < 2; j++) for (let i = 1; i < 4; i++) put(px, types, cx + i, cy - 4 + j, FLAG[faction], T_HOUSE);
-  put(px, types, x + 1, y + 1, STONE_L, T_HOUSE);
-  put(px, types, x + w - 2, y + 1, STONE_L, T_HOUSE);
-  put(px, types, x + 1, y + h - 2, STONE_D, T_HOUSE);
-  put(px, types, x + w - 2, y + h - 2, STONE_D, T_HOUSE);
 }
 
 function line(x0: number, y0: number, x1: number, y1: number, rad: number, fn: (x: number, y: number) => void): void {

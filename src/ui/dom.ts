@@ -1,5 +1,6 @@
 import { ITEM } from '../data/items';
-import { iconURL } from '../data/icons';
+import { ICONS } from '../art/icons';
+import { artDataURL } from '../render/artCanvas';
 import { audio } from '../audio/audio';
 
 type Child = Node | string | number | null | undefined | false | Child[];
@@ -35,10 +36,22 @@ export function h(tag: string, attrs: Record<string, unknown> = {}, ...kids: Chi
   return el;
 }
 
+const iconCache = new Map<string, string>();
+
+export function iconSrc(id: string): string {
+  let u = iconCache.get(id);
+  if (u !== undefined) return u;
+  const ic = ICONS[id];
+  u = ic ? artDataURL(ic.a, 2, ic.s) : '';
+  iconCache.set(id, u);
+  return u;
+}
+
 export function itemIcon(id: string, extra = ''): HTMLElement {
   const d = ITEM[id];
   const e = h('div', { cls: `icon ${extra}`, title: d?.name ?? id });
-  if (d) e.style.backgroundImage = `url(${iconURL(d.icon, d.cols, 3)})`;
+  const u = iconSrc(id);
+  if (u) e.style.backgroundImage = `url(${u})`;
   return e;
 }
 
