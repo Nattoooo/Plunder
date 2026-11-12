@@ -1,6 +1,6 @@
 # captain — notes
 
-## Size: 7 x 9 (spec 6 x 9, flexible)
+## Size: 7 x 9 (spec 6 x 9, flexible) — superseded in Round 1: now 9 x 9, body still 7 wide
 
 Height kept at 9 so the scale reference (door ~8 px plus hat, tree ~2x, crate to the waist) is unchanged.
 Width grew by one pixel. With 6 px and a 1 px outline the face has only 4 interior pixels, so the eyes
@@ -45,3 +45,49 @@ and the figure is exactly symmetric about it.
 - captain-side-2: mid-stride. Head, hat, coat tail unchanged. The hand swings forward to the coat front (row 6),
   legs split with a `k` gap, rear boot under the back leg and front boot reaching two pixels forward so the step
   reads at 1x.
+
+## Round 1
+
+Size is now **9 x 9**. Height unchanged (9), so the scale against the approved cottage door and tree is the same.
+The body, head and feet are still exactly 7 px wide (cols 1-7) and the feet occupy the same cells, so the ground
+footprint is unchanged. Only the tricorn's two raised wings use cols 0 and 8. See issue 1 for why.
+
+1. [MAJOR] Tricorn reads as a box: **fixed, by widening the hat to 9 px.** I tried the suggested 7 px rows first.
+   `kyk.kOk` leaves gold and the `K` crown with no outline above them (outline rule), and every 7 px peak
+   version I tried (corners 2 px wide, 3 px dip) read as horns or a crown, because the wings were no wider than
+   the face. The critique allowed 9 px if a wider brim was the only fix, and it was. Rows 0-1 are now 9 wide:
+   upturned wings at each side (`kk` peaks, gold `y`/`O` at the corner), a notch, then the crown dome
+   (`K`, outlined on top) between them. Row 2 is the 7 px front brim with the trim running from each wing
+   corner diagonally down onto it. Black silhouette, rows 0-2: `##.###.##`, `#########`, `.#######.`, so the
+   wings peak above the crown on both sides and the hat narrows down to the head. Back view uses the same
+   wings and crown. Side view raises the rear wing (`kk.` at the back, cols 0-1) and pushes the front of the
+   brim one pixel past the nose (`O`,`k` at cols 7-8, row 2).
+2. [MAJOR] Hands at ankle height: **fixed.** Standing hands are on the cuff row 6 (`ksRpRSk` front,
+   `ksRRRSk` back) and the skin no longer touches any boot pixel. Side-1 hand is at (4,6), mid-body at the
+   hip, and the cell that was skin at the hem is now coat. Walk frames: the forward-swinging hand rises to
+   row 5 at the shoulder side and the back-swinging hand disappears into the coat, as asked. Everything
+   else in each frame is identical to its standing frame. Side-2 keeps the hand at the coat front (5,6),
+   so the stride still swings it forward compared with side-1.
+3. [MAJOR] Trousers and boots don't read: **fixed for the trousers; boots are outline-only.** The coat now
+   ends at row 6, which leaves room for each leg to be 2 px wide (`kbbkbbk`), and both legs are flat navy `b`,
+   so the lit leg no longer looks like jeans. Boots: there is no row below the feet for an outline, so a `K`
+   boot on row 8 would leave its bottom edge open. The boots are therefore the `k` pixels of the bottom
+   row, aligned exactly under each trouser leg. They read as black boots against the navy, not as part of
+   the outline.
+4. [MINOR] Orphan cheeks: **fixed.** The chin row is now `kssssSk`, so the cheek pixels (2,3)/(6,3) join
+   the skin below and the eyes are the only dark pixels inside the face. Checked at 1x: the two eyes read.
+5. [MINOR] Walk frames, base and lifted leg: **fixed.** The lifted leg keeps one trouser pixel (inner column)
+   and a 1 px boot under it, instead of disappearing into a black bar. The planted leg is the full 2 px leg
+   and boot. The base now changes by one pixel between frames instead of jumping sideways. Up-2/3 use the same
+   lower bodies mirrored.
+6. [MINOR] Side boots a flat slab: **fixed.** Side-1 row 8 runs from one heel pixel behind the legs (under
+   the coat tail, where it also closes the outline) to a toe reaching two pixels past the front leg. Side-2's
+   front boot has the same two-pixel toe, and the rear boot sits under the back leg.
+7. [MINOR] Back trim reads as a headband: **fixed.** From behind, the gold is only at the two raised rear
+   corners. The back brim edge (row 2) is black, with the crown between the corners.
+8. [MINOR] Dark `r` column merges with the outline: **fixed.** The coat body is all `R`. Its right edge stays
+   red against the outline, and the shading on the right comes from the `S` hand and cheek. With the coat
+   now ending at row 6 there is no hem row, so `r` is no longer used.
+9. [MINOR] Width: **noted.** I may not edit specs.json, so this note states it instead: the captain sprite is
+   9 x 9, with a 7 px wide body and feet. Measure doors, crates and tree widths against the 7 px body. Measure
+   against the 9 px width only where the hat brim matters, such as clearing a door frame.

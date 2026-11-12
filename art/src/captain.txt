@@ -1,92 +1,92 @@
-# Captain: 7 x 9 (spec 6 x 9, flexible). Odd width gives a centre column for the
-# tricorn's front point, the shirt line and a nose-gap between the two eyes.
-# Hat K (black) with gold trim y/O; skin s/S; coat R/r; shirt p; trousers B/b;
-# boots are the k outline pixels on the bottom row; hair J/j.
+# Captain: 9 x 9 (spec 6 x 9, flexible). Body and feet are 7 px wide (cols 1-7);
+# only the tricorn's raised wings use cols 0 and 8 (round 1, critique issue 1).
+# Hat k/K with gold trim y/O; skin s/S; coat R (hem shade r); shirt p;
+# trousers b (navy); boots are the k outline pixels on the bottom row; hair J/j.
 
 == captain-down-1
-.kkkkk.
-kyKKKOk
-kkyyykk
-kskskSk
-.kssSk.
-kRRpRrk
-kRRpRrk
-ksBkbSk
-.kk.kk.
+kk.kkk.kk
+kykKKKkOk
+.kyyyyOk.
+.kskskSk.
+.kssssSk.
+.kRRpRRk.
+.ksRpRSk.
+.kbbkbbk.
+..kk.kk..
 
 == captain-down-2
-.kkkkk.
-kyKKKOk
-kkyyykk
-kskskSk
-.kssSk.
-kRRpRrk
-ksRpRrk
-.kkkbrk
-....kk.
+kk.kkk.kk
+kykKKKkOk
+.kyyyyOk.
+.kskskSk.
+.kssssSk.
+.ksRpRRk.
+.kRRpRRk.
+.kkbkbbk.
+...k.kk..
 
 == captain-down-3
-.kkkkk.
-kyKKKOk
-kkyyykk
-kskskSk
-.kssSk.
-kRRpRrk
-kRRpRSk
-kRBkkk.
-.kk....
+kk.kkk.kk
+kykKKKkOk
+.kyyyyOk.
+.kskskSk.
+.kssssSk.
+.kRRpRSk.
+.kRRpRRk.
+.kbbkbkk.
+..kk.k...
 
 == captain-up-1
-.kkkkk.
-kKKKKKk
-kyyyyOk
-kJJJJjk
-.kJjJk.
-kRRjRrk
-kRRRRrk
-ksBkbSk
-.kk.kk.
+kk.kkk.kk
+kykKKKkOk
+.kkkkkkk.
+.kJJJJjk.
+..kJjJk..
+.kRRjRRk.
+.ksRRRSk.
+.kbbkbbk.
+..kk.kk..
 
 == captain-up-2
-.kkkkk.
-kKKKKKk
-kyyyyOk
-kJJJJjk
-.kJjJk.
-kRRjRrk
-kRRRRSk
-kRBkkk.
-.kk....
+kk.kkk.kk
+kykKKKkOk
+.kkkkkkk.
+.kJJJJjk.
+..kJjJk..
+.kRRjRSk.
+.kRRRRRk.
+.kbbkbkk.
+..kk.k...
 
 == captain-up-3
-.kkkkk.
-kKKKKKk
-kyyyyOk
-kJJJJjk
-.kJjJk.
-kRRjRrk
-ksRRRrk
-.kkkbrk
-....kk.
+kk.kkk.kk
+kykKKKkOk
+.kkkkkkk.
+.kJJJJjk.
+..kJjJk..
+.ksRjRRk.
+.kRRRRRk.
+.kkbkbbk.
+...k.kk..
 
 == captain-side-1
-.kkkkk.
-kyKKKKk
-kkyyyOk
-kJJsksk
-.kjsSk.
-.kRRpk.
-.kRRRk.
-kRsBbk.
-.kkkkk.
+kk.kkkk..
+kykKKKKk.
+.kyyyyyOk
+.kJJsksk.
+..kjssSk.
+..kRRpk..
+..kRsRk..
+.kRRbbk..
+..kkkkkk.
 
 == captain-side-2
-.kkkkk.
-kyKKKKk
-kkyyyOk
-kJJsksk
-.kjsSk.
-.kRRpk.
-.kRRsk.
-kRBkbk.
-.kk.kkk
+kk.kkkk..
+kykKKKKk.
+.kyyyyyOk
+.kJJsksk.
+..kjssSk.
+..kRRpk..
+..kRRsk..
+.kRbkbk..
+..kk.kkk.
