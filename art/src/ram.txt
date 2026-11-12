@@ -1,0 +1,10 @@
+# Iron ram plate: point on the top 3 rows, 5 px base on the cell.
+== ram
+..k..
+.kNk.
+kNMmk
+kNMmk
+kNMmk
+kNMmk
+kNMmk
+kkkkk
