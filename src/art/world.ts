@@ -1175,12 +1175,20 @@ export const SHRINE = rd('shrine', SHRINE_0);
 export const CLAIM_STONE = rd('claim-stone', CLAIM_STONE_0);
 export const CLAIM_OWNED: Art = rd('claim-stone-owned', CLAIM_OWNED_0);
 
+function withShadow(a: Art): Art {
+  const rows = a.rows.map((r) => r + '..');
+  const base = a.rows[a.h - 1];
+  let shadow = '';
+  for (let x = 0; x < a.w + 2; x++) shadow += x >= 2 && base[x - 2] !== '.' ? ',' : '.';
+  return art([...rows, shadow]);
+}
+
 const HOUSE_NAMES = ['house-cottage', 'house-shutters', 'house-long', 'house-townhouse'];
 HOUSES.forEach((h, i) => {
   const a = rd(HOUSE_NAMES[i], h.art);
   if (a === h.art) return;
   const wall = a.rows.findIndex((r) => /[Cc]/.test(r));
-  HOUSES[i] = { art: a, foot: Math.max(0, wall - 8) };
+  HOUSES[i] = { art: withShadow(a), foot: Math.max(0, wall - 8) };
 });
 
 const STRUCTURE_NAMES: Record<string, string> = { lumber_camp: 'lumber-camp', dock: 'private-dock' };
