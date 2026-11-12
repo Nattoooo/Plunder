@@ -1,8 +1,9 @@
+# Seagull seen from above, head up: beak and head on row 0, wings on the middle row (wingtips raised on row 0 in gull-1).
 == gull-1
-u.y.u
-uPPPu
-.CPC.
+uPyPu
+.PPU.
+..P..
 == gull-2
-..y..
+.PyP.
 uPPPu
-.uPu.
+..P..

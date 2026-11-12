@@ -11,3 +11,4 @@ Families the critic has passed. Match their style.
 - jungle-tree (nature) — round 1
 - skull-rock (nature) — round 1
 - boulder (nature) — round 2
+- bush (nature) — round 2

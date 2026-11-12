@@ -1,0 +1,12 @@
+# Lava: orange glow (q base, Q hot spots) with dark crust cracks (K).
+# Fixed 8 x 8, no outline. Column 0 equals column 7 and row 0 equals row 7
+# exactly, so cracks and glow run across every seam with no break.
+== lava-tile
+qqKqQQqq
+QQKqqQQQ
+QKqqqqqQ
+KqqqqKKK
+qqqqKQQq
+QqqKqQQQ
+KKKqqqqK
+qqKqQQqq

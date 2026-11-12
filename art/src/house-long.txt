@@ -1,0 +1,25 @@
+# house-long: long single-storey plaster house, hip roof, chimney.
+== house-long
+...................kkkkkkk....
+...................kuuuuTk....
+....kkkkkkkkkkkkkkkkuuuuTk....
+...keeeeeeeeeeeeeeekuuuuTkk...
+...keRRRRRRRRRRRRRRkuuuuTkk...
+..keRRRRRRRRRRRRRRRRRRRRRRrk..
+..keRRRRRRRRRRRRRRRRRRRRRRrk..
+.keRRRRRRRRRRRRRRRRRRRRRRRRrk.
+.keRRRRRRRRRRRRRRRRRRRRRRRRrk.
+keRRRRRRRRRRRRRRRRRRRRRRRRRRrk
+krrrrrrrrrrrrrrrrrrrrrrrrrrrrk
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+.kcccccccccccccccccccccccccck.
+.kCCCCCCCCCCCCCCCCCCCCCCCCCCk.
+.kCCCCCCCCCCCwwwwCCCCCCCCCCCk.
+.kCkkkkCkkkkCwWWWCkkkkCkkkkCk.
+.kCkllkCkllkCwWWWCkllkCkllkCk.
+.kCkBBkCkBBkCwWWWCkBBkCkBBkCk.
+.kCkkkkCkkkkCwWyWCkkkkCkkkkCk.
+.kCVVVVCVVVVCwWWWCVVVVCVVVVCk.
+.kCCCCCCCCCCCwWWWCCCCCCCCCCCk.
+.kCCCCCCCCCCCwWWWCCCCCCCCCCCk.
+.kkkkkkkkkkkkkkkkkkkkkkkkkkkk.
