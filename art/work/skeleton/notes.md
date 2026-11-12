@@ -9,3 +9,6 @@ Both frames are 9 x 9 (spec 5 x 8, flexible). Widened and heightened to match th
 
 ## skeleton-2 (right foot forward)
 Identical except the legs: mirrored stride, right foot on the bottom row.
+
+## Batch round
+Redrawn: 5 px skull with sockets, bone nose gap and teeth row; arm tops outlined; spine plus rib bars and K gaps; 3 px pelvis; legs end in k like the captain's boots, with a clearly different stride in frame 2 (mirror). No pirate prop added: kept to bone and k for readability.

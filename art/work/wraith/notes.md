@@ -10,3 +10,6 @@ Size change: 7 x 8 instead of 6 x 8 (flexible). The extra column lets the two ey
 
 ## wraith-2
 Identical except the hem row is shifted by one pixel the other way (rippled opposite).
+
+## Batch round
+Tapered hood peak, rounded hood opening, I used only for the eyes, hem is three 1 px tatters that swap sides between frames. Shadow side left flat to keep two tones.

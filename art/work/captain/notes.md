@@ -112,3 +112,6 @@ Size unchanged: 9 x 9, body and feet 7 wide (cols 1-7), as instructed to keep th
 7. [MINOR] Side boots: **fixed.** Side-1 row 8 `..kkkkk..` (toe stops at the outline column); side-2 `...kk.kk.`.
 8. [MINOR] Flat coat: **accepted.** Any `r` pixel touches the outline and reads black at 1x (Round 1 issue 8); the
    light direction is shown on the hat, hair and skin.
+
+## Round 3
+Still 9 x 9, 7 px body (door/scale decision belongs to the coordinator). Row 0 is now `kk.kkk.kk` (side `kk.kkkk..`) closing the wing outline; front trim centre is `O`; back head row 4 widened to match the front jaw; side face has a nose pixel at (7,3) with `k` at (8,3); side-2 row 8 `..kkk.kk.` closes the coat tail.
