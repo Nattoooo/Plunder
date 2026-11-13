@@ -9,7 +9,7 @@ kNnMMMMMMk
 kNnMMMMMMk
 .kNMMMMMk.
 .kKKKKKKk.
-kvVVwwwwk.
-kvVvwwwwk.
-kvvvwwwwk.
-kkkkkkkkk.
+kvVVwwwwwk
+kvVvvwwwwk
+kvvvvwwwwk
+kkkkkkkkkk
