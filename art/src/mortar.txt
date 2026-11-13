@@ -1,0 +1,12 @@
+# Mortar: squat round pot seen from above, rim lit from the top left, wide dark mouth.
+== mortar
+...kkkk...
+..kNNnnk..
+.kNnnnMMk.
+kNnkkkkMMk
+kNnkKKkMMk
+kMnkKKkMMk
+kMMkkkkMMk
+.kMMMMMMk.
+..kMMMMk..
+...kkkk...
