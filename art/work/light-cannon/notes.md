@@ -10,3 +10,7 @@
 
 ## Current batch revision
 Overhead light gun pointing up: narrow muzzle, wider N/n/M breech, v wooden carriage and paired dark wheels on an axle. Exact5x7, closed k edge. The bottom5x5 occupies one deck cell.
+
+## Batch round 1
+- MAJOR carriage (rows 4-5): the bed was full width and the wheels merged into it. Now the wheels are 2 px tall at x1 and x3, outlined on the outside, with a lit `v` bed between them as the axle. The bed is narrower than the wheels, so the wheels stand out. Row 4 is `kWvWk` and row 5 is `kWvWk`.
+- MINOR breech (row 2): changed `N N M` to `N n M`, so the highlight runs down the left edge like row 3. Rows 2 and 3 now match.

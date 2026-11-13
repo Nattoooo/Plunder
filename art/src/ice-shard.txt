@@ -1,6 +1,6 @@
 # Ice crystal cluster: tall centre shard, short left and right shards. Light from top left.
 == ice-shard
-...kk...
+...k....
 ..kPBk..
 ..kLBkk.
 .kkLBkBk
