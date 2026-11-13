@@ -91,3 +91,6 @@ Families the critic has passed. Match their style.
 - whale-oil (icons) — round 2
 - chests (props) — round 2
 - barrel (props) — round 2
+- private-dock (buildings) — round 2
+- watchtower (buildings) — round 2
+- tavern (buildings) — round 2
