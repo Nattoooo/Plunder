@@ -1,4 +1,3 @@
 # galley
 
-## Current batch revision
-Exact5x5 iron stove. The top N pixel is the attached chimney cap, q/Q is fire visible in the middle firebox, and m/M are the lower stove surfaces. Seen overhead with no front-facing kitchen props.
+Iron cooking stove seen from above. The K pixel at the top is the chimney pipe seen down its bore, ringed by iron (N, M). The q/Q/q row is the firebox glow. The m/M/m base is the iron front. The k outline closes the stove.

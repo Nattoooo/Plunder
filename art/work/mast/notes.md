@@ -1,4 +1,3 @@
 # mast
 
-## Current batch revision
-Exact5x5 overhead mast base with V/v wood and four f rope tie/stay points at the diagonal corners around the post. The k contour now closes all outer edges; exposed unoutlined rope tips were moved into the small base. The four f pixels are intentional attachment knots, not texture.
+Five-pixel mast base seen from above. The V/v/w plus is the round wood post, lit top-left. Four f rope pixels sit on the diagonal corners of the post and are the rigging stays running out from it. The k outline closes every edge, so no rope end is left unoutlined.

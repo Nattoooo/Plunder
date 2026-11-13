@@ -1,4 +1,3 @@
 # crew-quarters
 
-## Current batch revision
-Exact5x5 open deck hatch. K is the visible dark opening; V and w ladder rails flank the v central rung. The ladder runs down into the opening rather than floating above it.
+Open deck hatch with a ladder going below. The k outline is the hatch frame. K is the open dark shaft. V (left) and w (right) are the two ladder rails. The v rung crosses both rails on the middle row, so the rails and rung read as a ladder.

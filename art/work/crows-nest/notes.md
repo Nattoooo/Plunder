@@ -1,4 +1,3 @@
 # crows-nest
 
-## Current batch revision
-Exact6x6 round overhead lookout basket: V/v/w wooden rim encloses a dark2x2 K interior. Clipped corners establish the circular contour; no ground or drop shadow.
+Round lookout basket, six pixels across. The wood rim is V (lit top and left), v (top-right), w (right and bottom). The rim is one pixel wide and the K floor inside is the open basket. The k outline is round, with cut corners.

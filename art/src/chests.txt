@@ -8,18 +8,21 @@ kvvvvWk
 kvvvvWk
 kkkkkkk
 # locked-chest: same chest, iron band across the lid seam, iron padlock on the body.
-# The lock is 3 px wide and 2 px tall: lit shackle top (N), iron body (M), dark keyhole.
+# The padlock is 3 px wide: its steel shackle bar sits on the band (n), the lit body
+# (N) and the iron body (M) carry a dark keyhole.
 == locked-chest
 .kkkkk.
 kVVVVvk
-kMMMMMk
+kMnnnMk
 kvNNNWk
 kvMkMWk
 kkkkkkk
 # gold-chest: open chest. Gold heaped above the rim, lit rim and body below.
+# The heap is a dome: the top three coins sit on a wider pile of five.
 == gold-chest
 ..kkk..
 .kYyOk.
+kyyyOOk
 kVVVVvk
 kvvvvWk
 kkkkkkk

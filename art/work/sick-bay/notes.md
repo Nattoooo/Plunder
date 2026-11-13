@@ -1,4 +1,3 @@
 # sick-bay
 
-## Current batch revision
-Exact5x5 cot with a centred R cross in a three-pixel cloth square. C lit upper-left cloth and c right/bottom shadow replace the earlier alternating checker shade. Complete k edge.
+Cot seen from above. A cloth blanket (C lit top-left, c shaded bottom-right) carries the red R cross, a one-pixel plus with its arms meeting in the middle. The k outline is the cot edge.

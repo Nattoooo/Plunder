@@ -1,4 +1,3 @@
 # figurehead
 
-## Current batch revision
-Exact5x8 gold carved figure seen from above, head toward the bow. A narrow head, broad shoulder/chest and narrower supporting stem replace the old featureless gold rectangle. Only y/O/o gold tones are used. The head projects forward beyond the bottom5x5 deck cell.
+Gold carved bust on the bow. The top three rows are the head reaching forward; the five-pixel shoulders sit on the cell. y is the highlight on the head's left side, O the base gold, o the shadow down the right and bottom. The k outline closes the figure.

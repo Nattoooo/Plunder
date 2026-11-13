@@ -13,6 +13,8 @@ const ROWS: Record<string, string[]> = {
   'carronade': ['.kkk.', 'kNnMk', 'kNnMk', 'kNnMk', 'kKKKk', 'kvvvk', '.kkk.'],
   'claim-stone': ['....kkkkk', '...kwPPPk', '...kwPPpk', '...kwkkkk', '..kkwkk..', '.kUuuuTk.', '.kUuKuTk.', 'kUuKKKuTk', 'kUuuKuuTk', 'kkkkkkkkk'],
   'claim-stone-owned': ['....kkkkk', '...kwMKKk', '...kwMKKk', '...kwkkkk', '..kkwkk..', '.kUuuuTk.', '.kUuKuTk.', 'kUuKKKuTk', 'kUuuKuuTk', 'kkkkkkkkk'],
+  'crab-1': ['ke.kk.ek', 'kekeRkRk', '.keeRRk.', 'kkRRRrkk', 'k.k..k.k'],
+  'crab-2': ['ke.kk.ek', 'kekeRkRk', '.keeRRk.', '.kRRRrk.', '.k.kk.k.'],
   'crew': ['.J.', 'sRr', '.RS'],
   'cutlass-swing': ['....N', '...Nn', '..Nn.', '.Nn..', 'Nn...'],
   'damage-crack': ['wV...', '.ww..', '..wV.', '...ww', '....w'],
@@ -72,7 +74,9 @@ const ROWS: Record<string, string[]> = {
   'tavern': ['...............kkkk......', '...............kuTk......', '........kkkkkkkkuTk......', '.......keeeeeeekuTk......', '......kRRRRRRRRkuTk......', '.....kRRRRRRRRRkuTkk.....', '....kRRRRRRRRRRRRRRRk....', '...kRRRRRRRRRRRRRRRRRk...', '..kRRRRRRRRRRRRRRRRRRRk..', '.kRRRRRRRRRRRRRRRRRRRRRk.', 'kkkkkkkkkkkkkkkkkkkkkkkkk', '.kccccccccccccccccccccck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kCkkkkkCCkkkkkCCkkkkkck.', '.kCkllBkCCkllBkCCkllBkck.', '.kCkBBBkCCkBBBkCCkBBBkck.', '.kCkBBBkCCkBBBkCCkBBBkck.', '.kCkVVVkCCkVVVkCCkVVVkck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kVVVVVVVVVVVVVVVVVVVVVk.', '.kwwwwwwwwwwwwwwwwwwwwwk.', '.kCCCCCCCCCCCCkkkkkkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCCkCCCkCCCCkVWWwkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCkyyyyOkCCCkVWWwkCCck.', '.kCCkyyyyOkCCCkVWywkCCck.', '.kCCkOOOOOkCCCkVWWwkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCCCCCCCCCCCkVWWwkCCck.', '.kkkkkkkkkkkkkkkkkkkkkkk.'],
   'tree': ['.....kkkkk.....', '...kkHHHhhkk...', '..kHHHhhhhhhk..', '..khhhhhhhhhk..', '..kHhGGGGhhhk..', '.kHHhhhhhHHhhk.', 'khhhhhhhhhhhhhk', 'khhhhhhGGGhhhhk', 'khhhhHHhhhGhhhk', 'khhGGhhhhhGGGGk', '.kGGGhhhhGGGGk.', '..kkkGGGGGkkk..', '.....kwwwk.....', '.....kvvwk.....', '.....kvvwk.....', '.....kvvwk.....', '....kvvvwwk....', '....kkkkkkk....'],
   'warehouse': ['........kkkkkkkkkkkkkkkkkk........', '.......keeeeeeeeeeeeeeeeeek.......', '......kRRRRRRRRRRRRRRRRRRRRk......', '.....kRRRRRRRRRRRRRRRRRRRRRRk.....', '....kRRRRRRRRRRRRRRRRRRRRRRRRk....', '...kRRRRRRRRRRRRRRRRRRRRRRRRRRk...', '..kRRRRRRRRRRRRRRRRRRRRRRRRRRRRk..', '.krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk.', 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk', '.kcccccccccccccccccccccccccccccck.', '.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCkkkkkkkkkkkkCCkkkkkCck.', '.kCCCCCCCCCkVWWwKKVWWwkCCkVVVkCck.', '.kCCCCCCCCCkVWWwKKVWWwkCCkvvwkCck.', '.kCCCCCCCCCkMMMMKKMMMMkCCkkkkkCck.', '.kCkkkkkkkCkVWWwKKVWWwkCkkkkkkkck.', '.kCkVVVVVkCkVWWwKKVWWwkCkVVVVVkck.', '.kCkwwwwwkCkMMMMKKMMMMkCkwwwwwkck.', '.kCkvvvvwkCkVWWwKKVWWwkCkvvvvwkck.', '.kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.'],
-  'whale': ['kk....kk........', 'kBk..kBBkkkkkk..', 'kBBkkkBBlllBBBk.', '.kBBBBBBBllBBBBk', 'kBBkkkBBBBbbbbk.', 'kBk..kBbkkkkkk..', 'kk....kk........']
+  'whale': ['kk....kk........', 'kBk..kBBkkkkkk..', 'kBBkkkBBlllBBBk.', '.kBBBBBBBllBBBBk', 'kBBkkkBBBBbbbbk.', 'kBk..kBbkkkkkk..', 'kk....kk........'],
+  'wraith-1': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kiikiikik', '.kk.kk.k.'],
+  'wraith-2': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kikiikiik', '.k.kk.kk.']
 };
 
 const cache = new Map<string, Art>();

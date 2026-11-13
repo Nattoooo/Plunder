@@ -1,10 +1,9 @@
-# Cattail reeds: two brown heads on thin green stalks, splayed blades below.
+# Cattail reeds: two brown sausage heads on thin green stalks, no outline (like grass-tuft), blades splayed at the base.
 == reeds
-.kk.kk.
-kvJkvJk
-kvJkvJk
-kJjkJjk
-.kk.kk.
-..H.G..
-.hHgGh.
-hGHgHGh
+.vJ....
+.vJ.vJ.
+.jj.vJ.
+.H..jj.
+.H..G..
+hHh.GgG
+GhG.gGg

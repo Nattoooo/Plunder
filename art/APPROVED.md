@@ -44,3 +44,5 @@ Families the critic has passed. Match their style.
 - oar (sails) — round 1
 - flags (sails) — round 1
 - deck-people (sails) — round 1
+- crab (characters) — round 1
+- wraith (characters) — round 1

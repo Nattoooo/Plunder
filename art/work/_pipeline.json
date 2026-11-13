@@ -38,7 +38,7 @@
  },
  "crab": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
@@ -52,7 +52,7 @@
  },
  "wraith": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"

@@ -2,8 +2,8 @@
 == light-cannon
 .kkk.
 .kNk.
-kNNMk
 kNnMk
-kvvvk
-kWKWk
+kNnMk
+kWvWk
+kWvWk
 .kkk.

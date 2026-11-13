@@ -1,4 +1,3 @@
 # workshop
 
-## Current batch revision
-Exact5x5 overhead carpenter bench in three V/v/W wood tones. The NMm iron hammer head lies across its upper face and the W wooden handle runs down the centre. Top-left iron lighting corrected, fourth wood tone removed.
+Carpenter's bench seen from above. The M/N/m iron hammer head runs across the top row, lit on the left. A V handle runs down the bench (v, w), so the hammer reads as a head on a handle lying on the bench.
