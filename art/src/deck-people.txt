@@ -1,0 +1,15 @@
+# Deck people seen straight down, no outline at 6 px.
+== crew
+..JJ..
+.JJJJ.
+sRRRRr
+.RRRrS
+.RRRr.
+.j..j.
+== captain-deck
+..kk..
+.kKKk.
+kKKKKk
+sRRRRS
+.RRRRr
+.rrrr.

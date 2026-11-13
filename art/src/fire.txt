@@ -1,0 +1,15 @@
+# Flames on deck, no outline. q outer, Q body, Y core.
+== fire-1
+..Q...
+.qQ.q.
+.qQQq.
+qqQYQq
+qQYYQq
+qqQQqq
+== fire-2
+.Q....
+.qQ.q.
+.qQQq.
+qqQYQq
+qQYYQq
+qqQQqq

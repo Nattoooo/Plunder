@@ -1,0 +1,23 @@
+# Crack: dark split stepping 1-1-1 down to the right, pale fibres (V) lifting on its upper-right. Hole: pit of deep water in a dark wood rim, lit top-left. No outline (effects).
+== damage-crack
+wwV.......
+.wwV......
+..wwV.....
+...wwwV...
+....wwV...
+.....wwV..
+......wwV.
+.......ww.
+..........
+..........
+== damage-hole
+..vvwwww..
+.vwaaaaww.
+vwaaaaaaww
+waAAaaaaaw
+waAaaaaaaw
+waaaaaaaaw
+waaaaaaaaw
+wwaaaaaaww
+.wwaaaaww.
+..wwwwww..

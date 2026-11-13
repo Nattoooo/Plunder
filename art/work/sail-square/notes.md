@@ -1,0 +1,1 @@
+Cloth p/C/c only, lit left, shaded right. Yard is two rows (W lit, w shade) at the bottom, the full width. The cloth bellies up with a stepped curve; half and furled keep the same yard with less cloth.

@@ -1,0 +1,7 @@
+# Brass lantern from above: ring lit top-left (y), shaded bottom-right (O, o), pale glass Y. 5 px, so no outline.
+== stern-lantern
+.yyO.
+yYYYO
+yYYYO
+yYYYo
+.Ooo.

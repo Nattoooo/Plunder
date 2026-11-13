@@ -1,0 +1,21 @@
+# Small raft sail; 3x3 patch of c left of centre.
+== sail-patched-full
+.....ppCCCCcc.....
+...ppppCCCCCccc...
+..ppppCCCCCCcccc..
+.ppppcccCCCCCcccc.
+pppppcccCCCCCccccc
+pppppcccCCCCCccccc
+pppppCCCCCCCCccccc
+WWWWWWWWWWWWWWWWWW
+wwwwwwwwwwwwwwwwww
+== sail-patched-half
+..ppppCCCCCCcccc..
+.pppppCCCCCCCcccc.
+pppppCCCCCCCCccccc
+WWWWWWWWWWWWWWWWWW
+wwwwwwwwwwwwwwwwww
+== sail-patched-furled
+.pppppCCCCCCCcccc.
+WWWWWWWWWWWWWWWWWW
+wwwwwwwwwwwwwwwwww

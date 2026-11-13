@@ -1,0 +1,23 @@
+# Square sail seen from above; yard is the bottom two rows, cloth bellies up. Cloth p C c only.
+== sail-square-full
+......ppppCCCCCCcccc......
+....pppppCCCCCCCCccccc....
+...ppppppCCCCCCCCCccccc...
+..ppppppCCCCCCCCCCcccccc..
+.pppppppCCCCCCCCCCCcccccc.
+pppppppCCCCCCCCCCCCccccccc
+pppppppCCCCCCCCCCCCccccccc
+pppppppCCCCCCCCCCCCccccccc
+WWWWWWWWWWWWWWWWWWWWWWWWWW
+wwwwwwwwwwwwwwwwwwwwwwwwww
+== sail-square-half
+....pppppCCCCCCCCccccc....
+..ppppppCCCCCCCCCCcccccc..
+.pppppppCCCCCCCCCCCcccccc.
+pppppppCCCCCCCCCCCCccccccc
+WWWWWWWWWWWWWWWWWWWWWWWWWW
+wwwwwwwwwwwwwwwwwwwwwwwwww
+== sail-square-furled
+.pppppppCCCCCCCCCCCcccccc.
+WWWWWWWWWWWWWWWWWWWWWWWWWW
+wwwwwwwwwwwwwwwwwwwwwwwwww

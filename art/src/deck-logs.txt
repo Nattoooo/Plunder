@@ -1,0 +1,12 @@
+# Raft logs lit from the left (V, v, shadow W) with a dark gap between; a rope lashing (D f) crosses all of them. Tiles seamlessly, no outline.
+== deck-logs
+wVvvWwVvvW
+wVvvWwVvvW
+wVvvWwVvvW
+wVvvWwVvvW
+DffffDffff
+dDDDDdDDDD
+wVvvWwVvvW
+wVvvWwVvvW
+wVvvWwVvvW
+wVvvWwVvvW

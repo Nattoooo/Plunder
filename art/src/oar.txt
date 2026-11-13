@@ -1,0 +1,5 @@
+# Oar from above: knob grip left, shaft, flat blade right (V lit top, W, w shade).
+== oar
+WW.......VVV.
+WWWWWWWWWWWWW
+ww.......www.

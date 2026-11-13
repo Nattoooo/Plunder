@@ -1,0 +1,13 @@
+# Two 5 px planks side by side, bow up: lit left edge V, base v, dark seam W on the right.
+# Butt joints (W row) are staggered half a tile apart so the deck reads as real planking and tiles seamlessly.
+== deck-planks
+VvvvWVvvvW
+VvvvWVvvvW
+VvvvWVvvvW
+VvvvWVvvvW
+WWWWWVvvvW
+VvvvWWWWWW
+VvvvWVvvvW
+VvvvWVvvvW
+VvvvWVvvvW
+VvvvWVvvvW
