@@ -39,3 +39,8 @@ Families the critic has passed. Match their style.
 - rudder (ship) — round 2
 - galley (ship) — round 2
 - workshop (ship) — round 2
+- tree (nature) — round 1
+- jungle-tree (nature) — round 1
+- pine (nature) — round 1
+- dead-tree (nature) — round 1
+- whale (characters) — round 1

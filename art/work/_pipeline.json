@@ -30,8 +30,8 @@
   "batch": "characters"
  },
  "whale": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-large"
  },
@@ -42,14 +42,14 @@
   "batch": "characters"
  },
  "tree": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-large"
  },
  "jungle-tree": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-large"
  },
@@ -60,14 +60,14 @@
   "batch": "nature-large"
  },
  "pine": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-large"
  },
  "dead-tree": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-large"
  },

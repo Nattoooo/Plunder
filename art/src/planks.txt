@@ -1,0 +1,17 @@
+== planks
+................
+................
+................
+..........kkkk..
+.......kkkFFVvk.
+....kkkFFFVVVvk.
+..kkFFFFVVVvvkk.
+.kFFVVVVVvvvkvk.
+.kkkkkkkkkkkkvk.
+.kFFFFFFFFFFkvk.
+.kVVVVVVVVVVkkk.
+.kkkkkkkkkkkkvk.
+.kFFFFFFFFFFkvk.
+.kVVVvVVVVVvkkk.
+..kkkkkkkkkkk...
+................
