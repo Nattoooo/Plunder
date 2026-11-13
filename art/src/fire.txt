@@ -3,13 +3,13 @@
 ..Q...
 .qQ.q.
 .qQQq.
-qqQYQq
-qQYYQq
+.qQYQq
+qQYYQ.
 qqQQqq
 == fire-2
-.Q....
-.qQ.q.
+....Q.
+.q.Qq.
 .qQQq.
-qqQYQq
-qQYYQq
+qQYQq.
+.QYYQq
 qqQQqq
