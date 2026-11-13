@@ -1,10 +1,10 @@
-# Fish: silver-blue fish facing left, tail on the right, lit top left.
+# Fish: silver-blue fish facing left, forked tail on the right. Light top left, silver belly, one k eye.
 == fish
 ........
-..kkk.k.
-.kLlBkk.
-kLlBBBBk
-kBBBNNBk
-.kbNNbk.
-..kkk.k.
+..kk..kk
+.kllkkBk
+kLklBBk.
+kBBNNnk.
+.kBNkknk
+..kk..kk
 ........

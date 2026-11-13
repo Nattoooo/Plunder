@@ -1,0 +1,10 @@
+# Treasure map: old parchment sheet with a red X, shaded at the right and bottom. Light top left.
+== treasure-map
+.kkkkkk.
+kxxxxxXk
+kxRxxRXk
+kxxRRxXk
+kxxRRxXk
+kxRxxRXk
+kXXXXXXk
+.kkkkkk.

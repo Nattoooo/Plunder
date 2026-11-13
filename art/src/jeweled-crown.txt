@@ -1,0 +1,10 @@
+# Jeweled crown: three-point gold crown with a red and gold gem band. Light top left.
+== jeweled-crown
+k..kk..k
+kykyykyk
+kyOOOOok
+kOOeeOok
+kOORRook
+kOoooOok
+kooooook
+kkkkkkkk

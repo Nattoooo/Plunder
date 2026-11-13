@@ -1,0 +1,10 @@
+# Jeweled necklace: gold chain with a green pendant hanging from the centre. Light top left.
+== necklace
+kOO..OOk
+kOO..OOk
+kOO..OOk
+kOOOOOOk
+..kHhk..
+.kHhGGk.
+.kGGGGk.
+..kkkk..

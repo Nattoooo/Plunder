@@ -1,0 +1,10 @@
+# Ruby: red cut gem, table lit top left, pavilion shaded bottom right. Red ramp. Light top left.
+== ruby
+..kkkk..
+.kEEeRk.
+kEeeRRRk
+kRRRRRRk
+kRRRRrRk
+.kRRrRk.
+..kRRk..
+...kk...

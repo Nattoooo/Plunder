@@ -1,0 +1,10 @@
+# Kraken ink: clay pot of purple ink with a two-pixel white quill dipped in it. Light top left.
+== kraken-ink
+.....kk.
+....kPPk
+...kPPk.
+kkkkkk..
+kZzzzk..
+kfDDdk..
+kfDDdk..
+.kkkkk..

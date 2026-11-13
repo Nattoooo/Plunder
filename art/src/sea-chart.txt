@@ -1,0 +1,10 @@
+# Sea chart: rolled chart with a blue sea and a green island, rolls top and bottom. Light top left.
+== sea-chart
+.kkkkkk.
+kxxxxxXk
+kBlBhHBk
+kBBBhGBk
+kBlBBBBk
+kBBBBBBk
+kXXXXXXk
+.kkkkkk.

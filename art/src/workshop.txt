@@ -1,7 +1,8 @@
-# Carpenter bench: hammer head (iron) across the top, handle (V) running down the bench (v/w).
+# Carpenter bench: hammer head across the top (N lit on the left, M, m dark on the right), handle (V) running down the bench.
+# The bench is all w so the handle is the only light wood and separates from it by value.
 == workshop
 kkkkk
-kMNmk
-kvVwk
+kNMmk
+kwVwk
 kwVwk
 kkkkk

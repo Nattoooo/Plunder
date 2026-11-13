@@ -1,0 +1,10 @@
+# Trident shard: broken pale-blue trident tip, three tines and a short shaft. Light top left.
+== trident-shard
+kLkLLkLk
+kLkLLkLk
+kLkLLkBk
+kLLLLLBk
+..kLBk..
+..kLBk..
+..kBBk..
+...kk...

@@ -1,0 +1,10 @@
+# Siren conch: cream spiral shell with a pink opening at the lower right. Light top left.
+== siren-conch
+.kk.....
+kFfk....
+kFfFk...
+kFfFFk..
+kFfDEEk.
+kDfDEeEk
+.kDDEek.
+..kkkk..

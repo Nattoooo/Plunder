@@ -1,0 +1,10 @@
+# Silver coins: stack of three coins seen slightly from above, face lit top left. Steel ramp. Light top left.
+== silver-coins
+..kkkk..
+.kNNNNk.
+kNNNNNMk
+kNnnnnMk
+kMMMMMMk
+kNnnnnMk
+kMMMMMMk
+.kkkkkk.

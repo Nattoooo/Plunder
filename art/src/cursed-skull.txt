@@ -1,0 +1,10 @@
+# Cursed skull: bone skull with glowing purple eyes. Light top left.
+== cursed-skull
+..kkkk..
+.kxxxxk.
+kxxxxxxk
+kZZxxZZk
+kxkXXkxk
+.kxxxxk.
+..kxkxk.
+...kkk..

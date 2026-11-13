@@ -1,0 +1,10 @@
+# Sapphire: blue cut gem, same faceting as the ruby. Blue ramp. Light top left.
+== sapphire
+..kkkk..
+.kLLlBk.
+kLlllBBk
+kBBBBBBk
+kBBBBbBk
+.kBBbBk.
+..kBBk..
+...kk...

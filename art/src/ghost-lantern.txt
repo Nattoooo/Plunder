@@ -1,0 +1,10 @@
+# Ghost lantern: iron lantern with a green ghostly teal flame in the glass. Light top left.
+== ghost-lantern
+...kk...
+..kNNk..
+.kkkkkk.
+.kMIIMk.
+.kMIIMk.
+.kMiiMk.
+.kMMMMk.
+.kkkkkk.

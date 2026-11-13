@@ -1,0 +1,10 @@
+# Silver candelabra: three lit candles on a silver bar and stem. Light top left.
+== candelabra
+.y.YY.y.
+kPkPPkPk
+kPkpCkpk
+kNNNNNNk
+..kNnk..
+..kNnk..
+.kNNNNk.
+.kkkkkk.

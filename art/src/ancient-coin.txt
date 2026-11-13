@@ -1,0 +1,10 @@
+# Ancient coin: worn bronze disc, dull face, lit top left. Light top left.
+== ancient-coin
+..kkkk..
+.kVVVVk.
+kVWWWWvk
+kVWWWWvk
+kVWWWWvk
+kWWWWvvk
+.kWWvvk.
+..kkkk..

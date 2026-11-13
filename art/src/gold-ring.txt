@@ -1,0 +1,10 @@
+# Gold ring with a red stone set on top. Gold band lit top left. Light top left.
+== gold-ring
+...kk...
+..kEek..
+..kRRk..
+.kyOOok.
+kyO..ook
+kOO..ook
+.kooook.
+..kkkk..

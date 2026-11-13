@@ -1,0 +1,10 @@
+# Diamond: white cut gem, table lit top left, blue-white facets. Light top left.
+== diamond
+..kkkk..
+.kPPpLk.
+kPpLLLLk
+kLLLLLLk
+kLLLlLLk
+.kLLlLk.
+..kLLk..
+...kk...

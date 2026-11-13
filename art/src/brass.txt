@@ -1,10 +1,10 @@
-# Brass fitting: round brass ring with a dark hole, lit top left.
+# Brass gear: four teeth, brass ramp y/O/o lit top left, a 2 x 2 dark hub hole.
 == brass
-..kkkk..
+...kk...
+..kyOk..
 .kyOOOk.
-kyOOOOok
-kOOkkOOk
-kOOkkOok
-kooooook
-.kooook.
-..kkkk..
+kyOkkOok
+kOOkkook
+.kOOook.
+..kook..
+...kk...

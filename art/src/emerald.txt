@@ -1,0 +1,10 @@
+# Emerald: green cut gem, same faceting as the ruby. Green ramp. Light top left.
+== emerald
+..kkkk..
+.kHHhGk.
+kHhhGGGk
+kGGGGGGk
+kGGGGgGk
+.kGGgGk.
+..kGGk..
+...kk...

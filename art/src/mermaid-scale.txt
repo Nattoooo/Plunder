@@ -1,0 +1,10 @@
+# Mermaid scale: iridescent teal fan scale, light top left. Teal ramp. Light top left.
+== mermaid-scale
+.kkkkkk.
+kIIIIiik
+kIIIiiik
+kIIiiiik
+kIiiiiik
+.kiiiik.
+..kiik..
+...kk...

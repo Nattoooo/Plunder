@@ -1,4 +1,4 @@
-# Pine tar: bucket of black tar with a brush standing in it, lit top left.
+# Pine tar: bucket of black tar with a brush standing in it, lit top left. Bucket tapers to the base.
 == tar
 ....kWk.
 ....kWk.
@@ -6,5 +6,5 @@
 .kMmmJk.
 .kVvvWk.
 .kMMMMk.
-.kvvvWk.
+..kvWk..
 ..kkkk..

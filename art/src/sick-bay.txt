@@ -1,7 +1,8 @@
-# Cot: cloth blanket (C, c) with a red cross (R). Corners of the blanket are light on top-left, shaded bottom-right.
+# Cot: cloth blanket with a red cross (R). Only the top-left corner is lit (C); the other corners are shaded (c).
+# Light from the top left, shadow bottom and right.
 == sick-bay
 kkkkk
 kCRck
 kRRRk
-kcRCk
+kcRck
 kkkkk

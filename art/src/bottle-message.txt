@@ -1,0 +1,10 @@
+# Message in a bottle: green glass bottle with a leather cork and a rolled message inside. Light top left.
+== bottle-message
+..kkkk..
+..kJjk..
+..khGk..
+.khGGGk.
+kHhxxGGk
+kGhXXGGk
+kGGGGGGk
+.kkkkkk.

@@ -1,10 +1,11 @@
 # Wooden rudder blade. Rows 0-4 sit on the stern cell, rows 5-6 hang past it.
-# Lit on the left (V), mid wood (v), shadow on the right (w); closed outline with cut corners.
+# Flat attachment edge along the stern (k top row); lit wood on the left (V), mid (v), shadow on the right (w).
+# The blade tapers to a point at the tail. Two M pintles on the left edge at rows 1 and 3 are the hinges.
 == rudder
-.kkk.
+kkkkk
+MVvwk
 kVvwk
+MVvwk
 kVvwk
-kVvwk
-kVvwk
-kVvwk
-.kkk.
+.kvk.
+..k..

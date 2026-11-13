@@ -1,8 +1,8 @@
-# Mast base seen from above: a wood post (V top, v/w side) with four rope stays (f) running out to the sides.
-# The stays stop at the outline, so every rope end is closed by k.
+# Mast base seen from above: a round wood post (V lit top-left, v and w toward the shadow) inside a k outline.
+# Two rope stays (D, rope ramp) run out of the post's sides on the middle row. They are darker than the post, so the post is the lit subject.
 == mast
 .kkk.
-kfVfk
-kVvwk
-kfwfk
+kVVvk
+DVvwD
+kvwwk
 .kkk.

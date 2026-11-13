@@ -1,0 +1,10 @@
+# Storm glass: blue glass orb holding a tiny yellow lightning bolt, on a wood stand. Light top left.
+== storm-glass
+..kkkk..
+.kLLlBk.
+kLllYBBk
+kLlYYBBk
+.klYBBk.
+..kBBk..
+.kVVVVk.
+.kkkkkk.
