@@ -8,7 +8,7 @@ kuTTTTtk..kuTTTTtk..kuTTTTtk
 kuTTTTtk..kuTTTTtk..kuTTTTtk
 kkkkkkkkkkkkkkkkkkkkkkkkkkkk
 kuuuuuuuuuuuuuuuuuuuuuuuuutk
-kuuuuuuuuuuuuuuuuuuuuuuuuutk
+kTTTTTTtTTTTTTTtTTTTTTTtTTtk
 kTTTTTTtTTTTTTTtTTTTTTTtTTtk
 kTTTTTTtTTTTTTTtTTTTTTTtTTtk
 kttttttttttttttttttttttttttk
@@ -45,7 +45,7 @@ kuTTtk..
 kuTTtk..
 kkkkkkkk
 uuuuuuuu
-uuuuuuuu
+TTTtTTTT
 TTTtTTTT
 TTTtTTTT
 tttttttt

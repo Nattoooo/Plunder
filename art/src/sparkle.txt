@@ -1,0 +1,14 @@
+# Sparkle: gold four-point star marking dig spots and shrines. The large frame is a plus with tips two pixels out, the small frame is the same plus at 3 x 3 in the middle of the 5 x 5 box. Pale centre, gold arms. No outline (effect).
+== sparkle-1
+..y..
+..y..
+yyYyy
+..y..
+..y..
+
+== sparkle-2
+.....
+..y..
+.yYy.
+..y..
+.....

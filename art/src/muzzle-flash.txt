@@ -1,0 +1,7 @@
+# Muzzle flash: a white-hot centre inside a yellow burst, with spikes out to the sides, corners and edges. The corners are open so it does not read as a square. No outline (effect).
+== muzzle-flash
+y.y.y
+.yYy.
+yYPYy
+.yYy.
+y.y.y

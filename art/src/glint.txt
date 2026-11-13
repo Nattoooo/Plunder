@@ -1,0 +1,14 @@
+# Glint: sunlight on the water. A single white pixel grows to a short line, then to a plus at its brightest, then fades to two pale blue pixels with a gap. No outline (effect).
+== glint-1
+P
+
+== glint-2
+PPP
+
+== glint-3
+.P.
+PPP
+.P.
+
+== glint-4
+L.L
