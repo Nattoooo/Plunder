@@ -1,72 +1,61 @@
 # Review round 1: icons-trade
 
-Set notes: outline (1 px k) and top-left light are consistent. Level of detail is not. rum, wine and porcelain are well built, while silk, indigo, furs and whale-oil are flat slabs. Sack material is inconsistent (sugar uses the d D f ramp, spices uses the V v W wood ramp). No size drift (all 16 x 16).
+Set notes: all 16 sprites are 16 x 16 (no size drift), 1 px k outline and top-left light are consistent. Level of detail is not: rum, wine, porcelain, salt, tea and cocoa are well built, while silk, indigo, furs and whale-oil are flat slabs with no form. Sack material is inconsistent (sugar uses the d D f sand ramp, spices uses the V v W hull-wood ramp). Brown dominates (rum, sugar, tobacco, coffee, tea, spices, salt, furs): keep the hues and materials distinct when fixing.
 
 ## rum: PASS
-1. [MINOR] rum (13,11)/(14,11): the body outline jumps from x=13 (rows 6-10, 12) to x=14 at row 11, a 1 px bump under the handle. Fix: make row 11 `..kfDDDDDDDDdk..` and move the handle-bottom k row up or down by one so the joint has no bump.
-2. [MINOR] rum (5,0)-(10,2): the cork is a 1 px-high cap as wide as the neck, so the neck reads as a lid. Optional: narrow the neck rows 3-4 to 4 px inside.
+MINOR: handle loop (13-15,8-10) is only a 1 px hole of D; acceptable and matches the approved 8x8.
 
 ## sugar: PASS
-1. [MINOR] sugar (4,5)-(11,5): the 1 px rope row is the only sack cue. Optional: add one `d` fold pixel at (5,8) so it reads less like a jar with a white lid.
+MINOR: sugar (3-12,5): the tied neck is as wide as the flared mouth above, so it reads slightly like a pot with a white lid. Narrowing row 5 to cols 5-10 would sell the sack better.
 
-## tobacco: FAIL
-1. [MAJOR] tobacco (2,2)-(13,13): reads as a brown walnut or acorn, not leaves. The mass has no leaf separations, and the wandering 1 px `j` veins (x=7,7,6,7,7,8 on rows 5,6,9-12) look like noise. Fix: draw 3 distinct overlapping leaves fanned from the tie, each with its own k edge on the inside, and one straight midrib `j` per leaf.
-2. [MAJOR] tobacco (1,7)-(2,8): the string band's `kk` ends poke out 1 px past the body outline on the left only (body k at x=2 on rows 4-6, band k at x=1), so it is asymmetric and a black blob. Fix: keep the band inside the silhouette (k at x=2 on both sides, or add a matching bulge at x=14), with `f`/`D` string and a 1 px knot.
-3. [MINOR] tobacco (4,1),(7,1),(8,1),(11,1): leaf-tip outline pixels are single dots. Fix: give each tip 2 rows or remove them.
+## tobacco: PASS
+MINOR: tobacco leaf tips (4,1),(7,1),(8,1),(11,1) are 1 px spikes; acceptable as leaf tips. Veins j differ between upper and lower half but read as leaves.
 
-## coffee: FAIL
-1. [MAJOR] coffee bean 1 (2,4)-(5,4), bean 2 (10,4)-(13,4)... (all three beans): the crease is a straight `jjjj` bar on the 4th of 5 rows, near the bottom, not through the centre. The bean reads as a barrel or bowl. Fix: put a 1 px `j` S-curve through the middle of each bean (3 px diagonal, 1-1-1), leaving the body `v`/`W`.
-2. [MAJOR] coffee (0,3)-(0,4) and (15,5)-(15,6): beans touch the canvas edges (x=0 and x=15) with no margin, and the group is a loose triangle with 1 px overlaps in rows. Fix: tighten into a cluster inside x=1..14 and give each bean 7 x 6 or larger, with enough shared contact to read as one pile.
-3. [MINOR] coffee: the three beans are identical stamps. Vary one by 1 px (rotate 1 bean 90 degrees) so it doesn't look pasted.
+## coffee: PASS
+MINOR: coffee bean creases (jjjj) sit in the lower third of each bean (row 4 of 6) instead of the centre line. Beans are 8x6 / 7x6 / 6x6, slightly uneven.
 
-## tea: FAIL
-1. [MAJOR] tea (5,7)-(10,11): the green stamp is a symmetric blob with no stem or midrib. At 1x it reads as a green cross or arrow (first-aid mark), not a leaf. Fix: redraw as a tilted leaf with a 1 px `G` midrib and a 1-2 px stem at the lower left, e.g. tip at (9,7), widest at row 9, stem ending (6,12).
-2. [MINOR] tea (0,3)-(15,12): the crate runs edge to edge (x=0 and x=15) and has no slats or nails. Fix: narrow to x=1..14 and add two 1 px `D` nail dots at (2,4) and (13,4).
+## tea: PASS
+MINOR: tea leaf stamp (5-10,7-11) has no stem or vein, so it reads as a diamond; add a 1 px G stem at (7,12) if desired. Crate sits 1 px high (margins 1 top, 2 bottom).
 
 ## spices: FAIL
-1. [MAJOR] spices (3,6)-(12,13): the sack uses the wood ramp `V v W`, while the sibling sack (sugar) uses `d D f`. The same material must use the same ramp. Fix: recolour the sack body to `f` (rope neck), `D` base, `d` shadow, `F` left highlight.
-2. [MAJOR] spices (2,1)-(13,5): the orange mound is a flat lid whose width equals the rim, sitting on a full-width 12 px black bar at row 5, so the whole thing reads as a honey pot with an orange cap. Fix: make the mound a dome narrower than the sack mouth (cols 4-11), rise 4 rows, drop the black bar to the ordinary rim of `k` at the mouth (cols 3-12), and add a 2 px `Q` highlight at top left.
-3. [MINOR] spices: the sack body is a plain rectangle with no taper to the tie. Fix: round the shoulders (rows 6-8 inset by 1).
+1. [MAJOR] spices (1-14,7-13): sack body uses the V v W wood ramp (hull-wood swap colours) while sugar uses the d D f sand ramp for the same burlap sack. It reads as a wooden barrel/clay pot with an orange lid. Fix: recolour body to F (highlight col 2-3), D (base), d (right edge cols 11-13) exactly as sugar rows 6-13, and the f tie row 6 stays.
+2. [MAJOR] spices (3-12,1-5): orange top is a flat lid shape that is outlined off from the body by a full k row 5, so it reads as a jar lid, not spice heaped in a sack. Fix: drop the k row 5 across cols 3-12 down to a 6 px wide tie at cols 5-10, and let the Q/q heap flare above it like sugar's mouth.
 
 ## silk: FAIL
-1. [MAJOR] silk (1,1)-(14,14): two red rectangles read as bricks or books, not rolled cloth. There are no cylinder ends, only a 4 px `R` swirl at the left (3,3),(4,3),(3,5),(4,5). Fix: draw each bolt as a cylinder with a rounded elliptical end cap (a `kEEk` ring with a spiral `R` pixel) at the left and a 1 px cloth fold highlight `E` along the top.
-2. [MAJOR] silk (0,7)-(15,8): rows 7 and 8 are both solid `k`, a 2 px black seam between the bolts (outlines only 1 px). Fix: drop one k row so the bolts share a single 1 px line, or overlap the bolts diagonally.
-3. [MAJOR] silk: colour is `E e R` red, not pink silk, and bolt 2 touches x=15. Fix: keep it from the red palette but lead with `E` (ff9a80) and keep `e` only for shadow, or shift to `P`/`E` pink highlights; keep both bolts inside x=1..14.
+1. [BLOCKER] silk (0-15,0-14): two flat pink-red rectangles with no roll shape; they read as red bricks or books, not rolled bolts of silk. Fix: redraw each bolt as a cylinder: a round end cap on the left (ellipse of E/e with a spiral R 1 px line, 5 px tall) and the body running right with a top highlight E, mid e, bottom shadow R, and a slightly different offset for the second bolt.
+2. [MAJOR] silk (1-14,7-8): the bolts are separated by two stacked k rows (row 7 cols 1-13, row 8 cols 2-14), a 2 px thick staggered black line. Fix: a single shared 1 px k line, or overlap the bolts.
+3. [MAJOR] silk (1-3,3-5): the diagonal R pixels at (2,3),(3,3),(3,4),(2,5),(3,5) are noise. Fix: remove them, use a clean spiral end cap.
+4. [MINOR] colour is salmon/red (E e R), not pink. Fix: lean on E/e highlights, keep R only for shadow.
 
 ## cotton: FAIL
-1. [MAJOR] cotton (5,4),(10,4): two isolated `k` pixels inside the white mass read as eyes, so the boll looks like a ghost. Fix: replace with a proper notch: 2 px tall `C` shadow lines between three separate bolls, or give each boll its own k outline.
-2. [MAJOR] cotton (1,3)-(14,7): one flat white cloud, not "bolls". Fix: draw 3 bolls (centre one higher) each with a `C` lower-right shadow, and add a husk `j`/`J` or `G` star calyx under each.
-3. [MINOR] cotton (6,11)-(9,13): the stem is straight 2 px with no highlight. Fix: add `h` at (6,11)-(6,13) and a short leaf at (9,10).
+1. [MAJOR] cotton (5,4),(10,4): two isolated interior k pixels on the white mass read as eyes; the boll looks like a smiling ghost/cloud. Fix: delete them, and separate the three bolls with 2 px k notches reaching the top outline at (5,3) and (10,3), or draw three clear bolls with C shadow between them.
+2. [MINOR] cotton (6-9,8-13): stem is a 2 px G column with no leaf or branch and ends flat. Fix: add one h/G leaf pixel pair at (5,11),(4,10).
 
 ## salt: PASS
-1. [MINOR] salt (3,3)-(13,5): the mound is smooth, and "coarse" salt could take 2 `p` grain pixels. Optional.
-2. [MINOR] salt (10,5)-(13,5): `pppC` is a 4-tone-wide band at the right. Fix: use `pp C` run lengths of 2-1.
+MINOR: salt bowl and tea crate share the same brown family at 1x; fine.
 
-## cocoa: FAIL
-1. [MAJOR] cocoa (2,6)-(13,9): the pod is 12 wide x 14 tall, too fat and squat, and one centre `q` ridge plus a dark right strip read as a pumpkin, lantern or gem. A cocoa pod is long and pointed with several ridges. Fix: narrow to about 9 px wide by 14 tall, taper both ends to a point, and draw 2 ridge lines `q` curved from the top left.
-2. [MAJOR] cocoa (10,5)-(12,10): `q q o` is a banded stripe following the outline, and `o` is a gold-ramp colour on an orange object. Fix: drop `o`, use `q` shadow on the right column only, and add a `Y`-less 2 px `Q` highlight at top left (5,5).
-3. [MINOR] cocoa (7,1)-(8,2): the J stem is 2 px with a k cap. Fix: bend it 1 px to one side.
+## cocoa: PASS
+MINOR: cocoa (12,6-9) o stripe next to the outline gives a slight banding on the right edge; the pod reads clearly as an orange pod.
 
 ## indigo: FAIL
-1. [MAJOR] indigo (0,3)-(3,7): the light-blue `L` strip and `kkkk` rows at the left of the upper brick make no physical sense (a floating side face). The construction of the stack is unreadable: the top brick is shifted right, the bottom brick has no visible top face, and the perspective is inconsistent. Fix: redraw as 2-3 bricks stacked straight with the same top-face (`L`) and front-face (`B`) rows each, offset by at most 1 px.
-2. [MAJOR] indigo (0,1)-(15,13): both bricks touch x=0 or x=15, and the composition is not centred (right heavy on top, left heavy on bottom). Fix: centre within x=1..14.
-3. [MINOR] indigo front faces: flat `B` with only a right `b` column. Fix: add a 1 px `L` highlight on the left edge of each front face.
+1. [MAJOR] indigo (0-3,2-7): the light L block jutting left of the top brick reads as a separate small box; the geometry of top face, front and left face is incoherent. Fix: draw each brick as a front face (B/b) with a 2 px L top face and a 1 px right side, no left-hand protrusion.
+2. [MAJOR] indigo (0-12,8-13): lower brick has no visible top face and the stack is offset so the right 3 columns are empty and the sprite is lopsided and disconnected. Fix: stack the bricks, lower one offset by 1-2 px, both with the same top/front/side treatment, whole stack centred in 16 x 16.
+3. [MINOR] row 8 is a full-width k line wider than both bricks; remove when restacking.
 
 ## wine: PASS
-1. [MINOR] wine (4,10)-(10,10): `CCC` on the label row reads as text or a notch. Fix: use `ppppCC` so shade is on the right edge only.
+MINOR: label C block (7-10,10) reads fine as text; bottle could use a 1 px L glint on the left shoulder.
 
 ## furs: FAIL
-1. [MAJOR] furs (0,1)-(15,13): the silhouette is a 16 x 13 rectangle with two notches (a tunic or bow-tie), and it touches x=0 and x=15. There are no limb stubs, tail or fur edge, so it does not read as a pelt. Fix: draw an irregular hide: 4 leg stubs, a head point at the top, a tail at the bottom, a ragged 1-2 px fur edge, within x=1..14.
-2. [MAJOR] furs (1,2)-(10,6): the `D` diagonal patch top left sits on `J` as a hard two-ramp split (sand over dark brown), so it looks like two materials. Fix: use `J` base, `J`/`j` shadow and a `D` highlight of at most 2 px along the top left only, or `D` for the whole belly with `J` back patch.
-3. [MINOR] furs (11,11)-(12,13): the notch is a rectangle gap. Fix: taper it into two feet.
+1. [MAJOR] furs (0-15,1-13): silhouette is a nearly straight-edged rectangle with a notch; it reads as a brown banner, jacket or trousers, not a pelt. Fix: irregular pelt outline: head with ears at top, four stubby legs/corner projections, a short tail, and ragged 1 px fur tufts along the sides.
+2. [MAJOR] furs (1-7,2-6): D (sand) highlight forms a diagonal stripe of banding across the top left, with a hard J boundary. Fix: use J as base with D only as 2-3 highlight pixels top left and j for shadow bottom right; add 2 or 3 short j fur strokes for texture.
+3. [MINOR] centre notch (6-9,11-12) looks like a trouser crotch; remove with the new outline.
 
 ## whale-oil: FAIL
-1. [MAJOR] whale-oil (2,2)-(13,13): a flat square frame with a blue panel reads as a monitor or picture frame, not a tin can or lamp. It also departs from the approved 8x8 design (round can seen from above). Fix: draw a cylinder with an elliptical top rim (`N` highlight, `n` inner ellipse, `k` outline), a body with a vertical `N` left highlight and `M` right shade, and a blue label band across the middle only.
-2. [MINOR] whale-oil (4,6): the single `l` pixel is a deliberate glint but is the only `l` in the sprite. Fix: pair it with `l` at (4,7).
+1. [MAJOR] whale-oil (2-13,2-13): a square-cornered box with a blue panel reads as a monitor or framed picture, not a tin can/lamp. It also departs from the round approved 8x8 whale-oil. Fix: round the corners (drop the corner pixels at (2,3),(13,3),(2,12),(13,12)), show a top ellipse (N rim with n inner row) and a small spout or carry handle on top, and keep the blue label only on the middle band.
+2. [MINOR] M bands rows 5 and 11 are full-width stripes, making a banded look; keep one at the lid and one at the base only.
 
 ## porcelain: PASS
-1. [MINOR] porcelain (2,7)-(13,10): the widest part runs 4 rows at constant width. Optional: taper row 10 to x=3..12.
+MINOR: none beyond the thin 1 px L at (3,8).
 
 ## amber: PASS
-1. [MINOR] amber: four gold tones (`Y y O o`) when STYLE allows 3. `Y` is only 3 glint pixels, so it is acceptable, but do not add more.
-2. [MINOR] amber (0,5)-(15,8): the stone touches x=0 and x=15. Optional: trim to x=1..14.
+MINOR: amber (0-15,5-8): straight sides for 4 rows make the stone slightly loaf-like; a larger Y glint at (3,4)-(4,5) and a y pixel for translucence would improve it. The o column at (13-14,9-11) hugs the outline as a band.

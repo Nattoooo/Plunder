@@ -486,32 +486,32 @@
   "batch": "sails"
  },
  "sugar": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
  "rum": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
  "tobacco": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
  "coffee": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
  "tea": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
@@ -534,14 +534,14 @@
   "batch": "icons-trade"
  },
  "salt": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
  "cocoa": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
@@ -552,8 +552,8 @@
   "batch": "icons-trade"
  },
  "wine": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
@@ -570,14 +570,14 @@
   "batch": "icons-trade"
  },
  "porcelain": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },
  "amber": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-trade"
  },

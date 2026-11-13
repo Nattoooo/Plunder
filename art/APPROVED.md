@@ -44,3 +44,13 @@ Families the critic has passed. Match their style.
 - pine (nature) — round 1
 - dead-tree (nature) — round 1
 - whale (characters) — round 1
+- rum (icons) — round 1
+- sugar (icons) — round 1
+- tobacco (icons) — round 1
+- coffee (icons) — round 1
+- tea (icons) — round 1
+- salt (icons) — round 1
+- cocoa (icons) — round 1
+- wine (icons) — round 1
+- porcelain (icons) — round 1
+- amber (icons) — round 1
