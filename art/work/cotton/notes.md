@@ -2,4 +2,4 @@
 
 8 x 8, fixed. Light from the top left; one-pixel k outer silhouette.
 
-Two cotton bolls sit on branching green stems. White bolls shade to C underneath; the connected h stem is outlined all the way to its cut base.
+One fluffy boll made of two lobes, P on top and C underneath. Below it, a G/h calyx and a two-pixel h stem, outlined on both sides and closed by k at the base. Redrawn: the earlier two separate bolls on a 1 px stem read as eyes.

@@ -124,3 +124,10 @@ Earlier oversized suggested pixel edits were superseded by this proportional red
 
 ## Batch round 1
 Redrawn 7 x 9 (hat, head, body all 7 px, no overhanging wings) to answer the scale and ear-like-wing points; gold is only the two brim corners; hand moved to row 6 in back views; side-1 feet split.
+
+## Batch round 1
+- Door scale (issue 1): the captain stays 7 x 9; widening the building doors is outside this batch and is left to the houses families.
+- Hat: raised side corners with gold on them, gold front point (front), gold at rear corners only (back); side hat uses the same logic (rear corner gold, front point gold).
+- Face: brim now has its own row, forehead row 3, eyes on row 4 with skin around them, collar p is the chin.
+- Hair: speckle removed, only right column j and the queue remain.
+- Walk: lifted-leg frames kept as accepted. Side-1: single heel plus toe pair so only one boot sits under the coat tail.

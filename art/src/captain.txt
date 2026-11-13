@@ -1,81 +1,81 @@
-# Captain: 7 x 9 (spec 6 x 9, flexible). Redrawn narrower so a 4 px door still reads sensibly:
+# Captain: 7 x 9 (spec 6 x 9, flexible).
 # hat, head and body are all 7 px wide, nothing overhangs. Hat k/K with gold trim y/O;
 # skin s/S; coat R; shirt p; trousers b; boots are the k pixels on the bottom row; hair J/j.
 
 == captain-down-1
-..kkk..
-.kKKKk.
-kykkkOk
-kskskSk
+kk...kk
+kyKKKOk
+kkkykkk
 kssssSk
+kskskSk
 kRRpRRk
 ksRpRSk
 kbbkbbk
 .kk.kk.
 == captain-down-2
-..kkk..
-.kKKKk.
-kykkkOk
-kskskSk
+kk...kk
+kyKKKOk
+kkkykkk
 kssssSk
+kskskSk
 kRRpRRk
 ksRpRRk
 kkbkbbk
 ..k.kk.
 == captain-down-3
-..kkk..
-.kKKKk.
-kykkkOk
-kskskSk
+kk...kk
+kyKKKOk
+kkkykkk
 kssssSk
+kskskSk
 kRRpRRk
 kRRpRSk
 kbbkbkk
 .kk.k..
 == captain-up-1
-..kkk..
-.kKKKk.
-kykkkOk
+kk...kk
+kyKKKOk
+kkkkkkk
 kJJJJjk
-kJJjJjk
+kJJJJjk
 kRRjRRk
 kRRRRRk
 kbbkbbk
 .kk.kk.
 == captain-up-2
-..kkk..
-.kKKKk.
-kykkkOk
+kk...kk
+kyKKKOk
+kkkkkkk
 kJJJJjk
-kJJjJjk
+kJJJJjk
 kRRjRRk
 kRRRRSk
 kkbkbbk
 ..k.kk.
 == captain-up-3
-..kkk..
-.kKKKk.
-kykkkOk
+kk...kk
+kyKKKOk
+kkkkkkk
 kJJJJjk
-kJJjJjk
+kJJJJjk
 kRRjRRk
 ksRRRRk
 kbbkbkk
 .kk.k..
 == captain-side-1
-.kkkkk.
-kKKKKKk
-kkyyyOk
+kk..kk.
+kyKKKKk
+kkkkyOk
 kJJsksk
 .kjssSk
 .kRRpk.
 .kRsRk.
 kRRbbk.
-.kk.kk.
+..k.kk.
 == captain-side-2
-.kkkkk.
-kKKKKKk
-kkyyyOk
+kk..kk.
+kyKKKKk
+kkkkyOk
 kJJsksk
 .kjssSk
 .kRRpk.

@@ -2,4 +2,4 @@
 
 8 x 8, fixed. Light from the top left; one-pixel k outer silhouette.
 
-The tin has a visible top ellipse, straight body, blue label and closed lower rim. N/n/M are the three metal tones, with the left edge lit.
+A steel tin: N top-left highlight, n body, M on the right edge and the bottom rim. A two-row B blue label band crosses the middle. Redrawn to close the lower rim with a k outline.

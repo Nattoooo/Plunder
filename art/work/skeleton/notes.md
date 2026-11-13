@@ -19,3 +19,7 @@ Both frames are **6 x 9**, within one pixel of the 5 x 8 specification. The form
 
 ## Batch round 1
 Redrawn 9 x 11: red bandana = pirate cue, 5 px skull with teeth row, 7 px shoulders, ribs with K gaps between arms and spine, 3-row legs with a k foot; frame 2 mirrors the stride.
+
+## Batch round 1
+- Redrawn at 7 x 9 (captain scale): 5 px skull with bandana, 5 px shoulders, arms flush with ribs (outline only outside), ribs as bars with one dark gap row, 3 px teeth row.
+- Legs: trailing leg has bone x then a k foot; frames differ only in the legs.

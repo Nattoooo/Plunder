@@ -15,3 +15,7 @@ All segments face right in straight overhead view. The head is **8 x 6** (+1 wid
 
 ## Batch round 1
 Head mouth opened to the right (no wall at col 5); tail redrawn as a forked fin with a q spine pixel; body-1 has a horizontal 2 px q dorsal pair.
+
+## Batch round 1
+- Head: two k jaw edges bracket a one-row red mouth on the centre row, so the head is symmetric top to bottom.
+- Tail: fork notch is now 2 px deep (row 2 `..kqk`).

@@ -1,25 +1,21 @@
-# Skeleton pirate, 9 x 11. Bone x/X, dark gaps K, outline k, red bandana R/r (pirate cue). Light from top left.
+# Skeleton pirate, 7 x 9 (no taller than the captain). Bone x/X, dark gaps K, outline k, red bandana R/r (pirate cue). Light from top left.
 == skeleton-1
-..kkkkk..
-.kRRRRrk.
-.kxKxKXk.
-..kxkxk..
-.kxxxxxk.
-kxkxKxkXk
-kxkKxKkXk
-.kkxxxkk.
-..kxkxk..
-.kxk.kk..
-.kkk.....
+.kkkkk.
+.kRRrk.
+.kKxKk.
+.kxxXk.
+kxxxxXk
+kxKKKXk
+kxxxxXk
+.kxkxk.
+kkk.kk.
 == skeleton-2
-..kkkkk..
-.kRRRRrk.
-.kxKxKXk.
-..kxkxk..
-.kxxxxxk.
-kxkxKxkXk
-kxkKxKkXk
-.kkxxxkk.
-..kxkxk..
-..kk.kxk.
-.....kkk.
+.kkkkk.
+.kRRrk.
+.kKxKk.
+.kxxXk.
+kxxxxXk
+kxKKKXk
+kxxxxXk
+.kxkxk.
+.kk.kkk

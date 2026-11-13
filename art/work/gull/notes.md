@@ -15,3 +15,6 @@ Fixed the outline exemption violation by making both frames **6 x 3**, within on
 
 ## Batch round 1
 5 x 4 (flexible). Rows 0-1 (beak, head) identical in both frames; wings up are foreshortened, wings down full span.
+
+## Batch round 1
+- Now 5 x 3 with no outline (3 px or less on a side). gull-1 `..y..` / `.uPu.` / `.PPU.`; gull-2 `..y..` / `uPPPu` / `.PPU.`. Notes updated to match the grid.

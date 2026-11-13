@@ -2,4 +2,4 @@
 
 8 x 8, fixed. Light from the top left; one-pixel k outer silhouette.
 
-The pelt has paired splayed fore- and hindlegs with a narrower waist, so its silhouette is a hide rather than an oval pebble. J/j give one left light and one right shadow.
+A brown pelt with fluffy bumps on top and a shaggy fringe at the bottom, where k notches separate the tufts. D is the lit top-left edge and J the body. Redrawn: the earlier plain block read as a chest.

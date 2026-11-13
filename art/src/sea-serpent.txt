@@ -3,9 +3,9 @@
 == serpent-head
 .kkkkk..
 kiyiiik.
-kIiiRRR.
+kIiikkk.
 kiiiRRR.
-kiiiiik.
+kiiikkk.
 kiyiiik.
 .kkkkk..
 == serpent-body-1
@@ -29,6 +29,6 @@ kiik
 == serpent-tail
 kkk..
 kIik.
-.kiqk
+..kqk
 kiik.
 kkk..
