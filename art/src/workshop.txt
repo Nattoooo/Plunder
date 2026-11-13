@@ -1,8 +1,8 @@
 # Carpenter bench: hammer head across the top (N lit on the left, M, m dark on the right), handle (V) running down the bench.
-# The bench is all w so the handle is the only light wood and separates from it by value.
+# The bench keeps its lit v pixel on the left so it still reads as wood; the handle is V, lighter than v and w, so it separates by value.
 == workshop
 kkkkk
 kNMmk
-kwVwk
+kvVwk
 kwVwk
 kkkkk
