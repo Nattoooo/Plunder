@@ -1,0 +1,9 @@
+# Small grey rock: rounded lump, highlight top left, shadow bottom right.
+== rock
+..kkkkk...
+.kUUUuuk..
+kUUUuuuuk.
+kUuuuuuuTk
+kuuuuuuTTk
+kuuuuTTTTk
+.kkkkkkkk.

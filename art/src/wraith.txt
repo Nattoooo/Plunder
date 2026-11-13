@@ -1,0 +1,35 @@
+# Wraith 12x16.
+== wraith-1
+....kkkk....
+...kIiiik...
+..kIiiiiik..
+.kIiKKKKiik.
+.kiiIKKIiik.
+.kiiKKKKiGk.
+.kIiiiiiiGk.
+.kIiiiiiiGk.
+kIiiiiiiiiGk
+kIiiiiiiiiGk
+kIiiiiiiiGGk
+kIiiiiiiiGGk
+kIiiiiiiiGGk
+kIiiiiiiiGGk
+kiikiiikiGk.
+.k.kk.k.kk..
+== wraith-2
+....kkkk....
+...kIiiik...
+..kIiiiiik..
+.kIiKKKKiik.
+.kiiIKKIiik.
+.kiiKKKKiGk.
+.kIiiiiiiGk.
+.kIiiiiiiGk.
+kIiiiiiiiiGk
+kIiiiiiiiiGk
+kIiiiiiiiGGk
+kIiiiiiiiGGk
+kIiiiiiiiGGk
+kIiiiiiiiGGk
+kikiiikiiGk.
+..kk.k.kk.k.

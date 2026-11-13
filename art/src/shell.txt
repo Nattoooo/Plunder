@@ -1,0 +1,6 @@
+# Pink scallop shell, no outline. Light from top left.
+== shell
+.EEEEE.
+EeEeEeE
+.eEeEe.
+..RRR..

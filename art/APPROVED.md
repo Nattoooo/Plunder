@@ -7,3 +7,10 @@ Families the critic has passed. Match their style.
 - deck-logs (ship) — round 1
 - iron-bands (ship) — round 1
 - stern-lantern (ship) — round 1
+- sail-square (sails) — round 1
+- sail-main (sails) — round 1
+- sail-lateen (sails) — round 1
+- sail-patched (sails) — round 1
+- oar (sails) — round 1
+- flags (sails) — round 1
+- deck-people (sails) — round 1

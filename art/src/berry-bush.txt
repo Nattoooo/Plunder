@@ -3,11 +3,11 @@
 ....kkkkk..kkkkk....
 ..kkHHHHhkkHHhhhkk..
 .kHHHhhhhkkhhhhhhGk.
-kHHhheRhhhhhhheRGGk
-kHhhhRrhhhhHhhRrhGk
-khhhhhhhhhhhhhhhhGGk
-khhheRhhGhhhhhGGGGGk
-khhhRrGGGGGGhhGGGGGk
+kHHheRhhhhhhhhhhhGGk
+kHhhRrhhhhhheRhhhGGk
+khhhhhhhhhhhRrhhhGGk
+khhhhhheRhhhhhhGGGGk
+khhhhGGRrGGhhGGGGGGk
 khhGGGGGGGGGGGGGGGgk
 .khGGGGGGGGGGgggggk.
 ..kGGGGggggggggggk..

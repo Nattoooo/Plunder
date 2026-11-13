@@ -1,0 +1,17 @@
+# Large grey boulder: lit top-left face, shaded right and bottom, flat base on the bottom row.
+== boulder
+........kkkkkkkk........
+.....kkkUUUUUUUUkkk.....
+...kkUUUUUUUUUuuuuukk...
+..kUUUUUUUUUuuuuuuuuuk..
+.kUUUUUUUUuuuuuuuuuuuuk.
+kUUUUUUUuuuuuuuuuuuuuuuk
+kUUUUUuuuuuuuuuuuuuuuuTk
+kUUUuuuuuuuuuuuuuuuuuTTk
+kUUuuuuuuuuuuuuuuuuuTTTk
+kUuuuuuuuuuuuuuuuuuTTTTk
+kuuuuuuuuuuuuuuuTTTTTTTk
+kuuuuuuuuuuuuuTTTTTTTTTk
+kuuuuuuuuuuTTTTTTTTTTTTk
+kuuuuuuuTTTTTTTTTTTTTTTk
+.kkkkkkkkkkkkkkkkkkkkkk.

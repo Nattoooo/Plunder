@@ -1,0 +1,8 @@
+# Wildflowers: two red blooms and a yellow centre bloom on short stems over a leaf tuft, no outline.
+== flowers
+....Yy....
+.eR.yO.eR.
+.Rr..G.Rr.
+..G.hGhG..
+.hGhHGhGh.
+HhGGhGGGhG

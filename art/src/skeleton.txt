@@ -1,0 +1,35 @@
+# Skeleton pirate 10x16.
+== skeleton-1
+..kkkkkk..
+.kRRRRRrk.
+.kxxxxxXk.
+.kxKxxKXk.
+..kxxxXk..
+..kxKKXk..
+kxxxxxxxXk
+.kxKKKKXk.
+.kxxxxxXk.
+.kxKKKKXk.
+..kxxxXk..
+.kxk..kxk.
+.kxk..kxk.
+.kxk..kxk.
+kxxk..kxxk
+kkkk..kkkk
+== skeleton-2
+..kkkkkk..
+.kRRRRRrk.
+.kxxxxxXk.
+.kxKxxKXk.
+..kxxxXk..
+..kxKKXk..
+kxxxxxxxXk
+.kxKKKKXk.
+.kxxxxxXk.
+.kxKKKKXk.
+..kxxxXk..
+.kxk..kxk.
+.kxk..kxk.
+.kxk..kxk.
+.kxk..kxk.
+.kkk..kxxk

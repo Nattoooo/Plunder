@@ -438,38 +438,38 @@
   "batch": "ship-parts"
  },
  "sail-square": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "sails"
  },
  "sail-patched": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "sails"
  },
  "sail-main": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "sails"
  },
  "sail-lateen": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "sails"
  },
  "oar": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "sails"
  },
  "flags": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "sails"
  },
@@ -480,8 +480,8 @@
   "batch": "sails"
  },
  "deck-people": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "sails"
  },

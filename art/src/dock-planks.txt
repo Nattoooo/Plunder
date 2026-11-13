@@ -1,0 +1,10 @@
+# dock-planks: pier boards laid across the pier, seam along every 4th row. Tiles on y, no outline.
+== dock-planks
+vvvvvvvv
+vvvvvvvv
+vvvvvvvv
+WWWWWWWW
+vvvvvvvv
+vvvvvvvv
+vvvvvvvv
+WWWWWWWW

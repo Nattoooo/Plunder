@@ -1,0 +1,19 @@
+# Crab 12x8.
+== crab-1
+kEk.k..k.kEk
+kEEkRRRRkEEk
+.kkReeRRRkk.
+.kReeRRRRrk.
+.kRRRRRRRrk.
+.kkRRRRRrkk.
+k.k.kkkk.k.k
+k.k......k.k
+== crab-2
+kEk.k..k.kEk
+kEEkRRRRkEEk
+.kkReeRRRkk.
+.kReeRRRRrk.
+.kRRRRRRRrk.
+.kkRRRRRrkk.
+.kk.kkkk.kk.
+.k.k....k.k.

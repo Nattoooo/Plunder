@@ -3,10 +3,29 @@ import { art, Art } from './palette';
 const SCALE = 1;
 
 const ROWS: Record<string, string[]> = {
+  'captain-deck': ['..kk..', '.kKKk.', 'kKKKKk', 'sRRRRS', '.RRRRr', '.rrrr.'],
+  'crew': ['..JJ..', '.JJJJ.', 'sRRRRr', '.RRRrS', '.RRRr.', '.j..j.'],
   'deck-logs': ['wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'DffffDffff', 'dDDDDdDDDD', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW'],
   'deck-planks': ['VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'WWWWWVvvvW', 'VvvvWWWWWW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW'],
+  'flag-1': ['wRRRRRR.', 'wRRRRRRR', 'wRRRR...', 'w.......'],
+  'flag-2': ['wRRRR...', 'wRRRRRR.', 'wRRRRRRR', 'w.......'],
   'iron-bands': ['..........', 'nnnnnnnnnn', 'nNnnnnnNnn', 'MMMMMMMMMM', '..........', '..........', 'nnnnnnnnnn', 'nNnnnnnNnn', 'MMMMMMMMMM', '..........'],
   'long-gun': ['...kkkk...', '...kNNk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '..kNnMMk..', '..kNnMMk..', '..kNnMMk..', '.kvvVVwwk.', '.kWvVVwWk.', '..kkkkkk..'],
+  'oar': ['WW.......VVV.', 'WWWWWWWWWWWWW', 'ww.......www.'],
+  'pirate-flag-1': ['wKKKKKK.', 'wKKKKKKK', 'wkkkk...', 'w.......'],
+  'pirate-flag-2': ['wKKKK...', 'wKKKKKK.', 'wkkkkkkk', 'w.......'],
+  'sail-lateen-full': ['W........', 'Wp.......', 'Wp.......', 'Wp.......', 'WpC......', 'WpC......', 'WpC......', 'WpCc.....', 'WpCc.....', 'WpCc.....', 'WpCCc....', 'WpCCc....', 'WpCCc....', 'WpCCc....', 'WpCCCc...', 'WpCCCc...', 'WpCCCc...', 'WpCCCCc..', 'WpCCCCc..', 'WpCCCCc..', 'WpCCCCCc.', 'WpCCCCCc.', 'WpCCCCCc.', 'WpCCCCCc.', 'WpCCCCCCc', 'WpCCCCCCc'],
+  'sail-lateen-furled': ['WCC.', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WCC.'],
+  'sail-lateen-half': ['W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'Wp....', 'Wp....', 'Wp....', 'Wp....', 'WpC...', 'WpC...', 'WpC...', 'WpCc..', 'WpCc..', 'WpCc..', 'WpCc..', 'WpCCc.', 'WpCCc.', 'WpCCc.', 'WpCCc.', 'WpCCCc', 'WpCCCc'],
+  'sail-main-full': ['...........ppppCCCCCccc...........', '.........pppppCCCCCCCcccc.........', '........pppppCCCCCCCCccccc........', '.......ppppppCCCCCCCCCccccc.......', '......ppppppCCCCCCCCCCcccccc......', '.....WWWWWWWWWWWWWWWWWWWWWWWW.....', '.....wwwwwwwwwwwwwwwwwwwwwwww.....', '......ppppppCCCCCCCCCCcccccc......', '....pppppppCCCCCCCCCCCCccccccc....', '...ppppppppCCCCCCCCCCCCcccccccc...', '..pppppppppCCCCCCCCCCCCCcccccccc..', '.pppppppppCCCCCCCCCCCCCCccccccccc.', 'ppppppppppCCCCCCCCCCCCCCCccccccccc', 'ppppppppppCCCCCCCCCCCCCCCccccccccc', 'ppppppppppCCCCCCCCCCCCCCCccccccccc', 'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'],
+  'sail-main-furled': ['.......ppppppCCCCCCCCCccccc.......', '.....WWWWWWWWWWWWWWWWWWWWWWWW.....', '..pppppppppCCCCCCCCCCCCCcccccccc..', 'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'],
+  'sail-main-half': ['.........pppppCCCCCCCcccc.........', '.......ppppppCCCCCCCCCccccc.......', '.....WWWWWWWWWWWWWWWWWWWWWWWW.....', '.....wwwwwwwwwwwwwwwwwwwwwwww.....', '....pppppppCCCCCCCCCCCCccccccc....', '..pppppppppCCCCCCCCCCCCCcccccccc..', 'ppppppppppCCCCCCCCCCCCCCCccccccccc', 'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'],
+  'sail-patched-full': ['.....ppCCCCcc.....', '...ppppCCCCCccc...', '..ppppCCCCCCcccc..', '.ppppcccCCCCCcccc.', 'pppppcccCCCCCccccc', 'pppppcccCCCCCccccc', 'pppppCCCCCCCCccccc', 'WWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwww'],
+  'sail-patched-furled': ['.pppppCCCCCCCcccc.', 'WWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwww'],
+  'sail-patched-half': ['..ppppCCCCCCcccc..', '.pppppCCCCCCCcccc.', 'pppppCCCCCCCCccccc', 'WWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwww'],
+  'sail-square-full': ['......ppppCCCCCCcccc......', '....pppppCCCCCCCCccccc....', '...ppppppCCCCCCCCCccccc...', '..ppppppCCCCCCCCCCcccccc..', '.pppppppCCCCCCCCCCCcccccc.', 'pppppppCCCCCCCCCCCCccccccc', 'pppppppCCCCCCCCCCCCccccccc', 'pppppppCCCCCCCCCCCCccccccc', 'WWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwww'],
+  'sail-square-furled': ['.pppppppCCCCCCCCCCCcccccc.', 'WWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwww'],
+  'sail-square-half': ['....pppppCCCCCCCCccccc....', '..ppppppCCCCCCCCCCcccccc..', '.pppppppCCCCCCCCCCCcccccc.', 'pppppppCCCCCCCCCCCCccccccc', 'WWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwww'],
   'stern-lantern': ['.yyO.', 'yYYYO', 'yYYYO', 'yYYYo', '.Ooo.']
 };
 

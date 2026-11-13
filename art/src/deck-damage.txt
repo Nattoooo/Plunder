@@ -2,22 +2,22 @@
 == damage-crack
 wwV.......
 .wwV......
-..wwV.....
-...wwwV...
-....wwV...
-.....wwV..
-......wwV.
+..wwV..V..
+...ww.wV..
+....wwwV..
+...w.wwV..
+....V.wwV.
 .......ww.
 ..........
 ..........
 == damage-hole
-..vvwwww..
-.vwaaaaww.
+.vvwwww...
+vvwaaaaww.
 vwaaaaaaww
-waAAaaaaaw
-waAaaaaaaw
+waaaaaaaaw
+waaaaaaaaw
 waaaaaaaaw
 waaaaaaaaw
 wwaaaaaaww
 .wwaaaaww.
-..wwwwww..
+..wwwwwww.
