@@ -3,10 +3,10 @@
 ...kkkk...
 ..kNNnnk..
 .kNnnnMMk.
-kNnkkkkMMk
-kNnkKKkMMk
-kMnkKKkMMk
-kMMkkkkMMk
+kNnKKKKMMk
+kNKKKKKKMk
+kMKKKKKKMk
+kMMKKKKMMk
 .kMMMMMMk.
 ..kMMMMk..
 ...kkkk...

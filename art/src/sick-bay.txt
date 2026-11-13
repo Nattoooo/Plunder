@@ -1,0 +1,12 @@
+# Cot: white pillow at the head, cloth blanket with a red cross; only the top-left is lit.
+== sick-bay
+kkkkkkkkkk
+kPPPPPPPPk
+kPppppppck
+kCCCCCCCck
+kCCCRRccck
+kCRRRRRRck
+kcRRRRRrck
+kcccRRccck
+kcccccccck
+kkkkkkkkkk

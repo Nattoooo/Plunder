@@ -1,0 +1,12 @@
+# Hatch frame (V lit, w shadow) around a dark K shaft; ladder rails V/v with rungs at rows 3 and 6.
+== crew-quarters
+kkkkkkkkkk
+kVVVVVVVVk
+kVKVKKvKwk
+kVKVVVvKwk
+kVKVKKvKwk
+kVKVKKvKwk
+kVKVVVvKwk
+kVKVKKvKwk
+kvwwwwwwwk
+kkkkkkkkkk

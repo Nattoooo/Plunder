@@ -1,0 +1,14 @@
+# Round lookout basket: 2 px wood rim (V lit top-left, w shadow bottom-right) round a dark K floor.
+== crows-nest
+....kkkk....
+..kkVVVvkk..
+.kVVVVVvvwk.
+kVVVKKKKvwwk
+kVVKKKKKKwwk
+kVVKKKKKKwwk
+kVvKKKKKKwwk
+kVvKKKKKKwwk
+kVvvKKKKwwwk
+.kvvvvwwwwk.
+..kkvvwwkk..
+....kkkk....

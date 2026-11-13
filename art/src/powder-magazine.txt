@@ -1,0 +1,12 @@
+# Four powder kegs seen from above, one per quadrant, round lids lit top-left.
+== powder-magazine
+.kkk..kkk.
+kVVvkkVVvk
+kVvwkkVvwk
+kvwwkkvwwk
+.kkk..kkk.
+.kkk..kkk.
+kVVvkkVVvk
+kVvwkkVvwk
+kvwwkkvwwk
+.kkk..kkk.

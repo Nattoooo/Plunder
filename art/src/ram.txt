@@ -1,0 +1,18 @@
+# Iron ram: spear point on the top 6 rows, 10 px plate on the bow. Lit left N, mid M, shadow right m.
+== ram
+....kk....
+...kNmk...
+...kNmk...
+..kNMMmk..
+..kNMMmk..
+.kNNMMmmk.
+.kNNMMmmk.
+kNNMMMMmmk
+kNNMMMMmmk
+kNNMMMMmmk
+kNNMMMMmmk
+kNNMMMMmmk
+kNNMMMMmmk
+kNNMMMMmmk
+kNNMMMMmmk
+kkkkkkkkkk

@@ -1,0 +1,14 @@
+# Round leafy bush: two-lobed crown, closed outline, light top-left, shadow bottom-right.
+== bush
+....kkkkk..kkkkk....
+..kkHHHHhkkHHhhhkk..
+.kHHHhhhhkkhhhhhhGk.
+kHHhhhhhhhhhhhhhhGGk
+kHhhhhhhhhhhHhhhGGGk
+khhhhhGGhhhhhhhGGGGk
+khhhhGGGGhhhhGGGGGgk
+khhhhhGGGGGGGGGGGGgk
+khhhhhhGGGGGGGGGggGk
+.khhGGGGGGGGgggggggk
+..kGGGGGGGggggggggk.
+...kkkkkkkkkkkkkk...

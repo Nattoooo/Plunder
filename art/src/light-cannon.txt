@@ -1,16 +1,16 @@
 # Light cannon: slim barrel with a flared muzzle, swelling to a breech, on a wooden carriage with two wheels.
 == light-cannon
 ..kkkkkk..
+..kNKKMk..
 ..kNnMMk..
 ...kNMk...
 ...kNMk...
 ...kNMk...
 ...kNMk...
 ..kNnMMk..
-..kNnMMk..
-kkkNnMMkkk
-kWkvVVwkWk
-kWkvVVwkWk
-kwkvVwwkwk
-kwkvvwwkwk
+.kkNnMMkk.
+kVvwNMwvwk
+kVvwNMwvwk
+kvvvVwwwwk
+kvvvvwwwwk
 kkkkkkkkkk

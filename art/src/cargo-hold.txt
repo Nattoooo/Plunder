@@ -1,0 +1,12 @@
+# Closed hatch: boards V v w with two 2 px iron straps (N lit, M shadow) across.
+== cargo-hold
+kkkkkkkkkk
+kVVVVVVVVk
+kNNNNNNNNk
+kMMMMMMMMk
+kVvvvvvvwk
+kvvvvvvvwk
+kNNNNNNNNk
+kMMMMMMMMk
+kvwwwwwwwk
+kkkkkkkkkk

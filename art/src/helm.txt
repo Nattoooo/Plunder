@@ -1,0 +1,12 @@
+# Ship's wheel from above: round wood rim, four spokes meeting a brass hub, dark K gaps between spokes.
+== helm
+...kkkk...
+..kVVVvk..
+.kVKVvKwk.
+kVKKVvKKwk
+kVVVOOvvwk
+kVvvoowwwk
+kVKKVvKKwk
+.kVKVvKwk.
+..kvvwwk..
+...kkkk...
