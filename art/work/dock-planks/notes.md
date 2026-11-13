@@ -1,0 +1,1 @@
+- 8x8 tile, boards 3 rows of v with a W seam row every 4th row, same tones as deck-planks, no outline, repeats on y.

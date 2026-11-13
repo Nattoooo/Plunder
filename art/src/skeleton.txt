@@ -13,9 +13,9 @@ kxxxxxxxXk
 ..kxxxXk..
 .kxk..kxk.
 .kxk..kxk.
-.kxk..kxk.
-kxxk..kxxk
-kkkk..kkkk
+.kxk..kkk.
+kxxk..k...
+kkkk......
 == skeleton-2
 ..kkkkkk..
 .kRRRRRrk.
@@ -30,6 +30,6 @@ kxxxxxxxXk
 ..kxxxXk..
 .kxk..kxk.
 .kxk..kxk.
-.kxk..kxk.
-.kxk..kxk.
-.kkk..kxxk
+.kkk..kxk.
+...k..kxxk
+......kkkk

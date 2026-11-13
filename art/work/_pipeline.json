@@ -138,26 +138,26 @@
   "batch": "nature-small"
  },
  "house-cottage": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "houses"
  },
  "house-shutters": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "houses"
  },
  "house-long": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "houses"
  },
  "house-townhouse": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "houses"
  },
@@ -972,14 +972,14 @@
   "batch": "effects"
  },
  "glint": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "effects"
  },
  "muzzle-flash": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "effects"
  },

@@ -1,0 +1,1 @@
+Tricorn k/K with gold trim across the brim; face with two eye pixels; red coat with white cravat, belt and gold buckle; arm edges shaded r so arms read; navy trousers, J boots. Back view swaps face for hair J. Walk frames move one foot up; side view has nose and buckle on the right.

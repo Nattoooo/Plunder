@@ -1,0 +1,18 @@
+# Lava: orange glow (q base, Q hot spots) with dark crust cracks (K) that wrap across every edge, so the tile repeats with no seam.
+== lava-tile
+qqqqqqqqQqqqKqqq
+qQQqqqqqqqqqKqqq
+qqQqqqQQqqqqKqQq
+qqqqqqQqqqqKqQQq
+qqKKKqqqqqqKqqqq
+KKqqqKKqqqqKqqKK
+qqqQQqqKKKKqKKqq
+qqqQqqqqQqKKqQQq
+qqqqqqqQQqKqqqqq
+QqqqqQqqqKqqqqqQ
+QqqqqQQqqKqqqqqq
+qqKKqqqqqqKqqqqq
+qqqqKKqqqqKqqqKq
+qqqqqqKqqQKqqqKq
+qQQqqqqqqqqKqKqq
+qQqqqqqqQQqKqqqq

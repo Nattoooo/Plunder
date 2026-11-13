@@ -1,0 +1,3 @@
+- Hip roof in swap colours (e highlight top and left edge, R body, r eave rows), full k line under the eave, plaster C with a c shadow row under the eave.
+- 24 px wide double doors (19 px tall inside, captain fits) with plank tones, two iron straps per leaf and a dark K gap where the leaves meet.
+- Two small loft windows above the crate stacks, mirrored; stacked crates (V top/left, w bottom/right, one slat) in two stacks of three, opposite corners are stacked so it is not a mirror.

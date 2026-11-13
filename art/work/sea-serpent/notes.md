@@ -1,0 +1,1 @@
+Teal scales with I highlight top-left, y eyes, red mouth between open jaws; orange dorsal ridge runs along the body axis (horizontal, facing right) and shrinks per segment; tail is a forked orange fin.

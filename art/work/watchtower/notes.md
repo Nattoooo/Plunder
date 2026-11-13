@@ -1,0 +1,2 @@
+- Small hip roof (e R r), open K lookout between two corner posts, rail row, wider platform with front face v/w.
+- Legs splay out 1 px every 5 rows; one X of 2 px braces joins them. Outline added around legs and braces, including the enclosed gaps.

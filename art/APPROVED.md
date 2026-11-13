@@ -14,3 +14,9 @@ Families the critic has passed. Match their style.
 - oar (sails) — round 1
 - flags (sails) — round 1
 - deck-people (sails) — round 1
+- glint (effects) — round 1
+- muzzle-flash (effects) — round 1
+- house-cottage (buildings) — round 1
+- house-shutters (buildings) — round 1
+- house-long (buildings) — round 1
+- house-townhouse (buildings) — round 1

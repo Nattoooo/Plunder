@@ -1,0 +1,3 @@
+- Hip roof with stone chimney (u/T) set behind the roof on the right. Plaster C c.
+- Upper floor: three blue windows with sills; jetty beam V/w between floors.
+- Ground floor: plank door on the right (18 px tall, captain fits, gold handle), hanging gold sign with a mug on a bracket arm to the left of the door.

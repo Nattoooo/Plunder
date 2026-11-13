@@ -1,0 +1,2 @@
+- Deck top (v) with plank seams every 5 px (symmetric), front face W/w, pile legs below on three posts. Mooring posts at both ends, wood ramp V/W, base sits on the deck.
+- 15 px tall (spec 14): the extra row gives the piles a visible leg.
