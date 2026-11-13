@@ -2,12 +2,12 @@
 == figurehead
 ....kk....
 ...kyOk...
-...kyOk...
+...kOOk...
 ..kyyOOk..
-..kyOOOk..
-..kOoook..
-..kooook..
-..kooook..
+.kyyOOOok.
+.kyOOOOok.
+.kOOOOook.
+.kooooook.
 ..kooook..
 .kyyOOOok.
 kyyOOOOook

@@ -1,0 +1,17 @@
+== water
+................
+................
+...kkkkkkkkkk...
+..kllBBBBBBBbk..
+.kkbbBBBBBBbbkk.
+.kNkkkkkkkkkkMk.
+.kVvVVvVVvVVwMk.
+.kVvVVvVVvVVwwk.
+.kNNNNNNNNNNMMk.
+.kVvVVvVVvVVwwk.
+.kVvVVvVVvVVwwk.
+.kVvVVvVVvVVwwk.
+.kNNNNNNNNNNMMk.
+.kVvVVvVVvVwwwk.
+..kkkkkkkkkkkk..
+................
