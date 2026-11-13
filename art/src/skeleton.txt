@@ -11,8 +11,8 @@ kxkxKKXkxk.
 kxkxxxXkxk.
 kxkxKKXkxk.
 kxkxxxXkxk.
-.kxk..kxk..
-.kxk..kxk..
+.kxkxxkxk..
+.kxkkkkxk..
 .kxk..kxxk.
 kxxk..kkkk.
 kkkk.......
@@ -28,8 +28,8 @@ kxkxKKXkxk.
 kxkxxxXkxk.
 kxkxKKXkxk.
 kxkxxxXkxk.
-.kxk..kxk..
-.kxk..kxk..
+.kxkxxkxk..
+.kxkkkkxk..
 kxxk..kxk..
 kkkk..kxxk.
 ......kkkk.
