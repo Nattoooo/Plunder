@@ -6,3 +6,6 @@ Hut like the plantation hut but taller (window, 8x16 door). Beside it a drying r
 3. Door centred-ish with 3 px `C` right of it and a single `k` outline column.
 4. Knob is one `y` pixel.
 5. Fish eye sits inside the `N` head pixels, `L` is the head highlight.
+
+## Batch round 2
+1. Fish (all six, identical): inner gill `k` removed so the head is solid `N` with the `L` highlight (`kLNNNk`); eye is a single `k` at fish column 2 of the next row (`kLkNnk`); tail row is `kNkkNk` so it forks. Hut and rack untouched.
