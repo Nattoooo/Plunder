@@ -1,12 +1,12 @@
 == barrel
 ..kkkkkk..
 .kVVVVVVk.
-knnMMMMMMk
+.knnnMMMk.
 kVVVvvvvWk
 kVVVvvvvWk
 kVVVvvvvWk
 kVVVvvvvWk
 kVVVvvvvWk
-knnMMMMMMk
-.kVVVvvWk.
+.knnnMMMk.
+.kVVvvvWk.
 ..kkkkkk..

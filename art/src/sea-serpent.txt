@@ -1,23 +1,23 @@
 # Sea serpent
 == serpent-head
-..kkkkkkk.....
-.kIIiiiiiik...
-kIIiiyiiiikkkk
-kIiiiiiiiiiiik
-kiiiiiiiiikkkk
-kiiiiiiiiRRRRR
-kiiiiiiiiikkkk
-kIiiiiiiiiiiik
-kIIiiyiiiikkkk
-.kIIiiiiiik...
-..kkkkkkk.....
+..kkkkkkk......
+.kIIiiiiiik....
+kIIiiyiiiikkkk.
+kIiiiiiiiiPiPk.
+kiiiiiiiiikkkk.
+kiiiiiiiiRRRRRk
+kiiiiiiiiikkkk.
+kIiiiiiiiiPiPk.
+kIIiiyiiiikkkk.
+.kIIiiiiiik....
+..kkkkkkk......
 == serpent-body-1
 ...kkkkk...
 ..kIIiiik..
 .kIIiiiiik.
 kIIiiiiiiik
-kIiiiiiiiik
-kIiqqqqqiik
+kiiiiiiiiik
+kiiqqqqqiik
 kiiiiiiiiik
 kiiiiiiiiik
 .kiiiiiiik.
@@ -27,8 +27,8 @@ kiiiiiiiiik
 ..kkkkk..
 .kIIiiik.
 kIIiiiiik
-kIiiiiiik
-kIqqqqqik
+kiiiiiiik
+kiiqqqiik
 kiiiiiiik
 kiiiiiiik
 .kiiiiik.
@@ -37,15 +37,15 @@ kiiiiiiik
 ..kkk..
 .kIiik.
 kIiiiik
-kIqqqik
+kiiqiik
 kiiiiik
 .kiiik.
 ..kkk..
 == serpent-tail
-......kkk.
-kkkk.kQQqk
-kIiikQqqk.
-kiiiqqqk..
-kiiikqqqk.
-kkkk.kqqqk
-......kkk.
+.kkk......
+kqQQk.kkk.
+.kqqQkIiik
+..kqqqqiik
+.kqqqkiiik
+kqqqk.kkk.
+.kkk......

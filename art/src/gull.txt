@@ -1,15 +1,15 @@
 # Gull
 == gull-1
-...kyk...
-ku.kPk.uk
-kukPPPkuk
-.kkPPPkk.
-...kPk...
+kk.kyk.kk
+kuukPkuuk
+kPPkPkPPk
+kUPPPuPUk
+.kkPPukk.
 ...kkk...
 == gull-2
 ...kyk...
-.kkPPPkk.
-kuPPPPPuk
-kUUPPPUUk
+...kPk...
 .kkkPkkk.
-...kkk...
+kPPPPuPPk
+kUUPPuUUk
+.kkkkkkk.

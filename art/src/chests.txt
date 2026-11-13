@@ -24,9 +24,9 @@ kvvnvvvvvvnvWk
 .kkkkkkkkkkkk.
 == gold-chest
 ....kkkkkk....
-..kkYYyyyOkk..
-.kYYyyyyyyOOk.
-kyyyYyyyyyyOOk
+..kkYyYyyOkk..
+.kYYyOyYyyOOk.
+kKyYyyOyyYyOKk
 kVVVVVVVVVVvWk
 kvvyvvvvvvyvWk
 kvvyvvyOvvyvWk

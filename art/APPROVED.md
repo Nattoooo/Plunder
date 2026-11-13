@@ -84,3 +84,8 @@ Families the critic has passed. Match their style.
 - musket (icons) — round 1
 - reeds (nature) — round 2
 - skull-rock (nature) — round 2
+- spices (icons) — round 2
+- cotton (icons) — round 2
+- indigo (icons) — round 2
+- furs (icons) — round 2
+- whale-oil (icons) — round 2
