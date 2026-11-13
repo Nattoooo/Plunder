@@ -1,0 +1,1 @@
+Plaster hut (swap roof e R r, walls C c) on the left with an 8x16 door the captain fits and a small window. Three tall crop plants on the right, foliage swap chars only; leaves alternate left and right so they read as stalks, not poles. Lit from the left (H), shaded right (G).

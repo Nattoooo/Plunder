@@ -1,0 +1,1 @@
+Open-sided shed: slab roof (V top, v, w fascia) on two 3 px posts around a dark interior; a cut log lies on the floor inside. Right: pyramid of 10 log ends (F core, D rings and shadow) with 1 px outlines between logs so they stay separate.

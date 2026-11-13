@@ -21,3 +21,4 @@ Families the critic has passed. Match their style.
 - house-long (buildings) — round 1
 - house-townhouse (buildings) — round 1
 - mortar (ship) — round 2
+- fire (sails) — round 2

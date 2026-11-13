@@ -1,0 +1,1 @@
+Hut like the plantation hut but taller (window, 8x16 door). Beside it a drying rack: two posts and a beam in wood ramp, three silver fish (N L n) hung head up from 1 px dark strings, eye k on the head.

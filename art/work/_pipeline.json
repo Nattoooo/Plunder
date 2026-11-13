@@ -474,8 +474,8 @@
   "batch": "sails"
  },
  "fire": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "tiny",
   "batch": "sails"
  },

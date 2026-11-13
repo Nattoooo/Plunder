@@ -7,6 +7,8 @@ const ROWS: Record<string, string[]> = {
   'crew': ['..JJ..', '.JJJJ.', 'sRRRRr', '.RRRrS', '.RRRr.', '.j..j.'],
   'deck-logs': ['wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'DffffDffff', 'dDDDDdDDDD', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW'],
   'deck-planks': ['VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'WWWWWVvvvW', 'VvvvWWWWWW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW'],
+  'fire-1': ['..Q...', '.qQ.q.', '.qQQq.', '.qQYQq', 'qQYYQ.', 'qqQQqq'],
+  'fire-2': ['....Q.', '.q.Qq.', '.qQQq.', 'qQYQq.', '.QYYQq', 'qqQQqq'],
   'flag-1': ['wRRRRRR.', 'wRRRRRRR', 'wRRRR...', 'w.......'],
   'flag-2': ['wRRRR...', 'wRRRRRR.', 'wRRRRRRR', 'w.......'],
   'glint-1': ['P'],

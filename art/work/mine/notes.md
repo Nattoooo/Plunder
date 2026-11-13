@@ -1,0 +1,1 @@
+Grey stone hill (u/T/t, light from top left) with a timber-framed tunnel (V v w posts and lintel, K dark opening). Ore cart on the right: iron rim, wood body with iron straps, two wheels, heap of stone with two gold ore flecks.
