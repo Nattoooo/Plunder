@@ -432,8 +432,8 @@
   "batch": "ship-parts"
  },
  "figurehead": {
-  "round": 0,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "ship-parts"
  },
