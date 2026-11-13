@@ -2,15 +2,15 @@
 == rudder
 kkkkkkkkkk
 kVVvvvwwwk
-MVVvvvwwwk
+kMVvvvwwwk
 kVVvvvwwwk
 kVVvvvwwwk
 kVVvvvwwwk
-MVVvvvwwwk
+kMVvvvwwwk
 kVVvvvwwwk
 kVVvvvwwwk
 kVVvvvwwwk
-.kVVvvwwk.
-..kVvvwk..
-...kvwk...
-....kk....
+kVVvvvwwwk
+kVVvvvwwwk
+kVVvvvwwwk
+.kkkkkkkk.
