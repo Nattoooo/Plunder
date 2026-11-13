@@ -1,5 +1,4 @@
-# rapier
+# rapier (icons)
 
-8 x 8, fixed. Light from top left.
-
-The thin rapier blade is a one-pixel diagonal of steel. A swept gold guard curls around the leather hilt at lower left, separating this narrow weapon from the wider cutlass.
+- One-pixel steel blade (N, n) on a diagonal: thinner than the cutlass, so the two read apart.
+- Gold guard (O) and leather grip (J) at the lower left, the guard crossing the blade base.

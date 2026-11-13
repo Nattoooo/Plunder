@@ -1,5 +1,4 @@
-# musket
+# musket (icons)
 
-8 x 8, fixed. Light from top left.
-
-A long slim steel barrel points upper right, continuing into a straight diagonal wooden stock at lower left. The narrow muzzle and long line distinguish it from the short flared blunderbuss.
+- Long two-pixel steel barrel (N, n) on a diagonal up to the top right.
+- Wood stock (W, V, w) at the lower left with the lock (M) where barrel meets stock.

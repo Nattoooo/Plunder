@@ -1,5 +1,5 @@
-# spyglass
+# spyglass (icons)
 
-8 x 8, fixed. Light from top left.
-
-A brass telescope points toward the upper-right. The wide blue objective glass is at the far end, the narrow eyepiece at lower left, and y/O/o shade the brass tube.
+- Brass tube (y, O, o) as a two-pixel diagonal band: highlight upper left, shadow lower right.
+- Two dark pixels (o) across the tube mark the rings, so it reads as a telescope and not a stick.
+- Dark eyepiece (k) at the lower-left end, the end you look through.

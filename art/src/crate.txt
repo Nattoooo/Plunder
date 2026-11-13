@@ -1,20 +1,23 @@
-# crate: wood box, lit top face, one plank seam across the middle.
+# crate: wood box, lit top face, one plank seam across the middle. The seam is the
+# lighter W, as on deck-planks, so it does not merge with the outline at either side.
 == crate
 kkkkkk
 kVVVVk
 kvvvWk
-kwwwwk
+kWWWWk
 kvvvWk
 kkkkkk
-# lost-cargo: the same crate with a red flag on a short pole at its top left.
-# The flag is 2 x 2 red inside its own outline, and the pole stands on the crate's top edge.
-# The crate is four rows here (top edge, lit top, one plank row, bottom) so the flag fits in
-# the 7 px height; the plank seam does not fit, so it is dropped.
+# lost-cargo: the crate with a red flag on a pole rising from its top left. The pole is
+# 1 px W at x=1 with its cap in outline; the flag is 2 x 2 red (R, r shade lower right)
+# hanging to the pole's right. Column 5 stays clear above the crate, so the flag reads as
+# hanging from the pole rather than as a label on the box. The 6 x 6 body is the crate above.
 == lost-cargo
 .kkkk.
 kWRRk.
 kWRrk.
 kkkkkk
 kVVVVk
+kvvvWk
+kWWWWk
 kvvvWk
 kkkkkk

@@ -1,5 +1,4 @@
-# cutlass
+# cutlass (icons)
 
-8 x 8, fixed. Light from top left.
-
-A broad steel blade curves gently toward its high tip at upper right. N is the clean blade; O/y form the gold guard across the lower-left hilt and J the leather grip.
+- Two-pixel steel blade (N, n) with the highlight on the left edge.
+- Gold guard (O, o) at the hilt, leather grip (J, j) below it.

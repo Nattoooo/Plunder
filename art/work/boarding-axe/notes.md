@@ -1,5 +1,4 @@
-# boarding-axe
+# boarding-axe (icons)
 
-8 x 8, fixed. Light from top left.
-
-The short axe has a broad offset steel head near the upper-right end of a diagonal wooden haft. The lower edge of the head is M shadow, and the long D shaft is continuous.
+- Steel head (N, n, M) across the top: the cutting edge (M) on the right, the back of the head on the left.
+- Wood handle (W, V, v) runs down from the head centre, lit on the left.

@@ -1,5 +1,5 @@
-# flintlock
+# flintlock (icons)
 
-8 x 8, fixed. Light from top left.
-
-The compact flintlock pistol points right. Its long top steel barrel ends at the muzzle, with a short dropped wooden grip on the left and a small dark trigger beneath the breech.
+- Steel barrel (N, n, M) across the top; the muzzle end is on the right.
+- Wood stock (W, w) under the barrel with a brass lock plate (O) on its side.
+- Hammer (m) on the lock at the top left, a single dark pixel attached to the barrel.

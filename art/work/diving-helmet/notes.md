@@ -1,5 +1,5 @@
-# diving-helmet
+# diving-helmet (icons)
 
-8 x 8, fixed. Light from top left.
-
-The domed brass diving helmet has a dark-rimmed round blue faceplate and a flared lower collar. y/O/o shade brass; L/B show the lit and shaded glass.
+- Brass dome (y, O, o): highlight upper left.
+- Blue round window (B, l, b): a light pixel (l) upper left as the glint, dark (b) on the lower right.
+- Brass collar (O, o) at the bottom with a gap in the middle so it reads as a ring of bolts.

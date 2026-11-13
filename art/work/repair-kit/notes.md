@@ -1,5 +1,4 @@
-# repair-kit
+# repair-kit (icons)
 
-8 x 8, fixed. Light from top left.
-
-The red toolbox has a steel carrying handle above its lid and one broad steel latch on its front. e/R/r shade painted metal, and N is reserved for hardware.
+- Steel handle (N, n, M) above a red box (e, R, r): highlight stripe on the top, shadow on the base.
+- Gold clasp (y) in the centre is the one bright spot and draws the eye.

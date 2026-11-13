@@ -1,5 +1,5 @@
-# leather-vest
+# leather-vest (icons)
 
-8 x 8, fixed. Light from top left.
-
-The leather vest has two shoulder straps, cut-away armholes and an open front seam. J/j light the left leather face and shade the right; no decorative studs are added.
+- Two leather front panels (J) with shadow (j) on the right side of each.
+- Neck V gap and armhole notches cut into the silhouette so it reads as a vest, not a block.
+- Dark seam (k) between the panels and gold buckles (y) at the hem.

@@ -1,9 +1,12 @@
-# quest-mark: gold exclamation mark, 4 px wide (spec 3, one px more). A 1 px stroke
-# is lost on sand, so the stroke is 2 px: lit left column (y), shaded right column (O).
-# Too small for an outline, so it has none (STYLE allows this for very small sprites).
+# quest-mark: gold exclamation mark, 4 px wide and 7 tall (spec 3 x 5). A 1 px stroke
+# is lost on sand, so the stroke is 2 px: lit left column (y), shaded right column (O),
+# inside a 1 px k outline so it pops on sand and water. The outline row between stroke
+# and dot doubles as the gap, so the dot's top outline is shared with the stroke's.
 == quest-mark
-.yO.
-.yO.
-.yO.
-....
-.yO.
+.kk.
+kyOk
+kyOk
+kyOk
+.kk.
+kyOk
+.kk.

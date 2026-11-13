@@ -1,5 +1,4 @@
-# blunderbuss
+# blunderbuss (icons)
 
-8 x 8, fixed. Light from top left.
-
-The flared muzzle widens at upper right, unlike the straight musket. The short barrel slopes into a broad wooden stock and a downward grip at lower left.
+- Steel barrel (N, n, M) with a bell-shaped muzzle flare on the right, the defining shape.
+- Wood stock (W, V, w) under the barrel at the lower left, lit from the top left.

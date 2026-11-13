@@ -1,5 +1,5 @@
-# rusty-cutlass
+# rusty-cutlass (icons)
 
-8 x 8, fixed. Light from top left.
-
-The curved rusty blade sweeps toward upper right and widens toward its tip. q/O are warm rust faces; the J leather grip and o guard remain distinct at the lower-left hilt.
+- Same silhouette as the cutlass, iron ramp (n, N, M), so the blade reads as one object.
+- Two brown rust patches (W) as solid blobs, not speckle, placed where the blade would corrode.
+- Plain leather grip (J) with no gold guard, so it looks worn and cheap.
