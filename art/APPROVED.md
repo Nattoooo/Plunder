@@ -95,3 +95,9 @@ Families the critic has passed. Match their style.
 - watchtower (buildings) — round 2
 - tavern (buildings) — round 2
 - silk (icons) — round 3
+- fruit (icons) — round 1
+- water (icons) — round 1
+- mortar-shell (icons) — round 1
+- planks (icons) — round 1
+- iron-bars (icons) — round 1
+- brass (icons) — round 1

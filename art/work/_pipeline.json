@@ -582,116 +582,116 @@
   "batch": "icons-trade"
  },
  "rations": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "salted-pork": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "fruit": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "water": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "grog": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "medicine": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "fish": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "cannonball": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "chain-shot": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "grapeshot": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "heated-shot": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "mortar-shell": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "pistol-shot": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "planks": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "iron-bars": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "canvas": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "rope": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "tar": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "brass": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
