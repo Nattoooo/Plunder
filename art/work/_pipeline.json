@@ -72,8 +72,8 @@
   "batch": "nature-large"
  },
  "bush": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
@@ -84,14 +84,14 @@
   "batch": "nature-small"
  },
  "boulder": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
  "rock": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
@@ -102,38 +102,38 @@
   "batch": "nature-small"
  },
  "ice-shard": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
  "grass-tuft": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "nature-small"
  },
  "flowers": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
  "mushrooms": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
  "shell": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "nature-small"
  },
  "lava-tile": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
@@ -234,8 +234,8 @@
   "batch": "props"
  },
  "crate": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
@@ -246,8 +246,8 @@
   "batch": "props"
  },
  "bottle": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
@@ -258,38 +258,38 @@
   "batch": "props"
  },
  "dig-spot": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
  "x-mark": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
  "claim-stone": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
  "shrine": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
  "quest-mark": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
  "waypoint": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
