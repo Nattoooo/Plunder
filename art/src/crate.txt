@@ -1,0 +1,27 @@
+== crate
+kkkkkkkkkkk
+kVVVVVVVVvk
+kVVVVVVVVvk
+kWWWWWWWWWk
+kVvvvvvvvWk
+kVvvvvvvvWk
+kWWWWWWWWWk
+kVvvvvvvvWk
+kVvvvvvvvWk
+kkkkkkkkkkk
+== lost-cargo
+kkkkkkk....
+kvReRRRk...
+kvRRRRrk...
+kvkkkkkk...
+kvk........
+kkkkkkkkkkk
+kVVVVVVVVvk
+kVVVVVVVVvk
+kWWWWWWWWWk
+kVvvvvvvvWk
+kVvvvvvvvWk
+kWWWWWWWWWk
+kVvvvvvvvWk
+kVvvvvvvvWk
+kkkkkkkkkkk

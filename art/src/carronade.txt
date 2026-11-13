@@ -1,15 +1,15 @@
-# Carronade: a short, fat barrel on a stubby wooden slide; no wheels.
+# Carronade: a short, fat straight barrel with trunnion nubs on a stubby wooden slide; no wheels.
 == carronade
 ..kkkkkk..
 .kNKKKKMk.
-.knNnMMMk.
+.kNnMMMMk.
+.kNnMMMMk.
 .kNnMMMMk.
 kNnMMMMMMk
 kNnMMMMMMk
-kNnMMMMMMk
-kNMMMMMMMk
-kKKKKKKKKk
-.kvVVwwwk.
-kvVvvwwwwk
-kvvvvwwwwk
-.kkkkkkkk.
+.kNMMMMMk.
+.kKKKKKKk.
+kvVVwwwwk.
+kvVvwwwwk.
+kvvvwwwwk.
+kkkkkkkkk.

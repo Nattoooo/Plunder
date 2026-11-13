@@ -1,0 +1,35 @@
+== chest
+..kkkkkkkkkk..
+.kVVVVVVVVVVk.
+kVVyVVVVVVyvWk
+kVVyVVVVVVyvWk
+kvvyvvvvvvyvWk
+kyyyyyyyyyyOOk
+kvvyvvyOvvyvWk
+kvvyvvOovvyvWk
+kvvyvvvvvvyvWk
+kvvyvvvvvvyvWk
+.kkkkkkkkkkkk.
+== locked-chest
+..kkkkkkkkkk..
+.kVVVVVVVVVVk.
+kVVnVVVVVVnvWk
+kVVnVVVVVVnvWk
+kvvnvvvvvvnvWk
+knnnnNMMNnnMMk
+kvvnvNkNMvnvWk
+kvvnvNkNMvnvWk
+kvvnvMMMMvnvWk
+kvvnvvvvvvnvWk
+.kkkkkkkkkkkk.
+== gold-chest
+....kkkkkk....
+..kkYYyyyOkk..
+.kYYyyyyyyOOk.
+kyyyYyyyyyyOOk
+kVVVVVVVVVVvWk
+kvvyvvvvvvyvWk
+kvvyvvyOvvyvWk
+kvvyvvOovvyvWk
+kvvyvvvvvvyvWk
+.kkkkkkkkkkkk.

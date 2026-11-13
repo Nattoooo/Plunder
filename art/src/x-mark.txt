@@ -1,0 +1,12 @@
+== x-mark
+RRr.....RRr
+.RRr...RRr.
+..RRr.RRr..
+...RRRRr...
+....RRr....
+...RRRRr...
+..RRr.RRr..
+.RRr...RRr.
+RRr.....RRr
+Rr.......RR
+r.........R

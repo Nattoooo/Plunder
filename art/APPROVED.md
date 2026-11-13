@@ -22,3 +22,5 @@ Families the critic has passed. Match their style.
 - house-townhouse (buildings) — round 1
 - mortar (ship) — round 2
 - fire (sails) — round 2
+- deck-damage (ship) — round 2
+- bows (ship) — round 2

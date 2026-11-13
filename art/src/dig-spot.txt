@@ -1,0 +1,8 @@
+== dig-spot
+....FFFF....
+..FFFFDDDd..
+.FFFDDDDDdd.
+FFDDDDDDDddd
+FDDDDDDDdddd
+DDDDDDdddddd
+.dddddddddd.

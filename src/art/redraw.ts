@@ -3,8 +3,13 @@ import { art, Art } from './palette';
 const SCALE = 1;
 
 const ROWS: Record<string, string[]> = {
+  'bow-large': ['..............kk..............', '............kVvvwk............', '..........kVVvvvvwwk..........', '........kVVvvvvvvvvwwk........', '......kVVvvvvvvvvvvvvwwk......', '....kVVvvvvvvvvvvvvvvvvwwk....', '..kVVvvvvvvvvvvvvvvvvvvvvwwk..', 'kVVvvvvvvvvvvvvvvvvvvvvvvvvwwk', 'kVVvvvvvvvvvvvvvvvvvvvvvvvvwwk'],
+  'bow-medium': ['.........kk.........', '.......kVvvwk.......', '.....kVVvvvvwwk.....', '...kVVvvvvvvvvwwk...', '.kVVvvvvvvvvvvvvwwk.', 'kVVvvvvvvvvvvvvvvwwk'],
+  'bow-small': ['....kk....', '...kVvk...', '..kVvvwk..', '.kVVvvwwk.', 'kVVvvvvwwk'],
   'captain-deck': ['..kk..', '.kKKk.', 'kKKKKk', 'sRRRRS', '.RRRRr', '.rrrr.'],
   'crew': ['..JJ..', '.JJJJ.', 'sRRRRr', '.RRRrS', '.RRRr.', '.j..j.'],
+  'damage-crack': ['wwV.......', '.wwV......', '..wwV..V..', '...ww.wV..', '....wwwV..', '...w.wwV..', '....V.wwV.', '.......ww.', '..........', '..........'],
+  'damage-hole': ['.vvwwww...', 'vvwaaaaww.', 'vwaaaaaaww', 'waaaaaaaaw', 'waaaaaaaaw', 'waaaaaaaaw', 'waaaaaaaaw', 'wwaaaaaaww', '.wwaaaaww.', '..wwwwwww.'],
   'deck-logs': ['wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'DffffDffff', 'dDDDDdDDDD', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW'],
   'deck-planks': ['VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'WWWWWVvvvW', 'VvvvWWWWWW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW'],
   'fire-1': ['..Q...', '.qQ.q.', '.qQQq.', '.qQYQq', 'qQYYQ.', 'qqQQqq'],
