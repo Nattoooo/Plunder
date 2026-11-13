@@ -1,6 +1,6 @@
 # Batch `ship-tiles`
 
-4 families. Draw every sprite listed below.
+6 families. Draw every sprite listed below.
 
 ## Folder `ship` rules
 
@@ -8,19 +8,29 @@
 
 ## Families
 
+### `deck-planks` (new: draw from scratch)
+
+- `deck-planks` 10 x 10 (fixed size): Wooden deck planks; tiles seamlessly; hull wood colours (recoloured for pine, oak and iron hulls)
+
 ### `deck-logs` (new: draw from scratch)
 
-- `deck-logs` 5 x 5 (fixed size): Lashed logs for rafts; tiles seamlessly
+- `deck-logs` 10 x 10 (fixed size): Lashed logs for rafts; tiles seamlessly
 
 ### `iron-bands` (new: draw from scratch)
 
-- `iron-bands` 5 x 5 (fixed size): Iron bands laid over the planks of an Ironbound hull; transparent between the bands
+- `iron-bands` 10 x 10 (fixed size): Iron bands laid over the planks of an Ironbound hull; transparent between the bands
 
 ### `deck-damage` (new: draw from scratch)
 
-- `damage-crack` 5 x 5 (fixed size): Cracked, splintered planks; transparent except the damage
-- `damage-hole` 5 x 5 (fixed size): Hole in the deck showing dark water; transparent around it
+- `damage-crack` 10 x 10 (fixed size): Cracked, splintered planks; transparent except the damage
+- `damage-hole` 10 x 10 (fixed size): Hole in the deck showing dark water; transparent around it
+
+### `bows` (new: draw from scratch)
+
+- `bow-small` 10 x 5 (fixed size): Pointed front tip of a 1-cell-wide hull, point at the top
+- `bow-medium` 20 x 6 (fixed size): Pointed front tip of a 2-cell-wide hull
+- `bow-large` 30 x 9 (fixed size): Pointed front tip of a 3-cell-wide hull
 
 ### `stern-lantern` (new: draw from scratch)
 
-- `stern-lantern` 3 x 3 (fixed size): Small brass lantern hanging off the back of the ship
+- `stern-lantern` 5 x 5 (fixed size): Small brass lantern hanging off the back of the ship

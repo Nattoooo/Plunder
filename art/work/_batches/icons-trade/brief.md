@@ -1,6 +1,6 @@
 # Batch `icons-trade`
 
-15 families. Draw every sprite listed below.
+16 families. Draw every sprite listed below.
 
 ## Folder `icons` rules
 
@@ -8,62 +8,66 @@
 
 ## Families
 
-### `sugar` (has a drawing in art/src/sugar.txt)
+### `rum` (new: draw from scratch)
 
-- `sugar` 8 x 8 (fixed size): Sugar: Burlap sack of white sugar
+- `rum` 16 x 16 (fixed size): Rum: Clay jug of rum with a cork
 
-### `tobacco` (has a drawing in art/src/tobacco.txt)
+### `sugar` (new: draw from scratch)
 
-- `tobacco` 8 x 8 (fixed size): Tobacco: Bundle of dried tobacco leaves tied with string
+- `sugar` 16 x 16 (fixed size): Sugar: Burlap sack of white sugar
 
-### `coffee` (has a drawing in art/src/coffee.txt)
+### `tobacco` (new: draw from scratch)
 
-- `coffee` 8 x 8 (fixed size): Coffee: A few roasted coffee beans
+- `tobacco` 16 x 16 (fixed size): Tobacco: Bundle of dried tobacco leaves tied with string
 
-### `tea` (has a drawing in art/src/tea.txt)
+### `coffee` (new: draw from scratch)
 
-- `tea` 8 x 8 (fixed size): Tea: Small wooden tea crate with a leaf stamp
+- `coffee` 16 x 16 (fixed size): Coffee: A few roasted coffee beans
 
-### `spices` (has a drawing in art/src/spices.txt)
+### `tea` (new: draw from scratch)
 
-- `spices` 8 x 8 (fixed size): Spices: Sack of orange spices
+- `tea` 16 x 16 (fixed size): Tea: Small wooden tea crate with a leaf stamp
 
-### `silk` (has a drawing in art/src/silk.txt)
+### `spices` (new: draw from scratch)
 
-- `silk` 8 x 8 (fixed size): Silk: Rolled bolts of pink silk
+- `spices` 16 x 16 (fixed size): Spices: Sack of orange spices
 
-### `cotton` (has a drawing in art/src/cotton.txt)
+### `silk` (new: draw from scratch)
 
-- `cotton` 8 x 8 (fixed size): Cotton: White cotton bolls on a stem
+- `silk` 16 x 16 (fixed size): Silk: Rolled bolts of pink silk
 
-### `salt` (has a drawing in art/src/salt.txt)
+### `cotton` (new: draw from scratch)
 
-- `salt` 8 x 8 (fixed size): Salt: Bowl or sack of coarse white salt
+- `cotton` 16 x 16 (fixed size): Cotton: White cotton bolls on a stem
 
-### `cocoa` (has a drawing in art/src/cocoa.txt)
+### `salt` (new: draw from scratch)
 
-- `cocoa` 8 x 8 (fixed size): Cocoa: Orange cocoa pod
+- `salt` 16 x 16 (fixed size): Salt: Bowl or sack of coarse white salt
 
-### `indigo` (has a drawing in art/src/indigo.txt)
+### `cocoa` (new: draw from scratch)
 
-- `indigo` 8 x 8 (fixed size): Indigo: Stack of blue dye bricks
+- `cocoa` 16 x 16 (fixed size): Cocoa: Orange cocoa pod
 
-### `wine` (has a drawing in art/src/wine.txt)
+### `indigo` (new: draw from scratch)
 
-- `wine` 8 x 8 (fixed size): Wine: Red wine bottle with a label
+- `indigo` 16 x 16 (fixed size): Indigo: Stack of blue dye bricks
 
-### `furs` (has a drawing in art/src/furs.txt)
+### `wine` (new: draw from scratch)
 
-- `furs` 8 x 8 (fixed size): Furs: Brown fur pelt
+- `wine` 16 x 16 (fixed size): Wine: Red wine bottle with a label
 
-### `whale-oil` (has a drawing in art/src/whale-oil.txt)
+### `furs` (new: draw from scratch)
 
-- `whale-oil` 8 x 8 (fixed size): Whale Oil: Tin can or lamp of whale oil
+- `furs` 16 x 16 (fixed size): Furs: Brown fur pelt
 
-### `porcelain` (has a drawing in art/src/porcelain.txt)
+### `whale-oil` (new: draw from scratch)
 
-- `porcelain` 8 x 8 (fixed size): Porcelain: Blue and white vase
+- `whale-oil` 16 x 16 (fixed size): Whale Oil: Tin can or lamp of whale oil
 
-### `amber` (has a drawing in art/src/amber.txt)
+### `porcelain` (new: draw from scratch)
 
-- `amber` 8 x 8 (fixed size): Amber: Polished golden-orange amber stone
+- `porcelain` 16 x 16 (fixed size): Porcelain: Blue and white vase
+
+### `amber` (new: draw from scratch)
+
+- `amber` 16 x 16 (fixed size): Amber: Polished golden-orange amber stone

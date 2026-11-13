@@ -1,6 +1,6 @@
 # Batch `nature-small`
 
-5 families. Draw every sprite listed below.
+11 families. Draw every sprite listed below.
 
 ## Folder `nature` rules
 
@@ -8,22 +8,47 @@
 
 ## Families
 
-### `reeds` (has a drawing in art/src/reeds.txt; earlier reviews: art/work/reeds/critique-1.md (fix what they raise, keep what works))
+### `bush` (new: draw from scratch)
 
-- `reeds` 7 x 7 (flexible size): Cattail reeds with brown heads, for swamps
+- `bush` 20 x 12 (flexible size): Round leafy bush, about knee to waist high on the captain
+- `berry-bush` 20 x 12 (flexible size): The same bush with clusters of red berries
 
-### `ice-shard` (has a drawing in art/src/ice-shard.txt; earlier reviews: art/work/ice-shard/critique-1.md (fix what they raise, keep what works))
+### `reeds` (new: draw from scratch)
 
-- `ice-shard` 8 x 8 (flexible size): Cluster of pale blue ice crystals, for glaciers
+- `reeds` 14 x 14 (flexible size): Cattail reeds with brown heads, for swamps
 
-### `mushrooms` (has a drawing in art/src/mushrooms.txt; earlier reviews: art/work/mushrooms/critique-1.md (fix what they raise, keep what works))
+### `boulder` (new: draw from scratch)
 
-- `mushrooms` 5 x 3 (flexible size): Two red-capped mushrooms
+- `boulder` 24 x 15 (flexible size): Large grey boulder (blocks walking)
 
-### `shell` (has a drawing in art/src/shell.txt)
+### `rock` (new: draw from scratch)
 
-- `shell` 4 x 2 (flexible size): Pink seashell lying on sand
+- `rock` 10 x 7 (flexible size): Small grey rock
 
-### `lava-tile` (has a drawing in art/src/lava-tile.txt)
+### `skull-rock` (new: draw from scratch)
 
-- `lava-tile` 8 x 8 (fixed size): Glowing lava with darker cracks; fixed size, must tile seamlessly in every direction
+- `skull-rock` 30 x 20 (flexible size): Big pale rock shaped like a skull, for Skull Isles
+
+### `ice-shard` (new: draw from scratch)
+
+- `ice-shard` 16 x 16 (flexible size): Cluster of pale blue ice crystals, for glaciers
+
+### `grass-tuft` (new: draw from scratch)
+
+- `grass-tuft` 8 x 4 (flexible size): Small tuft of grass blades, low contrast against grass
+
+### `flowers` (new: draw from scratch)
+
+- `flowers` 10 x 6 (flexible size): Small cluster of red and yellow wildflowers
+
+### `mushrooms` (new: draw from scratch)
+
+- `mushrooms` 10 x 6 (flexible size): Two red-capped mushrooms
+
+### `shell` (new: draw from scratch)
+
+- `shell` 7 x 4 (flexible size): Pink seashell lying on sand
+
+### `lava-tile` (new: draw from scratch)
+
+- `lava-tile` 16 x 16 (fixed size): Glowing lava with darker cracks; fixed size, must tile seamlessly in every direction

@@ -25,7 +25,7 @@ def main():
     body = ",\n".join(f"  '{k}': [{', '.join(repr(r) for r in v)}]" for k, v in sorted(rows.items()))
     OUT.write_text(
         "import { art, Art } from './palette';\n\n"
-        "const SCALE = 2;\n\n"
+        "const SCALE = 1;\n\n"
         f"const ROWS: Record<string, string[]> = {{\n{body}\n}};\n\n"
         "const cache = new Map<string, Art>();\n\n"
         "function grow(rows: string[]): string[] {\n"

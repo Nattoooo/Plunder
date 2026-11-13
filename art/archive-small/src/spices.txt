@@ -1,0 +1,10 @@
+# Spices: a small orange heap over a narrow dark jute sack tied with a rope band. Light top left.
+== spices
+..kkkk..
+.kQQqqk.
+.kQqqqk.
+.kkkkkk.
+.kffffk.
+.kVvvWk.
+.kvvWWk.
+..kkkk..

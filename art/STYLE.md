@@ -57,7 +57,7 @@ These parts are recoloured in game, so they must use exactly these characters, a
 - Outline: a 1 px `k` outline around the outer silhouette of characters, creatures, props, buildings, trees, deck parts and icons.
 - Interior lines only where two shapes would otherwise merge. Never outline every colour patch.
 - No outline on tiling tiles (deck planks, logs, lava, dock planks), sail cloth, ground marks, or effects.
-- Very small sprites (3 px or less on a side) may drop the outline when it would eat the shape.
+- Very small sprites (5 px or less on a side) may drop the outline when it would eat the shape.
 - Light comes from the top left. Highlights on top and left faces, shadow on bottom and right.
 - At most 3 tones per material (shadow, base, highlight). Usually 2 is enough.
 - No pillow shading (dark ring around a lighter centre), no banding (parallel stripes of tones following the outline), no dithering.
@@ -67,12 +67,12 @@ These parts are recoloured in game, so they must use exactly these characters, a
 - On land (characters, trees, buildings, props, icons): front view seen slightly from above, like a classic top-down RPG. You see the front face and a little of the top.
 - At sea and on deck (ship tiles, deck parts, sails, crew on deck, wrecks): straight down from above, bow pointing up.
 - Sea creatures: straight down from above, facing right.
-- Icons: one object, centred, filling most of the 8 x 8 square, at a slight angle from above.
+- Icons: one object, centred, filling most of the 16 x 16 square, at a slight angle from above.
 
 ## Scale
 
-- The captain (6 x 9) is the unit of scale for everything on land. A door fits the captain; a tree is about twice the captain's height; a crate comes up to about the captain's waist.
-- Ship parts sit on a 5 x 5 deck cell. A crew member on deck is 3 x 3.
+- The captain (12 x 18) is the unit of scale for everything on land. A door fits the captain; a tree is about twice the captain's height; a crate comes up to about the captain's waist.
+- Ship parts sit on a 10 x 10 deck cell. A crew member on deck is 6 x 6.
 - Sizes in the spec are exact for fixed sprites. Flexible sprites may change by a pixel or two if it clearly reads better; say why.
 
 ## Pixel craft

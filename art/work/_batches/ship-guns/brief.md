@@ -8,22 +8,22 @@
 
 ## Families
 
-### `light-cannon` (has a drawing in art/src/light-cannon.txt)
+### `light-cannon` (new: draw from scratch)
 
-- `light-cannon` 5 x 7 (fixed size): Small cannon on a wooden carriage, barrel pointing up
+- `light-cannon` 10 x 14 (fixed size): Small cannon on a wooden carriage, barrel pointing up
 
-### `long-gun` (has a drawing in art/src/long-gun.txt)
+### `long-gun` (new: draw from scratch)
 
-- `long-gun` 5 x 8 (fixed size): Cannon with a long, slim barrel
+- `long-gun` 10 x 16 (fixed size): Cannon with a long, slim barrel
 
-### `carronade` (has a drawing in art/src/carronade.txt)
+### `carronade` (new: draw from scratch)
 
-- `carronade` 5 x 7 (fixed size): Cannon with a short, fat barrel
+- `carronade` 10 x 13 (fixed size): Cannon with a short, fat barrel
 
-### `swivel-gun` (has a drawing in art/src/swivel-gun.txt)
+### `swivel-gun` (new: draw from scratch)
 
-- `swivel-gun` 5 x 7 (fixed size): Small swivel gun on a post
+- `swivel-gun` 10 x 13 (fixed size): Small swivel gun on a post
 
-### `mortar` (has a drawing in art/src/mortar.txt)
+### `mortar` (new: draw from scratch)
 
-- `mortar` 5 x 5 (fixed size): Squat round mortar seen from above, wide dark mouth
+- `mortar` 10 x 10 (fixed size): Squat round mortar seen from above, wide dark mouth

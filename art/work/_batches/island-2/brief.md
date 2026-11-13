@@ -1,6 +1,6 @@
 # Batch `island-2`
 
-4 families. Draw every sprite listed below.
+5 families. Draw every sprite listed below.
 
 ## Folder `buildings` rules
 
@@ -10,18 +10,22 @@
 
 ## Families
 
-### `warehouse` (has a drawing in art/src/warehouse.txt)
+### `warehouse` (new: draw from scratch)
 
-- `warehouse` 34 x 21 (flexible size): Wide barn with large double doors and stacked crates
+- `warehouse` 68 x 42 (flexible size): Wide barn with large double doors and stacked crates
 
-### `private-dock` (has a drawing in art/src/private-dock.txt)
+### `private-dock` (new: draw from scratch)
 
-- `private-dock` 20 x 7 (flexible size): Short wooden jetty with mooring posts
+- `private-dock` 40 x 14 (flexible size): Short wooden jetty with mooring posts
 
-### `watchtower` (has a drawing in art/src/watchtower.txt)
+### `watchtower` (new: draw from scratch)
 
-- `watchtower` 14 x 21 (flexible size): Tall wooden lookout tower on cross-braced legs, with a small roof
+- `watchtower` 28 x 41 (flexible size): Tall wooden lookout tower on cross-braced legs, with a small roof
 
-### `tavern` (has a drawing in art/src/tavern.txt)
+### `tavern` (new: draw from scratch)
 
-- `tavern` 25 x 32 (flexible size): Two-storey inn with a hanging sign beside the door
+- `tavern` 50 x 63 (flexible size): Two-storey inn with a hanging sign beside the door
+
+### `dock-planks` (new: draw from scratch)
+
+- `dock-planks` 8 x 8 (fixed size): Wooden pier planks for town docks; fixed size, tiles along the pier

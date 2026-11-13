@@ -1,6 +1,6 @@
 # Batch `nature-large`
 
-3 families. Draw every sprite listed below.
+6 families. Draw every sprite listed below.
 
 ## Folder `characters` rules
 
@@ -12,14 +12,27 @@
 
 ## Families
 
-### `palm` (has a drawing in art/src/palm.txt; earlier reviews: art/work/palm/critique-1.md (fix what they raise, keep what works))
+### `tree` (new: draw from scratch)
 
-- `palm` 19 x 20 (flexible size): Coconut palm: curved trunk, drooping fronds
+- `tree` 30 x 35 (flexible size): Broadleaf tree: round canopy of leaf clusters, brown trunk
 
-### `dead-tree` (has a drawing in art/src/dead-tree.txt; earlier reviews: art/work/dead-tree/critique-1.md (fix what they raise, keep what works))
+### `jungle-tree` (new: draw from scratch)
 
-- `dead-tree` 13 x 11 (flexible size): Bare, twisted grey-brown tree with forked branches
+- `jungle-tree` 39 x 30 (flexible size): Jungle tree: wide flat umbrella canopy on a tall thin trunk
 
-### `whale` (has a drawing in art/src/whale.txt; earlier reviews: art/work/whale/critique-1.md, art/work/whale/critique-2.md (fix what they raise, keep what works))
+### `palm` (new: draw from scratch)
 
-- `whale` 14 x 5 (flexible size): Whale seen from above, swimming right just under the surface
+- `palm` 37 x 39 (flexible size): Coconut palm: curved trunk, drooping fronds
+
+### `pine` (new: draw from scratch)
+
+- `pine` 22 x 37 (flexible size): Pine tree: stacked layers of branches, short trunk
+- `snow-pine` 22 x 37 (flexible size): The same pine with snow on each layer
+
+### `dead-tree` (new: draw from scratch)
+
+- `dead-tree` 26 x 22 (flexible size): Bare, twisted grey-brown tree with forked branches
+
+### `whale` (new: draw from scratch)
+
+- `whale` 28 x 10 (flexible size): Whale seen from above, swimming right just under the surface

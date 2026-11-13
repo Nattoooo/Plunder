@@ -8,54 +8,54 @@
 
 ## Families
 
-### `helm` (has a drawing in art/src/helm.txt)
+### `helm` (new: draw from scratch)
 
-- `helm` 5 x 5 (fixed size): Ship's wheel
+- `helm` 10 x 10 (fixed size): Ship's wheel
 
-### `rudder` (has a drawing in art/src/rudder.txt)
+### `rudder` (new: draw from scratch)
 
-- `rudder` 5 x 7 (fixed size): Wooden rudder blade; sticks out 2 px below the cell
+- `rudder` 10 x 14 (fixed size): Wooden rudder blade; sticks out 2 px below the cell
 
-### `mast` (has a drawing in art/src/mast.txt)
+### `mast` (new: draw from scratch)
 
-- `mast` 5 x 5 (fixed size): Base of a mast with rigging lines (sails are drawn over it)
+- `mast` 10 x 10 (fixed size): Base of a mast with rigging lines (sails are drawn over it)
 
-### `oar-bench` (has a drawing in art/src/oar-bench.txt)
+### `oar-bench` (new: draw from scratch)
 
-- `oar-bench` 5 x 5 (fixed size): Rowing bench across the deck (oars are a separate sprite)
+- `oar-bench` 10 x 10 (fixed size): Rowing bench across the deck (oars are a separate sprite)
 
-### `crew-quarters` (has a drawing in art/src/crew-quarters.txt)
+### `crew-quarters` (new: draw from scratch)
 
-- `crew-quarters` 5 x 5 (fixed size): Deck hatch with a ladder going below
+- `crew-quarters` 10 x 10 (fixed size): Deck hatch with a ladder going below
 
-### `cargo-hold` (has a drawing in art/src/cargo-hold.txt)
+### `cargo-hold` (new: draw from scratch)
 
-- `cargo-hold` 5 x 5 (fixed size): Closed cargo hatch with two iron straps
+- `cargo-hold` 10 x 10 (fixed size): Closed cargo hatch with two iron straps
 
-### `galley` (has a drawing in art/src/galley.txt)
+### `galley` (new: draw from scratch)
 
-- `galley` 5 x 5 (fixed size): Iron cooking stove with a chimney pipe and a glow of fire
+- `galley` 10 x 10 (fixed size): Iron cooking stove with a chimney pipe and a glow of fire
 
-### `powder-magazine` (has a drawing in art/src/powder-magazine.txt)
+### `powder-magazine` (new: draw from scratch)
 
-- `powder-magazine` 5 x 5 (fixed size): Four powder kegs seen from above
+- `powder-magazine` 10 x 10 (fixed size): Four powder kegs seen from above
 
-### `workshop` (has a drawing in art/src/workshop.txt)
+### `workshop` (new: draw from scratch)
 
-- `workshop` 5 x 5 (fixed size): Carpenter's workbench with a hammer
+- `workshop` 10 x 10 (fixed size): Carpenter's workbench with a hammer
 
-### `sick-bay` (has a drawing in art/src/sick-bay.txt)
+### `sick-bay` (new: draw from scratch)
 
-- `sick-bay` 5 x 5 (fixed size): Cot with a red cross
+- `sick-bay` 10 x 10 (fixed size): Cot with a red cross
 
-### `crows-nest` (has a drawing in art/src/crows-nest.txt)
+### `crows-nest` (new: draw from scratch)
 
-- `crows-nest` 6 x 6 (fixed size): Round lookout basket seen from above, drawn on top of the sails
+- `crows-nest` 12 x 12 (fixed size): Round lookout basket seen from above, drawn on top of the sails
 
-### `ram` (has a drawing in art/src/ram.txt)
+### `ram` (new: draw from scratch)
 
-- `ram` 5 x 8 (fixed size): Pointed iron ram plate on the bow, sticking out forward
+- `ram` 10 x 16 (fixed size): Pointed iron ram plate on the bow, sticking out forward
 
-### `figurehead` (has a drawing in art/src/figurehead.txt)
+### `figurehead` (new: draw from scratch)
 
-- `figurehead` 5 x 8 (fixed size): Gold carved figurehead on the bow, sticking out forward
+- `figurehead` 10 x 16 (fixed size): Gold carved figurehead on the bow, sticking out forward

@@ -12,36 +12,47 @@
   "round": 0,
   "status": "drawing"
  },
- "nature-small": {
-  "families": [
-   "reeds",
-   "ice-shard",
-   "mushrooms",
-   "shell",
-   "lava-tile"
-  ],
-  "tier": "tiny",
-  "round": 0,
-  "status": "drawing"
- },
  "nature-large": {
   "families": [
+   "tree",
+   "jungle-tree",
    "palm",
+   "pine",
    "dead-tree",
    "whale"
   ],
   "tier": "normal",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
+ },
+ "nature-small": {
+  "families": [
+   "bush",
+   "reeds",
+   "boulder",
+   "rock",
+   "skull-rock",
+   "ice-shard",
+   "grass-tuft",
+   "flowers",
+   "mushrooms",
+   "shell",
+   "lava-tile"
+  ],
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
  },
  "houses": {
   "families": [
+   "house-cottage",
+   "house-shutters",
    "house-long",
    "house-townhouse"
   ],
   "tier": "normal",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "fort": {
   "families": [
@@ -68,31 +79,26 @@
    "warehouse",
    "private-dock",
    "watchtower",
-   "tavern"
+   "tavern",
+   "dock-planks"
   ],
   "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
- "props-small": {
+ "props": {
   "families": [
    "chests",
    "crate",
    "barrel",
    "bottle",
+   "wreck",
    "dig-spot",
    "x-mark",
+   "claim-stone",
+   "shrine",
    "quest-mark",
-   "waypoint",
-   "dock-planks"
-  ],
-  "tier": "tiny",
-  "round": 0,
-  "status": "drawing"
- },
- "props-large": {
-  "families": [
-   "wreck"
+   "waypoint"
   ],
   "tier": "normal",
   "round": 0,
@@ -100,14 +106,16 @@
  },
  "ship-tiles": {
   "families": [
+   "deck-planks",
    "deck-logs",
    "iron-bands",
    "deck-damage",
+   "bows",
    "stern-lantern"
   ],
-  "tier": "tiny",
-  "round": 1,
-  "status": "done"
+  "tier": "normal",
+  "round": 0,
+  "status": "drawing"
  },
  "ship-guns": {
   "families": [
@@ -117,7 +125,7 @@
    "swivel-gun",
    "mortar"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
@@ -137,30 +145,22 @@
    "ram",
    "figurehead"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
- "ship-large": {
+ "sails": {
   "families": [
-   "bows",
    "sail-square",
    "sail-main",
-   "sail-lateen"
-  ],
-  "tier": "normal",
-  "round": 2,
-  "status": "done"
- },
- "ship-small": {
-  "families": [
+   "sail-lateen",
    "sail-patched",
    "oar",
    "flags",
    "fire",
    "deck-people"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
@@ -172,11 +172,12 @@
    "cutlass-swing"
   ],
   "tier": "tiny",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "icons-trade": {
   "families": [
+   "rum",
    "sugar",
    "tobacco",
    "coffee",
@@ -193,7 +194,7 @@
    "porcelain",
    "amber"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
@@ -219,7 +220,7 @@
    "tar",
    "brass"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
@@ -244,7 +245,7 @@
    "tricorn",
    "captains-coat"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  },
@@ -278,7 +279,7 @@
    "bottle-message",
    "sea-chart"
   ],
-  "tier": "tiny",
+  "tier": "normal",
   "round": 0,
   "status": "drawing"
  }

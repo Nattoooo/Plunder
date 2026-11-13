@@ -1,0 +1,10 @@
+# Tea: wooden crate with a lit lid, a green leaf stamp on the front and a shadowed base. Light top left.
+== tea
+.kkkkkk.
+kFFFFFFk
+kVVVVVVk
+kkkkkkkk
+kvvvvHHk
+kvvhHvvk
+kWhhWWWk
+.kkkkkk.

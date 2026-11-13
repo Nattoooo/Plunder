@@ -1,0 +1,10 @@
+# Indigo: two stacked blue dye bricks, the top one offset a pixel to the right. Light top left.
+== indigo
+.kkkkkk.
+.kllllk.
+.kBBBBk.
+.kkkkkk.
+kBBBBk..
+kBBBbk..
+kBBBbk..
+.kkkkk..

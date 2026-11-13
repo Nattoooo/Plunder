@@ -4,7 +4,7 @@ You draw a batch of Plunder sprite families in one go. Work from /home/user/plun
 
 1. Read `art/STYLE.md` fully. It is binding.
 2. Read your brief: `art/work/_batches/<batch>/brief.md`. It lists every family and sprite in the batch, with sizes, descriptions, folder rules, and any earlier reviews to address.
-3. Open `art/work/_ref/approved.png` with the Read tool. That is the approved style. Match its outline, light, shading, level of detail and proportions exactly. Everything on land is scaled against the captain (shown beside each sprite in your previews).
+3. Open `art/work/_ref/approved.png` with the Read tool. It shows the designs approved earlier at half resolution (their grids are in `art/archive-small/src/`). You are drawing at full resolution: keep those designs, colours and look, and use the extra pixels for cleaner shapes and form, not noise. Once families are approved at full resolution they are added to this sheet too. Match its outline, light, shading, level of detail and proportions exactly. Everything on land is scaled against the captain (shown beside each sprite in your previews).
 4. Draw each family in `art/src/<family>.txt`:
    ```
    == sprite-name
