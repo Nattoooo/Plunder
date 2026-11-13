@@ -1,7 +1,7 @@
-# Golden idol: squat gold figure with dark eyes and a toothy grin. Light top left.
+# Golden idol: squat gold figure with dark eyes and a toothy grin. Gold ramp y O o.
 == golden-idol
 ..kkkk..
-.kYyyOk.
+.kyyyOk.
 kykOOkok
 kyOOOOok
 kOkPPkOk

@@ -1,7 +1,7 @@
-# Golden chalice: flared gold cup on a stem and foot, light top left. Light top left.
+# Golden chalice: flared gold cup on a stem and foot, light top left. Gold ramp y O o.
 == chalice
 .kkkkkk.
-kYyyyOOk
+kyyyyOOk
 kyyOOOok
 .kyOOok.
 ..kOOk..

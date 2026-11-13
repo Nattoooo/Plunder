@@ -1,7 +1,7 @@
-# Gold doubloons: stack of three gold coins, face lit top left. Gold ramp. Light top left.
+# Gold doubloons: stack of three gold coins, face lit top left. Gold ramp y O o.
 == gold-doubloon
 ..kkkk..
-.kYyyOk.
+.kyyyOk.
 kyyyOOok
 kOOOOook
 kooooook

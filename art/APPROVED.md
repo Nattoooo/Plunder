@@ -77,3 +77,7 @@ Families the critic has passed. Match their style.
 - chests (props) — round 2
 - bottle (props) — round 2
 - quest-mark (props) — round 2
+- compass (icons) — round 1
+- repair-kit (icons) — round 1
+- cutlass (icons) — round 1
+- rapier (icons) — round 1

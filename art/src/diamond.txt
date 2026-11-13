@@ -1,8 +1,8 @@
-# Diamond: white cut gem, table lit top left, blue-white facets. Light top left.
+# Diamond: white cut gem, table lit top left, blue-white facets. Ramp P L l.
 == diamond
 ..kkkk..
-.kPPpLk.
-kPpLLLLk
+.kPPPLk.
+kPPLLLLk
 kLLLLLLk
 kLLLlLLk
 .kLLlLk.

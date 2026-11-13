@@ -820,7 +820,7 @@
  },
  "compass": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
@@ -841,7 +841,7 @@
  },
  "repair-kit": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
@@ -869,7 +869,7 @@
  },
  "cutlass": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
@@ -883,7 +883,7 @@
  },
  "rapier": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
