@@ -82,3 +82,5 @@ Families the critic has passed. Match their style.
 - flintlock (icons) — round 1
 - blunderbuss (icons) — round 1
 - musket (icons) — round 1
+- reeds (nature) — round 2
+- skull-rock (nature) — round 2

@@ -78,8 +78,8 @@
   "batch": "nature-small"
  },
  "reeds": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
@@ -96,8 +96,8 @@
   "batch": "nature-small"
  },
  "skull-rock": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "nature-small"
  },
