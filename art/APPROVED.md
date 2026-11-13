@@ -115,3 +115,4 @@ Families the critic has passed. Match their style.
 - trident-shard (icons) — round 1
 - storm-glass (icons) — round 1
 - sea-chart (icons) — round 1
+- wreck (props) — round 3

@@ -252,8 +252,8 @@
   "batch": "props"
  },
  "wreck": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "props"
  },
