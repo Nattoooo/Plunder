@@ -1,18 +1,18 @@
-# Gold bust on the bow: head, narrow neck, wide shoulders on the cell. y highlight top-left, O base, o shadow right/bottom.
+# Gold prow figure seen straight down, bow up: pointed forward body, hair-topped head, wide shoulders and arms on the cell. y highlight top-left, O base, o shadow right/bottom.
 == figurehead
-...kkkk...
+....kk....
+...kyOk...
+...kyOk...
 ..kyyOOk..
-.kyyyOOok.
-.kyyOOOok.
-.kyOOOook.
-.kOOOOook.
-..kOOook..
-...kOok...
-...kOok...
-..kyOOok..
+..kyOOOk..
+..kOoook..
+..kooook..
+..kooook..
+..kooook..
 .kyyOOOok.
 kyyOOOOook
 kyOOOOOook
+kyOOOOOook
 kOOOOOoook
-kooooooook
+koOOOOoook
 kkkkkkkkkk
