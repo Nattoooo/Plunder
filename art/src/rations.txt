@@ -1,0 +1,17 @@
+== rations
+................
+................
+..kkkkkkkkkkkk..
+.kFFFFFFFFFFFfk.
+.kFFDFFFFDFFffk.
+.kkkkkkkkkkkkkk.
+.kffffffffffDDk.
+.kkkkkkkkkkkkkk.
+..kFFFFFFFFFfk..
+..kFFFFDFFFffk..
+..kkkkkkkkkkkk..
+..kffffffffDDk..
+.kkkkkkkkkkkkkk.
+.kffffffffffDDk.
+..kkkkkkkkkkkk..
+................

@@ -36,3 +36,6 @@ Families the critic has passed. Match their style.
 - light-cannon (ship) — round 3
 - carronade (ship) — round 3
 - swivel-gun (ship) — round 3
+- rudder (ship) — round 2
+- galley (ship) — round 2
+- workshop (ship) — round 2

@@ -20,6 +20,7 @@ const ROWS: Record<string, string[]> = {
   'fire-2': ['....Q.', '.q.Qq.', '.qQQq.', 'qQYQq.', '.QYYQq', 'qqQQqq'],
   'flag-1': ['wRRRRRR.', 'wRRRRRRR', 'wRRRR...', 'w.......'],
   'flag-2': ['wRRRR...', 'wRRRRRR.', 'wRRRRRRR', 'w.......'],
+  'galley': ['kkkkkkkkkk', 'kNNNMMMMmk', 'kNMMNNMMmk', 'kNMNKKmMmk', 'kMMNKKmMmk', 'kMMMNmMMmk', 'kMmqQQqmMk', 'kMmqqqqmMk', 'kmmmmmmmmk', 'kkkkkkkkkk'],
   'glint-1': ['P'],
   'glint-2': ['PPP'],
   'glint-3': ['.P.', 'PPP', '.P.'],
@@ -41,6 +42,7 @@ const ROWS: Record<string, string[]> = {
   'pirate-flag-2': ['wKKKK...', 'wKKKKKK.', 'wkkkkkkk', 'w.......'],
   'powder-magazine': ['.kkk..kkk.', 'kVVvkkVVvk', 'kVvwkkVvwk', 'kvwwkkvwwk', '.kkk..kkk.', '.kkk..kkk.', 'kVVvkkVVvk', 'kVvwkkVvwk', 'kvwwkkvwwk', '.kkk..kkk.'],
   'ram': ['....kk....', '...kNmk...', '...kNmk...', '..kNMMmk..', '..kNMMmk..', '.kNNMMmmk.', '.kNNMMmmk.', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kNNMMMMmmk', 'kkkkkkkkkk'],
+  'rudder': ['kkkkkkkkkk', 'kVVvvvwwwk', 'kMVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', 'kMVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', 'kVVvvvwwwk', '.kkkkkkkk.'],
   'sail-lateen-full': ['W........', 'Wp.......', 'Wp.......', 'Wp.......', 'WpC......', 'WpC......', 'WpC......', 'WpCc.....', 'WpCc.....', 'WpCc.....', 'WpCCc....', 'WpCCc....', 'WpCCc....', 'WpCCc....', 'WpCCCc...', 'WpCCCc...', 'WpCCCc...', 'WpCCCCc..', 'WpCCCCc..', 'WpCCCCc..', 'WpCCCCCc.', 'WpCCCCCc.', 'WpCCCCCc.', 'WpCCCCCc.', 'WpCCCCCCc', 'WpCCCCCCc'],
   'sail-lateen-furled': ['WCC.', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WpCc', 'WCC.'],
   'sail-lateen-half': ['W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'W.....', 'Wp....', 'Wp....', 'Wp....', 'Wp....', 'WpC...', 'WpC...', 'WpC...', 'WpCc..', 'WpCc..', 'WpCc..', 'WpCc..', 'WpCCc.', 'WpCCc.', 'WpCCc.', 'WpCCc.', 'WpCCCc', 'WpCCCc'],
@@ -55,7 +57,8 @@ const ROWS: Record<string, string[]> = {
   'sail-square-half': ['....pppppCCCCCCCCccccc....', '..ppppppCCCCCCCCCCcccccc..', '.pppppppCCCCCCCCCCCcccccc.', 'pppppppCCCCCCCCCCCCccccccc', 'WWWWWWWWWWWWWWWWWWWWWWWWWW', 'wwwwwwwwwwwwwwwwwwwwwwwwww'],
   'sick-bay': ['kkkkkkkkkk', 'kPPPPPPPPk', 'kPppppppck', 'kCCCCCCCck', 'kCCCRRccck', 'kCRRRRRRck', 'kcRRRRRrck', 'kcccRRccck', 'kcccccccck', 'kkkkkkkkkk'],
   'stern-lantern': ['.yyO.', 'yYYYO', 'yYYYO', 'yYYYo', '.Ooo.'],
-  'swivel-gun': ['..kkkkkk..', '..kNKKMk..', '..kNnMMk..', '..kNnMMk..', '..kNnMMk..', '.kNnMMMMk.', 'kNnMMMMMMk', '.kMMMMMmk.', '..kkMMkk..', '..kvVVwk..', '..kvVVwk..', '..kvVVwk..', '..kkkkkk..']
+  'swivel-gun': ['..kkkkkk..', '..kNKKMk..', '..kNnMMk..', '..kNnMMk..', '..kNnMMk..', '.kNnMMMMk.', 'kNnMMMMMMk', '.kMMMMMmk.', '..kkMMkk..', '..kvVVwk..', '..kvVVwk..', '..kvVVwk..', '..kkkkkk..'],
+  'workshop': ['kkkkkkkkkk', 'kVVVVVVVVk', 'kvNNNMMmvk', 'kvMMMmmmvk', 'kvvvVVvvwk', 'kvvvVVvvwk', 'kvvvVVvvwk', 'kvvvVVvwwk', 'kwwwwwwwwk', 'kkkkkkkkkk']
 };
 
 const cache = new Map<string, Art>();

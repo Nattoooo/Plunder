@@ -366,8 +366,8 @@
   "batch": "ship-parts"
  },
  "rudder": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
@@ -396,8 +396,8 @@
   "batch": "ship-parts"
  },
  "galley": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
@@ -408,8 +408,8 @@
   "batch": "ship-parts"
  },
  "workshop": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
