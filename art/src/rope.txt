@@ -1,0 +1,10 @@
+# A thick rope coil surrounds a clear dark central opening. The connected f top-left arc, D body and d lower-right arc describe the coil without alternating texture.
+== rope
+..kkkk..
+.kffffk.
+kffDDDDk
+kfDkkDdk
+kfDkkDdk
+kfDDDDdk
+.kDDddk.
+..kkkk..

@@ -2,15 +2,16 @@
 == crate
 kkkkkk
 kVVVVk
-kvvvWk
+kvvvvk
 kwwwwk
-kvvvWk
+kvvvvk
 kkkkkk
 # lost-cargo: the same crate with a red flag on a short pole at its top left.
 # The crate is 3 px tall here (one row less) to fit the 7 px height.
 == lost-cargo
-kWRRk.
-kWRrk.
+kkkkk.
+kVRRk.
+kVkkk.
 kkkkkk
 kVVVVk
 kvvvvk

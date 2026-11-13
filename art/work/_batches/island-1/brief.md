@@ -10,22 +10,22 @@
 
 ## Families
 
-### `plantation` (new: draw from scratch)
+### `plantation` (has a drawing in art/src/plantation.txt)
 
 - `plantation` 37 x 22 (flexible size): Rows of tall green crops beside a small hut
 
-### `lumber-camp` (new: draw from scratch)
+### `lumber-camp` (has a drawing in art/src/lumber-camp.txt)
 
 - `lumber-camp` 32 x 12 (flexible size): Open-sided wooden shed on posts beside a pile of cut logs
 
-### `mine` (new: draw from scratch)
+### `mine` (has a drawing in art/src/mine.txt)
 
 - `mine` 30 x 13 (flexible size): Timber-framed tunnel entrance in a grey rocky hillside, with an ore cart
 
-### `fishery` (new: draw from scratch)
+### `fishery` (has a drawing in art/src/fishery.txt)
 
 - `fishery` 31 x 21 (flexible size): Small fishing hut beside a wooden rack of hanging fish
 
-### `distillery` (new: draw from scratch)
+### `distillery` (has a drawing in art/src/distillery.txt)
 
 - `distillery` 26 x 23 (flexible size): Cottage with a big copper pot still and a chimney

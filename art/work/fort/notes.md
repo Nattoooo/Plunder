@@ -7,3 +7,6 @@
 - Wall-back: inside face of the back wall, same merlons and course 1 as front but only 7 px tall.
 - Flagpole: 1 px wood pole with outline, 3x3 flag in B (fort flag swap colour, used nowhere else).
 - Crates: two crates on the bottom sharing an outline column, one crate on top, wood V/W/w.
+
+## Current batch revision
+Aligned tower courses to bottom-aligned wall-front and gate: mortar rows 5/9/13, lit course starts 6/10/14, and a complete u/T/T bottom course above row 17 outline. Arrow slit stays a centred 2 x 4 opening at rows 6–9. Vertical joints use a four-pixel cadence, staggered between courses. Back-wall lit lip now includes its mortar joint. Side-wall cross joint spans its walkway cleanly. Existing 14 px tower merlon rhythm and gate join-phase asymmetry are retained as previously accepted; a gate begins/ends in a crenel and therefore one wall join has a two-pixel notch. All seven fixed canvases remain exact.

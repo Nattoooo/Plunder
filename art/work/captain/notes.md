@@ -115,3 +115,9 @@ Size unchanged: 9 x 9, body and feet 7 wide (cols 1-7), as instructed to keep th
 
 ## Round 3
 Still 9 x 9, 7 px body (door/scale decision belongs to the coordinator). Row 0 is now `kk.kkk.kk` (side `kk.kkkk..`) closing the wing outline; front trim centre is `O`; back head row 4 widened to match the front jaw; side face has a nose pixel at (7,3) with `k` at (8,3); side-2 row 8 `..kkk.kk.` closes the coat tail.
+
+
+## Current batch redraw
+The 9 px-wide draft violated the current one-pixel size tolerance. Redrawn at **7 x 9**, with a **5 px outlined torso and 3 px inner body**, instead of modifying any approved door or specification. The tricorn is a broad black felt brim with two raised corners, a black crown and only three gold trim pixels; the centre trim is the downward front point. The rear brim is black rather than a gold headband. The side brim projects beyond the face.
+The small face is a flat three-pixel skin cluster and one-pixel neck: deliberately no eye dots competing with the hat at this scale. Hair and queue replace skin from behind. The white shirt is confined to the front opening. Hands sit at row 6 under a red sleeve, never beside the face or ankles. Navy trousers end in separate black boots. Walk frames raise one foot and hide the opposite hand; all hat/head/shoulder pixels stay identical within each view. Profile stride moves only the hand and legs. Skin, hair and gold carry top-left lighting; the red coat stays flat to avoid a dark unreadable right edge.
+Earlier oversized suggested pixel edits were superseded by this proportional redraw. Hat/door scale, cuff-height hands, navy trousers, separate boots and profile coat outline are retained as requirements.

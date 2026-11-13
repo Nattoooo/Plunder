@@ -1,8 +1,4 @@
-# Two red-capped mushrooms: tall one left (white spot), small one right, cream stems.
 == mushrooms
-.kkk.....
-kePRk.kk.
-kRRrkkeRk
-.kCk.krrk
-.kCk..kCk
-.kkk..kkk
+eR.eR
+RR.Rr
+.p..p

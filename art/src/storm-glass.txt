@@ -1,0 +1,10 @@
+# A round blue glass orb encloses a tiny connected yellow lightning bolt. L/l/B gives the lit upper-left glass and shadowed right side; the four y pixels form one zigzag bolt.
+== storm-glass
+..kkkk..
+.kLLllk.
+kLLlyBBk
+kLlyyBBk
+kLlyBBBk
+kllBBBBk
+.kBBBBk.
+..kkkk..

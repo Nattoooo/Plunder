@@ -1,7 +1,6 @@
-# Four powder kegs, one per quadrant, split by a dark cross.
 == powder-magazine
-VvkVv
-vwkvw
 kkkkk
-VvkVv
-vwkvw
+kVkvk
+kkkkk
+kvkwk
+kkkkk

@@ -1,4 +1,4 @@
-# Cocoa: ripe orange pod, shaded on the right. Light top left.
+# The pointed orange pod has a broad lit upper-left side and one warm shadow face. No texture ribs are added at this scale.
 == cocoa
 ...kk...
 ..kQQk..

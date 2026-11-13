@@ -12,3 +12,7 @@ Identical except the legs: mirrored stride, right foot on the bottom row.
 
 ## Batch round
 Redrawn: 5 px skull with sockets, bone nose gap and teeth row; arm tops outlined; spine plus rib bars and K gaps; 3 px pelvis; legs end in k like the captain's boots, with a clearly different stride in frame 2 (mirror). No pirate prop added: kept to bone and k for readability.
+
+
+## Current batch redraw
+Both frames are **6 x 9**, within one pixel of the 5 x 8 specification. The formerly 9 x 11 drawing was far outside the permitted scale. The skull and bandana occupy the top four rows: R/r red cloth is the pirate cue, x/X are bone cheeks and jaw, and the dark paired socket opening is centred. Broad bone shoulders and the small pelvis bracket the dark rib hollow; arms hang from the shoulders beside it. Bone is lit x at the left and X at the right. The stance alternates by lifting one outlined foot at row 7 while the planted foot reaches row 8. All bandana, skull, shoulders, ribs and pelvis pixels stay fixed between frames. Earlier oversized prescriptions were replaced with the same anatomical landmarks at the actual specification scale.

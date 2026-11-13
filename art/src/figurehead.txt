@@ -1,10 +1,9 @@
-# Gold carved figurehead: rounded head over the bow.
 == figurehead
 .kkk.
-kyYOk
+.kyk.
+.kOk.
 kyOOk
-kOOOk
-kOoOk
-kOook
-kooOk
-kkkkk
+kOOok
+.kOk.
+.kOk.
+.kkk.

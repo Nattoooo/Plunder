@@ -584,7 +584,7 @@ const SIGN = art([
   '.kkkkkkkkkk.'
 ]);
 
-const TOWER = art([
+const TOWER_0 = art([
   'kkkkkk..kkkkkk..kkkkkk..kkkk',
   'kUUUUk..kUUUUk..kUUUUk..kUUk',
   'kuuuuk..kuuuuk..kuuuuk..kuuk',
@@ -623,7 +623,7 @@ const TOWER = art([
   'kkkkkkkkkkkkkkkkkkkkkkkkkkkk'
 ]);
 
-const FWALL = art([
+const FWALL_0 = art([
   'kkkk....',
   'kUUk....',
   'kuuk....',
@@ -650,7 +650,7 @@ const FWALL = art([
   'kkkkkkkk'
 ]);
 
-const GATE = art([
+const GATE_0 = art([
   'kkkk....kkkk....kkkk....kkkk',
   'kUUk....kUUk....kUUk....kUUk',
   'kuukkkkkkuukkkkkkuukkkkkkuuk',
@@ -676,7 +676,7 @@ const GATE = art([
   'kkkkkkkkkkkkkkkkkkkkkkkkkkkk'
 ]);
 
-const SWALL = art([
+const SWALL_0 = art([
   'kuTnNNNNnTuk',
   'kuTnNNNNnTuk',
   'kuTnNNNNnTuk',
@@ -687,7 +687,7 @@ const SWALL = art([
   'kuTnNNNNnTuk'
 ]);
 
-const BWALL = art([
+const BWALL_0 = art([
   'kkkk....',
   'kUUk....',
   'kuuk....',
@@ -704,7 +704,7 @@ const BWALL = art([
   'kkkkkkkk'
 ]);
 
-const FLAGPOLE = art([
+const FLAGPOLE_0 = art([
   '.k..........',
   'kNkkkkkkkkk.',
   'kNkBBBBBBBBk',
@@ -744,7 +744,7 @@ const CANNON = art([
   '..k......k..'
 ]);
 
-const CRATES = art([
+const CRATES_0 = art([
   '.kkkkkkkk.......',
   '.kVVVVVVk.......',
   '.kVvvvvVk.......',
@@ -1096,6 +1096,14 @@ export const WALLS: Swap[] = [
   { C: 0xe0b8a0, c: 0xb48c78 }
 ];
 
+const TOWER = rd('fort-tower', TOWER_0);
+const FWALL = rd('fort-wall-front', FWALL_0);
+const GATE = rd('fort-gate', GATE_0);
+const SWALL = rd('fort-wall-side', SWALL_0);
+const BWALL = rd('fort-wall-back', BWALL_0);
+const FLAGPOLE = rd('fort-flagpole', FLAGPOLE_0);
+const CRATES = rd('fort-crates', CRATES_0);
+
 function fort(tiles: number, depth: number, barracks: boolean): Art {
   const TW = TOWER.w;
   const W = TW * 2 + tiles * 8;
@@ -1175,20 +1183,12 @@ export const SHRINE = rd('shrine', SHRINE_0);
 export const CLAIM_STONE = rd('claim-stone', CLAIM_STONE_0);
 export const CLAIM_OWNED: Art = rd('claim-stone-owned', CLAIM_OWNED_0);
 
-function withShadow(a: Art): Art {
-  const rows = a.rows.map((r) => r + '..');
-  const base = a.rows[a.h - 1];
-  let shadow = '';
-  for (let x = 0; x < a.w + 2; x++) shadow += x >= 2 && base[x - 2] !== '.' ? ',' : '.';
-  return art([...rows, shadow]);
-}
-
 const HOUSE_NAMES = ['house-cottage', 'house-shutters', 'house-long', 'house-townhouse'];
 HOUSES.forEach((h, i) => {
   const a = rd(HOUSE_NAMES[i], h.art);
   if (a === h.art) return;
   const wall = a.rows.findIndex((r) => /[Cc]/.test(r));
-  HOUSES[i] = { art: withShadow(a), foot: Math.max(0, wall - 8) };
+  HOUSES[i] = { art: a, foot: Math.max(0, wall - 8) };
 });
 
 const STRUCTURE_NAMES: Record<string, string> = { lumber_camp: 'lumber-camp', dock: 'private-dock' };

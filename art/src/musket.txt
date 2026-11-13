@@ -1,0 +1,10 @@
+# A long slim steel barrel points upper right, continuing into a straight diagonal wooden stock at lower left. The narrow muzzle and long line distinguish it from the short flared blunderbuss.
+== musket
+......kk
+.....kNk
+....kNMk
+...kNMk.
+..kJMk..
+.kJJk...
+kJJk....
+.kk.....

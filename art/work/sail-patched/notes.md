@@ -6,3 +6,6 @@
 - Patch (full only): a 2x2 block of `c` left of centre, the one detail that makes it a patched sail. In the half and furled sprites the cloth is rolled onto the yard, so the patch is out of sight.
 - Half-reefed and furled: the cloth is rolled up onto the yard, so the bottom of the sail becomes one roll row (`pCCCCCCCc`) above the yard.
 - No outline: sail cloth and ground-level items are exempt in STYLE.md.
+
+## Current batch revision
+Checked against approved sail-square/main: p/C/c cloth only, w yard on the bottom row, the dome bellies upward and a single2x2 c patch is a real cloth repair. The patch rolls out of sight in half/furled states; all yards stay identical9px wide.

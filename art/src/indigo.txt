@@ -1,4 +1,4 @@
-# Indigo: two stacked blue dye bricks. Light top left.
+# Two dye bricks form a stepped stack. Pale blue top faces and blue front faces describe solid rectangular blocks; black seam separates the bricks.
 == indigo
 .kkkkkk.
 .kllllk.

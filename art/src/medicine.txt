@@ -1,0 +1,10 @@
+# A corked green medicine bottle has a cream label bearing one red cross. Light h glass forms the connected left edge and G shades the right glass around the label.
+== medicine
+..kkkk..
+..kDDk..
+..khGk..
+.khGGGk.
+khGCRCGk
+khCRRRGk
+khGCRCGk
+.kkkkkk.

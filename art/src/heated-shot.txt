@@ -1,0 +1,10 @@
+# A single round red-hot cannonball is lit from its upper-left e face, with R body and r dark red cooling underside. The whole form is outlined, without a decorative halo.
+== heated-shot
+..kkkk..
+.keRRRk.
+keRRRRrk
+keRRRRrk
+kRRRRrrk
+kRRRrrrk
+.krrrrk.
+..kkkk..

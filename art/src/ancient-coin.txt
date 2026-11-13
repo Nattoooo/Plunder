@@ -1,0 +1,10 @@
+# A worn bronze coin has a simple low-contrast square stamp in the centre. Its upper-left y face, O body and o worn relief/right edge use only three metal tones.
+== ancient-coin
+..kkkk..
+.kyOOOk.
+kyOOOOok
+kOOooOok
+kOOooOok
+kOOOOook
+.kOookk.
+..kkkk..

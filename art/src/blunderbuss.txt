@@ -1,0 +1,10 @@
+# The flared muzzle widens at upper right, unlike the straight musket. The short barrel slopes into a broad wooden stock and a downward grip at lower left.
+== blunderbuss
+.....kkk
+....kNNk
+...kNNMk
+..kNNMk.
+.kJJMk..
+kJJkk...
+kJjk....
+.kk.....

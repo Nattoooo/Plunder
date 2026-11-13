@@ -1,0 +1,10 @@
+# A corked green bottle contains a diagonal rolled pale message. h lights the left glass and G shades the right; p/C is paper inside, not scattered bottle highlights.
+== bottle-message
+..kkkk..
+..kDDk..
+..khGk..
+.khhGGk.
+khhpCGGk
+khpCCGGk
+khCCGGGk
+.kkkkkk.

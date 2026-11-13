@@ -1,0 +1,10 @@
+# The same open oyster holds a dark pearl. n/M shade the pearl from upper left, while x/X preserve the identical shell and hinge geometry of the white-pearl icon.
+== black-pearl
+..kkkk..
+.kxxXXk.
+kxnMMxXk
+kxMMMxXk
+.kxxxxk.
+kXXxxXXk
+.kXXXkk.
+..kkkk..

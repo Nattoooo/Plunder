@@ -1,0 +1,10 @@
+# Three pale-blue prongs join a short central socket and broken lower shaft. L lights the upper prongs, l shades their lower surfaces, and the asymmetrical snapped end distinguishes a shard from a full trident.
+== trident-shard
+.k.kk.k.
+kLkLLkLk
+kLkLLkLk
+.klLLlk.
+..kllk..
+..kllk..
+..klk...
+...k....

@@ -8,54 +8,54 @@
 
 ## Families
 
-### `helm` (new: draw from scratch)
+### `helm` (has a drawing in art/src/helm.txt)
 
 - `helm` 5 x 5 (fixed size): Ship's wheel
 
-### `rudder` (new: draw from scratch)
+### `rudder` (has a drawing in art/src/rudder.txt)
 
 - `rudder` 5 x 7 (fixed size): Wooden rudder blade; sticks out 2 px below the cell
 
-### `mast` (new: draw from scratch)
+### `mast` (has a drawing in art/src/mast.txt)
 
 - `mast` 5 x 5 (fixed size): Base of a mast with rigging lines (sails are drawn over it)
 
-### `oar-bench` (new: draw from scratch)
+### `oar-bench` (has a drawing in art/src/oar-bench.txt)
 
 - `oar-bench` 5 x 5 (fixed size): Rowing bench across the deck (oars are a separate sprite)
 
-### `crew-quarters` (new: draw from scratch)
+### `crew-quarters` (has a drawing in art/src/crew-quarters.txt)
 
 - `crew-quarters` 5 x 5 (fixed size): Deck hatch with a ladder going below
 
-### `cargo-hold` (new: draw from scratch)
+### `cargo-hold` (has a drawing in art/src/cargo-hold.txt)
 
 - `cargo-hold` 5 x 5 (fixed size): Closed cargo hatch with two iron straps
 
-### `galley` (new: draw from scratch)
+### `galley` (has a drawing in art/src/galley.txt)
 
 - `galley` 5 x 5 (fixed size): Iron cooking stove with a chimney pipe and a glow of fire
 
-### `powder-magazine` (new: draw from scratch)
+### `powder-magazine` (has a drawing in art/src/powder-magazine.txt)
 
 - `powder-magazine` 5 x 5 (fixed size): Four powder kegs seen from above
 
-### `workshop` (new: draw from scratch)
+### `workshop` (has a drawing in art/src/workshop.txt)
 
 - `workshop` 5 x 5 (fixed size): Carpenter's workbench with a hammer
 
-### `sick-bay` (new: draw from scratch)
+### `sick-bay` (has a drawing in art/src/sick-bay.txt)
 
 - `sick-bay` 5 x 5 (fixed size): Cot with a red cross
 
-### `crows-nest` (new: draw from scratch)
+### `crows-nest` (has a drawing in art/src/crows-nest.txt)
 
 - `crows-nest` 6 x 6 (fixed size): Round lookout basket seen from above, drawn on top of the sails
 
-### `ram` (new: draw from scratch)
+### `ram` (has a drawing in art/src/ram.txt)
 
 - `ram` 5 x 8 (fixed size): Pointed iron ram plate on the bow, sticking out forward
 
-### `figurehead` (new: draw from scratch)
+### `figurehead` (has a drawing in art/src/figurehead.txt)
 
 - `figurehead` 5 x 8 (fixed size): Gold carved figurehead on the bow, sticking out forward

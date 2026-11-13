@@ -1,26 +1,21 @@
-# Skeleton pirate, 9 x 10 (spec 5 x 8, flexible: 9 px wide like the captain, one row taller for 3-row legs).
-# Bone x/X, dark gaps K, outline k, red bandana R/r (pirate cue). Light from top left.
 == skeleton-1
-..kkkkk..
-.kRRRrRk.
-.kxKxKXk.
-.kkxxxkk.
-kxxxxxxXk
-kxkxxxkXk
-kxkKxKkXk
-.kkxxxkk.
-..kxkxk..
-.kxXk.kk.
-.kkk......
+.kkkk.
+kRRrrk
+kxkkXk
+.kxxk.
+kxxxxk
+kxkkXk
+.kxxk.
+.kxkk.
+.kk...
+
 == skeleton-2
-..kkkkk..
-.kRRRrRk.
-.kxKxKXk.
-.kkxxxkk.
-kxxxxxxXk
-kxkxxxkXk
-kxkKxKkXk
-.kkxxxkk.
-..kxkxk..
-.kk.kxXk.
-....kkk..
+.kkkk.
+kRRrrk
+kxkkXk
+.kxxk.
+kxxxxk
+kxkkXk
+.kxxk.
+.kkXk.
+...kk.

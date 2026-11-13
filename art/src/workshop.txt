@@ -1,7 +1,6 @@
-# Carpenter bench: hammer head across the top, handle on the bench.
 == workshop
 kkkkk
-kMNmk
+kNMmk
 kVWvk
-kvWwk
+kvWvk
 kkkkk

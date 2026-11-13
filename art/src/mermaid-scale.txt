@@ -1,0 +1,10 @@
+# One broad teardrop-shaped mermaid scale has an iridescent pale teal upper-left facet, teal body and dark blue lower-right turn. The three tones are coherent faces of the single scale.
+== mermaid-scale
+...kk...
+..kIIk..
+.kIIiik.
+kIIiiibk
+kIiiiibk
+kiiiibbk
+.kiibbk.
+..kkkk..

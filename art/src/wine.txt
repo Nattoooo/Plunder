@@ -1,10 +1,10 @@
-# Wine: red bottle with a tan cork and a cream label. Light top left.
+# The cork is enclosed at the top of a slim neck. A single cream label wraps the red wine bottle; R/r show the lit left glass and shaded right side.
 == wine
+..kkkk..
 ..kJJk..
-..kRRk..
-..kRRk..
-.kRRRRk.
-kRRRRRRk
-kRCCCCRk
-kRCCCCRk
+..kRrk..
+.kRRrrk.
+kRRRRrrk
+kRCCCCrk
+kRCCCCrk
 .kkkkkk.

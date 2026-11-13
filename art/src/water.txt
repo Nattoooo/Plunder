@@ -1,0 +1,10 @@
+# A small wooden water barrel shows its elliptical lid and two iron hoops. V/v/W shade wood and M/n are the iron straps; the curved side silhouette distinguishes it from a crate.
+== water
+..kkkk..
+.kVVVVk.
+kVvvvvWk
+kMnnnnMk
+kvvvvvWk
+kMnnnnMk
+.kvvvWk.
+..kkkk..

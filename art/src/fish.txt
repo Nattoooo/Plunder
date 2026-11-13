@@ -1,0 +1,10 @@
+# A silver-blue fish points right. Its forked tail is on the left, N is the lit upper back, l is the lower blue flank, and the single k near the right is the eye.
+== fish
+........
+....kk..
+.k.klNk.
+kNklNNNk
+.kklNNkk
+kNkkllk.
+.k..kk..
+........

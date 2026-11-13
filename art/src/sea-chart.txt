@@ -1,0 +1,10 @@
+# A rolled cream chart carries a broad blue sea area and one small connected green island. p/C/c shades paper with a darker right roll; B/h are printed map information.
+== sea-chart
+.kkkkkk.
+kppCCCck
+kpBBBBck
+kpBhhBck
+kpBBhBck
+kpBBBBck
+kCCCCcck
+.kkkkkk.

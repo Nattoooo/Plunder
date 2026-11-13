@@ -10,18 +10,18 @@
 
 ## Families
 
-### `warehouse` (new: draw from scratch)
+### `warehouse` (has a drawing in art/src/warehouse.txt)
 
 - `warehouse` 34 x 21 (flexible size): Wide barn with large double doors and stacked crates
 
-### `private-dock` (new: draw from scratch)
+### `private-dock` (has a drawing in art/src/private-dock.txt)
 
 - `private-dock` 20 x 7 (flexible size): Short wooden jetty with mooring posts
 
-### `watchtower` (new: draw from scratch)
+### `watchtower` (has a drawing in art/src/watchtower.txt)
 
 - `watchtower` 14 x 21 (flexible size): Tall wooden lookout tower on cross-braced legs, with a small roof
 
-### `tavern` (new: draw from scratch)
+### `tavern` (has a drawing in art/src/tavern.txt)
 
 - `tavern` 25 x 32 (flexible size): Two-storey inn with a hanging sign beside the door

@@ -1,0 +1,5 @@
+# planks
+
+8 x 8, fixed. Light from top left.
+
+A stepped stack of cut planks shows pale top planes and dark front edges. Each long straight strip is one plank, and the offset ends explain the layered silhouette.

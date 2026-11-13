@@ -1,0 +1,5 @@
+# iron-bars
+
+8 x 8, fixed. Light from top left.
+
+A compact stack of iron ingots uses the same offset geometry as planks but metal N/n/M faces. The upper-left surfaces are brightest and the lower right ends darkest.

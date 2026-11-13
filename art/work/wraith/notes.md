@@ -13,3 +13,7 @@ Identical except the hem row is shifted by one pixel the other way (rippled oppo
 
 ## Batch round
 Tapered hood peak, rounded hood opening, I used only for the eyes, hem is three 1 px tatters that swap sides between frames. Shadow side left flat to keep two tones.
+
+
+## Current batch redraw
+Both frames are **7 x 9**, one pixel wider/taller than the specification. The hood narrows to a rounded peak, then the robe flares from a 5 px hood to a 7 px skirt. The dark K opening encloses two I eyes and narrows beneath them; I occurs nowhere else. The teal i robe uses a K fold only on its lower-right shadow side. Three short k-closed tatters descend from the skirt in frame 1; the centre tatter lifts in frame 2, leaving two outer tips. Only the hem changes. The outline tips are the ends of coloured cloth above them, not separate legs; the robe remains broad down to the hem. This removes the earlier box silhouette and floating unconnected black stubs.

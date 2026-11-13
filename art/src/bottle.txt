@@ -1,7 +1,7 @@
-# bottle: green glass with a leather cork, rolled paper showing inside.
 == bottle
-.kk.
-kJjk
-khGk
-kxGk
-.kk.
+..k..
+.kJk.
+khGGk
+khxGk
+kGGGk
+.kkk.

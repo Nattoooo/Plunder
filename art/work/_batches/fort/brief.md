@@ -10,7 +10,7 @@
 
 ## Families
 
-### `fort` (new: draw from scratch)
+### `fort` (has a drawing in art/src/fort.txt)
 
 - `fort-tower` 14 x 18 (fixed size): Square stone corner tower: battlements around a flat top, arrow slit in the front
 - `fort-wall-front` 4 x 12 (fixed size): Front stone wall with battlements on top; tiles left to right

@@ -1,0 +1,10 @@
+# A stepped stack of square hardtack biscuits. The single D mark in the upper biscuit is a baking perforation; the broad horizontal faces are biscuit edges, not texture.
+== rations
+.kkkkkk.
+.kFFFFk.
+.kFDFFk.
+kkkkkkkk
+kffffffk
+kDDDDDDk
+kffffffk
+kkkkkkkk

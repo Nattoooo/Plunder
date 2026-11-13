@@ -1,0 +1,10 @@
+# A gathered tan fishing net has a heavy cord mouth with two pale floats, a broad folded mesh pouch, and one visible mesh opening low on the left. f/D/d carry the net cord and F the float tops.
+== fishing-net
+.kkkk...
+kffDfk..
+kfDDFkk.
+.kD.D.fk
+.kfDDDDk
+.kDD.Ddk
+..kDDdk.
+...kkk..

@@ -1,6 +1,3 @@
-# Wooden oar seen from above: grip on the left, shaft running right into a flat blade.
-# Blade top row is light wood (V) and its bottom row is mid wood (W) with a dark
-# corner (w). The blade avoids v, which is the deck colour, so it does not vanish on deck.
 == oar
-wWWWVVV
-WW..WWw
+WWWWVVV
+wW..WWw

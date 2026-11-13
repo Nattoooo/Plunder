@@ -5,3 +5,6 @@
 - Base (`qqq`): the full-width bottom row sits on the deck, as a fire does, and gives the flame a footing.
 - `fire-2`: the tip leans left and the core stays put, so the flame looks as though it is flickering. The base is unchanged, so the fire stays anchored.
 - No outline: effects take none (STYLE.md).
+
+## Current batch revision
+Exact3x3 flames use q outer body and Q bright core/tip. Only the top tongue shifts between frames; the base and central core stay fixed. Effects have no outline.

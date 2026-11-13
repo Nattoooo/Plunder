@@ -1,0 +1,10 @@
+# Three equal round iron cannonballs form a centred pyramid. The lower pair have matching geometry and separate rounded bases; n/M/m shade each ball from upper left to lower right.
+== cannonball
+...kk...
+..knMk..
+..kMMk..
+.kkkkkk.
+knMkknMk
+kMMkkMMk
+kmmkkmmk
+.kk..kk.

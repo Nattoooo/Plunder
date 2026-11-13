@@ -1,0 +1,10 @@
+# A metal lantern has a clear carrying loop, rectangular frame, dark interior and one green ghost flame. I/i forms the flame, K is interior darkness, N/n/M is iron lit from upper left.
+== ghost-lantern
+..kkkk..
+..k..k..
+.kkkkkk.
+kNKiKKMk
+kNKIiKMk
+kNKiiKMk
+.knnnMk.
+..kkkk..

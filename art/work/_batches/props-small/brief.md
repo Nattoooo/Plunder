@@ -14,41 +14,41 @@
 
 ## Families
 
-### `chests` (new: draw from scratch)
+### `chests` (has a drawing in art/src/chests.txt)
 
 - `chest` 7 x 6 (flexible size): Closed wooden treasure chest with gold trim
 - `locked-chest` 7 x 6 (flexible size): Iron-banded chest with a padlock
 - `gold-chest` 7 x 5 (flexible size): Open chest overflowing with gold coins
 
-### `crate` (new: draw from scratch)
+### `crate` (has a drawing in art/src/crate.txt)
 
 - `crate` 6 x 6 (flexible size): Wooden crate
 - `lost-cargo` 6 x 7 (flexible size): Crate with a small red flag, marking cargo lost when your ship sank
 
-### `barrel` (new: draw from scratch)
+### `barrel` (has a drawing in art/src/barrel.txt)
 
 - `barrel` 5 x 6 (flexible size): Wooden barrel
 
-### `bottle` (new: draw from scratch)
+### `bottle` (has a drawing in art/src/bottle.txt)
 
 - `bottle` 4 x 5 (flexible size): Message in a bottle: green glass, cork, rolled paper inside
 
-### `dig-spot` (new: draw from scratch)
+### `dig-spot` (has a drawing in art/src/dig-spot.txt)
 
 - `dig-spot` 6 x 4 (flexible size): Small mound of disturbed sand where treasure is buried
 
-### `x-mark` (new: draw from scratch)
+### `x-mark` (has a drawing in art/src/x-mark.txt)
 
 - `x-mark` 6 x 6 (flexible size): Big red X on the ground, from a treasure map
 
-### `quest-mark` (new: draw from scratch)
+### `quest-mark` (has a drawing in art/src/quest-mark.txt)
 
 - `quest-mark` 3 x 5 (flexible size): Gold exclamation mark floating over a quest location
 
-### `waypoint` (new: draw from scratch)
+### `waypoint` (has a drawing in art/src/waypoint.txt)
 
 - `waypoint` 5 x 7 (flexible size): Small red flag on a pole, marking your waypoint
 
-### `dock-planks` (new: draw from scratch)
+### `dock-planks` (has a drawing in art/src/dock-planks.txt)
 
 - `dock-planks` 4 x 4 (fixed size): Wooden pier planks for town docks; fixed size, tiles along the pier
