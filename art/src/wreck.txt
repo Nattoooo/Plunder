@@ -1,11 +1,16 @@
-# Broken hull seen from straight above, bow up. Dark flooded interior, one rib, snapped mast stub, stern end snapped off ragged and sunk.
+# Broken hull seen from straight above, bow up (9 x 14). Pointed bow, lit left rim, shaded right rim, flooded K interior, one rib, snapped mast stub on the centre line, stern broken off ragged.
 == wreck
-......kkkkk......
-....kkVVVVVkk....
-..kVvKKKKKKKwwk..
-.kVvKWWWWWWWKwwk.
-kVvKKKKKKKKKKKwwk
-kVvKKKKVVvKKKKwk.
-kVvKKKKvvwKKKkk..
-.kwwKKKKKKKkk....
-..kkkk.kkkk......
+....k....
+...kVk...
+..kVvwk..
+.kVvKKwk.
+kVvKKKKwk
+kVvWWWWwk
+kVvKKKKwk
+kVvKKVKwk
+kVvKVvKwk
+kVvKvwKwk
+kVvKKKKwk
+kVvKKKKwk
+kVvKKKKk.
+.kkkkkk..
