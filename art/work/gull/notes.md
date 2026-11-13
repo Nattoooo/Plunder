@@ -12,3 +12,6 @@ Both frames are **5 x 4**, one row taller than specification to separate the bea
 
 ## Batch round 1
 Fixed the outline exemption violation by making both frames **6 x 3**, within one pixel of the 5 x 3 specification. The gull faces right in overhead view: P head at (4,1), y beak at (5,1), white tail/body along row 1, fixed right underside U. Only the wings above/below the body extend between frames. The three-row height permits the tiny-sprite outline exemption without losing a separate head.
+
+## Batch round 1
+5 x 4 (flexible). Rows 0-1 (beak, head) identical in both frames; wings up are foreshortened, wings down full span.

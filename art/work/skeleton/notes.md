@@ -16,3 +16,6 @@ Redrawn: 5 px skull with sockets, bone nose gap and teeth row; arm tops outlined
 
 ## Current batch redraw
 Both frames are **6 x 9**, within one pixel of the 5 x 8 specification. The formerly 9 x 11 drawing was far outside the permitted scale. The skull and bandana occupy the top four rows: R/r red cloth is the pirate cue, x/X are bone cheeks and jaw, and the dark paired socket opening is centred. Broad bone shoulders and the small pelvis bracket the dark rib hollow; arms hang from the shoulders beside it. Bone is lit x at the left and X at the right. The stance alternates by lifting one outlined foot at row 7 while the planted foot reaches row 8. All bandana, skull, shoulders, ribs and pelvis pixels stay fixed between frames. Earlier oversized prescriptions were replaced with the same anatomical landmarks at the actual specification scale.
+
+## Batch round 1
+Redrawn 9 x 11: red bandana = pirate cue, 5 px skull with teeth row, 7 px shoulders, ribs with K gaps between arms and spine, 3-row legs with a k foot; frame 2 mirrors the stride.

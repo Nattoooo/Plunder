@@ -5,20 +5,21 @@ kkkk.kkkk.kkkk
 kuuk.kuuk.kuuk
 kuTk.kuTk.kuTk
 kkkkkkkkkkkkkk
-kuuutuuuutuuuk
-kTTTtTTTTtTTTk
-kTTTtTkkTtTTTk
-kttttttkkttttk
-kuutuukkuutuuk
-kTTtTTkkTTtTTk
-kTTtTTTTTTtTTk
+kTtTTTtTTTtTTk
 kttttttttttttk
-kuuutuuuutuuuk
-kTTTtTTTTtTTTk
-kTTTtTTTTtTTTk
+kuuutukkuuutuk
+kTTTtTkkTTTtTk
+kTTTtTkkTTTtTk
+ktttttkkttttttk
+kutuuutuuutuuk
+kTtTTTtTTTtTTk
+kTtTTTtTTTtTTk
 kttttttttttttk
-kTTTtTTTTtTTTk
+kuuutuuutuuuuk
+kTTTtTTTtTTTTk
+kTTTtTTTtTTTTk
 kkkkkkkkkkkkkk
+
 == fort-wall-front
 kkk.
 kuk.
@@ -49,12 +50,12 @@ kkkkkkkkkkkkkk
 kuTTtk
 kuTTtk
 kuTTtk
-kTttTk
+kttttk
 == fort-wall-back
 kkk.
 kTk.
 kkkk
-uuuu
+uuut
 TTTt
 TTTt
 kkkk
