@@ -76,3 +76,4 @@ Families the critic has passed. Match their style.
 - cutlass-swing (effects) — round 2
 - warehouse (buildings) — round 1
 - dock-planks (buildings) — round 1
+- palm (nature) — round 2
