@@ -48,3 +48,13 @@ Families the critic has passed. Match their style.
 - wraith (characters) — round 1
 - fire (sails) — round 2
 - swivel-gun (ship) — round 2
+- helm (ship) — round 1
+- oar-bench (ship) — round 1
+- crew-quarters (ship) — round 1
+- cargo-hold (ship) — round 1
+- galley (ship) — round 1
+- crows-nest (ship) — round 1
+- ram (ship) — round 1
+- skeleton (characters) — round 2
+- gull (characters) — round 2
+- sea-serpent (characters) — round 2

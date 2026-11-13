@@ -44,8 +44,8 @@
   "batch": "characters"
  },
  "skeleton": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
@@ -59,7 +59,7 @@
  },
  "gull": {
   "round": 2,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
@@ -72,8 +72,8 @@
   "batch": "nature-large"
  },
  "sea-serpent": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
@@ -421,7 +421,7 @@
  },
  "helm": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
@@ -442,28 +442,28 @@
  },
  "oar-bench": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "crew-quarters": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "cargo-hold": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "galley": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
@@ -491,14 +491,14 @@
  },
  "crows-nest": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "ram": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
