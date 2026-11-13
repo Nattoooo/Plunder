@@ -1,0 +1,10 @@
+# Rusty Cutlass: iron blade with brown rust patches. Light from top left.
+== rusty-cutlass
+.....kk.
+....knNk
+...knMk.
+..kWMk..
+.knnnk..
+knWkk...
+kJJk....
+.kk.....

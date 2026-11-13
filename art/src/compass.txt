@@ -1,0 +1,10 @@
+# Compass: brass ring, cream dial, red north needle. Light from top left.
+== compass
+..kkkk..
+.kyyOok.
+kyFFFRok
+kyFFRFok
+kOFpFFok
+kOpFFFok
+.kOooOk.
+..kkkk..

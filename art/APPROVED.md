@@ -69,3 +69,6 @@ Families the critic has passed. Match their style.
 - porcelain (icons) — round 1
 - amber (icons) — round 1
 - light-cannon (ship) — round 3
+- mushrooms (nature) — round 1
+- shell (nature) — round 1
+- lava-tile (nature) — round 1

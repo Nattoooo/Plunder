@@ -1,0 +1,10 @@
+# Blunderbuss: steel barrel with a flared muzzle, wood stock. Light from top left.
+== blunderbuss
+.....kk.
+..kkkNMk
+.kNNNNMk
+.knnnnMk
+..kWWnMk
+.kWVWwk.
+kWWwWk..
+.kkkk...

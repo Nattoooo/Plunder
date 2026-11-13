@@ -156,21 +156,21 @@
  },
  "mushrooms": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
  },
  "shell": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
  },
  "lava-tile": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"

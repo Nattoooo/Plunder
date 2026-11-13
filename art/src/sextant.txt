@@ -1,0 +1,10 @@
+# Sextant: brass arc with a dark pivot hole. Light from top left.
+== sextant
+.kkk....
+kyyOk...
+kyyyOk..
+kOoOyOk.
+kOkyOOk.
+kOOoOok.
+koOOook.
+.kkkkk..

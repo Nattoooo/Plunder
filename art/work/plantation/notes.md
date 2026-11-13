@@ -5,3 +5,9 @@ Foliage reduced from four tones to H/h/G, preserving lit left faces and dark rig
 
 ## Batch round 1
 Removed all twelve soil D pixels below crops, replacing them with G. Removed the seven remaining lower y speckles; only the three real upper ears and door handle retain y.
+
+## Batch round 1 (revised, sources now match)
+- Crops redrawn two-tone (H lit left, G right), with a 1 px h step on 1 or 2 rows; no banding.
+- y ears: one or two per crop, near the top only.
+- Base row is G, no D tub. Tips differ (pointed, flat, leaning) and heights differ.
+- One leaf (G with k end) per crop pokes into the gap, rows staggered. Sprite widened to 38 (gap of 2 px for leaves).

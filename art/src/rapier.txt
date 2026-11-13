@@ -1,0 +1,10 @@
+# Rapier: slim steel blade, gold guard, leather grip. Light from top left.
+== rapier
+......k.
+.....kNk
+....kNnk
+.k.kNnk.
+kOkNnk..
+kOOOk...
+.kJk....
+..k.....

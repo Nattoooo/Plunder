@@ -1,0 +1,10 @@
+# Musket: long steel barrel, wood stock. Light from top left.
+== musket
+......k.
+.....kNk
+....kNnk
+...kNnk.
+..kNnk..
+.kWWMk..
+kWVWwk..
+.kkkk...

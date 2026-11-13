@@ -1,0 +1,10 @@
+# Flintlock Pistol: steel barrel, wood stock, brass lock plate. Light from top left.
+== flintlock
+........
+..kkkkk.
+.kmNNnMk
+.knnnnMk
+kWWWOwk.
+kWWWwk..
+.kWwk...
+..kk....

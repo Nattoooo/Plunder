@@ -1,0 +1,10 @@
+# Lockpick Set: steel ring with two picks. Light from top left.
+== lockpick
+..kk....
+.kNNk...
+kNkkMk..
+kNkkMnk.
+.kMMnknk
+..kkknk.
+.....knk
+......k.

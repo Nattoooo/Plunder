@@ -1,0 +1,10 @@
+# Captain's Coat: crimson coat, cream lapel V, gold buttons. Light from top left.
+== captains-coat
+.kkkkkk.
+kRRCCRRk
+kRrCCrRk
+kRRrRRrk
+kRRyRRrk
+kRRrRRrk
+kRRyRRrk
+.kkkkkk.

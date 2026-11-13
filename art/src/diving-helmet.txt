@@ -1,0 +1,10 @@
+# Diving Helmet: brass dome, blue round window, brass collar. Light from top left.
+== diving-helmet
+..kkkk..
+.kyOOok.
+kyOBBOok
+klBBBbok
+kOBBBbok
+koOOOOok
+.koOook.
+..kkkk..

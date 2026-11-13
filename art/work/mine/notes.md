@@ -5,3 +5,9 @@ Retained the coherent three-tone rock dome, timber tunnel mouth, paired wheels a
 
 ## Batch round 1
 Changed the eight right-frame W pixels (16,4..11) to v. The cart and timber frame now share V/v/w; stone/ore untouched.
+
+## Batch round 1 (revised, sources now match)
+- Rock: one U blob top left, T base, t only on the right edge and bottom row. No banding.
+- Right frame post is v/w (shadow right).
+- Cart moved 1 px clear of the hill (width 31); 7 px box, ore heap N/n, wood V/v, wheels M with k below, inset from box ends.
+- Floor rail removed.
