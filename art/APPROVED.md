@@ -105,3 +105,13 @@ Families the critic has passed. Match their style.
 - crab (characters) — round 2
 - wraith (characters) — round 2
 - sea-serpent (characters) — round 2
+- gold-ring (icons) — round 1
+- necklace (icons) — round 1
+- chalice (icons) — round 1
+- candelabra (icons) — round 1
+- jeweled-crown (icons) — round 1
+- jade-figurine (icons) — round 1
+- cursed-skull (icons) — round 1
+- trident-shard (icons) — round 1
+- storm-glass (icons) — round 1
+- sea-chart (icons) — round 1

@@ -804,164 +804,164 @@
   "batch": "icons-gear"
  },
  "silver-coins": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "gold-doubloon": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "pearl": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "black-pearl": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "ruby": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "sapphire": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "emerald": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "diamond": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "gold-ring": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "necklace": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "chalice": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "candelabra": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "golden-idol": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "jeweled-crown": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "ancient-coin": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "jade-figurine": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "lucky-charm": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "kraken-ink": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "mermaid-scale": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "ghost-lantern": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "cursed-skull": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "siren-conch": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "trident-shard": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "storm-glass": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "treasure-map": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "bottle-message": {
-  "round": 0,
+  "round": 1,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "sea-chart": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
