@@ -8,7 +8,7 @@
 
 ## Batch round 1
 1. Shape: the blade is a tapered point with a brass guard across its base and a leather grip, the parts the approved cutlass icon has. It is no longer a straight bar.
-2. Clipping: the tip is at (7,0), one pixel in from the top-right edge, and the guard and grip are at the bottom left. The whole blade and hilt sit inside the 9 x 9 box.
+2. Clipping: the tip is a single pixel at (7,0), on the top row and one pixel in from the right edge, so it is complete and not cut off. The guard and grip are at the bottom left. The whole blade and hilt sit inside the 9 x 9 box.
 3. Banding: the upper blade has two tones only (N, n). M is confined to the lower-right edge from the centre row down (rows 4-6), so the three-tone band covers the base only, not the whole length.
 4. Curve: not added. The approved cutlass icon's blade is straight, and a curve would need uneven steps that break the clean 1-1-1 lit edge.
 5. Grip: moved from (0,8) to (0,7). At (0,8) it touched the guard only diagonally and sat off the blade's line, so it read as a stray pixel. At (0,7) it joins the guard and continues the blade's line from its base. This departs from the review's example position, for this reason.
