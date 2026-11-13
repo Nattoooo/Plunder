@@ -385,8 +385,8 @@
   "batch": "ship-tiles"
  },
  "light-cannon": {
-  "round": 1,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"

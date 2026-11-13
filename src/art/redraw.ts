@@ -57,6 +57,7 @@ const ROWS: Record<string, string[]> = {
   'house-townhouse': ['...........kkkkkk...', '...........kuuuTk...', '...........kuuuTk...', '....kkkkkkkkuuuTk...', '...keeeeeeekuuuTk...', '..keRRRRRRRRRRRRrk..', '..keRRRRRRRRRRRRrk..', '.keRRRRRRRRRRRRRRrk.', '.keRRRRRRRRRRRRRRrk.', 'kerrrrrrrrrrrrrrrrrk', 'kkkkkkkkkkkkkkkkkkkk', '.kcccccccccccccccck.', '.kCCCCCCCCCCCCCCCCk.', '.kCkkkkCkkkkCkkkkCk.', '.kCkllkCkllkCkllkCk.', '.kCkBBkCkBBkCkBBkCk.', '.kCkkkkCkkkkCkkkkCk.', '.kCVVVVCVVVVCVVVVCk.', '.kCCCCCCCCCCCCCCCCk.', '.kcccccccccccccccck.', '.kCCCCCCCCCCCCCCCCk.', '.kCCCCCCCCCCCCCCCCk.', '.kCkkkkCwwwwCkkkkCk.', '.kCkllkCwWWWCkllkCk.', '.kCkBBkCwWWWCkBBkCk.', '.kCkkkkCwWWWCkkkkCk.', '.kCVVVVCwWyWCVVVVCk.', '.kCCCCCCwWWWCCCCCCk.', '.kCCCCCCwWWWCCCCCCk.', '.kCCCCCCwWWWCCCCCCk.', '.kkkkkkkkkkkkkkkkkk.'],
   'iron-bands': ['.....', 'nnnnn', 'MMMMM', '.....', '.....'],
   'jungle-tree': ['.....kkkkkkkkkk.....', '.kkkkHHHHhhhhhhkkkk.', 'kkHHHHHhhhhhhhhhhhkk', 'kHHHhhhhhhhhhhhhhhhk', 'khhhhhhhGGhhhhhhhhhk', 'khhhhhhhhhhhhhhhGGGk', 'kGGhhhhhhGGGGGGGGGGk', '.kkGGGGGGGGGGGGGGkk.', '...kkkkkGGGGkkkkk...', '........kvwk........', '........kvwk........', '........kvwk........', '........kvwk........', '.......kvvwwk.......', '.......kkkkkk.......'],
+  'light-cannon': ['.kkk.', '.kNk.', 'kNnMk', 'kNnMk', '.kvk.', 'kWvWk', '.kkk.'],
   'long-gun': ['.kkk.', '.kNk.', '.kNk.', '.kNk.', '.kNk.', 'kNnMk', 'kvvvk', '.kkk.'],
   'mortar': ['.kkk.', 'kNnMk', 'kNKKk', 'kMKKk', '.kkk.'],
   'muzzle-flash': ['y.y', '.Y.', 'y.y'],

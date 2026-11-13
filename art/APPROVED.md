@@ -68,3 +68,4 @@ Families the critic has passed. Match their style.
 - whale-oil (icons) — round 1
 - porcelain (icons) — round 1
 - amber (icons) — round 1
+- light-cannon (ship) — round 3
