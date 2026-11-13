@@ -77,3 +77,8 @@ Families the critic has passed. Match their style.
 - warehouse (buildings) — round 1
 - dock-planks (buildings) — round 1
 - palm (nature) — round 2
+- compass (icons) — round 1
+- diving-helmet (icons) — round 1
+- flintlock (icons) — round 1
+- blunderbuss (icons) — round 1
+- musket (icons) — round 1

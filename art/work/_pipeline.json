@@ -708,8 +708,8 @@
   "batch": "icons-gear"
  },
  "compass": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
@@ -738,8 +738,8 @@
   "batch": "icons-gear"
  },
  "diving-helmet": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
@@ -768,20 +768,20 @@
   "batch": "icons-gear"
  },
  "flintlock": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
  "blunderbuss": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
  "musket": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
