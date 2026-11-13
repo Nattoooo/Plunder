@@ -9,8 +9,8 @@
    "sea-serpent"
   ],
   "tier": "normal",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "nature-small": {
   "families": [
@@ -21,8 +21,8 @@
    "lava-tile"
   ],
   "tier": "tiny",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "nature-large": {
   "families": [
@@ -48,8 +48,8 @@
    "fort"
   ],
   "tier": "normal",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "island-1": {
   "families": [
@@ -60,8 +60,8 @@
    "distillery"
   ],
   "tier": "normal",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "island-2": {
   "families": [
@@ -71,8 +71,8 @@
    "tavern"
   ],
   "tier": "normal",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "props-small": {
   "families": [
@@ -87,16 +87,16 @@
    "dock-planks"
   ],
   "tier": "tiny",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "props-large": {
   "families": [
    "wreck"
   ],
   "tier": "normal",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "ship-tiles": {
   "families": [
@@ -118,8 +118,8 @@
    "mortar"
   ],
   "tier": "tiny",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "ship-parts": {
   "families": [
@@ -138,8 +138,8 @@
    "figurehead"
   ],
   "tier": "tiny",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "ship-large": {
   "families": [
@@ -161,8 +161,8 @@
    "deck-people"
   ],
   "tier": "tiny",
-  "round": 1,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "effects": {
   "families": [
@@ -194,8 +194,8 @@
    "amber"
   ],
   "tier": "tiny",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "icons-supplies": {
   "families": [
@@ -220,8 +220,8 @@
    "brass"
   ],
   "tier": "tiny",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "icons-gear": {
   "families": [
@@ -245,8 +245,8 @@
    "captains-coat"
   ],
   "tier": "tiny",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  },
  "icons-treasure": {
   "families": [
@@ -279,7 +279,7 @@
    "sea-chart"
   ],
   "tier": "tiny",
-  "round": 2,
-  "status": "done"
+  "round": 0,
+  "status": "drawing"
  }
 }
