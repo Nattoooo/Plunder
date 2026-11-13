@@ -211,14 +211,14 @@
  },
  "lumber-camp": {
   "round": 2,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"
  },
  "mine": {
   "round": 2,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"

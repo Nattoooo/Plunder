@@ -60,6 +60,8 @@ const ROWS: Record<string, string[]> = {
   'lava-tile': ['qqKqQQqq', 'QQKqqQQQ', 'QKqqqqqQ', 'KqqqqKKK', 'qqqqKQQq', 'QqqKqQQQ', 'KKKqqqqK', 'qqKqQQqq'],
   'light-cannon': ['.kkk.', '.kNk.', 'kNnMk', 'kNnMk', '.kvk.', 'kWvWk', '.kkk.'],
   'long-gun': ['.kkk.', '.kNk.', '.kNk.', '.kNk.', '.kNk.', 'kNnMk', 'kvvvk', '.kkk.'],
+  'lumber-camp': ['..kkkkkkkkkkkkkk................', '.kVVVVVVVVVVVVVVk...............', 'kVVVVVVVVVVVVVvvvk......kkk.....', 'kwwwwwwwwwwwwwwwwk.....kFFDk....', '.kVwKKKKKKKKKKvwk......kFDDk....', '.kVwKKKKKKKKKKvwk.....kkkkkkk...', '.kVwKKKKKKKKKKvwk....kFFDkFFDk..', '.kVwKKKKKKKKKKvwk....kFDDkFDDk..', '.kVwKKKKKKKKKKvwk...kkkkkkkkkkk.', '.kVwKKKKKKKKKKvwk..kFFDkFFDkFFDk', '.kVwKKKKKKKKKKvwk..kFDDkFDDkFDDk', '.kkkkkkkkkkkkkkkkk..kkk.kkk.kkk.'],
+  'mine': ['........kkkkkkkk...............', '.....kkkTTTTTTTtkkk............', '...kkUTTTTTTTTTTTtkk...........', '..kUUTkVVVVVVVVVVkTTtk.........', '.kUUTTkVwKKKKKKvwkTTTtk........', 'kTTTTTkVwKKKKKKvwkTTTtk..kkkkk.', 'kTTTTTkVwKKKKKKvwkTTTtk.kNNnnnk', 'kTTTTTkVwKKKKKKvwkTTTtk.kNNNnnk', 'kTTTTTkVwKKKKKKvwkTTTtk.kVVVVVk', 'kTTTTTkVwKKKKKKvwkTTTtk.kvvvvvk', 'kTTTTTkVwKKKKKKvwkTTTtk.kkkkkkk', 'kTTTttkVwKKKKKKvwkttttk.kMkkkMk', 'kkkkkkkkkkkkkkkkkkkkkkk..k...k.'],
   'mortar': ['.kkk.', 'kNnMk', 'kNKKk', 'kMKKk', '.kkk.'],
   'mushrooms': ['eR.eR', 'Rr.Rr', 'C..C.'],
   'muzzle-flash': ['y.y', '.Y.', 'y.y'],

@@ -72,3 +72,5 @@ Families the critic has passed. Match their style.
 - mushrooms (nature) — round 1
 - shell (nature) — round 1
 - lava-tile (nature) — round 1
+- lumber-camp (buildings) — round 2
+- mine (buildings) — round 2
