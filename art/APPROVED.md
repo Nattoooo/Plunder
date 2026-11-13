@@ -101,3 +101,7 @@ Families the critic has passed. Match their style.
 - planks (icons) — round 1
 - iron-bars (icons) — round 1
 - brass (icons) — round 1
+- captain (characters) — round 2
+- crab (characters) — round 2
+- wraith (characters) — round 2
+- sea-serpent (characters) — round 2

@@ -1,30 +1,30 @@
 {
  "captain": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "characters"
  },
  "crab": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "characters"
  },
  "skeleton": {
-  "round": 0,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "characters"
  },
  "wraith": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "characters"
  },
  "gull": {
-  "round": 0,
+  "round": 2,
   "status": "batched",
   "tier": "tiny",
   "batch": "characters"
@@ -36,8 +36,8 @@
   "batch": "nature-large"
  },
  "sea-serpent": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "characters"
  },
