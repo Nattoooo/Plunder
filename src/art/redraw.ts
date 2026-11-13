@@ -3,7 +3,11 @@ import { art, Art } from './palette';
 const SCALE = 1;
 
 const ROWS: Record<string, string[]> = {
-  'long-gun': ['...kkkk...', '...kNNk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '..kNnMMk..', '..kNnMMk..', '..kNnMMk..', '.kvvVVwwk.', '.kWvVVwWk.', '..kkkkkk..']
+  'deck-logs': ['wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'DffffDffff', 'dDDDDdDDDD', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW', 'wVvvWwVvvW'],
+  'deck-planks': ['VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'WWWWWVvvvW', 'VvvvWWWWWW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW', 'VvvvWVvvvW'],
+  'iron-bands': ['..........', 'nnnnnnnnnn', 'nNnnnnnNnn', 'MMMMMMMMMM', '..........', '..........', 'nnnnnnnnnn', 'nNnnnnnNnn', 'MMMMMMMMMM', '..........'],
+  'long-gun': ['...kkkk...', '...kNNk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '..kNnMMk..', '..kNnMMk..', '..kNnMMk..', '.kvvVVwwk.', '.kWvVVwWk.', '..kkkkkk..'],
+  'stern-lantern': ['.yyO.', 'yYYYO', 'yYYYO', 'yYYYo', '.Ooo.']
 };
 
 const cache = new Map<string, Art>();

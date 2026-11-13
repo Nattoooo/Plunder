@@ -1,0 +1,14 @@
+# Same bush with three 2 x 2 red berry clusters.
+== berry-bush
+....kkkkk..kkkkk....
+..kkHHHHhkkHHhhhkk..
+.kHHHhhhhkkhhhhhhGk.
+kHHhheRhhhhhhheRGGk
+kHhhhRrhhhhHhhRrhGk
+khhhhhhhhhhhhhhhhGGk
+khhheRhhGhhhhhGGGGGk
+khhhRrGGGGGGhhGGGGGk
+khhGGGGGGGGGGGGGGGgk
+.khGGGGGGGGGGgggggk.
+..kGGGGggggggggggk..
+...kkkkkkkkkkkkkk...

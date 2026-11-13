@@ -294,20 +294,20 @@
   "batch": "props"
  },
  "deck-planks": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-tiles"
  },
  "deck-logs": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-tiles"
  },
  "iron-bands": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-tiles"
  },
@@ -324,8 +324,8 @@
   "batch": "ship-tiles"
  },
  "stern-lantern": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "ship-tiles"
  },
