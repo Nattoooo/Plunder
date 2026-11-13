@@ -1,8 +1,8 @@
 # Cocoa: ripe orange pod, shaded on the right. Light top left.
 == cocoa
-...kk...
-..kQQk..
-.kQqqqk.
+..kkkk..
+.kQQqok.
+kQqqqqok
 kQqqqqok
 kQqqqqok
 kqqqqqok

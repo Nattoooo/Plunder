@@ -1,10 +1,10 @@
-# Cotton: two white bolls on a green stem. Light top left.
+# Cotton: a white boll of two merged lobes on a green calyx and stem. Light top left.
 == cotton
 .kk..kk.
 kPPkkPPk
-kPCkkPCk
-.kk..kk.
-...h....
-...h....
-...h....
-...h....
+kPPPPPPk
+kPPPPPCk
+.kCCCCk.
+.kGhhGk.
+..khhk..
+...hh...
