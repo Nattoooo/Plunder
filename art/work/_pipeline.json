@@ -239,7 +239,7 @@
  },
  "warehouse": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"
@@ -260,7 +260,7 @@
  },
  "tavern": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"

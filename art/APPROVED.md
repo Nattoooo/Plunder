@@ -38,3 +38,5 @@ Families the critic has passed. Match their style.
 - long-gun (ship) — round 1
 - carronade (ship) — round 1
 - mortar (ship) — round 1
+- warehouse (buildings) — round 1
+- tavern (buildings) — round 1
