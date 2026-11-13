@@ -186,8 +186,8 @@
   "batch": "island-1"
  },
  "fishery": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "island-1"
  },
