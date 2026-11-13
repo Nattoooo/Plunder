@@ -89,3 +89,5 @@ Families the critic has passed. Match their style.
 - indigo (icons) — round 2
 - furs (icons) — round 2
 - whale-oil (icons) — round 2
+- chests (props) — round 2
+- barrel (props) — round 2
