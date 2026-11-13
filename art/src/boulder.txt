@@ -1,14 +1,14 @@
-# Large grey boulder: lit top-left face, shaded right and bottom, flat base on the bottom row.
+# Large grey boulder: lit top-left face, shaded right and bottom, a crack across the upper face, flat base on the bottom row.
 == boulder
 ........kkkkkkkk........
 .....kkkUUUUUUUUkkk.....
 ...kkUUUUUUUUUuuuuukk...
 ..kUUUUUUUUUuuuuuuuuuk..
-.kUUUUUUUUuuuuuuuuuuuuk.
-kUUUUUUUuuuuuuuuuuuuuuuk
-kUUUUUuuuuuuuuuuuuuuuuTk
-kUUUuuuuuuuuuuuuuuuuuTTk
-kUUuuuuuuuuuuuuuuuuuTTTk
+.kUUUUUUUUuuuuTuuuuuuuk.
+kUUUUUUUuuuuuuTuuuuuuuuk
+kUUUUUuuuuuuuTuuuuuuuuTk
+kUUUuuuuuuuuuTuuuuuuuTTk
+kUUuuuuuuuuuTuuuuuuuTTTk
 kUuuuuuuuuuuuuuuuuuTTTTk
 kuuuuuuuuuuuuuuuTTTTTTTk
 kuuuuuuuuuuuuuTTTTTTTTTk

@@ -1,6 +1,6 @@
-# Pink scallop shell, no outline. Light from top left.
+# Pink scallop shell, no outline: fan of ridges meeting at a small hinge. Light from top left.
 == shell
 .EEEEE.
 EeEeEeE
 .eEeEe.
-..RRR..
+..eRe..

@@ -1,0 +1,17 @@
+== repair-kit
+................
+....kkkkkkkk....
+...kNNNNNNNNk...
+...kNkkkkkknk...
+.kkkNkkkkkknkkk.
+kEEEEEEEEEEEEEEk
+keeeeeeeeeeeeeek
+kRRRRRRRRRRRRRRk
+kRRRRRRRRRRRRRrk
+krrrrrrrrrrrrrrk
+kRRRRRRyyRRRRRrk
+kRRRRRRyOoRRRRrk
+kRRRRRRRRRRRRrrk
+kRRRRRRRRRRRrrrk
+krrrrrrrrrrrrrrk
+.kkkkkkkkkkkkkk.

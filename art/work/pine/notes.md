@@ -1,0 +1,1 @@
+Four stacked tiers, each wider than the last, with a G shadow row under each tier; left edge H, right edge G. Short wood trunk. snow-pine: same silhouette, snow caps (P lit, L right) on top of each tier with uneven drips, green showing below.

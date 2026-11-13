@@ -360,8 +360,8 @@
   "batch": "ship-guns"
  },
  "helm": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
@@ -372,26 +372,26 @@
   "batch": "ship-parts"
  },
  "mast": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
  "oar-bench": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
  "crew-quarters": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
  "cargo-hold": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
@@ -402,8 +402,8 @@
   "batch": "ship-parts"
  },
  "powder-magazine": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
@@ -414,20 +414,20 @@
   "batch": "ship-parts"
  },
  "sick-bay": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
  "crows-nest": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },
  "ram": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-parts"
  },

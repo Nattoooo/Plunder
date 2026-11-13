@@ -1,0 +1,1 @@
+Round canopy of one dome silhouette with small clump arcs (H upper-left, G lower-right) so it reads as leaf clusters; G underside. Short trunk (v lit, W, w shadow) with a root flare on the bottom row. Foliage uses only H h G.

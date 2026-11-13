@@ -24,3 +24,12 @@ Families the critic has passed. Match their style.
 - fire (sails) — round 2
 - deck-damage (ship) — round 2
 - bows (ship) — round 2
+- helm (ship) — round 1
+- mast (ship) — round 1
+- oar-bench (ship) — round 1
+- crew-quarters (ship) — round 1
+- cargo-hold (ship) — round 1
+- powder-magazine (ship) — round 1
+- sick-bay (ship) — round 1
+- crows-nest (ship) — round 1
+- ram (ship) — round 1

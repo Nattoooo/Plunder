@@ -1,8 +1,8 @@
-# Two small red-capped mushrooms, no outline. Light from top left.
+# Two red-capped mushrooms, a big one and a small one, no outline. Cream spot, pale stems. Light from top left.
 == mushrooms
 .EeR......
 EeCeR.....
-eeeRR..EeR
-.cC...eeRR
-.cC....cC.
-.cc....cc.
+eRRRr..EeR
+..C....eRr
+..c.....C.
+..c.....c.
