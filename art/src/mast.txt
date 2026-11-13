@@ -1,6 +1,7 @@
+# Mast base: round wood post with rope stays running out to the cell edges.
 == mast
-.kkk.
-kfVfk
-kVvvk
-kfvfk
-.kkk.
+.kfk.
+kVvwk
+fVvwf
+kvwwk
+.kfk.

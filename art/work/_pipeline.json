@@ -3,7 +3,7 @@
   "creator": "a743a2302295322b8",
   "critic": "a366084e9e6fc2fd3",
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet from round 2",
   "tier": "tiny",
   "batch": "characters"
@@ -38,28 +38,28 @@
  },
  "crab": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
  },
  "skeleton": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
  },
  "wraith": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
  },
  "gull": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
@@ -73,7 +73,7 @@
  },
  "sea-serpent": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "characters"
@@ -112,7 +112,7 @@
  },
  "reeds": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
@@ -137,7 +137,7 @@
  },
  "ice-shard": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
@@ -156,21 +156,21 @@
  },
  "mushrooms": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
  },
  "shell": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
  },
  "lava-tile": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "nature-small"
@@ -197,126 +197,126 @@
  },
  "fort": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "fort"
  },
  "plantation": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"
  },
  "lumber-camp": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"
  },
  "mine": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"
  },
  "fishery": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"
  },
  "distillery": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-1"
  },
  "warehouse": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"
  },
  "private-dock": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"
  },
  "watchtower": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"
  },
  "tavern": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"
  },
  "dock-planks": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "chests": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "crate": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "barrel": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "bottle": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "wreck": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "normal",
   "batch": "props-large"
  },
  "dig-spot": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "x-mark": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -337,14 +337,14 @@
  },
  "quest-mark": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "waypoint": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -386,126 +386,126 @@
  },
  "light-cannon": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
  },
  "long-gun": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
  },
  "carronade": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
  },
  "swivel-gun": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
  },
  "mortar": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
  },
  "helm": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "rudder": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "mast": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "oar-bench": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "crew-quarters": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "cargo-hold": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "galley": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "powder-magazine": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "workshop": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "sick-bay": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "crows-nest": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "ram": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
  },
  "figurehead": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-parts"
@@ -519,7 +519,7 @@
  },
  "sail-patched": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
@@ -540,581 +540,581 @@
  },
  "oar": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
  },
  "flags": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
  },
  "fire": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
  },
  "deck-people": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
  },
  "sugar": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "tobacco": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "coffee": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "tea": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "spices": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "silk": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "cotton": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "salt": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "cocoa": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "indigo": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "wine": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "furs": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "whale-oil": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "porcelain": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "amber": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "rations": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "salted-pork": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "fruit": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "water": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "grog": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "medicine": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "fish": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "cannonball": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "chain-shot": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "grapeshot": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "heated-shot": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "mortar-shell": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "pistol-shot": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "planks": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "iron-bars": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "canvas": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "rope": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "tar": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "brass": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-supplies"
  },
  "shovel": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "spyglass": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "compass": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "sextant": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "lockpick": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "repair-kit": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "fishing-net": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "diving-helmet": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "rusty-cutlass": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "cutlass": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "boarding-axe": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "rapier": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "flintlock": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "blunderbuss": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "musket": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "leather-vest": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "tricorn": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "captains-coat": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-gear"
  },
  "silver-coins": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "gold-doubloon": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "pearl": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "black-pearl": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "ruby": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "sapphire": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "emerald": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "diamond": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "gold-ring": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "necklace": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "chalice": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "candelabra": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "golden-idol": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "jeweled-crown": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "ancient-coin": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "jade-figurine": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "lucky-charm": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "kraken-ink": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "mermaid-scale": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "ghost-lantern": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "cursed-skull": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "siren-conch": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "trident-shard": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "storm-glass": {
   "round": 2,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "treasure-map": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "bottle-message": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"
  },
  "sea-chart": {
   "round": 1,
-  "status": "approved",
+  "status": "batched",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-treasure"

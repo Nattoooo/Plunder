@@ -1,10 +1,10 @@
-# Two roasted beans lie diagonally apart. Each has a continuous dark centre seam, not scattered texture. J/j are warm brown bean surfaces.
+# Coffee: two roasted beans on a diagonal, shaded right. Light top left.
 == coffee
 .kk.....
-kJJk....
-kJjk....
-kjjk.kk.
-.kk.kJJk
-....kJjk
-....kjjk
+kVWk....
+kVWk....
+kWwk.kk.
+.kk.kVWk
+....kVWk
+....kWwk
 .....kk.

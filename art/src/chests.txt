@@ -4,8 +4,8 @@
 .kkkkk.
 kVVVVVk
 kOOOOOk
-kvvyvWk
 kvvvvWk
+kvvyvWk
 kkkkkkk
 # locked-chest: same chest, iron band across the lid seam, iron padlock on it.
 # The lock is 3 px wide and 2 px tall, with a dark keyhole.
@@ -18,9 +18,8 @@ kvMmMWk
 kkkkkkk
 # gold-chest: open chest. Gold heaped above the rim, rim and body below.
 == gold-chest
-..kkk..
+..kYk..
 .kYyOk.
-kYyyOOk
-kVvvVWk
-kWvvWWk
+kVVVVVk
+kWWWWWk
 kkkkkkk

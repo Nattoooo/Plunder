@@ -1,10 +1,10 @@
-# A heap of orange spice fills the open burlap sack. Q/q shade the heap; f/D/d shade the sack, matching the sugar bag material.
+# Spices: orange spice heaped over a dark jute sack. Light top left.
 == spices
 ..kkkk..
 .kQQqqk.
 kQqqqqqk
 kqqqqqqk
-kfDDDDdk
-kDDDDddk
-.kDDddk.
+kVvvvvWk
+kvvvvWWk
+.kvvWWk.
 ..kkkk..

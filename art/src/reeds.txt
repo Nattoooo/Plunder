@@ -1,9 +1,9 @@
+# Cattail reeds: three stalks, tall centre head, shorter side heads, stalks and splayed blades below.
 == reeds
-.k.....
-kJk..k.
-kJk.kJk
-.k..kJk
-kGk.kGk
-kGkkkGk
-khGGGgk
-.kkkkk.
+...k...
+..kvk..
+.kkJkk.
+kvkJkvk
+kJkGkJk
+.GGHGG.
+hGGHGGh

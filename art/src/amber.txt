@@ -1,10 +1,10 @@
-# The asymmetrical polished amber stone retains its clean facets. Its connected upper-left y face, O body and o lower-right face use exactly three amber tones.
+# Amber: polished golden stone with a glint top left, shadow bottom right. Light top left.
 == amber
 ..kkkk..
 .kyOOOk.
-kyyOOOOk
+kYyOOOOk
 kyOOOOOk
 kOOOOOok
 .kOOOok.
 ..koook.
-...kkk..
+...kk...

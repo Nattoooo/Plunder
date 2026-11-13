@@ -1,10 +1,10 @@
-# Two pink cloth bolts are stacked. Their right-hand k/R curls are the rolled ends; the lit upper-left folds use E, the cloth body e, and the far folds R.
+# Silk: two rolled bolts of pink silk, seen from the side. Light top left.
 == silk
 .kkkkkk.
-kEEeeRkk
-kEeeRkRk
+kEEeeeRk
+kEeeeRRk
 .kkkkkk.
-kEEeeRkk
-kEeeRkRk
-kEeeRRkk
+kEEeeeRk
+kEeeeRRk
+kEeeRRRk
 .kkkkkk.

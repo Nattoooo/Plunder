@@ -1,21 +1,21 @@
+# Wraith: 7 x 8. Teal hooded robe i, 3x3 dark hood opening K with glowing eyes I inside, ragged hem that shifts between frames.
 == wraith-1
 ..kkk..
 .kiiik.
-.kKKKk.
-.kIKIk.
-.kiKik.
+kiKKKik
+kiIKIik
+kiKKKik
 kiiiiik
-kiiiKik
+kiiiiik
 kikikik
 .k.k.k.
-
 == wraith-2
 ..kkk..
 .kiiik.
-.kKKKk.
-.kIKIk.
-.kiKik.
+kiKKKik
+kiIKIik
+kiKKKik
 kiiiiik
-kiiiKik
-kikkkik
-.k...k.
+kiiiiik
+kikikik
+k.k.k.k

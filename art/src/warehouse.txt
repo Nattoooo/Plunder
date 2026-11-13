@@ -13,11 +13,11 @@ kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 .kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.
 .kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.
 .kCCCCCCCCCkkkkkkkkkkkkCCkkkkkCck.
-.kCCCCCCCCCkVvvwKKVvvwkCCkVVVkCck.
-.kCCCCCCCCCkVvvwKKVvvwkCCkvvwkCck.
+.kCCCCCCCCCkVWWwKKVWWwkCCkVVVkCck.
+.kCCCCCCCCCkVWWwKKVWWwkCCkvvwkCck.
 .kCCCCCCCCCkMMMMKKMMMMkCCkkkkkCck.
-.kCkkkkkkkCkVvvwKKVvvwkCkkkkkkkck.
-.kCkVVVVVkCkVvvwKKVvvwkCkVVVVVkck.
+.kCkkkkkkkCkVWWwKKVWWwkCkkkkkkkck.
+.kCkVVVVVkCkVWWwKKVWWwkCkVVVVVkck.
 .kCkwwwwwkCkMMMMKKMMMMkCkwwwwwkck.
-.kCkvvvvwkCkVvvwKKVvvwkCkvvvvwkck.
+.kCkvvvvwkCkVWWwKKVWWwkCkvvvvwkck.
 .kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.

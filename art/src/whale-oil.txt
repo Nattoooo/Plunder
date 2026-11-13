@@ -1,4 +1,4 @@
-# The tin has a visible top ellipse, straight body, blue label and closed lower rim. N/n/M are the three metal tones, with the left edge lit.
+# Whale oil: steel tin can with a blue label band. Light top left.
 == whale-oil
 ..kkkk..
 .kNNNNk.
@@ -6,5 +6,5 @@ kNnnnnMk
 kNBBBBMk
 kNBBBBMk
 kNnnnnMk
-.knnnMk.
-..kkkk..
+kNnnnnMk
+.kMMMMk.
