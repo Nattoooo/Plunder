@@ -1,5 +1,6 @@
 # Small patched sail on the starter raft, seen from above with the bow up.
-# The yard is the bottom row: W at the ends, v between, as the approved sails do.
+# The yard is the bottom row, one mid wood tone (W). The approved sails use v in the
+# middle, but v is the same colour as the deck, so the yard would vanish on deck.
 # The cloth bellies up over it. Light top-left as in the approved sails: p lit on the
 # left third, C base in the middle, c shade on the right. The patch is a 2x2 block of c
 # just left of centre. Half-reefed and furled rows are the cloth rolled up onto the yard,
@@ -9,11 +10,11 @@
 .pppCCcc.
 pppccCCcc
 pppccCCcc
-WvvvvvvvW
+WWWWWWWWW
 == sail-patched-half
 .pppCCcc.
 pppCCCccc
-WvvvvvvvW
+WWWWWWWWW
 == sail-patched-furled
 ppCCCCCcc
-WvvvvvvvW
+WWWWWWWWW
