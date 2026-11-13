@@ -1,0 +1,17 @@
+== pearl
+................
+....kkkkkkkk....
+..kkCCCCCCCCkk..
+.kCCppppppppCCk.
+.kCppppppppppck.
+kCCpppkkkkpppcck
+kCpppkPPPCkppcck
+kCpppkPPPCkppcck
+kCCppkPPCckppcck
+kCCCpkCCcckppcck
+.kCCCpkkkkpppck.
+.kCCCCppppppcck.
+..kkCCCCCCcckk..
+....kkkkkkkk....
+................
+................

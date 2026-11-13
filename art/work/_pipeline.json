@@ -198,8 +198,8 @@
   "batch": "island-1"
  },
  "warehouse": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "island-2"
  },
@@ -222,8 +222,8 @@
   "batch": "island-2"
  },
  "dock-planks": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "tiny",
   "batch": "island-2"
  },
@@ -966,8 +966,8 @@
   "batch": "icons-treasure"
  },
  "sparkle": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "tiny",
   "batch": "effects"
  },
@@ -984,8 +984,8 @@
   "batch": "effects"
  },
  "cutlass-swing": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "tiny",
   "batch": "effects"
  }

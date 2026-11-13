@@ -1,0 +1,17 @@
+== siren-conch
+................
+..........kkkk..
+.........kffFFk.
+.....kk..kfFFDk.
+....kFFkkfFDDDk.
+...kFfffFfDDDdk.
+..kFFffffDDDDdk.
+.kFfFFfkkkDddkk.
+.kFFfffkEEkkEEk.
+kkFFfffkEEEEEEEk
+kFfFFffkkEEEEEEk
+.kFffDDdkkEEEEk.
+..kkDDDdddkkkk..
+....kkkkkkk.....
+................
+................

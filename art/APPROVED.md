@@ -72,3 +72,7 @@ Families the critic has passed. Match their style.
 - mushrooms (nature) — round 1
 - shell (nature) — round 1
 - lava-tile (nature) — round 1
+- sparkle (effects) — round 2
+- cutlass-swing (effects) — round 2
+- warehouse (buildings) — round 1
+- dock-planks (buildings) — round 1

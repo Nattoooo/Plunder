@@ -1,0 +1,17 @@
+== treasure-map
+................
+..kkkkkkkkkkkkk.
+.kppppppppppppXk
+.kpxxppppppppxXk
+.kppppppppppppXk
+.kpppppRRppRRpXk
+.kpDDpppRRRRppXk
+.kppppDDpRRpppXk
+.kpppppppRRRRppk
+.kpppppppRRppRRk
+.kxpppppppppppXk
+.kpppxxppppppXXk
+.kppppppppppXXk.
+..kkkkkkkkkkkk..
+................
+................

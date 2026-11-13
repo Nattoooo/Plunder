@@ -1,0 +1,17 @@
+== black-pearl
+................
+....kkkkkkkk....
+..kkCCCCCCCCkk..
+.kCCppppppppCCk.
+.kCppppppppppck.
+kCCpppkkkkpppcck
+kCpppknNMKkppcck
+kCpppkNMKKkppcck
+kCCppkMKKKkppcck
+kCCCpkKKKkkppcck
+.kCCCpkkkkpppck.
+.kCCCCppppppcck.
+..kkCCCCCCcckk..
+....kkkkkkkk....
+................
+................

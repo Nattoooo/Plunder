@@ -1,0 +1,17 @@
+== sea-chart
+................
+.kkkk...........
+kCCcCk..........
+kCkkcCkkkkkkkkk.
+kCkkcCkppppppXk.
+kCCcCkpBBBBBBkk.
+.kkkkkpBlBBHhBXk
+....kppBBBBhHGBk
+....kppBlBBhGGBk
+....kppBBBBBGBBk
+....kpxBBBBBBBBk
+....kppBBlBBBlBk
+....kxxpBBBBBBXk
+.....kkkkkkkkkk.
+................
+................
