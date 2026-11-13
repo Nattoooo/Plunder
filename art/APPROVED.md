@@ -94,3 +94,4 @@ Families the critic has passed. Match their style.
 - private-dock (buildings) — round 2
 - watchtower (buildings) — round 2
 - tavern (buildings) — round 2
+- silk (icons) — round 3
