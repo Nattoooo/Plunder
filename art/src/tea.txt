@@ -1,0 +1,17 @@
+== tea
+................
+..kkkkkkkkkkkk..
+.kFFFFFFFFFFFFk.
+kFFFFFFFFFFFFFFk
+kVVVVVVVVVVVVVvk
+kvvvvvvvvvvvvvWk
+kkkkkkkkkkkkkkkk
+kvvvvvvHHvvvvvWk
+kvvvvvhHHGvvvvWk
+kvvvvhHHHGGvvvWk
+kvvvvvhHGGvvvvWk
+kvvvvvvGGvvvvvWk
+kWWWWWWWWWWWWWWk
+kkkkkkkkkkkkkkkk
+................
+................

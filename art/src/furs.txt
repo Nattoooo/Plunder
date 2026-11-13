@@ -1,0 +1,17 @@
+== furs
+................
+..kkkk....kkkk..
+.kDDDDk..kDDJJk.
+.kDDDDDkkDDJJJk.
+kDDDDDDDDDDJJJJk
+kDDDDJJJJJJJJJJk
+kDDJJJJJJJJJJJjk
+.kJJJJJJJJJJJjk.
+.kJJJJJJJJJJJjk.
+kJJJJJJJJJJJJjjk
+kJJJJJJJJJJJJJjk
+.kJJJJJkkJJJJjk.
+.kJJJJk..kJJJjk.
+..kkkk....kkkk..
+................
+................

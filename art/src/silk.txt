@@ -1,0 +1,17 @@
+== silk
+................
+.kkkkkkkkkkkkk..
+kEEEEEEEEEEEeek.
+kERReeeeeeeeeek.
+kEeReeeeeeeeRRk.
+kERReeeeeeeRRRk.
+kRRRRRRRRRRRRRk.
+.kkkkkkkkkkkkk..
+..kkkkkkkkkkkkk.
+.kEEEEEEEEEEEeek
+.kERReeeeeeeeeek
+.kEeReeeeeeeeRRk
+.kERReeeeeeeRRRk
+.kRRRRRRRRRRRRRk
+..kkkkkkkkkkkkk.
+................

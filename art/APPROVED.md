@@ -20,3 +20,4 @@ Families the critic has passed. Match their style.
 - house-shutters (buildings) — round 1
 - house-long (buildings) — round 1
 - house-townhouse (buildings) — round 1
+- mortar (ship) — round 2
