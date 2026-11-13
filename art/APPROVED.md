@@ -74,3 +74,6 @@ Families the critic has passed. Match their style.
 - lava-tile (nature) — round 1
 - lumber-camp (buildings) — round 2
 - mine (buildings) — round 2
+- chests (props) — round 2
+- bottle (props) — round 2
+- quest-mark (props) — round 2

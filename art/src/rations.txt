@@ -1,7 +1,7 @@
-# Hardtack rations: two stacked square biscuits, lit top left, outline k.
+# Hardtack rations: two stacked square biscuits with docking holes on the top face, lit top left.
 == rations
 .kkkkkk.
-kFFFFFFk
+kFDFFDFk
 kfffffDk
 kkkkkkkk
 kfffffDk

@@ -273,8 +273,8 @@
   "batch": "props-small"
  },
  "chests": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -294,8 +294,8 @@
   "batch": "props-small"
  },
  "bottle": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -336,8 +336,8 @@
   "batch": "props-large"
  },
  "quest-mark": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"

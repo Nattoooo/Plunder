@@ -2,8 +2,8 @@
 == salted-pork
 ......kk
 .....kXk
-....kxk.
-..kkRk..
+....kXXk
+...kkRk.
 .keRRRk.
 .kRRRRk.
 .kRRRk..

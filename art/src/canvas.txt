@@ -1,10 +1,10 @@
-# Canvas: rolled bolt of sail cloth seen from the side, lit top left. A k seam marks the rolled end cap on the right.
+# Canvas: rolled bolt of sail cloth seen from the side as a cylinder, light top left, shade bottom right.
 == canvas
 ........
-.kkkkkk.
-kppppkCk
-kpCCCkCk
-kpCCCkck
-kCCCCkck
-.kkkkkk.
+..kkkk..
+.kpppCk.
+kpppCCck
+kCCCCcck
+.kccccck
+..kkkk..
 ........
