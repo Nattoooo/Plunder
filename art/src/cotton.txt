@@ -4,7 +4,7 @@
 ....kkPPPPkk....
 ..kkPPPPPPPPkk..
 .kPPPkPPPPkPPPk.
-.kPPPkkPPkkPPCk.
+.kPPPPPPPPPPPCk.
 .kPPPPPPPPPPCCk.
 ..kPPCCCCCCCCk..
 ...kkGGGGGGkk...

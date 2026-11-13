@@ -1,0 +1,1 @@
+wreck: 34x17 hull seen from above, bow right, rounded pointed bow, 2 px rim lit on top, darker on bottom, flooded K interior, one rib, one snapped rib stub, round mast stump, bow deck remains (v), stern broken off on a diagonal.
