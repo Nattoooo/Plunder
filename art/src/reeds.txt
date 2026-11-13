@@ -1,9 +1,10 @@
-# Cattail reeds: three stalks, tall centre head, shorter side heads, stalks and splayed blades below.
+# Cattail reeds: two brown heads on thin green stalks, splayed blades below.
 == reeds
-...k...
-..kvk..
-.kkJkk.
-kvkJkvk
-kJkGkJk
-.GGHGG.
-hGGHGGh
+.kk.kk.
+kvJkvJk
+kvJkvJk
+kJjkJjk
+.kk.kk.
+..H.G..
+.hHgGh.
+hGHgHGh

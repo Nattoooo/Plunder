@@ -1,4 +1,4 @@
-# Four powder kegs, one per quadrant, split by a dark cross.
+# Four powder kegs, one per quadrant, split by a dark cross. Keg tops lit V, rims v, shadow w.
 == powder-magazine
 VvkVv
 vwkvw

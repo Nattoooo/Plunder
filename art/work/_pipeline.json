@@ -301,8 +301,8 @@
   "batch": "props-small"
  },
  "wreck": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "model": "sonnet",
   "tier": "normal",
   "batch": "props-large"

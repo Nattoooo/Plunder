@@ -1,8 +1,5 @@
-# Two red-capped mushrooms: tall one left (white spot), small one right, cream stems.
+# Two small red-capped mushrooms, no outline (3 px high). Light from top left.
 == mushrooms
-.kkk.....
-kePRk.kk.
-kRRrkkeRk
-.kCk.krrk
-.kCk..kCk
-.kkk..kkk
+eR.eR
+Rr.Rr
+C..C.

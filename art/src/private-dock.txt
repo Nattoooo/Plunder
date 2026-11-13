@@ -1,9 +1,10 @@
 # private-dock
 == private-dock
-..kkk..........kkk..
-..kVk..........kVk..
-kkkVkkkkkkkkkkkkVkkk
-kVkvkVvVVVVVVvVkvkVk
-kvkkkvwvvvvvvwvkkkvk
+..kkkk........kkkk..
+..kVVk........kvVk..
+kkkVVkkkkkkkkkkvVkkk
+kVVVVVVVVVVVVVVVVVVk
+kvvvvvvvvvvvvvvvvvvk
+kvvvvvvvvwwvvvvvvvvk
 kwwwwwwwwwwwwwwwwwwk
 kkkkkkkkkkkkkkkkkkkk

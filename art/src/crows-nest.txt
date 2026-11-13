@@ -1,8 +1,8 @@
-# Round lookout basket: wood rim, dark floor.
+# Round lookout basket seen from above: wood rim (V lit top-left, w shadow bottom-right), dark K floor inside.
 == crows-nest
 .kkkk.
-kVVvwk
+kVVVvk
 kVKKwk
-kvKKwk
+kVKKwk
 kvwwwk
 .kkkk.

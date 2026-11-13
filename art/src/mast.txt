@@ -1,7 +1,8 @@
-# Mast base: round wood post with rope stays running out to the cell edges.
+# Mast base seen from above: a wood post (V top, v/w side) with four rope stays (f) running out to the sides.
+# The stays stop at the outline, so every rope end is closed by k.
 == mast
-.kfk.
+.kkk.
+kfVfk
 kVvwk
-fVvwf
-kvwwk
-.kfk.
+kfwfk
+.kkk.

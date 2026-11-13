@@ -1,4 +1,5 @@
-# Iron ram plate: point on the top 3 rows, 5 px base on the cell.
+# Iron ram plate on the bow: point on the top 3 rows, 5 px base on the cell.
+# Lit on the left (N), mid iron (M), shadow on the right (m).
 == ram
 ..k..
 .kNk.

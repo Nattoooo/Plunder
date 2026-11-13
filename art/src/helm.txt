@@ -1,7 +1,8 @@
-# Ship wheel seen from above: a ring of wood around a brass hub, four spokes.
+# Ship wheel seen from above: a dark rim, four wood spokes meeting a brass hub.
+# Spokes are the only wood; the four K gaps are the dark hollow between them.
 == helm
 .kkk.
-kVWvk
-kWOwk
-kvwwk
+kKVKk
+kVOvk
+kKvKk
 .kkk.

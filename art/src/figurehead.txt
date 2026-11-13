@@ -1,10 +1,10 @@
-# Gold carved figurehead: rounded head over the bow.
+# Gold carved figurehead: a bust whose head (top 3 rows) reaches forward over the bow, shoulders on the cell.
 == figurehead
 .kkk.
-kyYOk
+kyyOk
 kyOOk
 kOOOk
+kOOok
 kOoOk
-kOook
 kooOk
 kkkkk

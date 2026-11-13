@@ -1,4 +1,5 @@
+# Pink scallop shell, no outline (3 px high). Light from top left.
 == shell
-.kkk.
-kEEek
-.keek
+.EEe.
+EEeee
+.eee.

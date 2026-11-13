@@ -1,7 +1,7 @@
-# Iron stove: chimney pipe at the top, fire glow in the firebox.
+# Iron stove seen from above: chimney pipe as a dark hole (K) ringed by iron, glowing firebox (q Q q), iron base.
 == galley
 kkkkk
-kMNMk
+kNKMk
 kqQqk
 kmMmk
 kkkkk

@@ -1,7 +1,8 @@
-# Closed cargo hatch: two iron straps over wood boards.
+# Closed cargo hatch: two iron straps (M) across the wood boards (V v w).
+# Straps are one pixel each, so they take a single iron tone.
 == cargo-hold
 kkkkk
-knMMk
+kMMMk
 kVvwk
-kMmmk
+kMMMk
 kkkkk

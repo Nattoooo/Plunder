@@ -1,7 +1,7 @@
-# Rowing bench across the deck, plank top.
+# Rowing bench across the deck: one plank, lit on its top edge (V), mid wood (v), shadow on its bottom edge (w).
 == oar-bench
-kkkkk
-kVvvk
+.kkk.
+kVVVk
 kvvvk
 kwwwk
-kkkkk
+.kkk.

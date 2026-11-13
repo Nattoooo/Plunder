@@ -1,4 +1,5 @@
 # Deck hatch open, ladder rails with one rung going below.
+# Rails are V (lit left) and w (shadow right); the rung crosses both on row 2; K is the open dark shaft.
 == crew-quarters
 kkkkk
 kVKwk
