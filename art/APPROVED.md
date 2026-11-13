@@ -118,3 +118,7 @@ Families the critic has passed. Match their style.
 - wreck (props) — round 3
 - skeleton (characters) — round 3
 - gull (characters) — round 3
+- plantation (buildings) — round 2
+- lumber-camp (buildings) — round 2
+- mine (buildings) — round 2
+- distillery (buildings) — round 2

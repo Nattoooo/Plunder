@@ -168,32 +168,32 @@
   "batch": "fort"
  },
  "plantation": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "island-1"
  },
  "lumber-camp": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "island-1"
  },
  "mine": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "island-1"
  },
  "fishery": {
-  "round": 0,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "island-1"
  },
  "distillery": {
-  "round": 0,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "island-1"
  },
