@@ -267,7 +267,7 @@
  },
  "dock-planks": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -288,7 +288,7 @@
  },
  "barrel": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -309,14 +309,14 @@
  },
  "dig-spot": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
  },
  "x-mark": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"
@@ -344,7 +344,7 @@
  },
  "waypoint": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "props-small"

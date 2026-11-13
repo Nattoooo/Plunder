@@ -131,3 +131,7 @@ Redrawn 7 x 9 (hat, head, body all 7 px, no overhanging wings) to answer the sca
 - Face: brim now has its own row, forehead row 3, eyes on row 4 with skin around them, collar p is the chin.
 - Hair: speckle removed, only right column j and the queue remain.
 - Walk: lifted-leg frames kept as accepted. Side-1: single heel plus toe pair so only one boot sits under the coat tail.
+
+## Batch round 2
+- Door scale (issue 1): the review states the captain sprites need no change and must not shrink; the fix is widening the doors in the house families, which are outside this batch, so the captain grids are untouched (still 7 x 9).
+- Side hat gap (issue 2) and lifted-leg trouser (issue 3): kept as the review advises.

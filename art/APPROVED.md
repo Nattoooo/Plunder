@@ -58,3 +58,8 @@ Families the critic has passed. Match their style.
 - skeleton (characters) — round 2
 - gull (characters) — round 2
 - sea-serpent (characters) — round 2
+- barrel (props) — round 1
+- dig-spot (props) — round 1
+- x-mark (props) — round 1
+- waypoint (props) — round 1
+- dock-planks (buildings) — round 1

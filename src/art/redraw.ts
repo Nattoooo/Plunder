@@ -3,6 +3,7 @@ import { art, Art } from './palette';
 const SCALE = 2;
 
 const ROWS: Record<string, string[]> = {
+  'barrel': ['.kkk.', 'kVVvk', 'kMMMk', 'kvvWk', 'kMMMk', '.kkk.'],
   'berry-bush': ['.kkk..kkk.', 'kHHhkkhhhk', 'kHhhhhRRhk', 'khhRRhhhGk', 'khhhhGGGGk', '.kkkkkkkk.'],
   'boulder': ['....kkkk....', '..kkUuuukk..', '.kUUuuuuTTk.', 'kUUuuuuTTTTk', 'kuuuuuTTTTTk', 'kuuuuTTTTTTk', 'kuuTTTTTTTTk', '.kkkkkkkkkk.'],
   'bow-large': ['......kkk......', '....kkVvwkk....', '..kkVvvvvwwkk..', '.kVvvvvvvvwwwk.', 'kVvvvvvvvvvwwwk'],
@@ -25,6 +26,8 @@ const ROWS: Record<string, string[]> = {
   'dead-tree': ['...k.....k...', '.kkvk...kdkk.', 'kvkvk...kdkdk', 'kvkvk...kddk.', '.kvvk..kddk..', '..kvvkkkdk...', '...kvvWddk...', '...kvWdkk....', '....kvWdk....', '....kvvdk....', '...kvvWdk....', '..kvvWddk....', '...kkkkk.....'],
   'deck-logs': ['WVvWW', 'WVvWW', 'DfffD', 'WVvWW', 'WVvWW'],
   'deck-planks': ['vvvvW', 'vvvvW', 'vvvvW', 'vvvvW', 'vvvvW'],
+  'dig-spot': ['..FF..', '.FDDd.', 'FDDDdd', 'DDDddd'],
+  'dock-planks': ['vvvv', 'vvvv', 'vvvv', 'WWWW'],
   'fire-1': ['.Q.', 'qQq', 'qqq'],
   'fire-2': ['Q..', 'qQ.', 'qqq'],
   'flag-1': ['wRRR', 'wRR.'],
@@ -93,9 +96,11 @@ const ROWS: Record<string, string[]> = {
   'tavern': ['...............kkkk......', '...............kuTk......', '........kkkkkkkkuTk......', '.......keeeeeeekuTk......', '......kRRRRRRRRkuTk......', '.....kRRRRRRRRRkuTkk.....', '....kRRRRRRRRRRRRRRRk....', '...kRRRRRRRRRRRRRRRRRk...', '..kRRRRRRRRRRRRRRRRRRRk..', '.kRRRRRRRRRRRRRRRRRRRRRk.', 'kkkkkkkkkkkkkkkkkkkkkkkkk', '.kccccccccccccccccccccck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kCkkkkkCCkkkkkCCkkkkkck.', '.kCkllBkCCkllBkCCkllBkck.', '.kCkBBBkCCkBBBkCCkBBBkck.', '.kCkBBBkCCkBBBkCCkBBBkck.', '.kCkVVVkCCkVVVkCCkVVVkck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kVVVVVVVVVVVVVVVVVVVVVk.', '.kwwwwwwwwwwwwwwwwwwwwwk.', '.kCCCCCCCCCCCCkkkkkkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCCkCCCkCCCCkVWWwkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCkyyyyOkCCCkVWWwkCCck.', '.kCCkyyyyOkCCCkVWywkCCck.', '.kCCkOOOOOkCCCkVWWwkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCCCCCCCCCCCkVWWwkCCck.', '.kkkkkkkkkkkkkkkkkkkkkkk.'],
   'tree': ['.....kkkkk.....', '...kkHHHhhkk...', '..kHHHhhhhhhk..', '..khhhhhhhhhk..', '..kHhGGGGhhhk..', '.kHHhhhhhHHhhk.', 'khhhhhhhhhhhhhk', 'khhhhhhGGGhhhhk', 'khhhhHHhhhGhhhk', 'khhGGhhhhhGGGGk', '.kGGGhhhhGGGGk.', '..kkkGGGGGkkk..', '.....kwwwk.....', '.....kvvwk.....', '.....kvvwk.....', '.....kvvwk.....', '....kvvvwwk....', '....kkkkkkk....'],
   'warehouse': ['........kkkkkkkkkkkkkkkkkk........', '.......keeeeeeeeeeeeeeeeeek.......', '......kRRRRRRRRRRRRRRRRRRRRk......', '.....kRRRRRRRRRRRRRRRRRRRRRRk.....', '....kRRRRRRRRRRRRRRRRRRRRRRRRk....', '...kRRRRRRRRRRRRRRRRRRRRRRRRRRk...', '..kRRRRRRRRRRRRRRRRRRRRRRRRRRRRk..', '.krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk.', 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk', '.kcccccccccccccccccccccccccccccck.', '.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCkkkkkkkkkkkkCCkkkkkCck.', '.kCCCCCCCCCkVWWwKKVWWwkCCkVVVkCck.', '.kCCCCCCCCCkVWWwKKVWWwkCCkvvwkCck.', '.kCCCCCCCCCkMMMMKKMMMMkCCkkkkkCck.', '.kCkkkkkkkCkVWWwKKVWWwkCkkkkkkkck.', '.kCkVVVVVkCkVWWwKKVWWwkCkVVVVVkck.', '.kCkwwwwwkCkMMMMKKMMMMkCkwwwwwkck.', '.kCkvvvvwkCkVWWwKKVWWwkCkvvvvwkck.', '.kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.'],
+  'waypoint': ['.kkkk', 'kWRRk', 'kWRRk', 'kWRrk', 'kWkkk', 'kWk..', 'kkk..'],
   'whale': ['kk....kk........', 'kBk..kBBkkkkkk..', 'kBBkkkBBlllBBBk.', '.kBBBBBBBllBBBBk', 'kBBkkkBBBBbbbbk.', 'kBk..kBbkkkkkk..', 'kk....kk........'],
   'wraith-1': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kiikiikik', '.kk.kk.k.'],
-  'wraith-2': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kikiikiik', '.k.kk.kk.']
+  'wraith-2': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kikiikiik', '.k.kk.kk.'],
+  'x-mark': ['RR..RR', '.RRRR.', '..RR..', '..RR..', '.RRRR.', 'RR..RR']
 };
 
 const cache = new Map<string, Art>();
