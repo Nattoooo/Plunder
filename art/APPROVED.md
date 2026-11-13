@@ -33,3 +33,6 @@ Families the critic has passed. Match their style.
 - sick-bay (ship) — round 1
 - crows-nest (ship) — round 1
 - ram (ship) — round 1
+- light-cannon (ship) — round 3
+- carronade (ship) — round 3
+- swivel-gun (ship) — round 3

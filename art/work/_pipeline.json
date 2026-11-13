@@ -330,8 +330,8 @@
   "batch": "ship-tiles"
  },
  "light-cannon": {
-  "round": 0,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-guns"
  },
@@ -342,14 +342,14 @@
   "batch": "ship-guns"
  },
  "carronade": {
-  "round": 0,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-guns"
  },
  "swivel-gun": {
-  "round": 0,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-guns"
  },

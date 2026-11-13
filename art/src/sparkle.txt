@@ -1,9 +1,9 @@
-# Sparkle: gold four-point star marking dig spots and shrines. The large frame is a thick star (3 x 3 body with a pale centre and four points), the small frame is its core at 3 x 3 in the middle of the 5 x 5 box. No outline (effect).
+# Sparkle: gold four-point star marking dig spots and shrines. A plus with a single pale centre (Y) and one-pixel gold arms (y). The large frame has 5 px arms, the small frame 3 px. No outline (effect).
 == sparkle-1
 ..y..
-.yYy.
+..y..
 yyYyy
-.yYy.
+..y..
 ..y..
 
 == sparkle-2

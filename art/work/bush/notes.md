@@ -1,0 +1,1 @@
+Two-lobed crown with a 2 px valley notch; H highlights top left, G/g shade under the lobes and bottom right. berry-bush: same body plus three 2 x 2 berry clusters (e/R/r) placed in the lit and mid areas. Only the four foliage colours are used for leaves.
