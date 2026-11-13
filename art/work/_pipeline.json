@@ -12,8 +12,8 @@
   "batch": "characters"
  },
  "skeleton": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "characters"
  },
@@ -24,8 +24,8 @@
   "batch": "characters"
  },
  "gull": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "tiny",
   "batch": "characters"
  },

@@ -116,3 +116,5 @@ Families the critic has passed. Match their style.
 - storm-glass (icons) — round 1
 - sea-chart (icons) — round 1
 - wreck (props) — round 3
+- skeleton (characters) — round 3
+- gull (characters) — round 3
