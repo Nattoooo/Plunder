@@ -35,3 +35,6 @@ Families the critic has passed. Match their style.
 - whale (characters) — round 2
 - claim-stone (props) — round 2
 - fort (buildings) — round 2
+- long-gun (ship) — round 1
+- carronade (ship) — round 1
+- mortar (ship) — round 1

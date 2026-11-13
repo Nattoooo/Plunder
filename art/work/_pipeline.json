@@ -393,14 +393,14 @@
  },
  "long-gun": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
  },
  "carronade": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
@@ -414,7 +414,7 @@
  },
  "mortar": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"
