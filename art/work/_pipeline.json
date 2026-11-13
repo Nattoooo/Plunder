@@ -2,8 +2,8 @@
  "captain": {
   "creator": "a743a2302295322b8",
   "critic": "a366084e9e6fc2fd3",
-  "round": 1,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "model": "sonnet from round 2",
   "tier": "tiny",
   "batch": "characters"
@@ -568,7 +568,7 @@
  },
  "sugar": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
@@ -582,7 +582,7 @@
  },
  "coffee": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
@@ -652,21 +652,21 @@
  },
  "whale-oil": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "porcelain": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"
  },
  "amber": {
-  "round": 2,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "icons-trade"

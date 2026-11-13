@@ -1,0 +1,10 @@
+# Fish: silver-blue fish facing left, tail on the right, lit top left.
+== fish
+........
+..kkk.k.
+.kLlBkk.
+kLlBBBBk
+kBBBNNBk
+.kbNNbk.
+..kkk.k.
+........

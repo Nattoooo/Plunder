@@ -1,0 +1,10 @@
+# Heated shot: red-hot iron ball, glowing orange core, red rim.
+== heated-shot
+..kkkk..
+.keeeRk.
+keQQeRRk
+keQyQeRk
+keQQeRRk
+keeeRRRk
+.kRRRRk.
+..kkkk..

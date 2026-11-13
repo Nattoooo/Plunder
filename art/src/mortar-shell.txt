@@ -1,0 +1,10 @@
+# Mortar shell: round black bomb with a lit fuse and spark at top right.
+== mortar-shell
+.....yY.
+.....J..
+..kkkk..
+.knMMMk.
+.knMMmk.
+.kMMmmk.
+.kmmmmk.
+..kkkk..

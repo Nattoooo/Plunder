@@ -1,0 +1,10 @@
+# Brass fitting: round brass ring with a dark hole, lit top left.
+== brass
+..kkkk..
+.kyOOOk.
+kyOOOOok
+kOOkkOOk
+kOOkkOok
+kooooook
+.kooook.
+..kkkk..

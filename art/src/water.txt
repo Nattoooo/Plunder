@@ -1,0 +1,10 @@
+# Fresh water: small wooden barrel with two iron hoops, lit top left.
+== water
+..kkkk..
+.kVVVVk.
+kMMMMMMk
+kVvvvWWk
+kVvvvWWk
+kMMMMMMk
+.kvvWWk.
+..kkkk..

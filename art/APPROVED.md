@@ -63,3 +63,8 @@ Families the critic has passed. Match their style.
 - x-mark (props) — round 1
 - waypoint (props) — round 1
 - dock-planks (buildings) — round 1
+- sugar (icons) — round 1
+- coffee (icons) — round 1
+- whale-oil (icons) — round 1
+- porcelain (icons) — round 1
+- amber (icons) — round 1

@@ -1,0 +1,10 @@
+# Cannonballs: pyramid of three dark iron balls, lit top left.
+== cannonball
+...kk...
+..knMk..
+..kMmk..
+...kk...
+.kk..kk.
+knMkknMk
+kMmkkMmk
+.kk..kk.

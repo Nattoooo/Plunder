@@ -1,0 +1,10 @@
+# Planks: two wooden planks stacked, lit top left, separated by an outline line.
+== planks
+kkkkkkkk
+kVVVVVVk
+kvvvvvvk
+kvvvvWWk
+kkkkkkkk
+kVVVVVVk
+kvvvvWWk
+kkkkkkkk

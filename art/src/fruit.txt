@@ -1,0 +1,10 @@
+# Fresh fruit: a green apple (top left, H/h/G) and an orange (bottom right, y/Q/q) overlapping.
+== fruit
+.kkk....
+kHHhk...
+kHhGk...
+kHGGkkk.
+.kkkyQQk
+...kyQqk
+...kQqqk
+....kkk.

@@ -1,0 +1,10 @@
+# Iron bars: two ingots stacked, trapezoid bevel, light top left.
+== iron-bars
+..kkkk..
+.kNNNNk.
+kMMMMMMk
+kmmmmmmk
+.kNNNNk.
+kMMMMMMk
+kmmmmmmk
+.kkkkkk.

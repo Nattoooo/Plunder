@@ -1,0 +1,10 @@
+# Canvas: rolled bolt of sail cloth seen from the side, end face on the right.
+== canvas
+.kkkkkk.
+kppppCCk
+kpppCcck
+kpppCcck
+kpppCcck
+kCCCcccк
+.kkkkkk.
+........

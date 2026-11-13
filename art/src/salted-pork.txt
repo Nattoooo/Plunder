@@ -1,0 +1,10 @@
+# Salted pork: a ham shank with its bone end up top, lit top left.
+== salted-pork
+...kk...
+..kXXk..
+..kxxk..
+..keRk..
+.keRRrk.
+keRRRrrk
+kRRRRrrk
+.kkkkkk.

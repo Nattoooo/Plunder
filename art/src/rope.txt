@@ -1,0 +1,10 @@
+# Rope: coil of rope seen from above, hole in the middle, lit top left.
+== rope
+..kkkk..
+.kffffk.
+kffffDDk
+kffkkDDk
+kffkkDDk
+kDDDDDDk
+.kDDDDk.
+..kkkk..

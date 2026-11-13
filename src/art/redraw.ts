@@ -3,6 +3,7 @@ import { art, Art } from './palette';
 const SCALE = 2;
 
 const ROWS: Record<string, string[]> = {
+  'amber': ['..kkkk..', '.kyOOOk.', 'kYyOOOOk', 'kyOOOOOk', 'kOOOOOok', '.kOOOok.', '..koook.', '...kkk..'],
   'barrel': ['.kkk.', 'kVVvk', 'kMMMk', 'kvvWk', 'kMMMk', '.kkk.'],
   'berry-bush': ['.kkk..kkk.', 'kHHhkkhhhk', 'kHhhhhRRhk', 'khhRRhhhGk', 'khhhhGGGGk', '.kkkkkkkk.'],
   'boulder': ['....kkkk....', '..kkUuuukk..', '.kUUuuuuTTk.', 'kUUuuuuTTTTk', 'kuuuuuTTTTTk', 'kuuuuTTTTTTk', 'kuuTTTTTTTTk', '.kkkkkkkkkk.'],
@@ -15,6 +16,7 @@ const ROWS: Record<string, string[]> = {
   'carronade': ['.kkk.', 'kNnMk', 'kNnMk', 'kNnMk', 'kKKKk', 'kvvvk', '.kkk.'],
   'claim-stone': ['....kkkkk', '...kwPPPk', '...kwPPpk', '...kwkkkk', '..kkwkk..', '.kUuuuTk.', '.kUuKuTk.', 'kUuKKKuTk', 'kUuuKuuTk', 'kkkkkkkkk'],
   'claim-stone-owned': ['....kkkkk', '...kwMKKk', '...kwMKKk', '...kwkkkk', '..kkwkk..', '.kUuuuTk.', '.kUuKuTk.', 'kUuKKKuTk', 'kUuuKuuTk', 'kkkkkkkkk'],
+  'coffee': ['.kkk....', 'kVVvk...', 'kVwvk...', '.kkk....', '....kkk.', '...kVwvk', '...kVwvk', '....kkk.'],
   'crab-1': ['ke.kk.ek', 'kekeRkRk', '.keeRRk.', 'kkRRRrkk', 'k.k..k.k'],
   'crab-2': ['ke.kk.ek', 'kekeRkRk', '.keeRRk.', '.kRRRrk.', '.k.kk.k.'],
   'crew': ['.J.', 'sRr', '.RS'],
@@ -64,6 +66,7 @@ const ROWS: Record<string, string[]> = {
   'pine': ['.....k.....', '....khk....', '...kHhhk...', '..kHhhGGk..', '..kGGGGGk..', '...kHhhk...', '..kHhhhhk..', '.kHhhhhhhk.', '.khhhhhGGk.', '.kGGGGGGGk.', '..kHhhhhk..', '.kHHhhhhhk.', 'kHHhhhhhhhk', 'khhhhhhhGGk', 'kGGGGGGGGGk', '.kkkkkkkkk.', '...kvvwk...', '...kvvwk...', '...kkkkk...'],
   'pirate-flag-1': ['wKKK', 'wkk.'],
   'pirate-flag-2': ['wKK.', 'wkkk'],
+  'porcelain': ['...kk...', '..kPpk..', '..kPpk..', '.kPPpCk.', 'kPPpppCk', 'kBBBBBBk', '.kpppCk.', '..kkkk..'],
   'ram': ['..k..', '.kNk.', 'kNMmk', 'kNMmk', 'kNMmk', 'kNMmk', 'kNMmk', 'kkkkk'],
   'rock': ['.kkk.', 'kuTTk', 'kTTtk', '.kkk.'],
   'rum': ['..kk....', '.kJjkk..', '.kfDkDk.', 'kffDDkDk', 'kDDDdkdk', 'kDDDdkk.', 'kDDddk..', '.kkkk...'],
@@ -92,12 +95,14 @@ const ROWS: Record<string, string[]> = {
   'sparkle-1': ['.y.', 'yYy', '.y.'],
   'sparkle-2': ['...', '.Y.', '...'],
   'stern-lantern': ['yyO', 'yYO', 'OOo'],
+  'sugar': ['...kk...', '..kPPk..', '.kPPPPk.', '.kffffk.', 'kDDDDDDk', 'kfDDDdDk', '.kfDDdk.', '..kkkk..'],
   'swivel-gun': ['.kkk.', '.kNk.', '.kNk.', '.kMk.', 'kNnMk', '.kVk.', '.kkk.'],
   'tavern': ['...............kkkk......', '...............kuTk......', '........kkkkkkkkuTk......', '.......keeeeeeekuTk......', '......kRRRRRRRRkuTk......', '.....kRRRRRRRRRkuTkk.....', '....kRRRRRRRRRRRRRRRk....', '...kRRRRRRRRRRRRRRRRRk...', '..kRRRRRRRRRRRRRRRRRRRk..', '.kRRRRRRRRRRRRRRRRRRRRRk.', 'kkkkkkkkkkkkkkkkkkkkkkkkk', '.kccccccccccccccccccccck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kCkkkkkCCkkkkkCCkkkkkck.', '.kCkllBkCCkllBkCCkllBkck.', '.kCkBBBkCCkBBBkCCkBBBkck.', '.kCkBBBkCCkBBBkCCkBBBkck.', '.kCkVVVkCCkVVVkCCkVVVkck.', '.kCCCCCCCCCCCCCCCCCCCCck.', '.kVVVVVVVVVVVVVVVVVVVVVk.', '.kwwwwwwwwwwwwwwwwwwwwwk.', '.kCCCCCCCCCCCCkkkkkkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCCkCCCkCCCCkVWWwkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCkyyyyOkCCCkVWWwkCCck.', '.kCCkyyyyOkCCCkVWywkCCck.', '.kCCkOOOOOkCCCkVWWwkCCck.', '.kCCkkkkkkkCCCkVWWwkCCck.', '.kCCCCCCCCCCCCkVWWwkCCck.', '.kkkkkkkkkkkkkkkkkkkkkkk.'],
   'tree': ['.....kkkkk.....', '...kkHHHhhkk...', '..kHHHhhhhhhk..', '..khhhhhhhhhk..', '..kHhGGGGhhhk..', '.kHHhhhhhHHhhk.', 'khhhhhhhhhhhhhk', 'khhhhhhGGGhhhhk', 'khhhhHHhhhGhhhk', 'khhGGhhhhhGGGGk', '.kGGGhhhhGGGGk.', '..kkkGGGGGkkk..', '.....kwwwk.....', '.....kvvwk.....', '.....kvvwk.....', '.....kvvwk.....', '....kvvvwwk....', '....kkkkkkk....'],
   'warehouse': ['........kkkkkkkkkkkkkkkkkk........', '.......keeeeeeeeeeeeeeeeeek.......', '......kRRRRRRRRRRRRRRRRRRRRk......', '.....kRRRRRRRRRRRRRRRRRRRRRRk.....', '....kRRRRRRRRRRRRRRRRRRRRRRRRk....', '...kRRRRRRRRRRRRRRRRRRRRRRRRRRk...', '..kRRRRRRRRRRRRRRRRRRRRRRRRRRRRk..', '.krrrrrrrrrrrrrrrrrrrrrrrrrrrrrrk.', 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk', '.kcccccccccccccccccccccccccccccck.', '.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCCCCCCCCCCCCCCCCCCCCCck.', '.kCCCCCCCCCkkkkkkkkkkkkCCkkkkkCck.', '.kCCCCCCCCCkVWWwKKVWWwkCCkVVVkCck.', '.kCCCCCCCCCkVWWwKKVWWwkCCkvvwkCck.', '.kCCCCCCCCCkMMMMKKMMMMkCCkkkkkCck.', '.kCkkkkkkkCkVWWwKKVWWwkCkkkkkkkck.', '.kCkVVVVVkCkVWWwKKVWWwkCkVVVVVkck.', '.kCkwwwwwkCkMMMMKKMMMMkCkwwwwwkck.', '.kCkvvvvwkCkVWWwKKVWWwkCkvvvvwkck.', '.kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.'],
   'waypoint': ['.kkkk', 'kWRRk', 'kWRRk', 'kWRrk', 'kWkkk', 'kWk..', 'kkk..'],
   'whale': ['kk....kk........', 'kBk..kBBkkkkkk..', 'kBBkkkBBlllBBBk.', '.kBBBBBBBllBBBBk', 'kBBkkkBBBBbbbbk.', 'kBk..kBbkkkkkk..', 'kk....kk........'],
+  'whale-oil': ['..kkkk..', '.kNNNNk.', 'kNnnnnMk', 'kNBBBBMk', 'kNBBBBMk', 'kNnnnnMk', '.kMMMMk.', '..kkkk..'],
   'wraith-1': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kiikiikik', '.kk.kk.k.'],
   'wraith-2': ['...kkk...', '..kiiik..', '.kiKKKik.', '.kiIKIik.', '.kiKKKik.', '.kiiiiik.', 'kiiiiiiik', 'kiiiiiiik', 'kikiikiik', '.k.kk.kk.'],
   'x-mark': ['RR..RR', '.RRRR.', '..RR..', '..RR..', '.RRRR.', 'RR..RR']
