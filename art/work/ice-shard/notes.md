@@ -1,12 +1,15 @@
 # ice-shard (8x8, flexible, kept at 8x8)
 
-- Tall centre shard (cols 2-5): pointed tip at the top, white `P` glint on the top-left facet, `L` lit left face, `l` middle, `B` shadowed right face.
-- Left shard (cols 0-2): shorter crystal leaning out, one lit pixel of `P`, separated from the centre by a `k` interior line.
-- Right shard (cols 5-7): shorter, shadowed side, peak at row 2 beside the centre tip.
-- Ice ramp `B l L` plus one `P` glint; outline `k`; flat base on the bottom row, no ground or shadow.
-
-## Current batch redraw
-Three outlined ice shards retain an 8 x 8 canvas. The centre peak is tallest, the left shard rises from row 3 and the smaller right shard from row 3. Continuous k interior seams separate both side shards from the centre down to the base. Only three blue ice tones L/l/B are used; the stray white glints are removed. A slightly inset base removes the former rectangular plinth corners.
+- Tall centre shard (x2-5): one-pixel tip at (3,0), a white P glint on the top-left facet at (3,1), L lit left face, B shadowed right face, k outline.
+- Left shard (x0-2): tip at row 3, one L face between k outline at x0 and the k seam at x2.
+- Right shard (x5-7): tip at (6,2), one B face at x6, k outline at x7 and the seam at x5.
+- Seams: k at x2 and x5 run from the shard tips down to the base, so every shard reads as a separate crystal.
+- Base: row 7 is k under x1-6 with transparent corners, so the cluster stands on a foot rather than a plinth.
+- Only k, L, B and P are used. Light from top left.
 
 ## Batch round 1
-Closed the right crystal tip: (6,3) is now k directly above its B face. All other pixels unchanged.
+1. [MAJOR] Left shard separated: the k seam at x2 runs from row 3 to the base, with no P glint on the left shard. The 8 px width leaves a 1 px body for each side shard; a 2 px side body with seams on both sides needs 9 px, which I did not take, to stay at spec.
+2. [MAJOR] Right shard: the k seam at x5 runs from row 2 to the base, so the right shard is a single B face with no L, and no light/shadow mix in a 2 px space.
+3. [MINOR] Extra glint: the left P is now L. The only P is at (3,1).
+4. [MINOR] Doubled peak outline: the centre tip is one pixel at (3,0); (5,2)/(6,2) pair is the seam meeting the right tip, not a doubled tip.
+5. [MINOR] Base: row 7 has transparent corners and a 6 px k foot, not an 8 px solid row.

@@ -245,15 +245,15 @@
   "batch": "island-2"
  },
  "private-dock": {
-  "round": 1,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"
  },
  "watchtower": {
-  "round": 1,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "model": "sonnet",
   "tier": "normal",
   "batch": "island-2"

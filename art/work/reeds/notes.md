@@ -1,7 +1,14 @@
-# reeds (7x7, flexible, unchanged size)
-- Three cattail stalks: tall centre, two shorter sides. Brown heads (v highlight on top-left, J body), outlined in k, shared outline columns between neighbours.
-- Stalks (G, H highlight on the centre stalk) emerge under the heads; lower row has splayed blades using only the swap foliage colours (H h G g) so seas can recolour.
-- Heads use the wood ramp (v, J) so they are not recoloured. Stands on bottom row, centred, symmetric.
+# reeds (7x7, flexible, kept at 7x7)
 
-## Current batch redraw
-Redrawn at 7 x 8 (+1 height) as two staggered cattail heads separated by transparent space. Each brown J head is a two-pixel-long sausage on a thin G stalk; the heads remain narrow to respect the current size limit, which overrides the archived 9 px proposal. The lower blades use h/G/g only and meet a closed k base. All foliage is restricted to the foliage swap ramp. The two isolated upper dark caps are intentional tips attached to the brown heads.
+- Two cattails. Left head x1-2 rows 0-2, right head x4-5 rows 1-3 (staggered down). Each head is a 2 px sausage: v (lit left column), J (body), j (dark underside).
+- Stalks: H under the left head, G under the right, one row of gap between them so each reads as its own stem.
+- Blades: two clumps at the base, left (h, H, G) lit, right (G, g) in shade, with a transparent column between them. Only the foliage swap characters H h G g are used on green parts, so each sea can recolour them.
+- No outline, as with grass-tuft and flowers: a 1 px outline would eat the stalks. The brown heads carry the silhouette against the green.
+- Bottom row touches the ground; the group is centred across the 7 px width.
+
+## Batch round 1
+1. [BLOCKER] Silhouette: the heads are no longer fused. They are 2 px wide and separated by transparent space above the blade row, so they read as cattails, not a pine or arrowhead. Three heads do not fit in 7 px with a 1 px stalk gap, so the design uses two.
+2. [MAJOR] Stub heads: each head is a 2 px by 3 px sausage, taller than the stalk line, with the left head taller by one row.
+3. [MAJOR] Stalks and outline: stalks show for two rows before the blades. The choice is no outline, stated above, which matches grass-tuft. Heads are not outlined either, because a k cap would double the head width and close the gap.
+4. [MINOR] Orphan corners: the blade corners are G/g now, no lone h pixels at the extremes.
+5. [MINOR] Highlight: H sits on the left stalk and left blades; the right side uses G and g.
