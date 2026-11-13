@@ -22,6 +22,8 @@ const ROWS: Record<string, string[]> = {
   'dead-tree': ['...k.....k...', '.kkvk...kdkk.', 'kvkvk...kdkdk', 'kvkvk...kddk.', '.kvvk..kddk..', '..kvvkkkdk...', '...kvvWddk...', '...kvWdkk....', '....kvWdk....', '....kvvdk....', '...kvvWdk....', '..kvvWddk....', '...kkkkk.....'],
   'deck-logs': ['WVvWW', 'WVvWW', 'DfffD', 'WVvWW', 'WVvWW'],
   'deck-planks': ['vvvvW', 'vvvvW', 'vvvvW', 'vvvvW', 'vvvvW'],
+  'fire-1': ['.Q.', 'qQq', 'qqq'],
+  'fire-2': ['Q..', 'qQ.', 'qqq'],
   'flag-1': ['wRRR', 'wRR.'],
   'flag-2': ['wRR.', 'wRRR'],
   'flowers': ['e.y.e', 'GhGGG', '.GGG.'],

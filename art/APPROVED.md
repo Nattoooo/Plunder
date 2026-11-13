@@ -46,3 +46,4 @@ Families the critic has passed. Match their style.
 - deck-people (sails) — round 1
 - crab (characters) — round 1
 - wraith (characters) — round 1
+- fire (sails) — round 2

@@ -1,4 +1,3 @@
-# waypoint
+# waypoint (batch props-small)
 
-## Current batch revision
-The red marker is now 5 x 8 (+1 height) so the flag top receives a full k outline. Pole stays straight, flags use only swap R cloth, and the lower edge narrows naturally down to the outlined pole.
+- waypoint 5x7: a 1 px wood pole (W) on the left with an outline (k) down its left side, a pole cap at the top and a base on the bottom row. The flag is 2 x 3 red (R, shaded r on its lower right) hanging to the right, outlined on its top, right and bottom edges. No outline between the pole and the flag, which are one object.

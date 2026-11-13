@@ -1,4 +1,3 @@
-# bottle
+# bottle (batch props-small)
 
-## Current batch revision
-Redrawn at 5 x 6 (+1 each) to make the corked neck narrower than the glass shoulders. The h left glass highlight joins its lower pixel, G is the glass base, and x is the visible rolled message inside. A complete k contour closes the neck, shoulders and base.
+- bottle 5x6 (spec 4x5, one px more on each side): 4 px cannot hold a cork wider than the neck, a one-pixel neck and a body with paper in it. Cork (J lit, j dark) is widest, the neck is one green glass pixel (G), the body is three px of green glass with a lit h glint on its left and bone paper (x) rolled down the centre. Outline on the silhouette.

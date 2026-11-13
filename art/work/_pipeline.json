@@ -553,8 +553,8 @@
   "batch": "ship-small"
  },
  "fire": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"

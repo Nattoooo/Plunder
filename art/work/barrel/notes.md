@@ -1,4 +1,3 @@
-# barrel
+# barrel (batch props-small)
 
-## Current batch revision
-Rounded 5 x 6 wooden barrel with a lit top, shaded staves and two dark M iron hoops. Retained exact spec dimensions and continuous outer k edge. Reads against sand and water.
+- barrel 5x6: rounded top and base (the outline corners are cut), two iron hoops (M) across the staves, lit staves on the left (V, v) and a W shade on the right stave. Stands on the bottom row. Outline on the silhouette.

@@ -1,4 +1,3 @@
-# dock-planks
+# dock-planks (batch props-small)
 
-## Current batch revision
-4 x 4 exact tiling dock surface: v planks and a W cross-seam row. No outline. The repeated seam is the real join between boards, not a border.
+- dock-planks 4x4 (fixed): three plank rows (v) and one seam row (W) along the bottom edge, so the tile repeats along the pier. Same two wood tones as the approved deck-planks. No outline: it is a tiling tile.

@@ -1,4 +1,3 @@
-# x-mark
+# x-mark (batch props-small)
 
-## Current batch revision
-Bold six-pixel red ground X with evenly stepped diagonal strokes and no outline. No texture pixels or unrelated decoration.
+- x-mark 6x6: two 2 px diagonals crossing in a 2 x 2 centre (rows 2 and 3). Flat red (R) with no shading, as a painted ground mark. No outline.

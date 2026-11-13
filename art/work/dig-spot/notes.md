@@ -1,4 +1,3 @@
-# dig-spot
+# dig-spot (batch props-small)
 
-## Current batch revision
-A low mound of disturbed sand in three F/D/d tones, brightest on the upper-left crest and darkest along the lower/right edge. Ground mark deliberately has no outline.
+- dig-spot 6x4: a mound of sand. F on the crest and upper left, D for the body, d on the right and underneath. No outline: it is a ground mark, drawn like the approved sand marks.

@@ -8,7 +8,8 @@ kvvvWk
 kkkkkk
 # lost-cargo: the same crate with a red flag on a short pole at its top left.
 # The flag is 2 x 2 red inside its own outline, and the pole stands on the crate's top edge.
-# The crate loses its upper plank to fit the 7 px height.
+# The crate is four rows here (top edge, lit top, one plank row, bottom) so the flag fits in
+# the 7 px height; the plank seam does not fit, so it is dropped.
 == lost-cargo
 .kkkk.
 kWRRk.
