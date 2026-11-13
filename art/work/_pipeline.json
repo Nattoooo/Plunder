@@ -336,8 +336,8 @@
   "batch": "ship-guns"
  },
  "long-gun": {
-  "round": 0,
-  "status": "batched",
+  "round": 1,
+  "status": "approved",
   "tier": "normal",
   "batch": "ship-guns"
  },

@@ -3,7 +3,7 @@ import { art, Art } from './palette';
 const SCALE = 1;
 
 const ROWS: Record<string, string[]> = {
-
+  'long-gun': ['...kkkk...', '...kNNk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '...kNMk...', '..kNnMMk..', '..kNnMMk..', '..kNnMMk..', '.kvvVVwwk.', '.kWvVVwWk.', '..kkkkkk..']
 };
 
 const cache = new Map<string, Art>();
