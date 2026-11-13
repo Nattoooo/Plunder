@@ -519,7 +519,7 @@
  },
  "sail-patched": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
@@ -540,14 +540,14 @@
  },
  "oar": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
  },
  "flags": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"
@@ -561,7 +561,7 @@
  },
  "deck-people": {
   "round": 1,
-  "status": "batched",
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-small"

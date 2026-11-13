@@ -1,10 +1,11 @@
 # Gold carved figurehead: a bust whose head (top 3 rows) reaches forward over the bow, shoulders on the cell.
+# Light from the top left: y highlight on the head's left side, O base gold, o shadow down the right and bottom.
 == figurehead
 .kkk.
 kyyOk
 kyOOk
 kOOOk
 kOOok
-kOoOk
-kooOk
+kOook
+koook
 kkkkk

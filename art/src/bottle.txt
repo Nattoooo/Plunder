@@ -1,7 +1,8 @@
 # bottle: green glass with a leather cork, rolled paper showing inside.
+# Cork is the widest part, the neck is one glass pixel wide, the body holds the paper.
 == bottle
 .kk.
 kJjk
-khGk
-kxGk
+.kGk
+kGxk
 .kk.

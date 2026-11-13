@@ -40,3 +40,7 @@ Families the critic has passed. Match their style.
 - mortar (ship) — round 1
 - warehouse (buildings) — round 1
 - tavern (buildings) — round 1
+- sail-patched (sails) — round 1
+- oar (sails) — round 1
+- flags (sails) — round 1
+- deck-people (sails) — round 1
