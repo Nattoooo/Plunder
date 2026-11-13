@@ -5,7 +5,7 @@
 ..keRRRRRRrk..
 .keRRRRRRRRrk.
 kkkkkkkkkkkkkk
-..kkkkkkkkkk..
+..kwwwwwwwwk..
 ..kVKKKKKKwk..
 ..kVKKKKKKwk..
 ..kvvvvvvvwk..
@@ -13,11 +13,11 @@ kkkkkkkkkkkkkk
 .kkkkkkkkkkkk.
 ..kVk....kvk..
 ..kVkwwwwkvk..
-..kVkw..wkvk..
-..kVk.ww.kvk..
-..kVk.ww.kvk..
-.kVk.w..w.kvk.
-.kVkwwwwwwkvk.
+..kVkv..vkvk..
+..kVk.vv.kvk..
+..kVk.vv.kvk..
+.kVk.v..v.kvk.
+.kVk......kvk.
 .kVk......kvk.
 kVkwwwwwwwwkvk
 kkk........kkk

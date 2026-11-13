@@ -1,10 +1,10 @@
-# Furs: brown pelt with a shaggy fringe, lighter top-left edge. Light top left.
+# Furs: brown pelt with a fluffy top and shaggy fringe, lighter top-left. Light top left.
 == furs
-.kkkkkk.
-kDDDDJJk
+.kk..kk.
+kDJkkJJk
 kDJJJJJk
 kDJJJJJk
-kDJJJJJk
-kJJJJJJk
-kJkJJkJk
+kDJJJJjk
+kJJJJjJk
+kJkJkJJk
 .kkkkkk.
