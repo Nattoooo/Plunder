@@ -6,9 +6,9 @@
 .......kuTk................
 ...kkkkkuTk......kkkkkkkkkk
 ..keeeekuTkk.....kyOOOOOOok
-.keRRRRkuTkRk....kyOOokkOok
-keRRRRRkuTkRrk...kyOOokkOok
-kkkkkkkkkkkkkk...kyOOokkOok
+.keRRRRkuTkRk....kyOOokOOok
+keRRRRRkuTkRrk...kyOOokOOok
+kkkkkkkkkkkkkk...kyOOokOOok
 .kcccccccccck...kyyOOOOOook
 .kCCCCCCCCCCk..kyyOOOOOOook
 .kCCCCCCwWwCk..kyOOOOOOOook

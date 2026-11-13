@@ -8,7 +8,7 @@ kwwwwwwwwwwwwwwwwk.....kFFDk....
 .kVwKKKKKKKKKKvwk.....kkkkkkk...
 .kVwKKKKKKKKKKvwk....kFFDkFFDk..
 .kVwKKKKKKKKKKvwk....kFDDkFDDk..
-.kVwKwKKKKKKwKvwk...kkkkkkkkkkk.
-.kVwKwKKKKKKwKvwk..kFFDkFFDkFFDk
-.kVwKwKKKKKKwKvwk..kFDDkFDDkFDDk
+.kVwKKKKKKKKKKvwk...kkkkkkkkkkk.
+.kVwKKKKKKKKKKvwk..kFFDkFFDkFFDk
+.kVwKKKKKKKKKKvwk..kFDDkFDDkFDDk
 .kkkkkkkkkkkkkkkkk..kkk.kkk.kkk.
