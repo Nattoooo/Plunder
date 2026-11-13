@@ -406,8 +406,8 @@
   "batch": "ship-guns"
  },
  "swivel-gun": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "model": "sonnet",
   "tier": "tiny",
   "batch": "ship-guns"

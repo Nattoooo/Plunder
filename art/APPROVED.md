@@ -47,3 +47,4 @@ Families the critic has passed. Match their style.
 - crab (characters) — round 1
 - wraith (characters) — round 1
 - fire (sails) — round 2
+- swivel-gun (ship) — round 2
