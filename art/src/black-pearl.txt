@@ -3,13 +3,13 @@
 ....kkkkkkkk....
 ..kkCCCCCCCCkk..
 .kCCCccccccCCCk.
-kCCccccccccccCCk
-kCccccmmmmccccCk
+kCCccCccccCccCCk
+kCcccCmmmmCcccCk
 kCcccmNmmmMcccCk
 kCcccmmnmMMcccCk
 kCcccmmmmMMcccCk
 kCcccmmMMKKcccCk
-kCccccMMKKcccccC
+kCkkkkMKKKkkkkCk
 kCCCCCCCCCCCCCCk
 .kCCcCCCCCCcCCk.
 ..kCCcCCCCcCCk..
