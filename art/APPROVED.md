@@ -146,3 +146,6 @@ Families the critic has passed. Match their style.
 - rusty-cutlass (icons) — round 3
 - cutlass (icons) — round 3
 - tricorn (icons) — round 3
+- golden-idol (icons) — round 3
+- mermaid-scale (icons) — round 3
+- ghost-lantern (icons) — round 3

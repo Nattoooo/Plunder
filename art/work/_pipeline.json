@@ -816,14 +816,14 @@
   "batch": "icons-treasure"
  },
  "pearl": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "black-pearl": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-treasure"
  },
@@ -840,8 +840,8 @@
   "batch": "icons-treasure"
  },
  "emerald": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-treasure"
  },
@@ -876,8 +876,8 @@
   "batch": "icons-treasure"
  },
  "golden-idol": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
@@ -888,8 +888,8 @@
   "batch": "icons-treasure"
  },
  "ancient-coin": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-treasure"
  },
@@ -912,14 +912,14 @@
   "batch": "icons-treasure"
  },
  "mermaid-scale": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "ghost-lantern": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
@@ -930,8 +930,8 @@
   "batch": "icons-treasure"
  },
  "siren-conch": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-treasure"
  },
