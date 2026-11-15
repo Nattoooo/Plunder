@@ -804,50 +804,50 @@
   "batch": "icons-gear"
  },
  "silver-coins": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "gold-doubloon": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "pearl": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "black-pearl": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "ruby": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "sapphire": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "emerald": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "diamond": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
@@ -876,7 +876,7 @@
   "batch": "icons-treasure"
  },
  "golden-idol": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
@@ -888,7 +888,7 @@
   "batch": "icons-treasure"
  },
  "ancient-coin": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
@@ -900,25 +900,25 @@
   "batch": "icons-treasure"
  },
  "lucky-charm": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "kraken-ink": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "mermaid-scale": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "ghost-lantern": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
@@ -930,7 +930,7 @@
   "batch": "icons-treasure"
  },
  "siren-conch": {
-  "round": 1,
+  "round": 2,
   "status": "batched",
   "tier": "normal",
   "batch": "icons-treasure"
@@ -948,14 +948,14 @@
   "batch": "icons-treasure"
  },
  "treasure-map": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },
  "bottle-message": {
-  "round": 1,
-  "status": "batched",
+  "round": 2,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-treasure"
  },

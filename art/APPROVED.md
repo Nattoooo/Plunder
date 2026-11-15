@@ -133,3 +133,12 @@ Families the critic has passed. Match their style.
 - medicine (icons) — round 2
 - cannonball (icons) — round 2
 - grapeshot (icons) — round 2
+- silver-coins (icons) — round 2
+- gold-doubloon (icons) — round 2
+- ruby (icons) — round 2
+- sapphire (icons) — round 2
+- diamond (icons) — round 2
+- lucky-charm (icons) — round 2
+- kraken-ink (icons) — round 2
+- treasure-map (icons) — round 2
+- bottle-message (icons) — round 2
