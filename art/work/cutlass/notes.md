@@ -5,3 +5,6 @@ The silhouette carries the identity; interior colour changes mark only real part
 
 ## Batch round 1
 Same curved blade and layout as rusty-cutlass; y/O gold guard 6 px perpendicular to the blade; clean steel.
+
+## Batch round 2
+- Same blade curve and guard cells as the rusty-cutlass, guard y/y/O/O/o, no rust.
