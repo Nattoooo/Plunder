@@ -122,3 +122,10 @@ Families the critic has passed. Match their style.
 - lumber-camp (buildings) — round 2
 - mine (buildings) — round 2
 - distillery (buildings) — round 2
+- shovel (icons) — round 2
+- spyglass (icons) — round 2
+- repair-kit (icons) — round 2
+- boarding-axe (icons) — round 2
+- rapier (icons) — round 2
+- leather-vest (icons) — round 2
+- captains-coat (icons) — round 2
