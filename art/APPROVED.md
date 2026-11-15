@@ -129,3 +129,7 @@ Families the critic has passed. Match their style.
 - rapier (icons) — round 2
 - leather-vest (icons) — round 2
 - captains-coat (icons) — round 2
+- grog (icons) — round 2
+- medicine (icons) — round 2
+- cannonball (icons) — round 2
+- grapeshot (icons) — round 2
