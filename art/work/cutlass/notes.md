@@ -2,3 +2,6 @@
 
 16x16 inventory icon, k outline, light from top left, materials on the STYLE.md ramps (see src/cutlass.txt).
 The silhouette carries the identity; interior colour changes mark only real parts (handle, blade, guard, trim, glass).
+
+## Batch round 1
+Same curved blade and layout as rusty-cutlass; y/O gold guard 6 px perpendicular to the blade; clean steel.

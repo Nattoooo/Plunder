@@ -10,8 +10,8 @@
 .kfDDk....kDDfk.
 .kfDDkk..kkDfDk.
 ..kfDDkkkkDDfk..
-..kkDfDfDDDfkkkk
-...kkkDDfDDkfffk
+..kkDfDfDDDfkkk.
+...kkkDDfDDkffk.
 .....kkkkkk.kkk.
 ................
 ................

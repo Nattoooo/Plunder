@@ -1,10 +1,10 @@
 == fishing-net
 ................
-.kkkk.kkkk.kkkk.
+..kk...kk...kk..
 .kEek.kEek.kEek.
 .kRRk.kRRk.kRRk.
-.kkkkkkkkkkkkkk.
-kFFFFFFFFFFFFFFk
+..kkkkkkkkkkkk..
+.kFFFFFFFFFFFFk.
 kFdfffdfffdfffdk
 kFfdfdfdfdfdfddk
 kFffdfffdfffdfdk
@@ -12,6 +12,6 @@ kFfdfdfdfdfdfddk
 kFdfffdfffdfffdk
 kFfdfdfdfdfdfddk
 kFffdfffdfffdfdk
-kDDDDDDDDDDDDDDk
-.kkkkkkkkkkkkkk.
+.kDDDDDDDDDDDDk.
+..kkkkkkkkkkkk..
 ................
