@@ -149,3 +149,6 @@ Families the critic has passed. Match their style.
 - golden-idol (icons) — round 3
 - mermaid-scale (icons) — round 3
 - ghost-lantern (icons) — round 3
+- rations (icons) — round 3
+- chain-shot (icons) — round 3
+- canvas (icons) — round 3

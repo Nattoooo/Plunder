@@ -582,14 +582,14 @@
   "batch": "icons-trade"
  },
  "rations": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "salted-pork": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-supplies"
  },
@@ -618,8 +618,8 @@
   "batch": "icons-supplies"
  },
  "fish": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-supplies"
  },
@@ -630,8 +630,8 @@
   "batch": "icons-supplies"
  },
  "chain-shot": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
@@ -642,8 +642,8 @@
   "batch": "icons-supplies"
  },
  "heated-shot": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-supplies"
  },
@@ -654,8 +654,8 @@
   "batch": "icons-supplies"
  },
  "pistol-shot": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-supplies"
  },
@@ -672,20 +672,20 @@
   "batch": "icons-supplies"
  },
  "canvas": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "rope": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-supplies"
  },
  "tar": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-supplies"
  },
