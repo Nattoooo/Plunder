@@ -142,3 +142,7 @@ Families the critic has passed. Match their style.
 - kraken-ink (icons) — round 2
 - treasure-map (icons) — round 2
 - bottle-message (icons) — round 2
+- lockpick (icons) — round 3
+- rusty-cutlass (icons) — round 3
+- cutlass (icons) — round 3
+- tricorn (icons) — round 3

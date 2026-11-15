@@ -714,14 +714,14 @@
   "batch": "icons-gear"
  },
  "sextant": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-gear"
  },
  "lockpick": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
@@ -732,8 +732,8 @@
   "batch": "icons-gear"
  },
  "fishing-net": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "stuck",
   "tier": "normal",
   "batch": "icons-gear"
  },
@@ -744,14 +744,14 @@
   "batch": "icons-gear"
  },
  "rusty-cutlass": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
  "cutlass": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
@@ -792,8 +792,8 @@
   "batch": "icons-gear"
  },
  "tricorn": {
-  "round": 2,
-  "status": "batched",
+  "round": 3,
+  "status": "approved",
   "tier": "normal",
   "batch": "icons-gear"
  },
